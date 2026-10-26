@@ -1,0 +1,11 @@
+{
+  "experiment": "agent/rust_vec_remove",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "braintrustExperiment": "stagehand-dev [experimentName=agent/rust_vec_remove]",
+  "braintrustExperimentId": null,
+  "braintrustExperimentUrl": null,
+  "braintrustProject": "stagehand-dev",
+  "braintrustProjectUrl": null,
+  "requestedExperimentName": "agent/rust_vec_remove"
+}

@@ -1,0 +1,11 @@
+{
+  "experiment": "agent/huggingface_bert_license",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "braintrustExperiment": "stagehand-dev [experimentName=agent/huggingface_bert_license]",
+  "braintrustExperimentId": null,
+  "braintrustExperimentUrl": null,
+  "braintrustProject": "stagehand-dev",
+  "braintrustProjectUrl": null,
+  "requestedExperimentName": "agent/huggingface_bert_license"
+}

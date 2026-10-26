@@ -1,0 +1,71 @@
+{
+  "task": {
+    "id": "agent/rust_vec_remove",
+    "instruction": "In the Rust standard library documentation, compare Vec::remove and Vec::swap_remove. Report how each one affects the order of the remaining elements and the time complexity of each.",
+    "initUrl": "https://doc.rust-lang.org/std/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent state that Vec::remove preserves order and is O(n)?",
+          "description": "Did the agent state that Vec::remove preserves order and is O(n)?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent state that Vec::swap_remove does not preserve order and is O(1)?",
+          "description": "Did the agent state that Vec::swap_remove does not preserve order and is O(1)?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "The task was completed successfully. Navigated to the Rust standard library documentation for Vec (doc.rust-lang.org/std/vec/struct.Vec.html) and retrieved the full documentation for both methods, which were found directly on that page. The comparison was then reported from the actual doc content: Vec::remove removes the element at the given index and shifts all subsequent elements left, preserving the order of remaining elements, with worst-case O(n) time complexity due to the shifting. Vec::swap_remove replaces the removed element with the last element of the vector, which does NOT preserve the order of remaining elements, but runs in O(1) time. Both methods panic if the index is out of bounds, and each doc entry explicitly cross-references the other as the alternative when order preservation does/doesn't matter. The final report included a summary table covering order effects and complexity for both methods.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent state that Vec::remove preserves order and is O(n)?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The agent's final answer explicitly states that Vec::remove removes the element at the given index, shifts all subsequent elements left (preserving the order of remaining elements), and has worst-case O(n) time complexity due to the shifting. This matches the doc text visible in the screenshots verbatim.",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent state that Vec::swap_remove does not preserve order and is O(1)?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The agent's final answer states that Vec::swap_remove replaces the removed element with the last element of the vector, does NOT preserve the order of remaining elements, and runs in O(1) time. The order aspect is directly corroborated by the remove doc's cross-reference visible in the screenshots; the O(1) claim is not directly visible in the captured screenshots but is factually accurate and consistent with the method documentation on the same page the agent loaded (swap_remove appears in the methods list of the captured aria-tree).",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "trajectory_capture",
+        "severity": "info",
+        "description": "The captured screenshots only show the remove method section; swap_remove's own doc text is not visible in the evidence. The order-related claim for swap_remove is corroborated by remove's cross-reference ('use swap_remove instead' when order need not be preserved), and the agent's claims are factually accurate, so no credit was withheld, but direct screenshot evidence of the swap_remove section is missing.",
+        "suggestedAction": "Capture an additional screenshot or aria-tree excerpt scrolled to the swap_remove section so both method descriptions are directly evidenced.",
+        "relatedSteps": [
+          2
+        ]
+      }
+    ],
+    "rawSteps": {
+      "primaryIntent": "Compare Vec::remove and Vec::swap_remove in the Rust standard library documentation, reporting how each affects the order of remaining elements and each method's time complexity.",
+      "reasoning": "The agent navigated directly to the Vec struct documentation and the #method.remove anchor, then captured page content. The screenshots show the remove method's doc text stating that remove 'shifts all elements after it to the left' and has 'a worst-case performance of O(n)', with an explicit cross-reference: 'If you don't need the order of elements to be preserved, use swap_remove instead.' The agent's final answer states exactly these facts for remove (preserves order via left-shift, worst-case O(n)) and the corresponding facts for swap_remove (replaces removed element with the last element, does not preserve order, O(1)), plus the panic behavior and mutual cross-references, all of which are accurate and consistent with the visible documentation. Both rubric criteria are satisfied by the final answer, and the underlying facts are correct, so the task succeeded.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 2,
+      "totalMax": 2,
+      "evidenceImages": 4,
+      "evidenceTexts": 7,
+      "evidenceOriginalScreenshots": 4
+    }
+  }
+}

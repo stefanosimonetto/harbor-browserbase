@@ -1,0 +1,10 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/github in dom mode
+Captured Browserbase session f7bd6c56-485a-49ce-9c6a-8ae7630704fe for Stagehand task agent/github in dom mode at jobs\glm-missing41\agent-github-ruby-repo__Z363u3Q\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-github-ruby-repo__Z363u3Q__agent/agent_github__openrouter_z-ai_glm-5.3-flash__20261026-073109-9be6f54cc8c0a9bd/agent/github/2026-10-26T07-31-12-419Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=1.0 max=1.0
+Skipping unscrubbable trial output jobs\glm-missing41\agent-github-ruby-repo__Z363u3Q\agent\trajectories\agent-github-ruby-repo__Z363u3Q__agent\agent_github__openrouter_z-ai_glm-5.3-flash__20261026-073109-9be6f54cc8c0a9bd\agent\github\2026-10-26T07-31-12-419Z\trajectory.json: 'charmap' codec can't decode byte 0x8d in position 13798: character maps to <undefined>

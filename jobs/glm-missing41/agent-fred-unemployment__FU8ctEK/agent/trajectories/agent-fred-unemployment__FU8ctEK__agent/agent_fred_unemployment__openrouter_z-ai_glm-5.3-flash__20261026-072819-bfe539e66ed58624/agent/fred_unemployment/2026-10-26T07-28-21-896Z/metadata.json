@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/fred_unemployment",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "task": "agent/fred_unemployment",
+  "runId": "2026-10-26T07-28-21-896Z",
+  "runDir": "2026-10-26T07-28-21-896Z",
+  "attempt": 1,
+  "status": "complete"
+}

@@ -1,0 +1,39 @@
+{
+    "task": {
+        "path": "tasks\\agent-all-recipes",
+        "source": "tasks"
+    },
+    "trial_name": "agent-all-recipes__23w6uqz",
+    "trials_dir": "jobs\\kernel-originals",
+    "agent": {
+        "import_path": "bb_harbor.agent:StagehandAgent",
+        "model_name": "openrouter/z-ai/glm-5.3-flash",
+        "kwargs": {
+            "mode": "dom"
+        },
+        "env": {
+            "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+            "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+            "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+        }
+    },
+    "environment": {
+        "import_path": "bb_harbor.kernel_env:KernelEnvironment",
+        "kwargs": {
+            "timeout_seconds": 300,
+            "headless": false,
+            "stealth": false,
+            "delete_on_start_failure": true
+        }
+    },
+    "verifier": {
+        "env": {
+            "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+        },
+        "import_path": "bb_harbor.verifier:StagehandVerifier",
+        "kwargs": {
+            "judge_model": "openrouter/z-ai/glm-5.3-flash"
+        }
+    },
+    "job_id": "779c4517-891b-44ad-94ef-3a9fbd3844e8"
+}

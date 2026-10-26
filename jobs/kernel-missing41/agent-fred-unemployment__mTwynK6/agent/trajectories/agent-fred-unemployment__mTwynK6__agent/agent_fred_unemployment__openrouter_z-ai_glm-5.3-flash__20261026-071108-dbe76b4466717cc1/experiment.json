@@ -1,0 +1,11 @@
+{
+  "experiment": "agent/fred_unemployment",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "braintrustExperiment": "stagehand-dev [experimentName=agent/fred_unemployment]",
+  "braintrustExperimentId": null,
+  "braintrustExperimentUrl": null,
+  "braintrustProject": "stagehand-dev",
+  "braintrustProjectUrl": null,
+  "requestedExperimentName": "agent/fred_unemployment"
+}

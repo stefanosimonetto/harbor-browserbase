@@ -1,0 +1,47 @@
+{
+  "outcomeSuccess": false,
+  "processScore": 0,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent open the Checkboxes page?",
+      "maxPoints": 1,
+      "earnedPoints": 0,
+      "explanation": "Fused judgment call failed for this criterion.",
+      "evidenceInsufficient": true
+    },
+    {
+      "criterion": "Did the agent end with both checkboxes checked and report that state?",
+      "maxPoints": 1,
+      "earnedPoints": 0,
+      "explanation": "Fused judgment call failed for this criterion.",
+      "evidenceInsufficient": true
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [
+    "Did the agent open the Checkboxes page?",
+    "Did the agent end with both checkboxes checked and report that state?"
+  ],
+  "findings": [
+    {
+      "category": "verifier_uncertainty",
+      "severity": "warning",
+      "description": "The fused judgment call did not return a parseable response."
+    }
+  ],
+  "rawSteps": {
+    "primaryIntent": "On the-internet.herokuapp.com, open the 'Checkboxes' page and make sure both checkboxes are checked. Report the final state of each checkbox.",
+    "reasoning": "Fused judgment LLM call failed; returning evidence-insufficient result.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 0,
+    "totalMax": 2,
+    "evidenceImages": 8,
+    "evidenceTexts": 15,
+    "evidenceOriginalScreenshots": 8
+  }
+}

@@ -1,0 +1,10 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/hugging_face in dom mode
+Captured Browserbase session dd2437ea-9d5d-4ca7-aef4-a3142b93d711 for Stagehand task agent/hugging_face in dom mode at jobs\glm-missing41\agent-hugging-face__5UJ95yq\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-hugging-face__5UJ95yq__agent/agent_hugging_face__openrouter_z-ai_glm-5.3-flash__20261026-073506-cf0355640052129c/agent/hugging_face/2026-10-26T07-35-08-693Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=all-kept-criteria-scored-zero kept=1 total=1 earned=0.0 max=1.0
+Skipping unscrubbable trial output jobs\glm-missing41\agent-hugging-face__5UJ95yq\agent\trajectories\agent-hugging-face__5UJ95yq__agent\agent_hugging_face__openrouter_z-ai_glm-5.3-flash__20261026-073506-cf0355640052129c\agent\hugging_face\2026-10-26T07-35-08-693Z\trajectory.json: 'charmap' codec can't decode byte 0x90 in position 7651: character maps to <undefined>

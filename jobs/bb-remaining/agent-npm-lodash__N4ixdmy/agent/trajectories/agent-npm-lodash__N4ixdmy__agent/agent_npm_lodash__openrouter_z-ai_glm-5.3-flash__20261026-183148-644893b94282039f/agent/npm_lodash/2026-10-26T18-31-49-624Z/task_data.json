@@ -1,0 +1,84 @@
+{
+  "task": {
+    "id": "agent/npm_lodash",
+    "instruction": "On npmjs.com, find the 'lodash' package and report its latest version, its license, and its approximate weekly downloads.",
+    "initUrl": "https://www.npmjs.com/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent open the lodash package page on npm?",
+          "description": "Did the agent open the lodash package page on npm?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report the latest version and the MIT license?",
+          "description": "Did the agent report the latest version and the MIT license?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report a weekly downloads figure from the page?",
+          "description": "Did the agent report a weekly downloads figure from the page?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "Successfully navigated directly to https://www.npmjs.com/package/lodash and extracted all requested information from the package page sidebar and header:\n\n1. **Latest Version: 4.18.1** — confirmed in both the page header (\"lodash 4.18.1 • Public\") and the Package Sidebar's \"Version\" section. Note: this reflects the data shown on the site at the time of the session (last published 7 months prior).\n\n2. **License: MIT** — confirmed in the Package Sidebar's \"License\" section.\n\n3. **Weekly Downloads: 102,276,859 (~102 million)** — confirmed in the Package Sidebar's \"Weekly Downloads\" section, which was explicitly toggled to \"Showing weekly downloads.\"\n\nAdditional corroborating details found: 197,529 dependents, 117 versions, repository at github.com/lodash/lodash, homepage lodash.com. All three required data points were located and reported, so the task was fully completed successfully.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent open the lodash package page on npm?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report the latest version and the MIT license?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report a weekly downloads figure from the page?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "trajectory_capture",
+        "severity": "info",
+        "description": "Evidence list references screenshots at step=2, but the action history only contains steps 0 and 1; this is a minor trajectory-capture indexing inconsistency that does not affect the verdict, since the final state and step 0/1 evidence already confirm all reported values."
+      },
+      {
+        "category": "verifier_uncertainty",
+        "severity": "info",
+        "description": "The reported latest version 4.18.1 (published ~7 months prior per the page) matches the environment's page ground truth; evaluators comparing against real-world npm data (4.17.21) should treat the observed page content as authoritative for this run."
+      }
+    ],
+    "rawSteps": {
+      "primaryIntent": "Find the lodash package on npmjs.com and report its latest version, its license, and its approximate weekly downloads.",
+      "reasoning": "The agent navigated directly to https://www.npmjs.com/package/lodash at step 0, and the final page state confirms all three requested data points on the package page: version 4.18.1 (shown in both the page header and the Package Sidebar 'Version' section), License MIT (Package Sidebar 'License' section), and Weekly Downloads 102,276,859 (~102 million). The agent's final answer matches the page evidence exactly on all three points, with no contradictions or fabrications. Navigating directly via the known URL pattern is a valid way to 'find the lodash package on npmjs.com' since the package page is the required destination, and the task explicitly requires reporting data 'from the page,' which the agent did. The task is valid and unambiguous given the current date (2026-10-26); lodash exists and the page rendered successfully, so no blockers apply.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 3,
+      "totalMax": 3,
+      "evidenceImages": 3,
+      "evidenceTexts": 5,
+      "evidenceOriginalScreenshots": 3
+    }
+  }
+}

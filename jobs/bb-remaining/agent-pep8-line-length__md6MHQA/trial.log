@@ -1,0 +1,10 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/pep8_line_length in dom mode
+Captured Browserbase session 860342d0-3400-4062-82e9-3e4a69d74fe3 for Stagehand task agent/pep8_line_length in dom mode at jobs\bb-remaining\agent-pep8-line-length__md6MHQA\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-pep8-line-length__md6MHQA__agent/agent_pep8_line_length__openrouter_z-ai_glm-5.3-flash__20261026-183719-4fcf664a65884d7e/agent/pep8_line_length/2026-10-26T18-37-21-118Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Skipping unscrubbable trial output jobs\bb-remaining\agent-pep8-line-length__md6MHQA\agent\trajectories\agent-pep8-line-length__md6MHQA__agent\agent_pep8_line_length__openrouter_z-ai_glm-5.3-flash__20261026-183719-4fcf664a65884d7e\agent\pep8_line_length\2026-10-26T18-37-21-118Z\trajectory.json: 'charmap' codec can't decode byte 0x9d in position 5681: character maps to <undefined>

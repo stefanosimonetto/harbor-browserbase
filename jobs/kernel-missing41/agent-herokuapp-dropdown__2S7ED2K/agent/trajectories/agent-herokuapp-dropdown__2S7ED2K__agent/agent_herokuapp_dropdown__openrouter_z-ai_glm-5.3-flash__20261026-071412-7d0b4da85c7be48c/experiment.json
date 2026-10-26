@@ -1,0 +1,11 @@
+{
+  "experiment": "agent/herokuapp_dropdown",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "braintrustExperiment": "stagehand-dev [experimentName=agent/herokuapp_dropdown]",
+  "braintrustExperimentId": null,
+  "braintrustExperimentUrl": null,
+  "braintrustProject": "stagehand-dev",
+  "braintrustProjectUrl": null,
+  "requestedExperimentName": "agent/herokuapp_dropdown"
+}

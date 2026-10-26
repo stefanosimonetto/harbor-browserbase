@@ -1,0 +1,106 @@
+{
+    "id": "779c4517-891b-44ad-94ef-3a9fbd3844e8",
+    "started_at": "2026-10-26T09:26:14.490448",
+    "updated_at": "2026-10-26T09:39:59.315683",
+    "finished_at": "2026-10-26T09:39:59.315683",
+    "n_total_trials": 9,
+    "stats": {
+        "n_completed_trials": 9,
+        "n_errored_trials": 1,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "stagehand__z-ai/glm-5.3-flash__tasks": {
+                "n_trials": 8,
+                "n_errors": 1,
+                "metrics": [
+                    {
+                        "criteria_earned_frac": 0.8888888888888888,
+                        "outcome": 0.7777777777777778,
+                        "process": 0.8888888888888888,
+                        "process_measured": 0.8888888888888888,
+                        "reward": 0.7777777777777778
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "agent-all-recipes__kTjWYdz",
+                            "agent-arxiv-gpt-report__uG6BhZc",
+                            "agent-github-react-version__wfznkg2",
+                            "agent-github-ruby-repo__brdSdDA",
+                            "agent-hugging-face__XWp8f9n",
+                            "agent-iframe-form__4FmM6KD",
+                            "agent-sf-library-card__LXX8UG7"
+                        ],
+                        "0.0": [
+                            "agent-nba-trades__qb2duVZ"
+                        ]
+                    },
+                    "outcome": {
+                        "1.0": [
+                            "agent-all-recipes__kTjWYdz",
+                            "agent-arxiv-gpt-report__uG6BhZc",
+                            "agent-github-react-version__wfznkg2",
+                            "agent-github-ruby-repo__brdSdDA",
+                            "agent-hugging-face__XWp8f9n",
+                            "agent-iframe-form__4FmM6KD",
+                            "agent-sf-library-card__LXX8UG7"
+                        ],
+                        "0.0": [
+                            "agent-nba-trades__qb2duVZ"
+                        ]
+                    },
+                    "process": {
+                        "1.0": [
+                            "agent-all-recipes__kTjWYdz",
+                            "agent-arxiv-gpt-report__uG6BhZc",
+                            "agent-github-react-version__wfznkg2",
+                            "agent-github-ruby-repo__brdSdDA",
+                            "agent-hugging-face__XWp8f9n",
+                            "agent-iframe-form__4FmM6KD",
+                            "agent-nba-trades__qb2duVZ",
+                            "agent-sf-library-card__LXX8UG7"
+                        ]
+                    },
+                    "process_measured": {
+                        "1.0": [
+                            "agent-all-recipes__kTjWYdz",
+                            "agent-arxiv-gpt-report__uG6BhZc",
+                            "agent-github-react-version__wfznkg2",
+                            "agent-github-ruby-repo__brdSdDA",
+                            "agent-hugging-face__XWp8f9n",
+                            "agent-iframe-form__4FmM6KD",
+                            "agent-nba-trades__qb2duVZ",
+                            "agent-sf-library-card__LXX8UG7"
+                        ]
+                    },
+                    "criteria_earned_frac": {
+                        "1.0": [
+                            "agent-all-recipes__kTjWYdz",
+                            "agent-arxiv-gpt-report__uG6BhZc",
+                            "agent-github-react-version__wfznkg2",
+                            "agent-github-ruby-repo__brdSdDA",
+                            "agent-hugging-face__XWp8f9n",
+                            "agent-iframe-form__4FmM6KD",
+                            "agent-nba-trades__qb2duVZ",
+                            "agent-sf-library-card__LXX8UG7"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "StagehandVerifierUnhealthyError": [
+                        "wtb-smoke__bKZRD6W"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null
+    }
+}

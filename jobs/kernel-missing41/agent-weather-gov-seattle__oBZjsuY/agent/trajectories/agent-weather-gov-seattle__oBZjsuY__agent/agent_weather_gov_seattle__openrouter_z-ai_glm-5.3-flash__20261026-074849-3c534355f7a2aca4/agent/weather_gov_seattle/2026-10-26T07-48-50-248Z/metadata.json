@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/weather_gov_seattle",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/weather_gov_seattle",
+  "runId": "2026-10-26T07-48-50-248Z",
+  "runDir": "2026-10-26T07-48-50-248Z",
+  "attempt": 1,
+  "status": "complete"
+}

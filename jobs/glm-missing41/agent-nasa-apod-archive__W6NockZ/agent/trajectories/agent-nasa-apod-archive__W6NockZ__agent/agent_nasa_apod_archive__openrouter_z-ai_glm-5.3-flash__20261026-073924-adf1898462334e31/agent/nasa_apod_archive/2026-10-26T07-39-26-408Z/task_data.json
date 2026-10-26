@@ -1,0 +1,23 @@
+{
+  "task": {
+    "id": "agent/nasa_apod_archive",
+    "instruction": "Using the NASA Astronomy Picture of the Day archive, open the entry for January 1, 2024 and report its title and who is credited for the image.",
+    "initUrl": "https://apod.nasa.gov/apod/archivepix.html",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent open the APOD entry dated 2024 January 1?",
+          "description": "Did the agent open the APOD entry dated 2024 January 1?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report the title and image credit as shown on that entry?",
+          "description": "Did the agent report the title and image credit as shown on that entry?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "The agent opened the NASA Astronomy Picture of the Day Archive page and attempted to locate the January 1, 2024 entry. It repeatedly tried (unsuccessfully) to fill in the Start date range filter fields (Month/Day/Year spinbuttons). It then typed \"2024-01-01\" into the search box and clicked Search, but the archive results continued to display the most recent entries (October 2026, sorted descending by publish date) — the January 1, 2024 entry was never located or opened. No title or image credit was ever retrieved or reported. The task was therefore not completed."
+}

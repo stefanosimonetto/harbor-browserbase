@@ -1,0 +1,44 @@
+{
+  "outcomeSuccess": true,
+  "processScore": 1,
+  "perCriterion": [
+    {
+      "criterion": "Is the form name input filled with 'John Smith'?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The Contact Form contains no single 'Name' input — it has separate First Name and Last Name textboxes. The agent entered 'John' into First Name and 'Smith' into Last Name, which together represent the full name 'John Smith' and is the only sensible way to fill this form. Both the post-action screenshot (step=2) and the final aria tree confirm First Name textbox = 'John' and Last Name textbox = 'Smith'.",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Is the form email input filled with 'john.smith@example.com'?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The Email textbox is confirmed to contain 'john.smith@example.com' in both the final screenshot (step=2) and the final aria tree ([0-16] textbox: Email with StaticText 'john.smith@example.com'). The value matches the requested email exactly.",
+      "evidenceInsufficient": false
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [],
+  "findings": [
+    {
+      "category": "rubric_quality",
+      "severity": "info",
+      "description": "Rubric Criterion 0 references a single 'form name input filled with John Smith', but the actual form has separate First Name and Last Name fields with no combined name input. Scoring required interpreting the split entry (First Name='John', Last Name='Smith') as satisfying the criterion, which is the intended real-world behavior."
+    }
+  ],
+  "rawSteps": {
+    "primaryIntent": "Fill the contact form on the iframe demo page with the name 'John Smith' and the email 'john.smith@example.com'.",
+    "reasoning": "The final page state (aria tree and screenshot) confirms First Name = 'John', Last Name = 'Smith', and Email = 'john.smith@example.com'. Since the form has separate First Name and Last Name fields rather than a single name input, splitting 'John Smith' across the two fields is the correct and only reasonable interpretation. The email was filled exactly as requested. Both rubric criteria are fully satisfied, so the task succeeded.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 2,
+    "totalMax": 2,
+    "evidenceImages": 3,
+    "evidenceTexts": 5,
+    "evidenceOriginalScreenshots": 3
+  }
+}

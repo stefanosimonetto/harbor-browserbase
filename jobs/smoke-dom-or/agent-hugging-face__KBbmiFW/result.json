@@ -1,0 +1,159 @@
+{
+    "id": "9903919c-f196-4d1a-bcde-215e8b950aa1",
+    "task_name": "browserbase/agent-hugging-face",
+    "trial_name": "agent-hugging-face__KBbmiFW",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/smoke-dom-or/agent-hugging-face__KBbmiFW",
+    "task_id": {
+        "path": "tasks\\agent-hugging-face"
+    },
+    "source": "tasks",
+    "task_checksum": "2bfb89a61e6abfb4723ebdc3681650ff9b70acee187a404b4b57e6684591e304",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-hugging-face",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-hugging-face__KBbmiFW",
+        "trials_dir": "jobs\\smoke-dom-or",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/google/gemini-3-flash-preview",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/google/gemini-2.5-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/google/gemini-3-flash-preview"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "create_session": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/google/gemini-3-flash-preview"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "104dad8f-91b2-4a60-9f70-1d6eefb4b964",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "google/gemini-3-flash-preview",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": {
+            "stagehand": {
+                "browserbase_session_id": "0eb227a3-9e15-435f-ac43-d6b92707210c",
+                "browserbase_session_url": "https://www.browserbase.com/sessions/0eb227a3-9e15-435f-ac43-d6b92707210c",
+                "browserbase_session_ids": [
+                    "0eb227a3-9e15-435f-ac43-d6b92707210c"
+                ],
+                "task_id": "agent/hugging_face",
+                "mode": "dom",
+                "trajectory_dir": "/logs/agent/trajectories/agent-hugging-face__KBbmiFW__agent/agent_hugging_face__openrouter_google_gemini-3-flash-preview__20261026-010743-a86da7ac3b94d44f/agent/hugging_face/2026-10-26T01-07-45-473Z",
+                "trajectory_root": "/logs/agent/trajectories/agent-hugging-face__KBbmiFW__agent",
+                "requested_trajectory_group": "agent-hugging-face__KBbmiFW__agent"
+            }
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0,
+            "outcome": 1.0,
+            "process": 0.0,
+            "process_measured": 1.0,
+            "criteria_earned_frac": 0.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-10-26T01:07:34.814822Z",
+    "finished_at": "2026-10-26T01:09:32.080659Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T01:07:34.846377Z",
+        "finished_at": "2026-10-26T01:07:39.163940Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T01:07:39.163940Z",
+        "finished_at": "2026-10-26T01:07:40.251475Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T01:07:40.251475Z",
+        "finished_at": "2026-10-26T01:09:26.606423Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-26T01:09:27.998848Z",
+        "finished_at": "2026-10-26T01:09:28.400618Z"
+    },
+    "step_results": null
+}

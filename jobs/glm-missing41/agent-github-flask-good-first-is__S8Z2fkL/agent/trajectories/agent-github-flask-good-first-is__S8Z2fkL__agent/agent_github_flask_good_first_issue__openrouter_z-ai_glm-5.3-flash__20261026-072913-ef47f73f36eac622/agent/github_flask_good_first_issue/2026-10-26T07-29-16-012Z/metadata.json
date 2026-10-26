@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/github_flask_good_first_issue",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "task": "agent/github_flask_good_first_issue",
+  "runId": "2026-10-26T07-29-16-012Z",
+  "runDir": "2026-10-26T07-29-16-012Z",
+  "attempt": 1,
+  "status": "complete"
+}

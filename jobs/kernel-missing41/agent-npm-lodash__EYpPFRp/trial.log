@@ -1,0 +1,11 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session tc88ncl9iy8betp72amj2emx
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/npm_lodash in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-npm-lodash__EYpPFRp__agent/agent_npm_lodash__openrouter_z-ai_glm-5.3-flash__20261026-072933-41689d65d2424119/agent/npm_lodash/2026-10-26T07-29-35-137Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=3 total=3 earned=3.0 max=3.0
+Deleted Kernel browser session tc88ncl9iy8betp72amj2emx
+Skipping unscrubbable trial output jobs\kernel-missing41\agent-npm-lodash__EYpPFRp\agent\trajectories\agent-npm-lodash__EYpPFRp__agent\agent_npm_lodash__openrouter_z-ai_glm-5.3-flash__20261026-072933-41689d65d2424119\agent\npm_lodash\2026-10-26T07-29-35-137Z\trajectory.json: 'charmap' codec can't decode byte 0x8f in position 1400: character maps to <undefined>

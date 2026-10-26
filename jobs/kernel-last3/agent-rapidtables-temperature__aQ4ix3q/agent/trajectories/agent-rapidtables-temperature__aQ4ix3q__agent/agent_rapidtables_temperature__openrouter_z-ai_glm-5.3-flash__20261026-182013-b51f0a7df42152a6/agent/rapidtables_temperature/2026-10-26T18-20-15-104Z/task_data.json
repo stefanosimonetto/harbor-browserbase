@@ -1,0 +1,85 @@
+{
+  "task": {
+    "id": "agent/rapidtables_temperature",
+    "instruction": "Using rapidtables.com's temperature converter, convert 100 degrees Fahrenheit to Celsius and report the result rounded to two decimal places.",
+    "initUrl": "https://www.rapidtables.com/convert/temperature/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent use the Fahrenheit to Celsius converter?",
+          "description": "Did the agent use the Fahrenheit to Celsius converter?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report approximately 37.78 degrees Celsius?",
+          "description": "Did the agent report approximately 37.78 degrees Celsius?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "The task was to use rapidtables.com's temperature converter to convert 100°F to Celsius and report the result rounded to two decimal places. Actions taken: navigated to the rapidtables temperature conversion page, selected Fahrenheit (°F) in the 'From' dropdown, typed '100' into the degrees textbox, and attempted to select Celsius (°C) in the 'To' dropdown. However, the final page state (via ARIA tree and screenshot) shows the 'To' dropdown still remained at '--' — the Celsius selection did not take effect. No conversion result was ever displayed or obtained (the result extraction returned null), and no result was reported rounded to two decimal places. The task was not completed successfully.",
+  "result": {
+    "outcomeSuccess": false,
+    "processScore": 0.25,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent use the Fahrenheit to Celsius converter?",
+        "maxPoints": 1,
+        "earnedPoints": 0.5,
+        "explanation": "",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report approximately 37.78 degrees Celsius?",
+        "maxPoints": 1,
+        "earnedPoints": null,
+        "explanation": "Verifier did not return a score for this criterion.",
+        "evidenceInsufficient": true
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [
+      "Did the agent report approximately 37.78 degrees Celsius?"
+    ],
+    "findings": [
+      {
+        "category": "agent_tool_usage",
+        "severity": "blocking",
+        "description": "The step-5 'select Celsius (°C)' action reported success, but the 'To' dropdown remained '--' in every subsequent screenshot, so the F-to-C conversion was never executed and no result existed to extract (extract at step 13 returned null)."
+      },
+      {
+        "category": "agent_strategy",
+        "severity": "warning",
+        "description": "Steps 6-12 consisted of seven consecutive ariaTree observations with no corrective action. Once the agent detected the 'To' dropdown was still '--', it should have retried the selection (e.g., clicking the Celsius option directly) instead of repeatedly re-observing and then giving up."
+      },
+      {
+        "category": "trajectory_capture",
+        "severity": "info",
+        "description": "The final trajectory state and post-run probe contain no aria tree ('no aria tree'), so final-state verification relies solely on the step-14 screenshots; screenshots clearly show the unselected 'To' dropdown, so the verdict is not affected."
+      }
+    ],
+    "firstPointOfFailure": {
+      "stepIndex": 5,
+      "errorCode": "2.2",
+      "category": "Hallucination",
+      "description": "The 'select Celsius (°C)' action reported success but the 'To' dropdown remained '--' in all subsequent screenshots, so the F-to-C conversion never ran; the agent then observed repeatedly without retrying."
+    },
+    "rawSteps": {
+      "primaryIntent": "Use rapidtables.com's temperature converter to convert 100 degrees Fahrenheit to Celsius and report the result rounded to two decimal places.",
+      "reasoning": "The agent navigated to the correct rapidtables temperature converter page, selected Fahrenheit (°F) as the source, and entered 100. However, the Celsius (°C) selection in the 'To' dropdown never took effect — despite the tool reporting success at step 5, all subsequent screenshots (steps 6-14) show the 'To' dropdown still set to '--'. The agent then spent seven consecutive observation steps without retrying the failed selection, the extract at step 13 returned null, and no conversion result was ever produced or reported. The agent's own final answer explicitly acknowledges the task was not completed and no rounded result (37.78) was delivered. This is a controllable failure: the Celsius option was visible and selectable in the dropdown, and the agent could have retried or used a click-based interaction.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 0.5,
+      "totalMax": 2,
+      "evidenceImages": 17,
+      "evidenceTexts": 16,
+      "evidenceOriginalScreenshots": 17
+    }
+  }
+}

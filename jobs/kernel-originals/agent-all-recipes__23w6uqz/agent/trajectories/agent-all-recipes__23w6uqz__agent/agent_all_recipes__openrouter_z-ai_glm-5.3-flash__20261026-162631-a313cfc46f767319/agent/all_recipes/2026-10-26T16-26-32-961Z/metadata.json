@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/all_recipes",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/all_recipes",
+  "runId": "2026-10-26T16-26-32-961Z",
+  "runDir": "2026-10-26T16-26-32-961Z",
+  "attempt": 1,
+  "status": "complete"
+}

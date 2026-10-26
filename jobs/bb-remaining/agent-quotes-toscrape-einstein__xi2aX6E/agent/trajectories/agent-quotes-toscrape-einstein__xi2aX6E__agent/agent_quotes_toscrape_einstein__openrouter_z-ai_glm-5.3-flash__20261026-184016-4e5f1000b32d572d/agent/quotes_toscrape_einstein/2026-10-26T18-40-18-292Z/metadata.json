@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/quotes_toscrape_einstein",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "task": "agent/quotes_toscrape_einstein",
+  "runId": "2026-10-26T18-40-18-292Z",
+  "runDir": "2026-10-26T18-40-18-292Z",
+  "attempt": 1,
+  "status": "complete"
+}

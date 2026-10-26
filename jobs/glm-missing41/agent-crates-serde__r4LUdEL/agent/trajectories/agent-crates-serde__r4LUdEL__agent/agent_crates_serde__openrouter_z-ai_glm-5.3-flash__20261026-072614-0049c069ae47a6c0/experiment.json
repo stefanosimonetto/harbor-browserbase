@@ -1,0 +1,11 @@
+{
+  "experiment": "agent/crates_serde",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "braintrustExperiment": "stagehand-dev [experimentName=agent/crates_serde]",
+  "braintrustExperimentId": null,
+  "braintrustExperimentUrl": null,
+  "braintrustProject": "stagehand-dev",
+  "braintrustProjectUrl": null,
+  "requestedExperimentName": "agent/crates_serde"
+}

@@ -1,0 +1,11 @@
+{
+  "experiment": "agent/demoqa_text_box",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "braintrustExperiment": "stagehand-dev [experimentName=agent/demoqa_text_box]",
+  "braintrustExperimentId": null,
+  "braintrustExperimentUrl": null,
+  "braintrustProject": "stagehand-dev",
+  "braintrustProjectUrl": null,
+  "requestedExperimentName": "agent/demoqa_text_box"
+}

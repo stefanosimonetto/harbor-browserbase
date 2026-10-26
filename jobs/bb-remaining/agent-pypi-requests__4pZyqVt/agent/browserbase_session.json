@@ -1,0 +1,10 @@
+{
+  "session_id": "5536e69d-4283-441c-b7dd-49ea34e52b2a",
+  "session_url": "https://www.browserbase.com/sessions/5536e69d-4283-441c-b7dd-49ea34e52b2a",
+  "debug_url": null,
+  "task_id": "agent/pypi_requests",
+  "mode": "dom",
+  "all_session_ids": [
+    "5536e69d-4283-441c-b7dd-49ea34e52b2a"
+  ]
+}

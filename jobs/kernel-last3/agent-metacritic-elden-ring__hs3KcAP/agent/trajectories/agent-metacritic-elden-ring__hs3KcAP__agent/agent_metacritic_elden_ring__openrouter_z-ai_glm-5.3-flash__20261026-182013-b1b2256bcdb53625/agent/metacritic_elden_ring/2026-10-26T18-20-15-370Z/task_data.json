@@ -1,0 +1,78 @@
+{
+  "task": {
+    "id": "agent/metacritic_elden_ring",
+    "instruction": "On Metacritic, find the game 'Elden Ring' and report its Metascore and its user score for any one platform, naming the platform.",
+    "initUrl": "https://www.metacritic.com/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent find the Elden Ring game page on Metacritic?",
+          "description": "Did the agent find the Elden Ring game page on Metacritic?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report a Metascore and a user score and name the platform?",
+          "description": "Did the agent report a Metascore and a user score and name the platform?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "Failed to execute task: Provider returned error",
+  "result": {
+    "outcomeSuccess": false,
+    "processScore": 0.5,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent find the Elden Ring game page on Metacritic?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The agent typed 'Elden Ring' into search, identified the correct game entry (Feb 25, 2022, PlayStation 5), and after click timeouts navigated directly to https://www.metacritic.com/game/elden-ring/, which loaded correctly. The game page was clearly found.",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report a Metascore and a user score and name the platform?",
+        "maxPoints": 1,
+        "earnedPoints": 0,
+        "explanation": "The required information (Metascore 96, user score 8.4, platform PS5) was visible on the final page, but the agent never reported any of it — its final output was an error message. The deliverable was not produced, so the criterion fails.",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "agent_strategy",
+        "severity": "blocking",
+        "description": "Agent reached the correct Elden Ring page with all required data (Metascore 96, User Score 8.4, PS5) fully visible in the final screenshot, but ended the run with a provider error message instead of reporting the requested values.",
+        "suggestedAction": "Add a final extract/observe step on the loaded page before producing the answer, and attempt recovery (e.g., retry or read visible content) rather than terminating with an error when a transient tool failure occurs.",
+        "relatedSteps": [
+          6,
+          7
+        ]
+      }
+    ],
+    "firstPointOfFailure": {
+      "stepIndex": 7,
+      "errorCode": "3.3",
+      "category": "Execution",
+      "description": "Agent terminated with 'Failed to execute task: Provider returned error' despite the Elden Ring page being loaded with all required scores (Metascore 96, user score 8.4, PS5) visible on screen."
+    },
+    "rawSteps": {
+      "primaryIntent": "Find Elden Ring on Metacritic and report its Metascore, user score, and platform for one platform.",
+      "reasoning": "The agent successfully reached the Elden Ring game page on Metacritic (final screenshot at step 7 clearly shows Metascore 96, User Score 8.4, and PS5 platform). However, the agent's final answer was 'Failed to execute task: Provider returned error' — it never reported the Metascore, user score, or platform despite all required information being visible on the page it had reached. Criterion 0 is satisfied (page found), but criterion 1 fails because the deliverable was never produced. This is an incomplete delivery: the agent had all necessary information on-screen but terminated with an error message instead of extracting and reporting the values.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 1,
+      "totalMax": 2,
+      "evidenceImages": 10,
+      "evidenceTexts": 12,
+      "evidenceOriginalScreenshots": 10
+    }
+  }
+}

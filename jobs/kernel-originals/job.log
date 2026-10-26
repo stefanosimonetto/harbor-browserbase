@@ -1,0 +1,131 @@
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session cnndqou141bn1ztsi780bkpm
+Checking for the Stagehand evals CLI
+Created Kernel browser session hgl4srmq1gvs0pmz6g87slwi
+Checking for the Stagehand evals CLI
+Created Kernel browser session bw1stx1qcpkuuult3t7viqzf
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/all_recipes in dom mode
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/github_react_version in dom mode
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/arxiv_gpt_report in dom mode
+Deleted Kernel browser session bw1stx1qcpkuuult3t7viqzf
+Deleted Kernel browser session hgl4srmq1gvs0pmz6g87slwi
+Deleted Kernel browser session cnndqou141bn1ztsi780bkpm
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Cleanup interrupted for agent-all-recipes__23w6uqz, but agent environment stop is shielded and will complete
+Cleanup interrupted for agent-github-react-version__yEaWkNP, but agent environment stop is shielded and will complete
+Skipping existing trial directory jobs\kernel-originals\agent-all-recipes__23w6uqz because result.json is empty
+Skipping existing trial directory jobs\kernel-originals\agent-arxiv-gpt-report__X9qtsof because result.json is empty
+Skipping existing trial directory jobs\kernel-originals\agent-github-react-version__yEaWkNP because result.json is empty
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session j5r9yo744nqvk3ksl7xqc9wn
+Checking for the Stagehand evals CLI
+Created Kernel browser session greqczxt3o0wasjo4c0esdy8
+Checking for the Stagehand evals CLI
+Created Kernel browser session mt1fxobliuz4a1knlzepkj9c
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/all_recipes in dom mode
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/arxiv_gpt_report in dom mode
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/github_react_version in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-github-react-version__wfznkg2__agent/agent_github_react_version__openrouter_z-ai_glm-5.3-flash__20261026-162930-0cb2714f2f1950de/agent/github_react_version/2026-10-26T16-29-31-726Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=1.0 max=1.0
+Deleted Kernel browser session mt1fxobliuz4a1knlzepkj9c
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session ttec921vcp2un6ev5obri296
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/github in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-arxiv-gpt-report__uG6BhZc__agent/agent_arxiv_gpt_report__openrouter_z-ai_glm-5.3-flash__20261026-162929-1a735cc46ffea716/agent/arxiv_gpt_report/2026-10-26T16-29-30-819Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=1.0 max=1.0
+Deleted Kernel browser session greqczxt3o0wasjo4c0esdy8
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session gkp927dl2uy9x55zgkuis2z9
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/hugging_face in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-github-ruby-repo__brdSdDA__agent/agent_github__openrouter_z-ai_glm-5.3-flash__20261026-163035-517fcf00b3e9bff4/agent/github/2026-10-26T16-30-38-152Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=1.0 max=1.0
+Deleted Kernel browser session ttec921vcp2un6ev5obri296
+Skipping unscrubbable trial output jobs\kernel-originals\agent-github-ruby-repo__brdSdDA\agent\trajectories\agent-github-ruby-repo__brdSdDA__agent\agent_github__openrouter_z-ai_glm-5.3-flash__20261026-163035-517fcf00b3e9bff4\agent\github\2026-10-26T16-30-38-152Z\trajectory.json: 'charmap' codec can't decode byte 0x8d in position 13996: character maps to <undefined>
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session uazmigyvb45md464vl4wgn7l
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/iframe_form in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-hugging-face__XWp8f9n__agent/agent_hugging_face__openrouter_z-ai_glm-5.3-flash__20261026-163057-72c7fb8e5b3e5fe7/agent/hugging_face/2026-10-26T16-30-59-523Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=1.0 max=1.0
+Deleted Kernel browser session gkp927dl2uy9x55zgkuis2z9
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session q7teg9e23uxh94bauszgc4iv
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/nba_trades in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-iframe-form__4FmM6KD__agent/agent_iframe_form__openrouter_z-ai_glm-5.3-flash__20261026-163203-65f397ba43d80f0c/agent/iframe_form/2026-10-26T16-32-04-266Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Deleted Kernel browser session uazmigyvb45md464vl4wgn7l
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session tsxenq2tbukz01w1uw7zqwx1
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/sf_library_card in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-sf-library-card__LXX8UG7__agent/agent_sf_library_card__openrouter_z-ai_glm-5.3-flash__20261026-163321-46bb485b10c4f5d3/agent/sf_library_card/2026-10-26T16-33-23-152Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=1.0 max=1.0
+Deleted Kernel browser session tsxenq2tbukz01w1uw7zqwx1
+Skipping unscrubbable trial output jobs\kernel-originals\agent-sf-library-card__LXX8UG7\agent\trajectories\agent-sf-library-card__LXX8UG7__agent\agent_sf_library_card__openrouter_z-ai_glm-5.3-flash__20261026-163321-46bb485b10c4f5d3\agent\sf_library_card\2026-10-26T16-33-23-152Z\trajectory.json: 'charmap' codec can't decode byte 0x81 in position 7260: character maps to <undefined>
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session cg4qywtheupwhpsbhocsrqx7
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/columbia_tuition in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-all-recipes__kTjWYdz__agent/agent_all_recipes__openrouter_z-ai_glm-5.3-flash__20261026-162929-44973b2867850f58/agent/all_recipes/2026-10-26T16-29-31-817Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=1.0 max=1.0
+Deleted Kernel browser session j5r9yo744nqvk3ksl7xqc9wn
+Skipping unscrubbable trial output jobs\kernel-originals\agent-all-recipes__kTjWYdz\agent\trajectories\agent-all-recipes__kTjWYdz__agent\agent_all_recipes__openrouter_z-ai_glm-5.3-flash__20261026-162929-44973b2867850f58\agent\all_recipes\2026-10-26T16-29-31-817Z\trajectory.json: 'charmap' codec can't decode byte 0x9d in position 235901: character maps to <undefined>
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-nba-trades__qb2duVZ__agent/agent_nba_trades__openrouter_z-ai_glm-5.3-flash__20261026-163235-e17049ba9146a0bb/agent/nba_trades/2026-10-26T16-32-36-747Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=1.0 max=1.0
+Deleted Kernel browser session q7teg9e23uxh94bauszgc4iv
+Stagehand trajectory flushed at /logs/agent/trajectories/wtb-smoke__bKZRD6W__agent/agent_columbia_tuition__openrouter_z-ai_glm-5.3-flash__20261026-163449-2ba86182cbb8a19c/agent/columbia_tuition/2026-10-26T16-34-50-507Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Trial wtb-smoke__bKZRD6W failed: Stagehand synthesized a judge-failure result matching 'Fused judgment LLM call failed; returning evidence-insufficient result.' for judge model 'openrouter/z-ai/glm-5.3-flash' and trajectory '/logs/agent/trajectories/wtb-smoke__bKZRD6W__agent/agent_columbia_tuition__openrouter_z-ai_glm-5.3-flash__20261026-163449-2ba86182cbb8a19c/agent/columbia_tuition/2026-10-26T16-34-50-507Z'. A retired or 404-ing judge model is the most likely cause; select a healthy model and retry verification.
+Deleted Kernel browser session cg4qywtheupwhpsbhocsrqx7
+Skipping unscrubbable trial output jobs\kernel-originals\wtb-smoke__bKZRD6W\agent\trajectories\wtb-smoke__bKZRD6W__agent\agent_columbia_tuition__openrouter_z-ai_glm-5.3-flash__20261026-163449-2ba86182cbb8a19c\agent\columbia_tuition\2026-10-26T16-34-50-507Z\trajectory.json: 'charmap' codec can't decode byte 0x9d in position 22741: character maps to <undefined>
+Not retrying trial because the maximum number of retries has been reached

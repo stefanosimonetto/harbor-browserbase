@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/herokuapp_dropdown",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/herokuapp_dropdown",
+  "runId": "2026-10-26T07-14-13-422Z",
+  "runDir": "2026-10-26T07-14-13-422Z",
+  "attempt": 1,
+  "status": "complete"
+}

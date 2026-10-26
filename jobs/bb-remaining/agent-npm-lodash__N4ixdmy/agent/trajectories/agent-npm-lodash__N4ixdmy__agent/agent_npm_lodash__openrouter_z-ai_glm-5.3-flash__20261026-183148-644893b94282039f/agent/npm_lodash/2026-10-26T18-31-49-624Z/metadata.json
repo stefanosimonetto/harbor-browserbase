@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/npm_lodash",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "task": "agent/npm_lodash",
+  "runId": "2026-10-26T18-31-49-624Z",
+  "runDir": "2026-10-26T18-31-49-624Z",
+  "attempt": 1,
+  "status": "complete"
+}

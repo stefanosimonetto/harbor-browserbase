@@ -1,0 +1,155 @@
+{
+    "id": "003c4b4e-ef04-471c-8d2a-59a082fe60cb",
+    "task_name": "browserbase/agent-huggingface-bert-license",
+    "trial_name": "agent-huggingface-bert-license__mLiLpBz",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/kernel-missing41/agent-huggingface-bert-license__mLiLpBz",
+    "task_id": {
+        "path": "tasks\\agent-huggingface-bert-license"
+    },
+    "source": "tasks",
+    "task_checksum": "febc312922226723016cd396970a738c2ed7631f5fecaac1fd7d00b446cc2f4b",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-huggingface-bert-license",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-huggingface-bert-license__mLiLpBz",
+        "trials_dir": "jobs\\kernel-missing41",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/z-ai/glm-5.3-flash",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.kernel_env:KernelEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "timeout_seconds": 300,
+                "headless": false,
+                "stealth": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "04c27338-02b2-4ba1-9dd2-d4789071d377",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "z-ai/glm-5.3-flash",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": {
+            "stagehand": {
+                "kernel_session_id": "qk26xjvlvrw0w3dllm6jycjh",
+                "task_id": "agent/huggingface_bert_license",
+                "mode": "dom",
+                "trajectory_dir": "/logs/agent/trajectories/agent-huggingface-bert-license__mLiLpBz__agent/agent_huggingface_bert_license__openrouter_z-ai_glm-5.3-flash__20261026-071524-84f8a9215aae1a59/agent/huggingface_bert_license/2026-10-26T07-15-26-698Z",
+                "trajectory_root": "/logs/agent/trajectories/agent-huggingface-bert-license__mLiLpBz__agent",
+                "requested_trajectory_group": "agent-huggingface-bert-license__mLiLpBz__agent"
+            }
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0,
+            "outcome": 1.0,
+            "process": 1.0,
+            "process_measured": 1.0,
+            "criteria_earned_frac": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-10-26T07:15:16.107390Z",
+    "finished_at": "2026-10-26T07:16:23.158083Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T07:15:16.129265Z",
+        "finished_at": "2026-10-26T07:15:20.920969Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T07:15:20.920969Z",
+        "finished_at": "2026-10-26T07:15:22.186710Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T07:15:22.186710Z",
+        "finished_at": "2026-10-26T07:16:17.561088Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-26T07:16:18.689469Z",
+        "finished_at": "2026-10-26T07:16:19.147350Z"
+    },
+    "step_results": null
+}

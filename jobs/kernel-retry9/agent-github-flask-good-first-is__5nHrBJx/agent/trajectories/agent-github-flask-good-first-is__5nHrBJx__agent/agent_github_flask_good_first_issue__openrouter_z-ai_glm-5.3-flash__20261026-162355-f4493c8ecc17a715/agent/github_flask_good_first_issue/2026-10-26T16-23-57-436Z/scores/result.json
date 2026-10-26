@@ -1,0 +1,47 @@
+{
+  "outcomeSuccess": false,
+  "processScore": 0,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent filter pallets/flask issues by the 'good first issue' label?",
+      "maxPoints": 1,
+      "earnedPoints": 0,
+      "explanation": "Fused judgment call failed for this criterion.",
+      "evidenceInsufficient": true
+    },
+    {
+      "criterion": "Did the agent report a count of open issues with that label based on the filtered page?",
+      "maxPoints": 1,
+      "earnedPoints": 0,
+      "explanation": "Fused judgment call failed for this criterion.",
+      "evidenceInsufficient": true
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [
+    "Did the agent filter pallets/flask issues by the 'good first issue' label?",
+    "Did the agent report a count of open issues with that label based on the filtered page?"
+  ],
+  "findings": [
+    {
+      "category": "verifier_uncertainty",
+      "severity": "warning",
+      "description": "The fused judgment call did not return a parseable response."
+    }
+  ],
+  "rawSteps": {
+    "primaryIntent": "On GitHub, find how many open issues in the pallets/flask repository currently have the 'good first issue' label (or report that there are none), and list the title of the most recent one if any exist.",
+    "reasoning": "Fused judgment LLM call failed; returning evidence-insufficient result.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 0,
+    "totalMax": 2,
+    "evidenceImages": 11,
+    "evidenceTexts": 18,
+    "evidenceOriginalScreenshots": 11
+  }
+}

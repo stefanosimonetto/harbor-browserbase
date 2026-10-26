@@ -1,0 +1,11 @@
+{
+  "experiment": "agent/sf_library_card",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "braintrustExperiment": "stagehand-dev [experimentName=agent/sf_library_card]",
+  "braintrustExperimentId": null,
+  "braintrustExperimentUrl": null,
+  "braintrustProject": "stagehand-dev",
+  "braintrustProjectUrl": null,
+  "requestedExperimentName": "agent/sf_library_card"
+}

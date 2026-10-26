@@ -1,0 +1,37 @@
+{
+  "outcomeSuccess": true,
+  "processScore": 1,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent report 9 November 1989 as the date the Berlin Wall fell?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The on-page infobox and lead text explicitly show 9 November 1989 as the date, and the agent's final answer reports exactly this date. Criterion fully satisfied.",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Did the agent identify Margaret Thatcher as the UK Prime Minister at that time?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The extract tool output from the Wikipedia list of UK prime ministers identifies Margaret Thatcher with a premiership that includes 9 November 1989, and the agent's final answer correctly names her. Criterion fully satisfied.",
+      "evidenceInsufficient": false
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [],
+  "rawSteps": {
+    "primaryIntent": "Using Wikipedia, find the date the Berlin Wall fell and identify who was UK Prime Minister on that date, reporting both facts.",
+    "reasoning": "The agent navigated to the Fall of the Berlin Wall article, whose infobox and lead text (visible in screenshots at steps 2–3) confirm the date 9 November 1989, which the agent correctly reported. It then went to the List of prime ministers of the United Kingdom article and ran an extract (step 5) that returned Margaret Thatcher with a premiership covering 9 November 1989 (term ending 28 November 1990). The final answer reports both the date (9 November 1989) and the Prime Minister (Margaret Thatcher), consistent with the rubric criteria and the evidence. The trajectory stayed on Wikipedia as required, and both facts were independently corroborated. No blockers, hallucinations, or errors are evident.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 2,
+    "totalMax": 2,
+    "evidenceImages": 7,
+    "evidenceTexts": 12,
+    "evidenceOriginalScreenshots": 7
+  }
+}

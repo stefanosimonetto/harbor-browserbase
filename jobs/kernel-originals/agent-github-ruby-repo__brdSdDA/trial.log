@@ -1,0 +1,11 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session ttec921vcp2un6ev5obri296
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/github in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-github-ruby-repo__brdSdDA__agent/agent_github__openrouter_z-ai_glm-5.3-flash__20261026-163035-517fcf00b3e9bff4/agent/github/2026-10-26T16-30-38-152Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=1.0 max=1.0
+Deleted Kernel browser session ttec921vcp2un6ev5obri296
+Skipping unscrubbable trial output jobs\kernel-originals\agent-github-ruby-repo__brdSdDA\agent\trajectories\agent-github-ruby-repo__brdSdDA__agent\agent_github__openrouter_z-ai_glm-5.3-flash__20261026-163035-517fcf00b3e9bff4\agent\github\2026-10-26T16-30-38-152Z\trajectory.json: 'charmap' codec can't decode byte 0x8d in position 13996: character maps to <undefined>

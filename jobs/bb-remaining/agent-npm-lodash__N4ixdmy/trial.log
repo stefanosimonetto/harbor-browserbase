@@ -1,0 +1,10 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/npm_lodash in dom mode
+Captured Browserbase session b9a8f156-6b3f-4e04-8f7a-680634d9243b for Stagehand task agent/npm_lodash in dom mode at jobs\bb-remaining\agent-npm-lodash__N4ixdmy\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-npm-lodash__N4ixdmy__agent/agent_npm_lodash__openrouter_z-ai_glm-5.3-flash__20261026-183148-644893b94282039f/agent/npm_lodash/2026-10-26T18-31-49-624Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=3 total=3 earned=3.0 max=3.0
+Skipping unscrubbable trial output jobs\bb-remaining\agent-npm-lodash__N4ixdmy\agent\trajectories\agent-npm-lodash__N4ixdmy__agent\agent_npm_lodash__openrouter_z-ai_glm-5.3-flash__20261026-183148-644893b94282039f\agent\npm_lodash\2026-10-26T18-31-49-624Z\trajectory.json: 'charmap' codec can't decode byte 0x8f in position 2250: character maps to <undefined>

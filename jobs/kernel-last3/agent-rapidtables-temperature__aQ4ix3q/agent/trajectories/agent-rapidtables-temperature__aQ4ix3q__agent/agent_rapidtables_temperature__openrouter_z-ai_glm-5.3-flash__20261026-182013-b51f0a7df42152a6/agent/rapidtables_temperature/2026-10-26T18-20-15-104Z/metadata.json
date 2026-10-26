@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/rapidtables_temperature",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/rapidtables_temperature",
+  "runId": "2026-10-26T18-20-15-104Z",
+  "runDir": "2026-10-26T18-20-15-104Z",
+  "attempt": 1,
+  "status": "complete"
+}

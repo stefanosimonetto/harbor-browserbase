@@ -1,0 +1,62 @@
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session wurgg2l68m40bl2c8ndv2aa1
+Checking for the Stagehand evals CLI
+Created Kernel browser session gw4hltaka5zo7bnf7wgjff6r
+Checking for the Stagehand evals CLI
+Created Kernel browser session cmvm96yz1vzdybecbraroz1n
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/herokuapp_checkboxes in dom mode
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/httpbin_pizza_form in dom mode
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/github_flask_good_first_issue in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-httpbin-pizza-form__CGhTDAD__agent/agent_httpbin_pizza_form__openrouter_z-ai_glm-5.3-flash__20261026-162355-88567f28de4e604f/agent/httpbin_pizza_form/2026-10-26T16-23-56-692Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Trial agent-httpbin-pizza-form__CGhTDAD failed: Stagehand synthesized a judge-failure result matching 'Fused judgment LLM call failed; returning evidence-insufficient result.' for judge model 'openrouter/z-ai/glm-5.3-flash' and trajectory '/logs/agent/trajectories/agent-httpbin-pizza-form__CGhTDAD__agent/agent_httpbin_pizza_form__openrouter_z-ai_glm-5.3-flash__20261026-162355-88567f28de4e604f/agent/httpbin_pizza_form/2026-10-26T16-23-56-692Z'. A retired or 404-ing judge model is the most likely cause; select a healthy model and retry verification.
+Deleted Kernel browser session gw4hltaka5zo7bnf7wgjff6r
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-github-flask-good-first-is__5nHrBJx__agent/agent_github_flask_good_first_issue__openrouter_z-ai_glm-5.3-flash__20261026-162355-f4493c8ecc17a715/agent/github_flask_good_first_issue/2026-10-26T16-23-57-436Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Trial agent-github-flask-good-first-is__5nHrBJx failed: Stagehand synthesized a judge-failure result matching 'Fused judgment LLM call failed; returning evidence-insufficient result.' for judge model 'openrouter/z-ai/glm-5.3-flash' and trajectory '/logs/agent/trajectories/agent-github-flask-good-first-is__5nHrBJx__agent/agent_github_flask_good_first_issue__openrouter_z-ai_glm-5.3-flash__20261026-162355-f4493c8ecc17a715/agent/github_flask_good_first_issue/2026-10-26T16-23-57-436Z'. A retired or 404-ing judge model is the most likely cause; select a healthy model and retry verification.
+Deleted Kernel browser session wurgg2l68m40bl2c8ndv2aa1
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-herokuapp-checkboxes__JwYRFMT__agent/agent_herokuapp_checkboxes__openrouter_z-ai_glm-5.3-flash__20261026-162355-b4d17b2f5169791f/agent/herokuapp_checkboxes/2026-10-26T16-23-56-753Z
+Collecting main service artifacts
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+reward source: persisted scores/result.json
+Trial agent-herokuapp-checkboxes__JwYRFMT failed: Stagehand synthesized a judge-failure result matching 'Fused judgment LLM call failed; returning evidence-insufficient result.' for judge model 'openrouter/z-ai/glm-5.3-flash' and trajectory '/logs/agent/trajectories/agent-herokuapp-checkboxes__JwYRFMT__agent/agent_herokuapp_checkboxes__openrouter_z-ai_glm-5.3-flash__20261026-162355-b4d17b2f5169791f/agent/herokuapp_checkboxes/2026-10-26T16-23-56-753Z'. A retired or 404-ing judge model is the most likely cause; select a healthy model and retry verification.
+Deleted Kernel browser session cmvm96yz1vzdybecbraroz1n
+Skipping unscrubbable trial output jobs\kernel-retry9\agent-github-flask-good-first-is__5nHrBJx\agent\trajectories\agent-github-flask-good-first-is__5nHrBJx__agent\agent_github_flask_good_first_issue__openrouter_z-ai_glm-5.3-flash__20261026-162355-f4493c8ecc17a715\agent\github_flask_good_first_issue\2026-10-26T16-23-57-436Z\trajectory.json: 'charmap' codec can't decode byte 0x9d in position 3003: character maps to <undefined>
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Created Kernel browser session ep1n9xs5epbaj601cgvjqyci
+Checking for the Stagehand evals CLI
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session z3iwhzqvc1e2bwass08l7s57
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/metacritic_elden_ring in dom mode
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/nasa_apod_archive in dom mode
+Created Kernel browser session y1mdf2y2o8g8adpagly5af2h
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/ns_enschede_amsterdam in dom mode
+Deleted Kernel browser session ep1n9xs5epbaj601cgvjqyci
+Deleted Kernel browser session z3iwhzqvc1e2bwass08l7s57
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Cleanup interrupted for agent-nasa-apod-archive__r5fXiFX, but agent environment stop is shielded and will complete
+Trial agent-ns-enschede-amsterdam__MGNN5PA cancelled
+Collecting main service artifacts
+Deleted Kernel browser session y1mdf2y2o8g8adpagly5af2h

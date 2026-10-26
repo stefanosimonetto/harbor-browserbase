@@ -1,0 +1,102 @@
+{
+  "task": {
+    "id": "agent/openlibrary_dune",
+    "instruction": "On Open Library, search for the novel 'Dune' by Frank Herbert and report the year it was first published and how many editions Open Library lists for it.",
+    "initUrl": "https://openlibrary.org/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent find the work 'Dune' by Frank Herbert on Open Library?",
+          "description": "Did the agent find the work 'Dune' by Frank Herbert on Open Library?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report 1965 as the first publication year?",
+          "description": "Did the agent report 1965 as the first publication year?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report a number of editions taken from the Open Library page?",
+          "description": "Did the agent report a number of editions taken from the Open Library page?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "The task was to search Open Library for 'Dune' by Frank Herbert and report (1) the year it was first published and (2) how many editions Open Library lists for it. Actions taken: navigated to Open Library's search page with the query \"Dune Frank Herbert\", clicked through to the book's title page, and made multiple attempts to extract the publication year and edition count from the page. Outcome: all extraction attempts failed (returned null/empty results), and the page at one point displayed a \"Human Verification\" challenge, indicating automated access was being blocked. As a result, neither the first publication year nor the number of editions was ever successfully retrieved or reported to the user. The user was instead told to check the page manually. Since the required data points were never obtained, the task was not completed successfully.",
+  "result": {
+    "outcomeSuccess": false,
+    "processScore": 0.3333333333333333,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent find the work 'Dune' by Frank Herbert on Open Library?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The agent clearly found the correct work 'Dune' by Frank Herbert on Open Library — it appears as the first search result and the agent proceeded to its work page. Full credit.",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report 1965 as the first publication year?",
+        "maxPoints": 1,
+        "earnedPoints": 0,
+        "explanation": "Although 1965 was visible in the screenshots the agent captured, the agent never read or reported it — all extraction attempts against the CAPTCHA-blocked work page returned null, and the final answer explicitly concedes the data was not obtained. No credit for reporting the year.",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report a number of editions taken from the Open Library page?",
+        "maxPoints": 1,
+        "earnedPoints": 0,
+        "explanation": "The edition count (155) was visible on the search results page the agent had already captured, but the agent never reported any number to the user. No credit.",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "agent_strategy",
+        "severity": "blocking",
+        "description": "The agent had both required data points ('First published in 1965', '155 editions, 18 ebooks') visible in the search results page at step 1-2, but ignored them and instead navigated to the work page, which was blocked by a CAPTCHA. It then made 9 repeated extract attempts against the blocked page rather than falling back to the already-captured search page content.",
+        "suggestedAction": "When data is visible in search results (which surface 'First published in X' and 'N editions'), extract it directly from that page instead of navigating deeper; if a page is CAPTCHA-blocked, retry from a known-good cached state.",
+        "relatedSteps": [
+          1,
+          3,
+          5,
+          13
+        ]
+      },
+      {
+        "category": "trajectory_capture",
+        "severity": "warning",
+        "description": "The evidence set for Criteria 1 and 2 only includes the step-1 search-results screenshot; the search screenshot actually contains ground-truth values (1965, 155 editions), which makes it clear the failure was delivery rather than data availability.",
+        "suggestedAction": "Ensure screenshots after each extract attempt are attached so the null extraction results can be verified against page state.",
+        "relatedSteps": [
+          5,
+          13
+        ]
+      }
+    ],
+    "firstPointOfFailure": {
+      "stepIndex": 13,
+      "errorCode": "3.3",
+      "category": "Execution & Strategy",
+      "description": "Agent had both required data points (1965, 155 editions) visible in the search-results page it captured at step 1-2, but after the work page was CAPTCHA-blocked it never fell back to that data and delivered a final answer containing neither the year nor the edition count."
+    },
+    "rawSteps": {
+      "primaryIntent": "Search Open Library for the novel 'Dune' by Frank Herbert and report its first publication year and the number of editions Open Library lists for it.",
+      "reasoning": "The agent successfully located the work 'Dune' by Frank Herbert (top search result, work OL893414W), and the search results page clearly displayed 'First published in 1965' and '155 editions, 18 ebooks' (visible in the step 1-2 screenshots). However, the agent then clicked through to the work page, which triggered a Human Verification CAPTCHA that blocked all subsequent extract attempts. Critically, the agent already had both required data points visible on the search results page it had just captured, but never read them from that page. Its final answer explicitly admits no data was retrieved and tells the user to check manually, so neither the year nor the edition count was ever reported.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 1,
+      "totalMax": 3,
+      "evidenceImages": 15,
+      "evidenceTexts": 20,
+      "evidenceOriginalScreenshots": 15
+    }
+  }
+}

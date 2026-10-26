@@ -1,0 +1,159 @@
+{
+    "id": "71a35255-b9b7-44ac-8aab-eb1e6b95113a",
+    "task_name": "browserbase/agent-github-react-version",
+    "trial_name": "agent-github-react-version__S4pmAtQ",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/glm-missing41/agent-github-react-version__S4pmAtQ",
+    "task_id": {
+        "path": "tasks\\agent-github-react-version"
+    },
+    "source": "tasks",
+    "task_checksum": "abb5cfde3b35471a2cae0a41ba157b079ad4d911b0142fa4f3bda80da242a3a3",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-github-react-version",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-github-react-version__S4pmAtQ",
+        "trials_dir": "jobs\\glm-missing41",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/z-ai/glm-5.3-flash",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "create_session": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "7341f028-a0ee-498f-b02f-3c014d4567ef",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "z-ai/glm-5.3-flash",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": {
+            "stagehand": {
+                "browserbase_session_id": "2dad9ece-4690-40fd-994b-83190978a3e1",
+                "browserbase_session_url": "https://www.browserbase.com/sessions/2dad9ece-4690-40fd-994b-83190978a3e1",
+                "browserbase_session_ids": [
+                    "2dad9ece-4690-40fd-994b-83190978a3e1"
+                ],
+                "task_id": "agent/github_react_version",
+                "mode": "dom",
+                "trajectory_dir": "/logs/agent/trajectories/agent-github-react-version__S4pmAtQ__agent/agent_github_react_version__openrouter_z-ai_glm-5.3-flash__20261026-073026-d8187cea2a97d789/agent/github_react_version/2026-10-26T07-30-30-477Z",
+                "trajectory_root": "/logs/agent/trajectories/agent-github-react-version__S4pmAtQ__agent",
+                "requested_trajectory_group": "agent-github-react-version__S4pmAtQ__agent"
+            }
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0,
+            "outcome": 1.0,
+            "process": 1.0,
+            "process_measured": 1.0,
+            "criteria_earned_frac": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-10-26T07:30:12.928714Z",
+    "finished_at": "2026-10-26T07:31:04.749376Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T07:30:12.973174Z",
+        "finished_at": "2026-10-26T07:30:19.131919Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T07:30:19.131919Z",
+        "finished_at": "2026-10-26T07:30:20.794910Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T07:30:20.794910Z",
+        "finished_at": "2026-10-26T07:30:58.162407Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-26T07:31:00.071064Z",
+        "finished_at": "2026-10-26T07:31:00.727565Z"
+    },
+    "step_results": null
+}

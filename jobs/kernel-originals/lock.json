@@ -1,0 +1,551 @@
+{
+    "schema_version": 3,
+    "created_at": "2026-10-26T16:26:15.231559Z",
+    "harbor": {
+        "version": "0.25.0",
+        "is_editable": false
+    },
+    "n_concurrent_trials": 3,
+    "retry": {
+        "max_retries": 0,
+        "exclude_exceptions": [
+            "RewardFileEmptyError",
+            "ModelNotFoundError",
+            "ApiUsageLimitError",
+            "RewardFileNotFoundError",
+            "UnsupportedModelParametersError",
+            "VerifierTimeoutError",
+            "VerifierOutputParseError",
+            "AgentAuthenticationError",
+            "AgentSafetyRefusalError",
+            "AgentTimeoutError"
+        ],
+        "wait_multiplier": 1.0,
+        "min_wait_sec": 1.0,
+        "max_wait_sec": 60.0
+    },
+    "trials": [
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "agent-all-recipes",
+                "type": "local",
+                "digest": "sha256:88d14eaed30062e3ca5aac78ff81bc205d3ac171345f2b7ae441fa3a4cc05024",
+                "source": "tasks",
+                "path": "tasks\\agent-all-recipes"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/z-ai/glm-5.3-flash",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.kernel_env:KernelEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "timeout_seconds": 300,
+                    "headless": false,
+                    "stealth": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/z-ai/glm-5.3-flash"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "agent-arxiv-gpt-report",
+                "type": "local",
+                "digest": "sha256:a4abf08a80d5e9e3db75d41253fd37a8b775141878f77682877e3db0563c74b5",
+                "source": "tasks",
+                "path": "tasks\\agent-arxiv-gpt-report"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/z-ai/glm-5.3-flash",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.kernel_env:KernelEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "timeout_seconds": 300,
+                    "headless": false,
+                    "stealth": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/z-ai/glm-5.3-flash"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "agent-github-react-version",
+                "type": "local",
+                "digest": "sha256:62ed5b87b1300e23a54f884202e27fb5046e044161962bb087913d6e49b2be7e",
+                "source": "tasks",
+                "path": "tasks\\agent-github-react-version"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/z-ai/glm-5.3-flash",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.kernel_env:KernelEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "timeout_seconds": 300,
+                    "headless": false,
+                    "stealth": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/z-ai/glm-5.3-flash"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "agent-github-ruby-repo",
+                "type": "local",
+                "digest": "sha256:4c6d2a039b4600880b4506f799d03f5d1e7cf0446cf8038db19af057c9bf5c5b",
+                "source": "tasks",
+                "path": "tasks\\agent-github-ruby-repo"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/z-ai/glm-5.3-flash",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.kernel_env:KernelEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "timeout_seconds": 300,
+                    "headless": false,
+                    "stealth": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/z-ai/glm-5.3-flash"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "agent-hugging-face",
+                "type": "local",
+                "digest": "sha256:5383105bdc2c9fa8b157bad4dc70ba2a524b649f3183d2785a3244adec041aaf",
+                "source": "tasks",
+                "path": "tasks\\agent-hugging-face"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/z-ai/glm-5.3-flash",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.kernel_env:KernelEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "timeout_seconds": 300,
+                    "headless": false,
+                    "stealth": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/z-ai/glm-5.3-flash"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "agent-iframe-form",
+                "type": "local",
+                "digest": "sha256:68ad167135f124764fbf5f6550981586d9785753e11a77a82a768337acbe42eb",
+                "source": "tasks",
+                "path": "tasks\\agent-iframe-form"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/z-ai/glm-5.3-flash",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.kernel_env:KernelEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "timeout_seconds": 300,
+                    "headless": false,
+                    "stealth": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/z-ai/glm-5.3-flash"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "agent-nba-trades",
+                "type": "local",
+                "digest": "sha256:1a27e0686e3108179663a4da361ebcff35f106111395e4d8efb0d211301a14cf",
+                "source": "tasks",
+                "path": "tasks\\agent-nba-trades"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/z-ai/glm-5.3-flash",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.kernel_env:KernelEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "timeout_seconds": 300,
+                    "headless": false,
+                    "stealth": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/z-ai/glm-5.3-flash"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "agent-sf-library-card",
+                "type": "local",
+                "digest": "sha256:614d1e23e4223d01d149a73072083dd0627d29630a55c53d1c81b3f8df552c8e",
+                "source": "tasks",
+                "path": "tasks\\agent-sf-library-card"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/z-ai/glm-5.3-flash",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.kernel_env:KernelEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "timeout_seconds": 300,
+                    "headless": false,
+                    "stealth": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/z-ai/glm-5.3-flash"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "wtb-smoke",
+                "type": "local",
+                "digest": "sha256:3ac0dedd52d1af679471458485c3445ff2b6f28517801da72edb47c717eaf937",
+                "source": "tasks",
+                "path": "tasks\\wtb-smoke"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/z-ai/glm-5.3-flash",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.kernel_env:KernelEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "timeout_seconds": 300,
+                    "headless": false,
+                    "stealth": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/z-ai/glm-5.3-flash"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+{
+  "task": {
+    "id": "agent/calculator_mortgage",
+    "instruction": "Using the calculator.net mortgage calculator, compute the monthly principal and interest payment for a $300,000 loan amount (home price $375,000 with $75,000 down payment), a 30-year term and a 6.5% interest rate. Report the monthly payment.",
+    "initUrl": "https://www.calculator.net/mortgage-calculator.html",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent enter a $375,000 home price, $75,000 down payment, 30-year term and 6.5% interest rate?",
+          "description": "Did the agent enter a $375,000 home price, $75,000 down payment, 30-year term and 6.5% interest rate?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report a monthly principal and interest payment of about $1,896?",
+          "description": "Did the agent report a monthly principal and interest payment of about $1,896?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "The task was completed successfully. I used the calculator.net mortgage calculator and entered the required inputs: Home Price = $375,000, Down Payment = $75,000 (switching the unit from % to $), Loan Term = 30 years, and Interest Rate = 6.5%, with 'Include Taxes & Costs' left unchecked so the result reflects only principal and interest. During the process, a first attempt failed because typed values appended to existing field contents (e.g., '400,000,375,000'), producing an invalid result; this was resolved by clicking the Clear button and re-entering all values into the empty fields. After clicking Calculate, the calculator returned: Monthly Pay: $1,896.20, with Loan Amount $300,000.00, Down Payment $75,000.00, House Price $375,000.00, Total of 360 Payments $682,633.47, and Total Interest $382,633.47. The result matches the standard amortization formula for a $300,000 loan at 6.5% over 360 months, confirming accuracy.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent enter a $375,000 home price, $75,000 down payment, 30-year term and 6.5% interest rate?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The final page state and submitted URL confirm all four required inputs were correctly entered ($375,000 home price, $75,000 down payment in dollars, 30-year term, 6.5% rate), with taxes/costs excluded so the result is pure principal & interest. The earlier appended-value error was fully corrected before the final calculation.",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report a monthly principal and interest payment of about $1,896?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The calculator's final result of $1,896.20 for a $300,000 loan at 6.5% over 360 months matches the expected ~$1,896 and the standard amortization formula, and the agent explicitly reported this figure as the monthly principal-and-interest payment.",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "agent_tool_usage",
+        "severity": "warning",
+        "description": "The initial fillForm call appended typed values onto existing defaults (Home Price became '400,000,375,000', Down Payment '8,000,075,000', rate '6.57'), producing an invalid first calculation. The agent caught the discrepancy, used Clear, verified empty fields, and successfully re-entered values.",
+        "suggestedAction": "After fillForm, verify field contents via ariaTree/screenshot before clicking Calculate, or prefer clear-then-fill semantics to avoid value concatenation.",
+        "relatedSteps": [
+          2,
+          4,
+          6,
+          10,
+          11
+        ]
+      },
+      {
+        "category": "agent_strategy",
+        "severity": "info",
+        "description": "Good self-correction loop: the agent noticed the appended-value problem from the result/URL, cleared the form, confirmed emptiness with both a screenshot and aria tree, then recalculated with correct inputs and validated the result against the amortization formula.",
+        "suggestedAction": "No action needed; this recovery behavior is desirable.",
+        "relatedSteps": [
+          6,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      }
+    ],
+    "rawSteps": {
+      "primaryIntent": "Use calculator.net's mortgage calculator to compute and report the monthly principal-and-interest payment for a $375,000 home with $75,000 down ($300,000 loan), 30-year term, at 6.5% interest.",
+      "reasoning": "The agent initially mis-filled the form (typed values appended to defaults, producing a garbage calculation like $2,495,781,970.89), but detected the error, clicked Clear, verified the fields were empty via ariaTree/screenshot, re-entered the correct values, and recalculated. The final page state (URL params chouseprice=375,000&cdownpayment=75,000&cdownpaymentunit=d&cloanterm=30&cinterestrate=6.5 and the final aria tree/screenshot) confirms Home Price 375,000, Down Payment 75,000 ($ unit selected), Loan Term 30, Interest Rate 6.5, with 'Include Taxes & Costs' unchecked. The calculator returned Monthly Pay $1,896.20 with Loan Amount $300,000.00, matching the expected ~$1,896 and the standard amortization formula. The agent's final answer correctly reports $1,896.20. Both rubric criteria are satisfied.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 2,
+      "totalMax": 2,
+      "evidenceImages": 15,
+      "evidenceTexts": 29,
+      "evidenceOriginalScreenshots": 15
+    }
+  }
+}

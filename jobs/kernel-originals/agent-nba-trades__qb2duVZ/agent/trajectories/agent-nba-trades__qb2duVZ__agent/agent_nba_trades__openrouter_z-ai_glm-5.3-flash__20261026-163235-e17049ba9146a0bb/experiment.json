@@ -1,0 +1,11 @@
+{
+  "experiment": "agent/nba_trades",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "braintrustExperiment": "stagehand-dev [experimentName=agent/nba_trades]",
+  "braintrustExperimentId": null,
+  "braintrustExperimentUrl": null,
+  "braintrustProject": "stagehand-dev",
+  "braintrustProjectUrl": null,
+  "requestedExperimentName": "agent/nba_trades"
+}

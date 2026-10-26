@@ -1,0 +1,6 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session bw1stx1qcpkuuult3t7viqzf
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/arxiv_gpt_report in dom mode
+Deleted Kernel browser session bw1stx1qcpkuuult3t7viqzf

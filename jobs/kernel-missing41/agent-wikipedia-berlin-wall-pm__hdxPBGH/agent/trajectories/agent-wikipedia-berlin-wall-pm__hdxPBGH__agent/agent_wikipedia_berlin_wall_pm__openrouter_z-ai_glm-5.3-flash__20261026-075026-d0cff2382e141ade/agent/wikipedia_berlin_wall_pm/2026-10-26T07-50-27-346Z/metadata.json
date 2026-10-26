@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/wikipedia_berlin_wall_pm",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/wikipedia_berlin_wall_pm",
+  "runId": "2026-10-26T07-50-27-346Z",
+  "runDir": "2026-10-26T07-50-27-346Z",
+  "attempt": 1,
+  "status": "complete"
+}

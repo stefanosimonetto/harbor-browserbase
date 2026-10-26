@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/all_recipes",
+  "model": "openrouter/google/gemini-3-flash-preview",
+  "environment": "BROWSERBASE",
+  "task": "agent/all_recipes",
+  "runId": "2026-10-26T01-06-28-138Z",
+  "runDir": "2026-10-26T01-06-28-138Z",
+  "attempt": 1,
+  "status": "complete"
+}

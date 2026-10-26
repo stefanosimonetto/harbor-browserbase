@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/github_vscode_release",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "task": "agent/github_vscode_release",
+  "runId": "2026-10-26T07-31-20-252Z",
+  "runDir": "2026-10-26T07-31-20-252Z",
+  "attempt": 1,
+  "status": "complete"
+}

@@ -1,0 +1,7 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session hgl4srmq1gvs0pmz6g87slwi
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/all_recipes in dom mode
+Deleted Kernel browser session hgl4srmq1gvs0pmz6g87slwi
+Cleanup interrupted for agent-all-recipes__23w6uqz, but agent environment stop is shielded and will complete

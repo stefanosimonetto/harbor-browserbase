@@ -1,0 +1,9 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/books_toscrape_travel in dom mode
+Captured Browserbase session 5fdd299a-ac74-4165-bf2d-7900e673fdc0 for Stagehand task agent/books_toscrape_travel in dom mode at jobs\glm-missing41\agent-books-toscrape-travel__D5NnCHc\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-books-toscrape-travel__D5NnCHc__agent/agent_books_toscrape_travel__openrouter_z-ai_glm-5.3-flash__20261026-072354-28b65f6f852e6a3e/agent/books_toscrape_travel/2026-10-26T07-23-56-289Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=3 total=3 earned=3.0 max=3.0

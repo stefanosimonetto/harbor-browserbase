@@ -1,0 +1,10 @@
+{
+  "session_id": "eddf497e-902c-437a-bac6-3e8f450b9fe5",
+  "session_url": "https://www.browserbase.com/sessions/eddf497e-902c-437a-bac6-3e8f450b9fe5",
+  "debug_url": null,
+  "task_id": "agent/caniuse_css_has",
+  "mode": "dom",
+  "all_session_ids": [
+    "eddf497e-902c-437a-bac6-3e8f450b9fe5"
+  ]
+}

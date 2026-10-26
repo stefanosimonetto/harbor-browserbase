@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/nba_trades",
+  "model": "openrouter/google/gemini-3-flash-preview",
+  "environment": "BROWSERBASE",
+  "task": "agent/nba_trades",
+  "runId": "2026-10-26T01-08-50-693Z",
+  "runDir": "2026-10-26T01-08-50-693Z",
+  "attempt": 1,
+  "status": "complete"
+}

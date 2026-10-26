@@ -1,0 +1,10 @@
+{
+  "session_id": "4aef38f9-3794-4d8f-8821-133fad0b82a6",
+  "session_url": "https://www.browserbase.com/sessions/4aef38f9-3794-4d8f-8821-133fad0b82a6",
+  "debug_url": null,
+  "task_id": "agent/huggingface_bert_license",
+  "mode": "dom",
+  "all_session_ids": [
+    "4aef38f9-3794-4d8f-8821-133fad0b82a6"
+  ]
+}

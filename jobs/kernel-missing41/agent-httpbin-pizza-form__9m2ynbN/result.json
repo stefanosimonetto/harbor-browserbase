@@ -1,0 +1,152 @@
+{
+    "id": "4a400edb-8da2-48d9-b701-70c54191f7a6",
+    "task_name": "browserbase/agent-httpbin-pizza-form",
+    "trial_name": "agent-httpbin-pizza-form__9m2ynbN",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/kernel-missing41/agent-httpbin-pizza-form__9m2ynbN",
+    "task_id": {
+        "path": "tasks\\agent-httpbin-pizza-form"
+    },
+    "source": "tasks",
+    "task_checksum": "e831d9366c540db6a7fce23b23287ebfbfb6f447e8acee9faaba0ae0ecd3b653",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-httpbin-pizza-form",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-httpbin-pizza-form__9m2ynbN",
+        "trials_dir": "jobs\\kernel-missing41",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/z-ai/glm-5.3-flash",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.kernel_env:KernelEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "timeout_seconds": 300,
+                "headless": false,
+                "stealth": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "04c27338-02b2-4ba1-9dd2-d4789071d377",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "z-ai/glm-5.3-flash",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": {
+            "stagehand": {
+                "kernel_session_id": "vkjn4ojzi83l1pydrpx7chjh",
+                "task_id": "agent/httpbin_pizza_form",
+                "mode": "dom",
+                "trajectory_dir": "/logs/agent/trajectories/agent-httpbin-pizza-form__9m2ynbN__agent/agent_httpbin_pizza_form__openrouter_z-ai_glm-5.3-flash__20261026-072246-1fc9efe24c430520/agent/httpbin_pizza_form/2026-10-26T07-22-47-301Z",
+                "trajectory_root": "/logs/agent/trajectories/agent-httpbin-pizza-form__9m2ynbN__agent",
+                "requested_trajectory_group": "agent-httpbin-pizza-form__9m2ynbN__agent"
+            }
+        }
+    },
+    "verifier_result": null,
+    "verifier_environment_mode": "shared",
+    "exception_info": {
+        "exception_type": "StagehandVerifierUnhealthyError",
+        "exception_message": "Stagehand synthesized a judge-failure result matching 'Fused judgment LLM call failed; returning evidence-insufficient result.' for judge model 'openrouter/z-ai/glm-5.3-flash' and trajectory '/logs/agent/trajectories/agent-httpbin-pizza-form__9m2ynbN__agent/agent_httpbin_pizza_form__openrouter_z-ai_glm-5.3-flash__20261026-072246-1fc9efe24c430520/agent/httpbin_pizza_form/2026-10-26T07-22-47-301Z'. A retired or 404-ing judge model is the most likely cause; select a healthy model and retry verification.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 609, in run\n    await self._run()\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\trial\\single_step.py\", line 51, in _run\n    await self._run_verifier()\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\trial\\single_step.py\", line 105, in _run_verifier\n    self.result.verifier_result = await self._run_shared_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 1011, in _run_shared_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 974, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\bb_harbor\\verifier.py\", line 211, in verify\n    return self._translate_result(result, trajectory_dir)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\bb_harbor\\verifier.py\", line 266, in _translate_result\n    raise StagehandVerifierUnhealthyError(\nbb_harbor.verifier.StagehandVerifierUnhealthyError: Stagehand synthesized a judge-failure result matching 'Fused judgment LLM call failed; returning evidence-insufficient result.' for judge model 'openrouter/z-ai/glm-5.3-flash' and trajectory '/logs/agent/trajectories/agent-httpbin-pizza-form__9m2ynbN__agent/agent_httpbin_pizza_form__openrouter_z-ai_glm-5.3-flash__20261026-072246-1fc9efe24c430520/agent/httpbin_pizza_form/2026-10-26T07-22-47-301Z'. A retired or 404-ing judge model is the most likely cause; select a healthy model and retry verification.\n",
+        "occurred_at": "2026-10-26T07:24:41.956410Z"
+    },
+    "started_at": "2026-10-26T07:22:32.272585Z",
+    "finished_at": "2026-10-26T07:24:47.419101Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T07:22:32.798395Z",
+        "finished_at": "2026-10-26T07:22:39.159909Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T07:22:39.159909Z",
+        "finished_at": "2026-10-26T07:22:42.227528Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T07:22:42.227528Z",
+        "finished_at": "2026-10-26T07:24:39.329360Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-26T07:24:41.165523Z",
+        "finished_at": "2026-10-26T07:24:41.953510Z"
+    },
+    "step_results": null
+}

@@ -1,0 +1,11 @@
+{
+  "experiment": "agent/sf_library_card",
+  "model": "openrouter/google/gemini-3-flash-preview",
+  "environment": "BROWSERBASE",
+  "braintrustExperiment": "stagehand-dev [experimentName=agent/sf_library_card]",
+  "braintrustExperimentId": null,
+  "braintrustExperimentUrl": null,
+  "braintrustProject": "stagehand-dev",
+  "braintrustProjectUrl": null,
+  "requestedExperimentName": "agent/sf_library_card"
+}

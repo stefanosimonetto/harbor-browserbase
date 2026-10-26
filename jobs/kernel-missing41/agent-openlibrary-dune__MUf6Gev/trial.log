@@ -1,0 +1,11 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session kgqls4y86l93r9rvtza8i13a
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/openlibrary_dune in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-openlibrary-dune__MUf6Gev__agent/agent_openlibrary_dune__openrouter_z-ai_glm-5.3-flash__20261026-073150-e56987e2e59e2a90/agent/openlibrary_dune/2026-10-26T07-31-52-772Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=3 total=3 earned=1.0 max=3.0
+Deleted Kernel browser session kgqls4y86l93r9rvtza8i13a
+Skipping unscrubbable trial output jobs\kernel-missing41\agent-openlibrary-dune__MUf6Gev\agent\trajectories\agent-openlibrary-dune__MUf6Gev__agent\agent_openlibrary_dune__openrouter_z-ai_glm-5.3-flash__20261026-073150-e56987e2e59e2a90\agent\openlibrary_dune\2026-10-26T07-31-52-772Z\trajectory.json: 'charmap' codec can't decode byte 0x8d in position 26087: character maps to <undefined>

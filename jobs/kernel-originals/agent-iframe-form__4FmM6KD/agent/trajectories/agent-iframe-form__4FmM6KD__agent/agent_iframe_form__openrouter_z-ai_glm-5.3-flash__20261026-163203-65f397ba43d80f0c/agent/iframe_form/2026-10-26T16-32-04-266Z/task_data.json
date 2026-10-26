@@ -1,0 +1,71 @@
+{
+  "task": {
+    "id": "agent/iframe_form",
+    "instruction": "Fill in the form name with 'John Smith', then fill in the form email with 'john.smith@example.com'.",
+    "initUrl": "https://browserbase.github.io/stagehand-eval-sites/sites/iframe-form-filling/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Is the form name input filled with 'John Smith'?",
+          "description": "Is the form name input filled with 'John Smith'?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Is the form email input filled with 'john.smith@example.com'?",
+          "description": "Is the form email input filled with 'john.smith@example.com'?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "The task required filling in the form name with 'John Smith' and the email with 'john.smith@example.com'. The page contained a Contact Form (inside a cross-site OOPIF iframe) with separate 'First Name' and 'Last Name' textboxes plus an 'Email' textbox. I filled all three fields: First Name = 'John', Last Name = 'Smith' (together representing 'John Smith'), and Email = 'john.smith@example.com'. The fillForm actions all reported success, and I verified the results both via a screenshot and the accessibility tree, which confirmed the exact values ('John', 'Smith', 'john.smith@example.com') present in the corresponding textboxes. No other fields were modified. The task was fully completed.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Is the form name input filled with 'John Smith'?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Is the form email input filled with 'john.smith@example.com'?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "rubric_quality",
+        "severity": "info",
+        "description": "Rubric criterion 0 refers to a single 'name input' filled with 'John Smith', but the form actually contains separate First Name and Last Name fields. The agent's split ('John' / 'Smith') is the natural and correct interpretation of filling the name with 'John Smith' given the form structure.",
+        "suggestedAction": "Consider rewriting criteria to explicitly account for split first/last name fields (e.g., 'First Name = John and Last Name = Smith') to avoid evaluator ambiguity in similar form-filling tasks.",
+        "relatedSteps": [
+          1
+        ]
+      }
+    ],
+    "rawSteps": {
+      "primaryIntent": "Fill the Contact Form's name field with 'John Smith' and the email field with 'john.smith@example.com' on the iframe-hosted form page.",
+      "reasoning": "The agent correctly identified the Contact Form inside the cross-site OOPIF iframe. Since the form has no single 'name' field, it sensibly filled First Name with 'John' and Last Name with 'Smith', which together represent 'John Smith'. The Email field was filled with 'john.smith@example.com'. Both the final screenshot and the final accessibility tree (authoritative ground truth) confirm the exact values in the corresponding textboxes, and no other fields were modified. Both rubric criteria are fully satisfied, so the task succeeded.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 2,
+      "totalMax": 2,
+      "evidenceImages": 6,
+      "evidenceTexts": 9,
+      "evidenceOriginalScreenshots": 6
+    }
+  }
+}

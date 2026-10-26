@@ -1,0 +1,11 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session tsxenq2tbukz01w1uw7zqwx1
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/sf_library_card in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-sf-library-card__LXX8UG7__agent/agent_sf_library_card__openrouter_z-ai_glm-5.3-flash__20261026-163321-46bb485b10c4f5d3/agent/sf_library_card/2026-10-26T16-33-23-152Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=1.0 max=1.0
+Deleted Kernel browser session tsxenq2tbukz01w1uw7zqwx1
+Skipping unscrubbable trial output jobs\kernel-originals\agent-sf-library-card__LXX8UG7\agent\trajectories\agent-sf-library-card__LXX8UG7__agent\agent_sf_library_card__openrouter_z-ai_glm-5.3-flash__20261026-163321-46bb485b10c4f5d3\agent\sf_library_card\2026-10-26T16-33-23-152Z\trajectory.json: 'charmap' codec can't decode byte 0x81 in position 7260: character maps to <undefined>

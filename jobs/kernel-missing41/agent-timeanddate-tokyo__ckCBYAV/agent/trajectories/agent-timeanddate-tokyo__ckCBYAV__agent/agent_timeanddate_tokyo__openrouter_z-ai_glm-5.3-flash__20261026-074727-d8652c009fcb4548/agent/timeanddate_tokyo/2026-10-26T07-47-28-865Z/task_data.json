@@ -1,0 +1,79 @@
+{
+  "task": {
+    "id": "agent/timeanddate_tokyo",
+    "instruction": "On timeanddate.com, find the current local time in Tokyo, Japan and report it together with Tokyo's UTC offset and whether Japan observes daylight saving time.",
+    "initUrl": "https://www.timeanddate.com/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent open the Tokyo time page on timeanddate.com?",
+          "description": "Did the agent open the Tokyo time page on timeanddate.com?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report UTC+9 and that Japan does not observe daylight saving time?",
+          "description": "Did the agent report UTC+9 and that Japan does not observe daylight saving time?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "The task was completed successfully. I navigated directly to the Tokyo world clock page on timeanddate.com (https://www.timeanddate.com/worldclock/japan/tokyo), extracted the page content via the accessibility tree, and confirmed the page state with a screenshot. All three required pieces of information were found and reported: (1) the current local time in Tokyo is 4:47:52 pm on Monday, October 26, 2026; (2) Tokyo's UTC offset is UTC/GMT +9 hours (Japan Standard Time, JST); and (3) Japan does not observe daylight saving time, as the page explicitly states 'No DST — No Daylight Saving Time in 2026.' All requested information was accurate, sourced directly from the specified website, and delivered in a clear, organized report.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent open the Tokyo time page on timeanddate.com?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report UTC+9 and that Japan does not observe daylight saving time?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "verifier_uncertainty",
+        "severity": "info",
+        "description": "The reported time (4:47:52 pm) differs by seconds from individual screenshots (4:47:33–4:49:37 pm range) because the page clock ticks live between captures; the minute-level and date values match, so this is not an error.",
+        "relatedSteps": [
+          1,
+          2
+        ]
+      },
+      {
+        "category": "trajectory_capture",
+        "severity": "info",
+        "description": "The final trajectory state and post-run probe returned no aria tree, so exact second-level verification relies on the ariaTree at step 1 and the final screenshots; screenshots alone are sufficient to confirm the UTC+9 offset and No DST status.",
+        "relatedSteps": [
+          2
+        ]
+      }
+    ],
+    "rawSteps": {
+      "primaryIntent": "Find and report the current local time in Tokyo, Japan on timeanddate.com, along with Tokyo's UTC offset and whether Japan observes daylight saving time.",
+      "reasoning": "The agent navigated directly to the Tokyo world clock page on timeanddate.com (goto succeeded, confirmed by all screenshots showing 'Current Local Time in Tokyo, Japan'). The page visibly displays the current local time (4:47–4:49 pm JST, Monday, October 26, 2026 — a live clock, so second-level variance across captures is expected), the UTC offset (JST, UTC/GMT +9 hours), and DST status (No DST — No Daylight Saving Time in 2026). The agent's final report contains all three required data points, matching the page content. The reported time of 4:47:52 pm is consistent with the observed clock range across screenshots. No fabricated content, no wrong targets, no platform non-compliance. Both rubric criteria are fully satisfied.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 2,
+      "totalMax": 2,
+      "evidenceImages": 5,
+      "evidenceTexts": 6,
+      "evidenceOriginalScreenshots": 5
+    }
+  }
+}

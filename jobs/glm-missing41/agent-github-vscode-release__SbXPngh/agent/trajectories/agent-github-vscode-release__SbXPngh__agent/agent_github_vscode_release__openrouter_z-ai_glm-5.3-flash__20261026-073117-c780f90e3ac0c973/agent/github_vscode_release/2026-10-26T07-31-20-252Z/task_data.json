@@ -1,0 +1,85 @@
+{
+  "task": {
+    "id": "agent/github_vscode_release",
+    "instruction": "On GitHub, find the latest release of the microsoft/vscode repository and report its version number and the date it was published.",
+    "initUrl": "https://github.com/microsoft/vscode",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent navigate to the releases of microsoft/vscode?",
+          "description": "Did the agent navigate to the releases of microsoft/vscode?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report the version number and publication date of the release marked Latest?",
+          "description": "Did the agent report the version number and publication date of the release marked Latest?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "I successfully completed the task by navigating to the microsoft/vscode releases page on GitHub and verifying the latest release through the GitHub REST API. The latest release is version 1.143.1, published on 2026-10-22 at 23:04:14 UTC (about 3 days before the current date of Oct 26, 2026). Both the version number and publication date were confirmed from authoritative sources, and the release was verified as non-draft and non-prerelease.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent navigate to the releases of microsoft/vscode?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The goto at step 0 succeeded and landed on the microsoft/vscode releases page for tag 1.143.1, confirmed by both the aria tree (page title 'Release 1.143.1 · microsoft/vscode · GitHub') and screenshots showing the 'Releases / 1.143.1' breadcrumb under the microsoft/vscode repo header. Full credit.",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report the version number and publication date of the release marked Latest?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The release marked 'Latest' on the releases page is 1.143.1, and the GitHub API /releases/latest endpoint independently returns the same release. The agent's final answer reports version 1.143.1 and publication date 2026-10-22T23:04:14Z, exactly matching published_at in the API JSON (and correctly preferring published_at over created_at). Both required data points are reported accurately. Full credit.",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "trajectory_capture",
+        "severity": "info",
+        "description": "The extract tool outputs from steps 2 and 4 (attempting to read the exact timestamp from the relative-time element) are not present in the captured evidence, but this gap is immaterial because the GitHub API response at steps 6-8 authoritatively confirms both the version and the published_at timestamp.",
+        "suggestedAction": "No action needed; the API cross-verification fully grounds the final answer.",
+        "relatedSteps": [
+          2,
+          4,
+          6,
+          7
+        ]
+      },
+      {
+        "category": "agent_strategy",
+        "severity": "info",
+        "description": "Good strategy: the agent used the /releases/latest redirect to land on the Latest-marked release, then cross-verified the exact publish timestamp via the GitHub REST API, correctly distinguishing published_at from created_at.",
+        "suggestedAction": "None; this is a pattern worth retaining.",
+        "relatedSteps": [
+          0,
+          6,
+          8
+        ]
+      }
+    ],
+    "rawSteps": {
+      "primaryIntent": "Find the latest release of the microsoft/vscode repository on GitHub and report its version number and publication date.",
+      "reasoning": "The agent navigated directly to https://github.com/microsoft/vscode/releases/latest, which resolved to the release page for tag 1.143.1 showing the 'Latest' badge (screenshots at steps 0, 3, 4, 5). After finding the on-page relative timestamp insufficiently precise, the agent queried https://api.github.com/repos/microsoft/vscode/releases/latest, whose JSON (visible in the aria tree and final screenshot) confirms tag_name '1.143.1', published_at '2026-10-22T23:04:14Z', draft: false, and prerelease: false. The agent's final answer reports version 1.143.1 published on 2026-10-22 at 23:04:14 UTC, which matches the ground-truth evidence exactly, including correctly using published_at rather than created_at (2026-10-22T17:23:22Z). The date is in the past relative to the current date (2026-10-26), so the task was valid and fully accomplished.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 2,
+      "totalMax": 2,
+      "evidenceImages": 11,
+      "evidenceTexts": 12,
+      "evidenceOriginalScreenshots": 11
+    }
+  }
+}

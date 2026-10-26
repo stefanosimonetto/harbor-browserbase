@@ -1,0 +1,6 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/metacritic_elden_ring in dom mode
+Trial agent-metacritic-elden-ring__6TnuJg8 cancelled
+Collecting main service artifacts

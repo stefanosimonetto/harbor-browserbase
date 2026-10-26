@@ -1,0 +1,10 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session gw4hltaka5zo7bnf7wgjff6r
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/httpbin_pizza_form in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-httpbin-pizza-form__CGhTDAD__agent/agent_httpbin_pizza_form__openrouter_z-ai_glm-5.3-flash__20261026-162355-88567f28de4e604f/agent/httpbin_pizza_form/2026-10-26T16-23-56-692Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Trial agent-httpbin-pizza-form__CGhTDAD failed: Stagehand synthesized a judge-failure result matching 'Fused judgment LLM call failed; returning evidence-insufficient result.' for judge model 'openrouter/z-ai/glm-5.3-flash' and trajectory '/logs/agent/trajectories/agent-httpbin-pizza-form__CGhTDAD__agent/agent_httpbin_pizza_form__openrouter_z-ai_glm-5.3-flash__20261026-162355-88567f28de4e604f/agent/httpbin_pizza_form/2026-10-26T16-23-56-692Z'. A retired or 404-ing judge model is the most likely cause; select a healthy model and retry verification.
+Deleted Kernel browser session gw4hltaka5zo7bnf7wgjff6r

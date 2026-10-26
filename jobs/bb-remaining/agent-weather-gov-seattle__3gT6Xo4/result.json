@@ -1,0 +1,159 @@
+{
+    "id": "ad35562a-222a-4c8c-b145-b96bd1c3bcc7",
+    "task_name": "browserbase/agent-weather-gov-seattle",
+    "trial_name": "agent-weather-gov-seattle__3gT6Xo4",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/bb-remaining/agent-weather-gov-seattle__3gT6Xo4",
+    "task_id": {
+        "path": "tasks\\agent-weather-gov-seattle"
+    },
+    "source": "tasks",
+    "task_checksum": "7daca346c957e8a489edfa9e2b60ea2d5b5e04d788daa7bc584898fd5b74a32b",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-weather-gov-seattle",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-weather-gov-seattle__3gT6Xo4",
+        "trials_dir": "jobs\\bb-remaining",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/z-ai/glm-5.3-flash",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "create_session": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "17ba1d76-9723-42bb-aced-aca61351df09",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "z-ai/glm-5.3-flash",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": {
+            "stagehand": {
+                "browserbase_session_id": "4908e63c-8e21-42ef-97ac-99e495716040",
+                "browserbase_session_url": "https://www.browserbase.com/sessions/4908e63c-8e21-42ef-97ac-99e495716040",
+                "browserbase_session_ids": [
+                    "4908e63c-8e21-42ef-97ac-99e495716040"
+                ],
+                "task_id": "agent/weather_gov_seattle",
+                "mode": "dom",
+                "trajectory_dir": "/logs/agent/trajectories/agent-weather-gov-seattle__3gT6Xo4__agent/agent_weather_gov_seattle__openrouter_z-ai_glm-5.3-flash__20261026-184919-5fd75bfde8efd335/agent/weather_gov_seattle/2026-10-26T18-49-20-670Z",
+                "trajectory_root": "/logs/agent/trajectories/agent-weather-gov-seattle__3gT6Xo4__agent",
+                "requested_trajectory_group": "agent-weather-gov-seattle__3gT6Xo4__agent"
+            }
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0,
+            "outcome": 1.0,
+            "process": 1.0,
+            "process_measured": 1.0,
+            "criteria_earned_frac": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-10-26T18:49:10.486109Z",
+    "finished_at": "2026-10-26T18:50:14.233427Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T18:49:10.503817Z",
+        "finished_at": "2026-10-26T18:49:14.549902Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T18:49:14.549902Z",
+        "finished_at": "2026-10-26T18:49:15.657729Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T18:49:15.657729Z",
+        "finished_at": "2026-10-26T18:50:08.987355Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-26T18:50:10.169865Z",
+        "finished_at": "2026-10-26T18:50:10.607782Z"
+    },
+    "step_results": null
+}

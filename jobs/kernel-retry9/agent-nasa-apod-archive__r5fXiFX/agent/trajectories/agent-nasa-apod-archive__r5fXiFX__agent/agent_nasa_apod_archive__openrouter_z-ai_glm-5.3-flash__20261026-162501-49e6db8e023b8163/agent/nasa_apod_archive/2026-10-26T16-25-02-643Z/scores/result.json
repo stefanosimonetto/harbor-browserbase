@@ -1,0 +1,47 @@
+{
+  "outcomeSuccess": false,
+  "processScore": 0,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent open the APOD entry dated 2024 January 1?",
+      "maxPoints": 1,
+      "earnedPoints": 0,
+      "explanation": "Fused judgment call failed for this criterion.",
+      "evidenceInsufficient": true
+    },
+    {
+      "criterion": "Did the agent report the title and image credit as shown on that entry?",
+      "maxPoints": 1,
+      "earnedPoints": 0,
+      "explanation": "Fused judgment call failed for this criterion.",
+      "evidenceInsufficient": true
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [
+    "Did the agent open the APOD entry dated 2024 January 1?",
+    "Did the agent report the title and image credit as shown on that entry?"
+  ],
+  "findings": [
+    {
+      "category": "verifier_uncertainty",
+      "severity": "warning",
+      "description": "The fused judgment call did not return a parseable response."
+    }
+  ],
+  "rawSteps": {
+    "primaryIntent": "Using the NASA Astronomy Picture of the Day archive, open the entry for January 1, 2024 and report its title and who is credited for the image.",
+    "reasoning": "Fused judgment LLM call failed; returning evidence-insufficient result.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 0,
+    "totalMax": 2,
+    "evidenceImages": 0,
+    "evidenceTexts": 0,
+    "evidenceOriginalScreenshots": 0
+  }
+}

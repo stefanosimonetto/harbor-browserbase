@@ -1,0 +1,11 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session j5r9yo744nqvk3ksl7xqc9wn
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/all_recipes in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-all-recipes__kTjWYdz__agent/agent_all_recipes__openrouter_z-ai_glm-5.3-flash__20261026-162929-44973b2867850f58/agent/all_recipes/2026-10-26T16-29-31-817Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=1.0 max=1.0
+Deleted Kernel browser session j5r9yo744nqvk3ksl7xqc9wn
+Skipping unscrubbable trial output jobs\kernel-originals\agent-all-recipes__kTjWYdz\agent\trajectories\agent-all-recipes__kTjWYdz__agent\agent_all_recipes__openrouter_z-ai_glm-5.3-flash__20261026-162929-44973b2867850f58\agent\all_recipes\2026-10-26T16-29-31-817Z\trajectory.json: 'charmap' codec can't decode byte 0x9d in position 235901: character maps to <undefined>

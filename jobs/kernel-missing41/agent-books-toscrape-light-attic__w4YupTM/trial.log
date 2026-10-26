@@ -1,0 +1,10 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session y7v8o3hbd9h1nqp3hdqnw8e6
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/books_toscrape_light_attic in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-books-toscrape-light-attic__w4YupTM__agent/agent_books_toscrape_light_attic__openrouter_z-ai_glm-5.3-flash__20261026-070505-52471cfdee6fde53/agent/books_toscrape_light_attic/2026-10-26T07-05-06-927Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=3 total=3 earned=3.0 max=3.0
+Deleted Kernel browser session y7v8o3hbd9h1nqp3hdqnw8e6

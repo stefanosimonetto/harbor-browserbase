@@ -1,0 +1,9 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/httpbin_pizza_form in dom mode
+Captured Browserbase session 6815e9bc-d6b0-4ace-ab57-8c10a3826a75 for Stagehand task agent/httpbin_pizza_form in dom mode at jobs\glm-missing41\agent-httpbin-pizza-form__4UuFHKg\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-httpbin-pizza-form__4UuFHKg__agent/agent_httpbin_pizza_form__openrouter_z-ai_glm-5.3-flash__20261026-073403-b4c18687d0f92204/agent/httpbin_pizza_form/2026-10-26T07-34-04-944Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=3 total=3 earned=3.0 max=3.0

@@ -1,0 +1,47 @@
+{
+  "outcomeSuccess": true,
+  "processScore": 1,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent report C as the primary language with a percentage from the repository page?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Did the agent report the license shown on the repository (GPL-2.0 / other)?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "",
+      "evidenceInsufficient": false
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [],
+  "findings": [
+    {
+      "category": "trajectory_capture",
+      "severity": "info",
+      "description": "The final step-2 aria_tree is truncated before the license text and sidebar, so verification of the agent's license claim relies on the attached screenshot of the License tab rather than the aria tree text.",
+      "relatedSteps": [
+        2
+      ]
+    }
+  ],
+  "rawSteps": {
+    "primaryIntent": "Open the torvalds/linux GitHub repository and report its primary programming language with its percentage and the license shown for the repository.",
+    "reasoning": "The agent loaded the torvalds/linux repository page, read the Languages section (C at 97.9% primary), then clicked the License link to reach the License tab, which displays 'SPDX-License-Identifier: GPL-2.0 WITH Linux-syscall-note' (GNU General Public License version 2 with the Linux-syscall-note exception). Both reported values match the page evidence: the step=0 screenshot shows C 97.9% in the Languages sidebar, and the step=2 screenshot shows the GPL-2.0 license statement verbatim as quoted by the agent. Both rubric criteria are fully satisfied, so the task succeeded.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 2,
+    "totalMax": 2,
+    "evidenceImages": 4,
+    "evidenceTexts": 6,
+    "evidenceOriginalScreenshots": 4
+  }
+}

@@ -1,0 +1,58 @@
+{
+    "schema_version": 2,
+    "task": {
+        "name": "agent-arxiv-gpt-report",
+        "type": "local",
+        "digest": "sha256:555b858bdf8c956189a60bc82de5da798239a25b34f901627b1bb6ba522e97f4",
+        "source": "tasks",
+        "path": "tasks\\agent-arxiv-gpt-report"
+    },
+    "install_only": false,
+    "timeout_multiplier": 1.0,
+    "agent": {
+        "import_path": "bb_harbor.agent:StagehandAgent",
+        "model_name": "openrouter/google/gemini-3-flash-preview",
+        "skip_model_parsing": false,
+        "skills": [],
+        "resume_trajectory": false,
+        "extra_allowed_hosts": [],
+        "kwargs": {
+            "mode": "dom"
+        },
+        "env": {
+            "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+            "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+            "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+            "STAGEHAND_EXECUTION_MODEL": "openrouter/google/gemini-2.5-flash",
+            "STAGEHAND_JUDGE_MODEL": "openrouter/google/gemini-3-flash-preview"
+        },
+        "mcp_servers": []
+    },
+    "bridge_inputs": {},
+    "skills": [],
+    "environment": {
+        "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+        "force_build": false,
+        "delete": true,
+        "stream": false,
+        "cpu_enforcement_policy": "auto",
+        "memory_enforcement_policy": "auto",
+        "extra_docker_compose": [],
+        "kwargs": {
+            "create_session": false,
+            "delete_on_start_failure": true
+        },
+        "extra_allowed_hosts": []
+    },
+    "verifier": {
+        "env": {
+            "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+        },
+        "import_path": "bb_harbor.verifier:StagehandVerifier",
+        "kwargs": {
+            "judge_model": "openrouter/google/gemini-3-flash-preview"
+        },
+        "disable": false,
+        "environment_mode": "shared"
+    }
+}

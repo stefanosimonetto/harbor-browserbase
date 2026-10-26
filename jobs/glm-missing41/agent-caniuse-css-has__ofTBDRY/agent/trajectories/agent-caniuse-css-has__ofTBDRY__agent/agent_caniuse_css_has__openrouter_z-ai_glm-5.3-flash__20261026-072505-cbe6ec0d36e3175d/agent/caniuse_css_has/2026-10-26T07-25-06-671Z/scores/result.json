@@ -1,0 +1,37 @@
+{
+  "outcomeSuccess": true,
+  "processScore": 1,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent report Firefox 121 as the first supporting Firefox version?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Did the agent report Chrome 105 as the first supporting Chrome version?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "",
+      "evidenceInsufficient": false
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [],
+  "rawSteps": {
+    "primaryIntent": "Look up the CSS :has() relational pseudo-class on caniuse.com and report the first Firefox and Chrome versions that support it by default.",
+    "reasoning": "The final page state (caniuse.com/css-has) shows Chrome's first 'Supported' range begins at 105 (101–104 only behind the Experimental Web Platform features flag) and Firefox's first 'Supported' range begins at 121 (103–120 only behind the layout.css.has-selector.enabled flag, enabled by default only in Nightly). The agent reported exactly Chrome 105 and Firefox 121 as the first versions supporting the feature by default, correctly interpreting the 'by default' qualifier using the table notes, so both rubric criteria are fully satisfied and the task succeeded.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 2,
+    "totalMax": 2,
+    "evidenceImages": 3,
+    "evidenceTexts": 3,
+    "evidenceOriginalScreenshots": 3
+  }
+}

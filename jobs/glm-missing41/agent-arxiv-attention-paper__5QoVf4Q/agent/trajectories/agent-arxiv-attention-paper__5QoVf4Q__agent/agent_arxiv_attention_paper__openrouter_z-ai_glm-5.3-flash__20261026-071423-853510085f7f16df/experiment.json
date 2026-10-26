@@ -1,0 +1,11 @@
+{
+  "experiment": "agent/arxiv_attention_paper",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "braintrustExperiment": "stagehand-dev [experimentName=agent/arxiv_attention_paper]",
+  "braintrustExperimentId": null,
+  "braintrustExperimentUrl": null,
+  "braintrustProject": "stagehand-dev",
+  "braintrustProjectUrl": null,
+  "requestedExperimentName": "agent/arxiv_attention_paper"
+}

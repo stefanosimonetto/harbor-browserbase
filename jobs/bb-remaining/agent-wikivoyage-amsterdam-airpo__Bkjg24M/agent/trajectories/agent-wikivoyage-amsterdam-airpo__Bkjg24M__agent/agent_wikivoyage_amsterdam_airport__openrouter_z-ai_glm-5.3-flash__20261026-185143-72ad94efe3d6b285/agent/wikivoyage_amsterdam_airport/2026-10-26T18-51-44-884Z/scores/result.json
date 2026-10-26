@@ -1,0 +1,37 @@
+{
+  "outcomeSuccess": true,
+  "processScore": 1,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent identify Amsterdam Airport Schiphol?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The agent's final answer explicitly identifies 'Amsterdam Airport Schiphol' as the main international airport serving Amsterdam, quoting the page's 'Get in' → 'By plane' wording ('Amsterdam Airport Schiphol (AMS IATA) ... about 15 km southwest ... five busiest airports in Europe'). Screenshots at steps 0-1 confirm the correct Amsterdam Wikivoyage guide was loaded, and the step-1 ariaTree captured the full article (display-truncated, but the tree extends well past the Districts section into subsequent sections). The quoted details match the live page's actual formatting and content, indicating genuine extraction. This is factually the correct airport.",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Did the agent report the IATA code AMS?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The agent's final answer reports the IATA code 'AMS', consistent with the Wikivoyage convention '(AMS IATA)' quoted from the page's accessibility tree. The code is correct for Amsterdam Airport Schiphol.",
+      "evidenceInsufficient": false
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [],
+  "rawSteps": {
+    "primaryIntent": "Open the Amsterdam travel guide on Wikivoyage and report the name of the main international airport serving the city and its IATA code.",
+    "reasoning": "The agent navigated directly to https://en.wikivoyage.org/wiki/Amsterdam, which loaded successfully (confirmed by screenshots at steps 0-1 showing the Amsterdam guide header, breadcrumb 'Europe > Benelux > Netherlands > ... > Amsterdam', and article intro). It then captured a full-page accessibility tree via ariaTree() at step 1 — the final trajectory state shows the tree spans deep into the article (element IDs into the 8800s, ~12k additional chars truncated in display), which would include the 'Get in' → 'By plane' section. The agent's final answer correctly reports 'Amsterdam Airport Schiphol' as the main international airport with IATA code AMS, citing specific page phrasing ('Amsterdam Airport Schiphol (AMS IATA)', ~15 km southwest, among Europe's five busiest airports) that matches the actual Wikivoyage article formatting and content. Both rubric criteria are satisfied by the final answer. The displayed evidence is truncated before the 'By plane' text, so direct visual confirmation is limited, but the specificity and accuracy of the quoted details support that the information was genuinely extracted from the accessibility tree rather than fabricated. The task is factually answerable and the answer given is correct, so the run succeeds. A direct-URL shortcut instead of searching from the homepage is an acceptable, efficient interpretation of 'open the Amsterdam travel guide'.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 2,
+    "totalMax": 2,
+    "evidenceImages": 3,
+    "evidenceTexts": 5,
+    "evidenceOriginalScreenshots": 3
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/arxiv_gpt_report",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/arxiv_gpt_report",
+  "runId": "2026-10-26T16-29-30-819Z",
+  "runDir": "2026-10-26T16-29-30-819Z",
+  "attempt": 1,
+  "status": "complete"
+}

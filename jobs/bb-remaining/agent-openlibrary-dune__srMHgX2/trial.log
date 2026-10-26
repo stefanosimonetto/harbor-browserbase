@@ -1,0 +1,10 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/openlibrary_dune in dom mode
+Captured Browserbase session 90e3d8d6-8710-449b-8a43-5910dd1ede5b for Stagehand task agent/openlibrary_dune in dom mode at jobs\bb-remaining\agent-openlibrary-dune__srMHgX2\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-openlibrary-dune__srMHgX2__agent/agent_openlibrary_dune__openrouter_z-ai_glm-5.3-flash__20261026-183243-4f1e5294a00b244e/agent/openlibrary_dune/2026-10-26T18-32-48-056Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=3 total=3 earned=3.0 max=3.0
+Skipping unscrubbable trial output jobs\bb-remaining\agent-openlibrary-dune__srMHgX2\agent\trajectories\agent-openlibrary-dune__srMHgX2__agent\agent_openlibrary_dune__openrouter_z-ai_glm-5.3-flash__20261026-183243-4f1e5294a00b244e\agent\openlibrary_dune\2026-10-26T18-32-48-056Z\trajectory.json: 'charmap' codec can't decode byte 0x81 in position 31542: character maps to <undefined>

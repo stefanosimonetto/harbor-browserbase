@@ -1,0 +1,48 @@
+{
+  "task": {
+    "id": "agent/sf_library_card",
+    "instruction": "Fill in the 'street Address' field with '166 Geary St'",
+    "initUrl": "https://sfpl.org/welcome-new-cardholders/application",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Does the page show the 'street Address' field filled with '166 Geary St'?",
+          "description": "Does the page show the 'street Address' field filled with '166 Geary St'?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "The user requested to fill the 'Street Address' field with '166 Geary St'. I identified the correct input field (labeled 'Enter street address of residence') and used the 'type' action to enter the specified address. The action was successful.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Does the page show the 'street Address' field filled with '166 Geary St'?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The final screenshot clearly shows '166 Geary St' typed into the Street Address textbox. The ARIA tree confirms this text value is present in element [3-166].",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "rawSteps": {
+      "primaryIntent": "Fill in the 'street Address' field with '166 Geary St' on the SFPL library card application page.",
+      "reasoning": "The agent successfully identified the correct input field and entered the requested address. The final screenshot and the ARIA tree both confirm that the 'Street Address' field (labeled 'Enter street address of residence') contains the value '166 Geary St'.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 1,
+      "totalMax": 1,
+      "evidenceImages": 3,
+      "evidenceTexts": 3,
+      "evidenceOriginalScreenshots": 3
+    }
+  }
+}

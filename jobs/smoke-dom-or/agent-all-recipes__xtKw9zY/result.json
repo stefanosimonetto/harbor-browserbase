@@ -1,0 +1,159 @@
+{
+    "id": "a0a597db-2481-4e6b-8417-d01e4bfef312",
+    "task_name": "browserbase/agent-all-recipes",
+    "trial_name": "agent-all-recipes__xtKw9zY",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/smoke-dom-or/agent-all-recipes__xtKw9zY",
+    "task_id": {
+        "path": "tasks\\agent-all-recipes"
+    },
+    "source": "tasks",
+    "task_checksum": "65d566d7cda5564c7a69ad31c428c00638faea754a8647371d87add7ed3f178e",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-all-recipes",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-all-recipes__xtKw9zY",
+        "trials_dir": "jobs\\smoke-dom-or",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/google/gemini-3-flash-preview",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/google/gemini-2.5-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/google/gemini-3-flash-preview"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "create_session": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/google/gemini-3-flash-preview"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "104dad8f-91b2-4a60-9f70-1d6eefb4b964",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "google/gemini-3-flash-preview",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": {
+            "stagehand": {
+                "browserbase_session_id": "6d563d00-17d5-4c84-bc53-536403efb017",
+                "browserbase_session_url": "https://www.browserbase.com/sessions/6d563d00-17d5-4c84-bc53-536403efb017",
+                "browserbase_session_ids": [
+                    "6d563d00-17d5-4c84-bc53-536403efb017"
+                ],
+                "task_id": "agent/all_recipes",
+                "mode": "dom",
+                "trajectory_dir": "/logs/agent/trajectories/agent-all-recipes__xtKw9zY__agent/agent_all_recipes__openrouter_google_gemini-3-flash-preview__20261026-010626-83019f5659793e07/agent/all_recipes/2026-10-26T01-06-28-138Z",
+                "trajectory_root": "/logs/agent/trajectories/agent-all-recipes__xtKw9zY__agent",
+                "requested_trajectory_group": "agent-all-recipes__xtKw9zY__agent"
+            }
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0,
+            "outcome": 0.0,
+            "process": 0.5,
+            "process_measured": 1.0,
+            "criteria_earned_frac": 0.5
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-10-26T01:06:14.756897Z",
+    "finished_at": "2026-10-26T01:11:50.597455Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T01:06:15.245410Z",
+        "finished_at": "2026-10-26T01:06:19.933883Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T01:06:19.933883Z",
+        "finished_at": "2026-10-26T01:06:22.562338Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T01:06:22.562338Z",
+        "finished_at": "2026-10-26T01:11:45.315543Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-26T01:11:46.400060Z",
+        "finished_at": "2026-10-26T01:11:46.794787Z"
+    },
+    "step_results": null
+}

@@ -1,0 +1,11 @@
+{
+  "experiment": "agent/github_react_version",
+  "model": "openrouter/google/gemini-3-flash-preview",
+  "environment": "BROWSERBASE",
+  "braintrustExperiment": "stagehand-dev [experimentName=agent/github_react_version]",
+  "braintrustExperimentId": null,
+  "braintrustExperimentUrl": null,
+  "braintrustProject": "stagehand-dev",
+  "braintrustProjectUrl": null,
+  "requestedExperimentName": "agent/github_react_version"
+}

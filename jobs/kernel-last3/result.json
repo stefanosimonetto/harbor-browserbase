@@ -1,0 +1,79 @@
+{
+    "id": "51d49de5-5db3-409e-8f6c-a40d0afa4293",
+    "started_at": "2026-10-26T11:20:01.921160",
+    "updated_at": "2026-10-26T11:31:27.769849",
+    "finished_at": "2026-10-26T11:31:27.769849",
+    "n_total_trials": 3,
+    "stats": {
+        "n_completed_trials": 3,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "stagehand__z-ai/glm-5.3-flash__tasks": {
+                "n_trials": 3,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "criteria_earned_frac": 0.3333333333333333,
+                        "outcome": 0.0,
+                        "process": 0.25,
+                        "process_measured": 1.0,
+                        "reward": 0.0
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "agent-metacritic-elden-ring__hs3KcAP",
+                            "agent-rapidtables-temperature__aQ4ix3q",
+                            "agent-thegamer-opinion__GQPSqtZ"
+                        ]
+                    },
+                    "outcome": {
+                        "0.0": [
+                            "agent-metacritic-elden-ring__hs3KcAP",
+                            "agent-rapidtables-temperature__aQ4ix3q",
+                            "agent-thegamer-opinion__GQPSqtZ"
+                        ]
+                    },
+                    "process": {
+                        "0.5": [
+                            "agent-metacritic-elden-ring__hs3KcAP"
+                        ],
+                        "0.25": [
+                            "agent-rapidtables-temperature__aQ4ix3q"
+                        ],
+                        "0.0": [
+                            "agent-thegamer-opinion__GQPSqtZ"
+                        ]
+                    },
+                    "process_measured": {
+                        "1.0": [
+                            "agent-metacritic-elden-ring__hs3KcAP",
+                            "agent-rapidtables-temperature__aQ4ix3q",
+                            "agent-thegamer-opinion__GQPSqtZ"
+                        ]
+                    },
+                    "criteria_earned_frac": {
+                        "0.5": [
+                            "agent-metacritic-elden-ring__hs3KcAP",
+                            "agent-rapidtables-temperature__aQ4ix3q"
+                        ],
+                        "0.0": [
+                            "agent-thegamer-opinion__GQPSqtZ"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null
+    }
+}

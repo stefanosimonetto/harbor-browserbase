@@ -1,0 +1,10 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session q7teg9e23uxh94bauszgc4iv
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/nba_trades in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-nba-trades__qb2duVZ__agent/agent_nba_trades__openrouter_z-ai_glm-5.3-flash__20261026-163235-e17049ba9146a0bb/agent/nba_trades/2026-10-26T16-32-36-747Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=1.0 max=1.0
+Deleted Kernel browser session q7teg9e23uxh94bauszgc4iv

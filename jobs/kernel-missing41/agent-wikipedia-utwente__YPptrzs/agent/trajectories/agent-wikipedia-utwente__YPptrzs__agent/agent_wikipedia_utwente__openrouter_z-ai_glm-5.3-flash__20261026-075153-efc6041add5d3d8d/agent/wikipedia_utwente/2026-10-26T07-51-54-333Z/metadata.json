@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/wikipedia_utwente",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/wikipedia_utwente",
+  "runId": "2026-10-26T07-51-54-333Z",
+  "runDir": "2026-10-26T07-51-54-333Z",
+  "attempt": 1,
+  "status": "complete"
+}

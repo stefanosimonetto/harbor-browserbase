@@ -1,0 +1,71 @@
+{
+  "task": {
+    "id": "agent/wikipedia_eiffel_tower",
+    "instruction": "Using Wikipedia, find the Eiffel Tower article and report the tower's total height in metres (including antennas) and the year its construction was completed.",
+    "initUrl": "https://en.wikipedia.org/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent report a total height of about 330 metres?",
+          "description": "Did the agent report a total height of about 330 metres?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report 1889 as the completion year?",
+          "description": "Did the agent report 1889 as the completion year?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "The task was completed successfully. I navigated to the English Wikipedia article for the Eiffel Tower (https://en.wikipedia.org/wiki/Eiffel_Tower) and extracted the required information from the article's infobox and body text. Both requested facts were found and reported: (1) the tower's total height including antennas is 330 metres (1,083 ft) — the \"tip\" height reflecting the digital radio antenna added in March 2022, compared to the 300 m architectural height; and (2) construction was completed in 1889 (specifically 31 March 1889, with construction having started 28 January 1887 and the tower opening 15 May 1889). All information was verified directly from the Wikipedia article content.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent report a total height of about 330 metres?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The agent explicitly reported the total height including antennas as 330 metres (1,083 ft), matching the 'Tip: 330 m (1,083 ft)' value visible in the article infobox. The 300 m architectural height excludes antennas, and the agent correctly identified the 330 m tip height as the total including antennas.",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report 1889 as the completion year?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The agent reported 1889 as the completion year (specifically 31 March 1889), which exactly matches the infobox 'Completed' field and the article's lead text visible in the evidence.",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "trajectory_capture",
+        "severity": "info",
+        "description": "The extract action's instruction text in the history appears truncated ('Extract from the Eiffel Tower Wikipedia article infobox: the, schema: object'), but the final answer is consistent with the page content shown in the final state, so no scoring impact.",
+        "suggestedAction": "No action needed; ensure extract instructions are fully logged in future capture for verifiability.",
+        "relatedSteps": [
+          3
+        ]
+      }
+    ],
+    "rawSteps": {
+      "primaryIntent": "Navigate to the English Wikipedia Eiffel Tower article and report the tower's total height in metres (including antennas) and the year construction was completed.",
+      "reasoning": "The agent navigated directly to the Eiffel Tower Wikipedia article and extracted the required facts. The final page's infobox (visible in the aria-tree and screenshots) shows 'Tip: 330 m (1,083 ft)' — the tip height including antennas — and 'Completed: 31 March 1889'. The agent's final answer reported exactly these values: 330 metres total height including antennas and 1889 as the completion year. Both rubric criteria are fully satisfied, and the reported figures match the ground-truth page content, so the task succeeded.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 2,
+      "totalMax": 2,
+      "evidenceImages": 5,
+      "evidenceTexts": 8,
+      "evidenceOriginalScreenshots": 5
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "session_id": "6815e9bc-d6b0-4ace-ab57-8c10a3826a75",
+  "session_url": "https://www.browserbase.com/sessions/6815e9bc-d6b0-4ace-ab57-8c10a3826a75",
+  "debug_url": null,
+  "task_id": "agent/httpbin_pizza_form",
+  "mode": "dom",
+  "all_session_ids": [
+    "6815e9bc-d6b0-4ace-ab57-8c10a3826a75"
+  ]
+}

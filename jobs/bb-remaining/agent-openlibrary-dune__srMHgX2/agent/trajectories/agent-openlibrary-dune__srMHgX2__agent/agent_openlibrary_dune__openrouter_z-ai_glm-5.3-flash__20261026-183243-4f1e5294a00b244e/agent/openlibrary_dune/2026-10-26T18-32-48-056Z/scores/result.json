@@ -1,0 +1,69 @@
+{
+  "outcomeSuccess": true,
+  "processScore": 1,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent find the work 'Dune' by Frank Herbert on Open Library?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The search results page at step 2 clearly shows the work 'Dune' by Frank Herbert as the first result, and the JSON API confirms the work key /works/OL893414W with matching title and author. The agent definitively found the correct work.",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Did the agent report 1965 as the first publication year?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "Both the HTML search results page and the JSON API show 1965 as the first publication year, and the agent's final answer explicitly reports 1965.",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Did the agent report a number of editions taken from the Open Library page?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The agent reported 155 editions, which matches both the number displayed on the Open Library search results page ('155 editions') and the edition_count field in Open Library's official search JSON API. The figure is taken directly from Open Library, not fabricated.",
+      "evidenceInsufficient": false
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [],
+  "findings": [
+    {
+      "category": "other",
+      "severity": "info",
+      "description": "A CAPTCHA/human-verification interstitial (openlibrary.org/verify_human) intercepted navigation to the works detail page from step 3 onward; the agent correctly waited rather than interacting with it, then pivoted to Open Library's official JSON API to obtain the data. This was an environment blocker, not an agent error, and the workaround preserved answer accuracy.",
+      "suggestedAction": "No action required; the JSON API fallback was an appropriate and effective workaround.",
+      "relatedSteps": [
+        3,
+        11,
+        17,
+        19
+      ]
+    },
+    {
+      "category": "agent_strategy",
+      "severity": "info",
+      "description": "The agent briefly navigated to work key OL581793W (steps 11-15) even though the search results had already identified the correct work key OL893414W; it self-corrected by querying search.json, which returned the authoritative OL893414W record. This detour cost a few steps but did not affect the final answer.",
+      "suggestedAction": "Prefer reusing the work key already visible on the search results page when direct navigation is needed.",
+      "relatedSteps": [
+        11,
+        17,
+        19
+      ]
+    }
+  ],
+  "rawSteps": {
+    "primaryIntent": "Search Open Library for the novel 'Dune' by Frank Herbert and report its first publication year and the number of editions Open Library lists for it.",
+    "reasoning": "The agent found the work 'Dune' by Frank Herbert on Open Library (search results at step 2 show 'Dune: Book 1', 'Dune' by Frank Herbert, 'First published in 1965', '155 editions, 18 ebooks'). A human-verification interstitial blocked navigation to the works detail page (steps 3-16), an uncontrollable environment blocker, so the agent worked around it using Open Library's official search JSON API (steps 17-20), which returned first_publish_year: 1965 and edition_count: 155 for work OL893414W 'Dune' by Frank Herbert. The final answer (first published 1965, 155 editions) is fully grounded in both the HTML search results page and the JSON API evidence, satisfying all three rubric criteria.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 3,
+    "totalMax": 3,
+    "evidenceImages": 22,
+    "evidenceTexts": 39,
+    "evidenceOriginalScreenshots": 22
+  }
+}

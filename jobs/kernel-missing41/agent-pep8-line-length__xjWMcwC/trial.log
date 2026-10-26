@@ -1,0 +1,11 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session scm9jpl0mmvxp9ssji0mloqj
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/pep8_line_length in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-pep8-line-length__xjWMcwC__agent/agent_pep8_line_length__openrouter_z-ai_glm-5.3-flash__20261026-073216-42bc10308caeeb92/agent/pep8_line_length/2026-10-26T07-32-18-173Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=2 earned=1.0 max=1.0
+Deleted Kernel browser session scm9jpl0mmvxp9ssji0mloqj
+Skipping unscrubbable trial output jobs\kernel-missing41\agent-pep8-line-length__xjWMcwC\agent\trajectories\agent-pep8-line-length__xjWMcwC__agent\agent_pep8_line_length__openrouter_z-ai_glm-5.3-flash__20261026-073216-42bc10308caeeb92\agent\pep8_line_length\2026-10-26T07-32-18-173Z\trajectory.json: 'charmap' codec can't decode byte 0x9d in position 5477: character maps to <undefined>

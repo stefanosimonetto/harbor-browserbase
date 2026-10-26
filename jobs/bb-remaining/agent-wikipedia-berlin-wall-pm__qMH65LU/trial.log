@@ -1,0 +1,10 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/wikipedia_berlin_wall_pm in dom mode
+Captured Browserbase session da043d97-b117-408c-9d4b-e50daea7a098 for Stagehand task agent/wikipedia_berlin_wall_pm in dom mode at jobs\bb-remaining\agent-wikipedia-berlin-wall-pm__qMH65LU\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-wikipedia-berlin-wall-pm__qMH65LU__agent/agent_wikipedia_berlin_wall_pm__openrouter_z-ai_glm-5.3-flash__20261026-185024-ab5e8fe1cc1afe86/agent/wikipedia_berlin_wall_pm/2026-10-26T18-50-25-341Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Skipping unscrubbable trial output jobs\bb-remaining\agent-wikipedia-berlin-wall-pm__qMH65LU\agent\trajectories\agent-wikipedia-berlin-wall-pm__qMH65LU__agent\agent_wikipedia_berlin_wall_pm__openrouter_z-ai_glm-5.3-flash__20261026-185024-ab5e8fe1cc1afe86\agent\wikipedia_berlin_wall_pm\2026-10-26T18-50-25-341Z\trajectory.json: 'charmap' codec can't decode byte 0x81 in position 27497: character maps to <undefined>

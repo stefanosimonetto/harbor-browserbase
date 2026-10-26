@@ -1,0 +1,9 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/imdb_godfather in dom mode
+Captured Browserbase session 058f6baf-21ab-406d-be8f-a633e718af6d for Stagehand task agent/imdb_godfather in dom mode at jobs\bb-remaining\agent-imdb-godfather__9suj7bn\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-imdb-godfather__9suj7bn__agent/agent_imdb_godfather__openrouter_z-ai_glm-5.3-flash__20261026-182506-421987e4426f53fd/agent/imdb_godfather/2026-10-26T18-25-07-537Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=all-kept-criteria-scored-zero kept=3 total=3 earned=0.0 max=3.0

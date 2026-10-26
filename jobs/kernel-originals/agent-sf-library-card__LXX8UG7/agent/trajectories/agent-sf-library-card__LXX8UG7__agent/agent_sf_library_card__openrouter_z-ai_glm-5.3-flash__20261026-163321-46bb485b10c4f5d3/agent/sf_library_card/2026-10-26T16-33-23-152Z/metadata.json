@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/sf_library_card",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/sf_library_card",
+  "runId": "2026-10-26T16-33-23-152Z",
+  "runDir": "2026-10-26T16-33-23-152Z",
+  "attempt": 1,
+  "status": "complete"
+}

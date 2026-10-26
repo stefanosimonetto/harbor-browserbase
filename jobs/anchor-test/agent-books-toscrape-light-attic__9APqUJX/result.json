@@ -1,0 +1,129 @@
+{
+    "id": "3dde1d90-c39a-4c9f-b3b7-9f1a0959a204",
+    "task_name": "browserbase/agent-books-toscrape-light-attic",
+    "trial_name": "agent-books-toscrape-light-attic__9APqUJX",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/anchor-test/agent-books-toscrape-light-attic__9APqUJX",
+    "task_id": {
+        "path": "tasks\\agent-books-toscrape-light-attic"
+    },
+    "source": "tasks",
+    "task_checksum": "a1db1f726da955e1f268ec7dd1c6d2565b400966afcac19aa90342c18ec41254",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-books-toscrape-light-attic",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-books-toscrape-light-attic__9APqUJX",
+        "trials_dir": "jobs\\anchor-test",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/z-ai/glm-5.3-flash",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.anchor_env:AnchorEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "adblock": false,
+                "popup_blocker": false,
+                "headless": false,
+                "recording": false,
+                "max_duration_minutes": 25,
+                "idle_timeout_minutes": 5,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "eb5400c0-9cec-40c2-a78b-6a6e3d8119a5",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "z-ai/glm-5.3-flash",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": null,
+    "verifier_result": null,
+    "verifier_environment_mode": "shared",
+    "exception_info": {
+        "exception_type": "RuntimeError",
+        "exception_message": "Anchor browser creation failed with HTTP 402: {\"error\":\"Insufficient credits balance\"}",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 606, in run\n    await self._prepare()\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 645, in _prepare\n    await self._setup_agent_environment()\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 1849, in _setup_agent_environment\n    await self._start_agent_environment()\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 1855, in _start_agent_environment\n    await asyncio.wait_for(\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\bb_harbor\\remote_cdp_env.py\", line 193, in start\n    payload = await asyncio.shield(create_task)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\bb_harbor\\remote_cdp_env.py\", line 168, in _create_browser\n    raise RuntimeError(\nRuntimeError: Anchor browser creation failed with HTTP 402: {\"error\":\"Insufficient credits balance\"}\n",
+        "occurred_at": "2026-10-26T19:14:34.598574Z"
+    },
+    "started_at": "2026-10-26T19:14:25.859345Z",
+    "finished_at": "2026-10-26T19:14:35.436431Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T19:14:26.275349Z",
+        "finished_at": "2026-10-26T19:14:34.596059Z"
+    },
+    "agent_setup": null,
+    "agent_execution": null,
+    "verifier": null,
+    "step_results": null
+}

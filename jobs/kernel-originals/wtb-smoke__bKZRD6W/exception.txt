@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 609, in run
+    await self._run()
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\single_step.py", line 51, in _run
+    await self._run_verifier()
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\single_step.py", line 105, in _run_verifier
+    self.result.verifier_result = await self._run_shared_verifier(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 1011, in _run_shared_verifier
+    return await self._verify_with_timeout(verifier, timeout_sec)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 974, in _verify_with_timeout
+    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\bb_harbor\verifier.py", line 211, in verify
+    return self._translate_result(result, trajectory_dir)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\bb_harbor\verifier.py", line 266, in _translate_result
+    raise StagehandVerifierUnhealthyError(
+bb_harbor.verifier.StagehandVerifierUnhealthyError: Stagehand synthesized a judge-failure result matching 'Fused judgment LLM call failed; returning evidence-insufficient result.' for judge model 'openrouter/z-ai/glm-5.3-flash' and trajectory '/logs/agent/trajectories/wtb-smoke__bKZRD6W__agent/agent_columbia_tuition__openrouter_z-ai_glm-5.3-flash__20261026-163449-2ba86182cbb8a19c/agent/columbia_tuition/2026-10-26T16-34-50-507Z'. A retired or 404-ing judge model is the most likely cause; select a healthy model and retry verification.

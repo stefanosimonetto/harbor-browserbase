@@ -1,0 +1,11 @@
+{
+  "experiment": "agent/github",
+  "model": "openrouter/google/gemini-3-flash-preview",
+  "environment": "BROWSERBASE",
+  "braintrustExperiment": "stagehand-dev [experimentName=agent/github]",
+  "braintrustExperimentId": null,
+  "braintrustExperimentUrl": null,
+  "braintrustProject": "stagehand-dev",
+  "braintrustProjectUrl": null,
+  "requestedExperimentName": "agent/github"
+}

@@ -1,0 +1,5 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/all_recipes in dom mode
+No Browserbase session id was captured for Stagehand task agent/all_recipes

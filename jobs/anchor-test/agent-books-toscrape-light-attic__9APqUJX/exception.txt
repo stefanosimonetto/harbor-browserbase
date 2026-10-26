@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 606, in run
+    await self._prepare()
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 645, in _prepare
+    await self._setup_agent_environment()
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 1849, in _setup_agent_environment
+    await self._start_agent_environment()
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 1855, in _start_agent_environment
+    await asyncio.wait_for(
+  File "C:\Program Files\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\bb_harbor\remote_cdp_env.py", line 193, in start
+    payload = await asyncio.shield(create_task)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\bb_harbor\remote_cdp_env.py", line 168, in _create_browser
+    raise RuntimeError(
+RuntimeError: Anchor browser creation failed with HTTP 402: {"error":"Insufficient credits balance"}

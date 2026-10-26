@@ -1,0 +1,28 @@
+{
+  "task": {
+    "id": "agent/metacritic_elden_ring",
+    "instruction": "On Metacritic, find the game 'Elden Ring' and report its Metascore and its user score for any one platform, naming the platform.",
+    "initUrl": "https://www.metacritic.com/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent find the Elden Ring game page on Metacritic?",
+          "description": "Did the agent find the Elden Ring game page on Metacritic?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report a Metascore and a user score and name the platform?",
+          "description": "Did the agent report a Metascore and a user score and name the platform?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "steps": [],
+  "finalAnswer": "Failed to execute task: Key limit exceeded (daily limit). Manage it using https://openrouter.ai/workspaces/default/keys/d03ae0713ac1fd2eebefc3ec725da14a51e4391a99f731b0ffea09e08fe3a352 $5.00 of $5.00 used; resets 2026-10-27T00:00:00.000Z.",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "task": {
+    "id": "agent/arxiv_gpt_report",
+    "instruction": "Find the paper 'GPT-4 Technical Report', when was v3 submitted?",
+    "initUrl": "https://arxiv.org/",
+    "expectedAnswer": "03-27-2023",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "did the agent complete this task successfully? Find the paper 'GPT-4 Technical Report', when was v3 submitted? The correct answer is '03-27-2023'.",
+          "description": "did the agent complete this task successfully? Find the paper 'GPT-4 Technical Report', when was v3 submitted? The correct answer is '03-27-2023'.",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "Searched arXiv for \"GPT-4 Technical Report\", opened the paper's abstract page (arXiv:2303.08774), and located the Submission history section, which lists all versions. Version v3 was submitted on Monday, 27 March 2023 at 17:46:54 UTC. The task was completed successfully.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "did the agent complete this task successfully? Find the paper 'GPT-4 Technical Report', when was v3 submitted? The correct answer is '03-27-2023'.",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The final page for arXiv:2303.08774 lists [v3] Mon, 27 Mar 2023 17:46:54 UTC, which matches the expected answer '03-27-2023'. The agent's final answer correctly reports this date, so the task succeeded.",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "other",
+        "severity": "info",
+        "description": "Agent located the correct paper (arXiv:2303.08774) and correctly identified v3's submission date from the Submission history section; the answer matches the rubric's expected '03-27-2023'.",
+        "suggestedAction": "No action needed.",
+        "relatedSteps": [
+          6,
+          7
+        ]
+      }
+    ],
+    "rawSteps": {
+      "primaryIntent": "Find the arXiv paper 'GPT-4 Technical Report' and determine the submission date of version v3 (expected 03-27-2023).",
+      "reasoning": "The agent navigated to arxiv.org, used the search box to query 'GPT-4 Technical Report', clicked through to the correct abstract page (arXiv:2303.08774), and correctly read the Submission history section. The final page's aria-tree confirms [v3] Mon, 27 Mar 2023 17:46:54 UTC, and the agent's final answer correctly states v3 was submitted on Monday, 27 March 2023, matching the rubric answer '03-27-2023'. The task was completed successfully with the correct answer.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 1,
+      "totalMax": 1,
+      "evidenceImages": 9,
+      "evidenceTexts": 17,
+      "evidenceOriginalScreenshots": 9
+    }
+  }
+}

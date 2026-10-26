@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/calculator_mortgage",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/calculator_mortgage",
+  "runId": "2026-10-26T07-05-56-030Z",
+  "runDir": "2026-10-26T07-05-56-030Z",
+  "attempt": 1,
+  "status": "complete"
+}

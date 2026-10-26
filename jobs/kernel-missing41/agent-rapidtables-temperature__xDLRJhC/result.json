@@ -1,0 +1,155 @@
+{
+    "id": "8678326b-beaa-4a39-a02a-7578c3dc0831",
+    "task_name": "browserbase/agent-rapidtables-temperature",
+    "trial_name": "agent-rapidtables-temperature__xDLRJhC",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/kernel-missing41/agent-rapidtables-temperature__xDLRJhC",
+    "task_id": {
+        "path": "tasks\\agent-rapidtables-temperature"
+    },
+    "source": "tasks",
+    "task_checksum": "23f19b97e68c8f08748b9dc9bb08f8ee7c9e4fc634fd04e44d0587da68c1ce3a",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-rapidtables-temperature",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-rapidtables-temperature__xDLRJhC",
+        "trials_dir": "jobs\\kernel-missing41",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/z-ai/glm-5.3-flash",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.kernel_env:KernelEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "timeout_seconds": 300,
+                "headless": false,
+                "stealth": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "04c27338-02b2-4ba1-9dd2-d4789071d377",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "z-ai/glm-5.3-flash",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": {
+            "stagehand": {
+                "kernel_session_id": "fyozov7b12bqdt5pyytn1bvy",
+                "task_id": "agent/rapidtables_temperature",
+                "mode": "dom",
+                "trajectory_dir": "/logs/agent/trajectories/agent-rapidtables-temperature__xDLRJhC__agent/agent_rapidtables_temperature__openrouter_z-ai_glm-5.3-flash__20261026-073738-fad94ea7aa384d9d/agent/rapidtables_temperature/2026-10-26T07-37-39-887Z",
+                "trajectory_root": "/logs/agent/trajectories/agent-rapidtables-temperature__xDLRJhC__agent",
+                "requested_trajectory_group": "agent-rapidtables-temperature__xDLRJhC__agent"
+            }
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0,
+            "outcome": 0.0,
+            "process": 0.5,
+            "process_measured": 1.0,
+            "criteria_earned_frac": 0.5
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-10-26T07:37:26.475549Z",
+    "finished_at": "2026-10-26T07:48:39.162096Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T07:37:26.511787Z",
+        "finished_at": "2026-10-26T07:37:33.645560Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T07:37:33.646363Z",
+        "finished_at": "2026-10-26T07:37:35.120907Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T07:37:35.120907Z",
+        "finished_at": "2026-10-26T07:48:33.480001Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-26T07:48:34.651735Z",
+        "finished_at": "2026-10-26T07:48:35.069799Z"
+    },
+    "step_results": null
+}

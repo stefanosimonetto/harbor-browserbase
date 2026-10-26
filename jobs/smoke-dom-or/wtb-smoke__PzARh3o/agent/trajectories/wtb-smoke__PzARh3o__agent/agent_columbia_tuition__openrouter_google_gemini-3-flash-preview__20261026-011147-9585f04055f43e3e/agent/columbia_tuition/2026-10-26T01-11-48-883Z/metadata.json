@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/columbia_tuition",
+  "model": "openrouter/google/gemini-3-flash-preview",
+  "environment": "BROWSERBASE",
+  "task": "agent/columbia_tuition",
+  "runId": "2026-10-26T01-11-48-883Z",
+  "runDir": "2026-10-26T01-11-48-883Z",
+  "attempt": 1,
+  "status": "complete"
+}

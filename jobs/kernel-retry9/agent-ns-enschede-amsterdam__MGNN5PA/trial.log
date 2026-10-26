@@ -1,0 +1,8 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session y1mdf2y2o8g8adpagly5af2h
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/ns_enschede_amsterdam in dom mode
+Trial agent-ns-enschede-amsterdam__MGNN5PA cancelled
+Collecting main service artifacts
+Deleted Kernel browser session y1mdf2y2o8g8adpagly5af2h

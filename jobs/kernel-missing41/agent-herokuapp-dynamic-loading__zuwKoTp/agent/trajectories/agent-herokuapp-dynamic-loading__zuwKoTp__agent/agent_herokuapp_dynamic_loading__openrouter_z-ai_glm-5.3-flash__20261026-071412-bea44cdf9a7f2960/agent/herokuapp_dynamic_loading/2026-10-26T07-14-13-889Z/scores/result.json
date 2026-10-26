@@ -1,0 +1,37 @@
+{
+  "outcomeSuccess": true,
+  "processScore": 1,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent click Start on the Dynamic Loading Example 2 page?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The agent first navigated to the page and then clicked the Start button (Evidence #12).",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Did the agent report the text 'Hello World!'?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The final ariaTree extraction (Step 6) and the final trajectory state both contain the element 'heading: Hello World!' (Evidence #14, #17, and Final trajectory state). The agent reported this text in its final prediction.",
+      "evidenceInsufficient": false
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [],
+  "rawSteps": {
+    "primaryIntent": "Navigate to the Dynamic Loading page on the-internet.herokuapp.com, select 'Example 2: Element rendered after the fact', click Start, wait for loading to finish, and report the resulting text.",
+    "reasoning": "The agent successfully followed all steps of the task. It navigated to the correct sub-page, selected 'Example 2: Element rendered after the fact', clicked 'Start', and waited 8 seconds. The final ariaTree extraction (Step 6/Final State) shows the heading 'Hello World!' which was successfully reported in the agent's final prediction. Both criteria were met.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 2,
+    "totalMax": 2,
+    "evidenceImages": 8,
+    "evidenceTexts": 11,
+    "evidenceOriginalScreenshots": 8
+  }
+}

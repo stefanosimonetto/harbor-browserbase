@@ -1,0 +1,9 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/github_react_version in dom mode
+Captured Browserbase session 2dad9ece-4690-40fd-994b-83190978a3e1 for Stagehand task agent/github_react_version in dom mode at jobs\glm-missing41\agent-github-react-version__S4pmAtQ\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-github-react-version__S4pmAtQ__agent/agent_github_react_version__openrouter_z-ai_glm-5.3-flash__20261026-073026-d8187cea2a97d789/agent/github_react_version/2026-10-26T07-30-30-477Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=1.0 max=1.0

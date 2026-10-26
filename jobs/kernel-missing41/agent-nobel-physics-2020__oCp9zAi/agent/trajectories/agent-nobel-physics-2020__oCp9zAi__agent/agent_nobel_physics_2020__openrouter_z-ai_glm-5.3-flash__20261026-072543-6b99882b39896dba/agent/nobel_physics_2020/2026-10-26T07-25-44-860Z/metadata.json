@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/nobel_physics_2020",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/nobel_physics_2020",
+  "runId": "2026-10-26T07-25-44-860Z",
+  "runDir": "2026-10-26T07-25-44-860Z",
+  "attempt": 1,
+  "status": "complete"
+}

@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/imdb_godfather",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/imdb_godfather",
+  "runId": "2026-10-26T07-22-47-634Z",
+  "runDir": "2026-10-26T07-22-47-634Z",
+  "attempt": 1,
+  "status": "complete"
+}

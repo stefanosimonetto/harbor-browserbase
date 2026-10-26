@@ -1,0 +1,60 @@
+{
+  "task": {
+    "id": "agent/caniuse_css_has",
+    "instruction": "On caniuse.com, look up the CSS :has() relational pseudo-class and report the first versions of Firefox and Chrome that support it by default.",
+    "initUrl": "https://caniuse.com/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent report Firefox 121 as the first supporting Firefox version?",
+          "description": "Did the agent report Firefox 121 as the first supporting Firefox version?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report Chrome 105 as the first supporting Chrome version?",
+          "description": "Did the agent report Chrome 105 as the first supporting Chrome version?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "Navigated to caniuse.com/css-has and read the browser support table. Determined that Chrome first supports CSS :has() by default in version 105 (versions 101–104 only supported it behind the Experimental Web Platform features flag), and Firefox first supports it by default in version 121 (versions 103–120 only had it behind the layout.css.has-selector.enabled flag, enabled by default only in Nightly). Both findings were reported to the user, along with context about Safari (15.4) and Baseline status (December 2023).",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent report Firefox 121 as the first supporting Firefox version?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report Chrome 105 as the first supporting Chrome version?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "rawSteps": {
+      "primaryIntent": "Look up the CSS :has() relational pseudo-class on caniuse.com and report the first Firefox and Chrome versions that support it by default.",
+      "reasoning": "The final page state (caniuse.com/css-has) shows Chrome's first 'Supported' range begins at 105 (101–104 only behind the Experimental Web Platform features flag) and Firefox's first 'Supported' range begins at 121 (103–120 only behind the layout.css.has-selector.enabled flag, enabled by default only in Nightly). The agent reported exactly Chrome 105 and Firefox 121 as the first versions supporting the feature by default, correctly interpreting the 'by default' qualifier using the table notes, so both rubric criteria are fully satisfied and the task succeeded.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 2,
+      "totalMax": 2,
+      "evidenceImages": 3,
+      "evidenceTexts": 3,
+      "evidenceOriginalScreenshots": 3
+    }
+  }
+}

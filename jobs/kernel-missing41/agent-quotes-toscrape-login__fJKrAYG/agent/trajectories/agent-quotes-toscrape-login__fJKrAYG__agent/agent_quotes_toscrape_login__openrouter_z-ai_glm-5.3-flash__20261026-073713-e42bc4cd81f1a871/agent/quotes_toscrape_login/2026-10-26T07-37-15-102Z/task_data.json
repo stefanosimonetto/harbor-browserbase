@@ -1,0 +1,60 @@
+{
+  "task": {
+    "id": "agent/quotes_toscrape_login",
+    "instruction": "On quotes.toscrape.com, log in using the username 'harbor' and password 'harbor', then confirm the login worked by reporting what link now appears in the top-right corner instead of 'Login'.",
+    "initUrl": "https://quotes.toscrape.com/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent fill the login form with username 'harbor' and password 'harbor' and submit it?",
+          "description": "Did the agent fill the login form with username 'harbor' and password 'harbor' and submit it?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report that a 'Logout' link appears after logging in?",
+          "description": "Did the agent report that a 'Logout' link appears after logging in?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "The task was completed successfully. Steps taken: (1) Navigated to quotes.toscrape.com and clicked the \"Login\" link in the top-right of the homepage. (2) On the login page, filled the username field with 'harbor' and the password field with 'harbor'. (3) Clicked the Login button to submit the form. (4) Verified the result: the page returned to the homepage and the top-right link changed from \"Login\" to \"Logout\", confirmed both via the accessibility tree (showing link: Logout in the header) and a screenshot. The login with username 'harbor' was successful, and the link that now appears in the top-right corner instead of 'Login' is \"Logout\".",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent fill the login form with username 'harbor' and password 'harbor' and submit it?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The agent correctly filled the username and password fields with 'harbor' and subsequently clicked the Login button, submitting the form as required by the task.",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report that a 'Logout' link appears after logging in?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The agent observed that after logging in, the link in the top-right changed from 'Login' to 'Logout', which is accurately reflected in the final accessibility tree and reported in the agent's conclusion.",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "rawSteps": {
+      "primaryIntent": "Log in to quotes.toscrape.com using 'harbor' and 'harbor', then report the new link in the top-right corner.",
+      "reasoning": "The agent successfully navigated to the login page, filled the form with the correct credentials ('harbor'/'harbor'), and submitted it. The subsequent accessibility tree analysis (Evidence #28 and Final Observation) confirmed that the 'Login' link was replaced by a 'Logout' link, which the agent correctly identified and reported.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 2,
+      "totalMax": 2,
+      "evidenceImages": 11,
+      "evidenceTexts": 23,
+      "evidenceOriginalScreenshots": 11
+    }
+  }
+}

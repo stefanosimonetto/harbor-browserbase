@@ -1,0 +1,39 @@
+{
+  "outcomeSuccess": false,
+  "processScore": 0,
+  "perCriterion": [
+    {
+      "criterion": "did the agent complete this task successfully? Find the paper 'GPT-4 Technical Report', when was v3 submitted? The correct answer is '03-27-2023'.",
+      "maxPoints": 1,
+      "earnedPoints": 0,
+      "explanation": "Fused judgment call failed for this criterion.",
+      "evidenceInsufficient": true
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [
+    "did the agent complete this task successfully? Find the paper 'GPT-4 Technical Report', when was v3 submitted? The correct answer is '03-27-2023'."
+  ],
+  "findings": [
+    {
+      "category": "verifier_uncertainty",
+      "severity": "warning",
+      "description": "The fused judgment call did not return a parseable response."
+    }
+  ],
+  "rawSteps": {
+    "primaryIntent": "Find the paper 'GPT-4 Technical Report', when was v3 submitted?",
+    "reasoning": "Fused judgment LLM call failed; returning evidence-insufficient result.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 0,
+    "totalMax": 1,
+    "evidenceImages": 0,
+    "evidenceTexts": 0,
+    "evidenceOriginalScreenshots": 0
+  }
+}

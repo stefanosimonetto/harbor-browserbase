@@ -1,0 +1,183 @@
+{
+    "id": "17ba1d76-9723-42bb-aced-aca61351df09",
+    "started_at": "2026-10-26T11:18:48.620892",
+    "updated_at": "2026-10-26T11:52:49.593102",
+    "finished_at": "2026-10-26T11:52:49.593102",
+    "n_total_trials": 22,
+    "stats": {
+        "n_completed_trials": 22,
+        "n_errored_trials": 1,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "stagehand__z-ai/glm-5.3-flash__tasks": {
+                "n_trials": 21,
+                "n_errors": 1,
+                "metrics": [
+                    {
+                        "criteria_earned_frac": 0.75,
+                        "outcome": 0.6818181818181818,
+                        "process": 0.75,
+                        "process_measured": 0.9545454545454546,
+                        "reward": 0.6818181818181818
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "agent-imdb-godfather__9suj7bn",
+                            "agent-metacritic-elden-ring__5ddfdnZ",
+                            "agent-ns-enschede-amsterdam__kQ5J4Hr",
+                            "agent-rapidtables-temperature__yk6wXL9",
+                            "agent-thegamer-opinion__W3hbX5E",
+                            "agent-timeanddate-tokyo__d7CcME5"
+                        ],
+                        "1.0": [
+                            "agent-nobel-physics-2020__dQTJYgP",
+                            "agent-npm-lodash__N4ixdmy",
+                            "agent-openlibrary-dune__srMHgX2",
+                            "agent-pep8-line-length__md6MHQA",
+                            "agent-pypi-requests__4pZyqVt",
+                            "agent-python-zip-strict__NDXVEqz",
+                            "agent-quotes-toscrape-einstein__xi2aX6E",
+                            "agent-quotes-toscrape-login__LWeEpEE",
+                            "agent-rust-vec-remove__kPcKXsj",
+                            "agent-sec-edgar-apple-10k__cX8fbVe",
+                            "agent-weather-gov-seattle__3gT6Xo4",
+                            "agent-wikipedia-berlin-wall-pm__qMH65LU",
+                            "agent-wikipedia-eiffel-tower__Kj22Wr7",
+                            "agent-wikipedia-utwente__bJwLwnb",
+                            "agent-wikivoyage-amsterdam-airpo__Bkjg24M"
+                        ]
+                    },
+                    "outcome": {
+                        "0.0": [
+                            "agent-imdb-godfather__9suj7bn",
+                            "agent-metacritic-elden-ring__5ddfdnZ",
+                            "agent-ns-enschede-amsterdam__kQ5J4Hr",
+                            "agent-rapidtables-temperature__yk6wXL9",
+                            "agent-thegamer-opinion__W3hbX5E",
+                            "agent-timeanddate-tokyo__d7CcME5"
+                        ],
+                        "1.0": [
+                            "agent-nobel-physics-2020__dQTJYgP",
+                            "agent-npm-lodash__N4ixdmy",
+                            "agent-openlibrary-dune__srMHgX2",
+                            "agent-pep8-line-length__md6MHQA",
+                            "agent-pypi-requests__4pZyqVt",
+                            "agent-python-zip-strict__NDXVEqz",
+                            "agent-quotes-toscrape-einstein__xi2aX6E",
+                            "agent-quotes-toscrape-login__LWeEpEE",
+                            "agent-rust-vec-remove__kPcKXsj",
+                            "agent-sec-edgar-apple-10k__cX8fbVe",
+                            "agent-weather-gov-seattle__3gT6Xo4",
+                            "agent-wikipedia-berlin-wall-pm__qMH65LU",
+                            "agent-wikipedia-eiffel-tower__Kj22Wr7",
+                            "agent-wikipedia-utwente__bJwLwnb",
+                            "agent-wikivoyage-amsterdam-airpo__Bkjg24M"
+                        ]
+                    },
+                    "process": {
+                        "0.0": [
+                            "agent-imdb-godfather__9suj7bn",
+                            "agent-thegamer-opinion__W3hbX5E"
+                        ],
+                        "0.25": [
+                            "agent-metacritic-elden-ring__5ddfdnZ",
+                            "agent-rapidtables-temperature__yk6wXL9"
+                        ],
+                        "1.0": [
+                            "agent-nobel-physics-2020__dQTJYgP",
+                            "agent-npm-lodash__N4ixdmy",
+                            "agent-openlibrary-dune__srMHgX2",
+                            "agent-pep8-line-length__md6MHQA",
+                            "agent-pypi-requests__4pZyqVt",
+                            "agent-python-zip-strict__NDXVEqz",
+                            "agent-quotes-toscrape-einstein__xi2aX6E",
+                            "agent-quotes-toscrape-login__LWeEpEE",
+                            "agent-rust-vec-remove__kPcKXsj",
+                            "agent-sec-edgar-apple-10k__cX8fbVe",
+                            "agent-weather-gov-seattle__3gT6Xo4",
+                            "agent-wikipedia-berlin-wall-pm__qMH65LU",
+                            "agent-wikipedia-eiffel-tower__Kj22Wr7",
+                            "agent-wikipedia-utwente__bJwLwnb",
+                            "agent-wikivoyage-amsterdam-airpo__Bkjg24M"
+                        ],
+                        "0.5": [
+                            "agent-ns-enschede-amsterdam__kQ5J4Hr",
+                            "agent-timeanddate-tokyo__d7CcME5"
+                        ]
+                    },
+                    "process_measured": {
+                        "1.0": [
+                            "agent-imdb-godfather__9suj7bn",
+                            "agent-metacritic-elden-ring__5ddfdnZ",
+                            "agent-nobel-physics-2020__dQTJYgP",
+                            "agent-npm-lodash__N4ixdmy",
+                            "agent-ns-enschede-amsterdam__kQ5J4Hr",
+                            "agent-openlibrary-dune__srMHgX2",
+                            "agent-pep8-line-length__md6MHQA",
+                            "agent-pypi-requests__4pZyqVt",
+                            "agent-python-zip-strict__NDXVEqz",
+                            "agent-quotes-toscrape-einstein__xi2aX6E",
+                            "agent-quotes-toscrape-login__LWeEpEE",
+                            "agent-rapidtables-temperature__yk6wXL9",
+                            "agent-rust-vec-remove__kPcKXsj",
+                            "agent-sec-edgar-apple-10k__cX8fbVe",
+                            "agent-thegamer-opinion__W3hbX5E",
+                            "agent-timeanddate-tokyo__d7CcME5",
+                            "agent-weather-gov-seattle__3gT6Xo4",
+                            "agent-wikipedia-berlin-wall-pm__qMH65LU",
+                            "agent-wikipedia-eiffel-tower__Kj22Wr7",
+                            "agent-wikipedia-utwente__bJwLwnb",
+                            "agent-wikivoyage-amsterdam-airpo__Bkjg24M"
+                        ]
+                    },
+                    "criteria_earned_frac": {
+                        "0.0": [
+                            "agent-imdb-godfather__9suj7bn",
+                            "agent-thegamer-opinion__W3hbX5E"
+                        ],
+                        "0.25": [
+                            "agent-metacritic-elden-ring__5ddfdnZ",
+                            "agent-rapidtables-temperature__yk6wXL9"
+                        ],
+                        "1.0": [
+                            "agent-nobel-physics-2020__dQTJYgP",
+                            "agent-npm-lodash__N4ixdmy",
+                            "agent-openlibrary-dune__srMHgX2",
+                            "agent-pep8-line-length__md6MHQA",
+                            "agent-pypi-requests__4pZyqVt",
+                            "agent-python-zip-strict__NDXVEqz",
+                            "agent-quotes-toscrape-einstein__xi2aX6E",
+                            "agent-quotes-toscrape-login__LWeEpEE",
+                            "agent-rust-vec-remove__kPcKXsj",
+                            "agent-sec-edgar-apple-10k__cX8fbVe",
+                            "agent-weather-gov-seattle__3gT6Xo4",
+                            "agent-wikipedia-berlin-wall-pm__qMH65LU",
+                            "agent-wikipedia-eiffel-tower__Kj22Wr7",
+                            "agent-wikipedia-utwente__bJwLwnb",
+                            "agent-wikivoyage-amsterdam-airpo__Bkjg24M"
+                        ],
+                        "0.5": [
+                            "agent-ns-enschede-amsterdam__kQ5J4Hr",
+                            "agent-timeanddate-tokyo__d7CcME5"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "AgentTimeoutError": [
+                        "agent-all-recipes__DJTPBAE"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null
+    }
+}

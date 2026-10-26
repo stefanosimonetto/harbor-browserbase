@@ -1,0 +1,10 @@
+{
+  "session_id": "27ace220-c6c9-4a67-8d2e-cf71b82b6e5e",
+  "session_url": "https://www.browserbase.com/sessions/27ace220-c6c9-4a67-8d2e-cf71b82b6e5e",
+  "debug_url": null,
+  "task_id": "agent/dockerhub_nginx",
+  "mode": "dom",
+  "all_session_ids": [
+    "27ace220-c6c9-4a67-8d2e-cf71b82b6e5e"
+  ]
+}

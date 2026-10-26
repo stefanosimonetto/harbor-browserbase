@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/crates_serde",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/crates_serde",
+  "runId": "2026-10-26T07-07-00-910Z",
+  "runDir": "2026-10-26T07-07-00-910Z",
+  "attempt": 1,
+  "status": "complete"
+}

@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/books_toscrape_light_attic",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "task": "agent/books_toscrape_light_attic",
+  "runId": "2026-10-26T07-15-22-798Z",
+  "runDir": "2026-10-26T07-15-22-798Z",
+  "attempt": 1,
+  "status": "complete"
+}

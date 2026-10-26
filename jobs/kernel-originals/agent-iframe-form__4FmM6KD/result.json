@@ -1,0 +1,155 @@
+{
+    "id": "9a160365-f487-4584-84f9-7549a085fc97",
+    "task_name": "browserbase/agent-iframe-form",
+    "trial_name": "agent-iframe-form__4FmM6KD",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/kernel-originals/agent-iframe-form__4FmM6KD",
+    "task_id": {
+        "path": "tasks\\agent-iframe-form"
+    },
+    "source": "tasks",
+    "task_checksum": "797852ed4f4d5aeb4cbfb68a97682a77364d184639e1c3f10dce3ca4b6b8646c",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-iframe-form",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-iframe-form__4FmM6KD",
+        "trials_dir": "jobs\\kernel-originals",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/z-ai/glm-5.3-flash",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.kernel_env:KernelEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "timeout_seconds": 300,
+                "headless": false,
+                "stealth": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "779c4517-891b-44ad-94ef-3a9fbd3844e8",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "z-ai/glm-5.3-flash",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": {
+            "stagehand": {
+                "kernel_session_id": "uazmigyvb45md464vl4wgn7l",
+                "task_id": "agent/iframe_form",
+                "mode": "dom",
+                "trajectory_dir": "/logs/agent/trajectories/agent-iframe-form__4FmM6KD__agent/agent_iframe_form__openrouter_z-ai_glm-5.3-flash__20261026-163203-65f397ba43d80f0c/agent/iframe_form/2026-10-26T16-32-04-266Z",
+                "trajectory_root": "/logs/agent/trajectories/agent-iframe-form__4FmM6KD__agent",
+                "requested_trajectory_group": "agent-iframe-form__4FmM6KD__agent"
+            }
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0,
+            "outcome": 1.0,
+            "process": 1.0,
+            "process_measured": 1.0,
+            "criteria_earned_frac": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-10-26T16:31:54.463141Z",
+    "finished_at": "2026-10-26T16:33:13.206313Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T16:31:54.507195Z",
+        "finished_at": "2026-10-26T16:31:59.728274Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T16:31:59.728274Z",
+        "finished_at": "2026-10-26T16:32:00.859378Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T16:32:00.859378Z",
+        "finished_at": "2026-10-26T16:33:07.714630Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-26T16:33:08.722116Z",
+        "finished_at": "2026-10-26T16:33:09.169661Z"
+    },
+    "step_results": null
+}

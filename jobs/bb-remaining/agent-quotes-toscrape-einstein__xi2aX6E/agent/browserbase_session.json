@@ -1,0 +1,10 @@
+{
+  "session_id": "1873c0a5-1a81-4efd-afd1-d181f835f598",
+  "session_url": "https://www.browserbase.com/sessions/1873c0a5-1a81-4efd-afd1-d181f835f598",
+  "debug_url": null,
+  "task_id": "agent/quotes_toscrape_einstein",
+  "mode": "dom",
+  "all_session_ids": [
+    "1873c0a5-1a81-4efd-afd1-d181f835f598"
+  ]
+}

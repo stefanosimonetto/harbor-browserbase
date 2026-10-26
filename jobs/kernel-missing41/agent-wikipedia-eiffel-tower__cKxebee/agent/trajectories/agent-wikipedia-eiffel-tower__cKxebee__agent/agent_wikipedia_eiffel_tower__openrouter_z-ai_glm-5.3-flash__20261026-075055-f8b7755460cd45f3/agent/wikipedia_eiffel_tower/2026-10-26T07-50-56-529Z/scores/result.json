@@ -1,0 +1,47 @@
+{
+  "outcomeSuccess": true,
+  "processScore": 1,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent report a total height of about 330 metres?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Did the agent report 1889 as the completion year?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "",
+      "evidenceInsufficient": false
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [],
+  "findings": [
+    {
+      "category": "verifier_uncertainty",
+      "severity": "info",
+      "description": "The agent's answer includes a supporting detail (antenna added in 2022, up from 324 m) that is not visible in the captured screenshots or truncated aria_tree, but this does not affect the two required facts, which are fully grounded.",
+      "relatedSteps": [
+        3
+      ]
+    }
+  ],
+  "rawSteps": {
+    "primaryIntent": "Find the Wikipedia Eiffel Tower article and report the tower's total height in metres including antennas and the year construction was completed.",
+    "reasoning": "The agent navigated from the Wikipedia main page to the Eiffel Tower article via search in two efficient actions. The final page state (aria_tree at step 3) and screenshots confirm the article states the tower is 330 metres (1,083 ft) tall including antennas (infobox 'Tip: 330 m (1,083 ft)') and that it was completed on 31 March 1889 (construction 1887–1889). The agent's reported figures for both requested facts are accurate and grounded in the observed page content, so the task succeeded.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 2,
+    "totalMax": 2,
+    "evidenceImages": 5,
+    "evidenceTexts": 8,
+    "evidenceOriginalScreenshots": 5
+  }
+}

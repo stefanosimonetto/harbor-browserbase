@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/openlibrary_dune",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "task": "agent/openlibrary_dune",
+  "runId": "2026-10-26T18-32-48-056Z",
+  "runDir": "2026-10-26T18-32-48-056Z",
+  "attempt": 1,
+  "status": "complete"
+}

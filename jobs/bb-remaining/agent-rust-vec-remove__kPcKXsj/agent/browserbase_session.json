@@ -1,0 +1,10 @@
+{
+  "session_id": "47b95cc8-8cc0-44f1-9632-3d166782b1fe",
+  "session_url": "https://www.browserbase.com/sessions/47b95cc8-8cc0-44f1-9632-3d166782b1fe",
+  "debug_url": null,
+  "task_id": "agent/rust_vec_remove",
+  "mode": "dom",
+  "all_session_ids": [
+    "47b95cc8-8cc0-44f1-9632-3d166782b1fe"
+  ]
+}

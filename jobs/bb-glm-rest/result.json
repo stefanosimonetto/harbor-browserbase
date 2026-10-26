@@ -1,0 +1,56 @@
+{
+    "id": "c9d2115e-d817-4a5e-91df-96e5daee8719",
+    "started_at": "2026-10-26T09:28:51.913830",
+    "updated_at": "2026-10-26T09:32:24.633102",
+    "finished_at": "2026-10-26T09:32:24.633102",
+    "n_total_trials": 20,
+    "stats": {
+        "n_completed_trials": 20,
+        "n_errored_trials": 20,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "stagehand__z-ai/glm-5.3-flash__tasks": {
+                "n_trials": 0,
+                "n_errors": 20,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {},
+                "exception_stats": {
+                    "StagehandAgentFailedError": [
+                        "agent-metacritic-elden-ring__Y2nHahL",
+                        "agent-nobel-physics-2020__JE5JYgp",
+                        "agent-npm-lodash__4gX6XiR",
+                        "agent-ns-enschede-amsterdam__wsXY6oh",
+                        "agent-openlibrary-dune__r3aVToF",
+                        "agent-pep8-line-length__Zc7N4iP",
+                        "agent-pypi-requests__wjTYWnM",
+                        "agent-python-zip-strict__HMEwATi",
+                        "agent-quotes-toscrape-einstein__epVcN3m",
+                        "agent-quotes-toscrape-login__F5CJt5d",
+                        "agent-rapidtables-temperature__YewdnRo",
+                        "agent-rust-vec-remove__qmxvdzs",
+                        "agent-sec-edgar-apple-10k__KpmvVV6",
+                        "agent-thegamer-opinion__w5GSYvx",
+                        "agent-timeanddate-tokyo__5F8KpGW",
+                        "agent-weather-gov-seattle__LRbAReo",
+                        "agent-wikipedia-berlin-wall-pm__KiYZp6t",
+                        "agent-wikipedia-eiffel-tower__gqgiX5A",
+                        "agent-wikipedia-utwente__yKVTUPf",
+                        "agent-wikivoyage-amsterdam-airpo__hYLaPK2"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null
+    }
+}

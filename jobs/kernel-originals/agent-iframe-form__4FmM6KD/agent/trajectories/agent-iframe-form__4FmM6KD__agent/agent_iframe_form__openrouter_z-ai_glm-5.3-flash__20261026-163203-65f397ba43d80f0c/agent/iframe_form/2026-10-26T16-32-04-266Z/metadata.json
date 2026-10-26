@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/iframe_form",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/iframe_form",
+  "runId": "2026-10-26T16-32-04-266Z",
+  "runDir": "2026-10-26T16-32-04-266Z",
+  "attempt": 1,
+  "status": "complete"
+}

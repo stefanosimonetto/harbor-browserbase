@@ -1,0 +1,159 @@
+{
+    "id": "388efbd7-0ed6-4fa5-b28c-933cd6aa4dee",
+    "task_name": "browserbase/agent-huggingface-bert-license",
+    "trial_name": "agent-huggingface-bert-license__KkzynjB",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/glm-missing41/agent-huggingface-bert-license__KkzynjB",
+    "task_id": {
+        "path": "tasks\\agent-huggingface-bert-license"
+    },
+    "source": "tasks",
+    "task_checksum": "febc312922226723016cd396970a738c2ed7631f5fecaac1fd7d00b446cc2f4b",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-huggingface-bert-license",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-huggingface-bert-license__KkzynjB",
+        "trials_dir": "jobs\\glm-missing41",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/z-ai/glm-5.3-flash",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "create_session": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "7341f028-a0ee-498f-b02f-3c014d4567ef",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "z-ai/glm-5.3-flash",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": {
+            "stagehand": {
+                "browserbase_session_id": "4aef38f9-3794-4d8f-8821-133fad0b82a6",
+                "browserbase_session_url": "https://www.browserbase.com/sessions/4aef38f9-3794-4d8f-8821-133fad0b82a6",
+                "browserbase_session_ids": [
+                    "4aef38f9-3794-4d8f-8821-133fad0b82a6"
+                ],
+                "task_id": "agent/huggingface_bert_license",
+                "mode": "dom",
+                "trajectory_dir": "/logs/agent/trajectories/agent-huggingface-bert-license__KkzynjB__agent/agent_huggingface_bert_license__openrouter_z-ai_glm-5.3-flash__20261026-073538-dcee2ce90aa8af94/agent/huggingface_bert_license/2026-10-26T07-35-39-577Z",
+                "trajectory_root": "/logs/agent/trajectories/agent-huggingface-bert-license__KkzynjB__agent",
+                "requested_trajectory_group": "agent-huggingface-bert-license__KkzynjB__agent"
+            }
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0,
+            "outcome": 1.0,
+            "process": 0.3333333333333333,
+            "process_measured": 1.0,
+            "criteria_earned_frac": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-10-26T07:35:25.708948Z",
+    "finished_at": "2026-10-26T07:37:06.553927Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T07:35:25.748421Z",
+        "finished_at": "2026-10-26T07:35:31.111978Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T07:35:31.111978Z",
+        "finished_at": "2026-10-26T07:35:32.676669Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T07:35:32.677670Z",
+        "finished_at": "2026-10-26T07:37:00.026526Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-26T07:37:01.873319Z",
+        "finished_at": "2026-10-26T07:37:02.576340Z"
+    },
+    "step_results": null
+}

@@ -1,0 +1,37 @@
+{
+  "outcomeSuccess": true,
+  "processScore": 1,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent enter a $375,000 home price, $75,000 down payment, 30-year term and 6.5% interest rate?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "Final aria-tree (step 21) shows the form fields containing exactly Home Price 375,000; Down Payment 75,000 with option '$' [selected]; Loan Term 30; Interest Rate 6.5. The step 20 Calculate URL parameters (chouseprice=375,000&cdownpayment=75,000&cdownpaymentunit=d&cloanterm=30&cinterestrate=6.5) and the results block (House Price $375,000.00, Down Payment $75,000.00, Loan Amount $300,000.00) confirm all four values were entered correctly before the final calculation. The agent also fixed an earlier mis-entry where typed values had appended to defaults.",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Did the agent report a monthly principal and interest payment of about $1,896?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The final page state shows 'Monthly Pay: $1,896.20' and Mortgage Payment $1,896.20/month ($682,633.47 total over 360 payments), and the agent reported $1,896.20 as the final answer, explicitly identifying it as the principal & interest component and excluding property tax, insurance, and other costs — matching the rubric's expected ~$1,896.",
+      "evidenceInsufficient": false
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [],
+  "rawSteps": {
+    "primaryIntent": "Use calculator.net's mortgage calculator to compute and report the monthly principal & interest payment for a $300,000 loan ($375,000 home price minus $75,000 down), 30-year term, 6.5% interest rate.",
+    "reasoning": "The final page state (aria-tree at step 21 and screenshot at step 20) confirms all required inputs were correctly applied: Home Price 375,000; Down Payment 75,000 with the '$' unit selected; Loan Term 30 years; Interest Rate 6.5%. The calculator reported Monthly Pay of $1,896.20 with Loan Amount $300,000.00 and Down Payment $75,000.00, matching the expected result for a $300,000 / 30-year / 6.5% loan. The agent correctly reported $1,896.20 as the principal & interest payment and explicitly excluded the taxes/insurance/other-cost components bundled into the 'Total Out-of-Pocket' figure. Although the first Calculate (step 5) ran with garbled values caused by typing appending to prefilled fields (URL showed house price '400,000,375,000', loan term '3,030', rate '6.57'), the agent detected this from the results page, cleared and retyped each field (steps 16-19), and recalculated correctly at step 20, so the final answer is grounded in verified page evidence.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 2,
+    "totalMax": 2,
+    "evidenceImages": 23,
+    "evidenceTexts": 37,
+    "evidenceOriginalScreenshots": 23
+  }
+}

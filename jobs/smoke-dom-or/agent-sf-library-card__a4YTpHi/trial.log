@@ -1,0 +1,10 @@
+Skipping image OS validation for hb__1b3fa871151c6321c82a3c606fadd55a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/sf_library_card in dom mode
+Captured Browserbase session ca623e8d-20af-4e4a-bb06-d4dbd17d9fdc for Stagehand task agent/sf_library_card in dom mode at jobs\smoke-dom-or\agent-sf-library-card__a4YTpHi\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-sf-library-card__a4YTpHi__agent/agent_sf_library_card__openrouter_google_gemini-3-flash-preview__20261026-010941-1967fe6181deec6e/agent/sf_library_card/2026-10-26T01-09-42-651Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=1.0 max=1.0
+Skipping unscrubbable trial output jobs\smoke-dom-or\agent-sf-library-card__a4YTpHi\agent\trajectories\agent-sf-library-card__a4YTpHi__agent\agent_sf_library_card__openrouter_google_gemini-3-flash-preview__20261026-010941-1967fe6181deec6e\agent\sf_library_card\2026-10-26T01-09-42-651Z\trajectory.json: 'charmap' codec can't decode byte 0x81 in position 6984: character maps to <undefined>

@@ -1,0 +1,11 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session v68ws2xn3fhfjaztly9l7v2n
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/python_zip_strict in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-python-zip-strict__J7CwwVB__agent/agent_python_zip_strict__openrouter_z-ai_glm-5.3-flash__20261026-073545-2e41ecf0d82cd11b/agent/python_zip_strict/2026-10-26T07-35-46-838Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Deleted Kernel browser session v68ws2xn3fhfjaztly9l7v2n
+Skipping unscrubbable trial output jobs\kernel-missing41\agent-python-zip-strict__J7CwwVB\agent\trajectories\agent-python-zip-strict__J7CwwVB__agent\agent_python_zip_strict__openrouter_z-ai_glm-5.3-flash__20261026-073545-2e41ecf0d82cd11b\agent\python_zip_strict\2026-10-26T07-35-46-838Z\trajectory.json: 'charmap' codec can't decode byte 0x81 in position 3080: character maps to <undefined>

@@ -1,0 +1,73 @@
+{
+  "task": {
+    "id": "agent/sec_edgar_apple_10k",
+    "instruction": "Using SEC EDGAR, find Apple Inc.'s most recent annual report (Form 10-K) and report its filing date and the fiscal year end it covers.",
+    "initUrl": "https://www.sec.gov/edgar/search/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent find Apple Inc. filings on SEC EDGAR?",
+          "description": "Did the agent find Apple Inc. filings on SEC EDGAR?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report the filing date and period of the most recent 10-K?",
+          "description": "Did the agent report the filing date and period of the most recent 10-K?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "The task was completed successfully. I navigated to SEC EDGAR's company filing search for Apple Inc. (CIK 0000320193) filtered by Form 10-K, which showed the most recent 10-K was filed on 2025-10-31. I then opened the Filing Detail page for accession number 0000320193-25-000079, which confirmed: Form 10-K (Annual report), Filing Date 2025-10-31 (accepted 2025-10-31 06:01:26), and Period of Report 2025-09-27 — Apple's fiscal year 2025 end (Apple's fiscal year ends the last Saturday of September). All requested information was verified directly from the EDGAR filing detail page.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent find Apple Inc. filings on SEC EDGAR?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The EDGAR Company Search Results page clearly shows Apple Inc. (CIK 0000320193) with its 10-K filings listed, confirming the agent successfully located Apple's filings on SEC EDGAR.",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report the filing date and period of the most recent 10-K?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The Filing Detail page for accession 0000320193-25-000079 explicitly shows Form 10-K with Filing Date 2025-10-31 and Period of Report 2025-09-27, and the agent's final answer reports both values correctly (fiscal year 2025 end, Sept 27, 2025), matching the evidence exactly.",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "verifier_uncertainty",
+        "severity": "info",
+        "description": "The stated current date is 2026-10-26, but the environment's EDGAR evidence shows the latest Apple 10-K as the FY2025 filing (2025-10-31, period 2025-09-27). This is consistent with Apple's historical filing cadence (FY2026 10-K would typically be filed on/after ~Oct 28, 2026), so the agent's answer aligns with both the evidence and the current date.",
+        "suggestedAction": "No action needed; answer is consistent with the current-date constraint.",
+        "relatedSteps": [
+          1,
+          3,
+          4
+        ]
+      }
+    ],
+    "rawSteps": {
+      "primaryIntent": "Find Apple Inc.'s most recent Form 10-K on SEC EDGAR and report its filing date and the fiscal year end it covers.",
+      "reasoning": "The agent navigated from the EDGAR search page to Apple Inc.'s (CIK 0000320193) company filing list filtered by Form 10-K (step 1), where the EDGAR Company Search Results screenshot shows the most recent 10-K with filing date 2025-10-31 and accession number 0000320193-25-000079. The agent then opened the Filing Detail page (steps 3-4), and the final screenshot/aria-tree confirms: Form 10-K, Filing Date 2025-10-31 (Accepted 2025-10-31 06:01:26), and Period of Report 2025-09-27 — matching Apple's fiscal 2025 year end (last Saturday of September). The agent's final answer accurately reports both required data points, verified directly from the filing detail page. This filing date is also consistent with the current date (2026-10-26): Apple historically files its 10-K in late October/early November, so the FY2025 10-K filed 2025-10-31 remains the most recent as of the evaluation date, and the environment evidence confirms no newer 10-K. Both rubric criteria are fully satisfied.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 2,
+      "totalMax": 2,
+      "evidenceImages": 6,
+      "evidenceTexts": 11,
+      "evidenceOriginalScreenshots": 6
+    }
+  }
+}

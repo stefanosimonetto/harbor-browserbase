@@ -1,0 +1,11 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session en3iunidz2pw6gr3ao7ih0u1
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/wikipedia_eiffel_tower in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-wikipedia-eiffel-tower__cKxebee__agent/agent_wikipedia_eiffel_tower__openrouter_z-ai_glm-5.3-flash__20261026-075055-f8b7755460cd45f3/agent/wikipedia_eiffel_tower/2026-10-26T07-50-56-529Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Deleted Kernel browser session en3iunidz2pw6gr3ao7ih0u1
+Skipping unscrubbable trial output jobs\kernel-missing41\agent-wikipedia-eiffel-tower__cKxebee\agent\trajectories\agent-wikipedia-eiffel-tower__cKxebee__agent\agent_wikipedia_eiffel_tower__openrouter_z-ai_glm-5.3-flash__20261026-075055-f8b7755460cd45f3\agent\wikipedia_eiffel_tower\2026-10-26T07-50-56-529Z\trajectory.json: 'charmap' codec can't decode byte 0x81 in position 39315: character maps to <undefined>

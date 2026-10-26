@@ -1,0 +1,10 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session mt1fxobliuz4a1knlzepkj9c
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/github_react_version in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-github-react-version__wfznkg2__agent/agent_github_react_version__openrouter_z-ai_glm-5.3-flash__20261026-162930-0cb2714f2f1950de/agent/github_react_version/2026-10-26T16-29-31-726Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=1.0 max=1.0
+Deleted Kernel browser session mt1fxobliuz4a1knlzepkj9c

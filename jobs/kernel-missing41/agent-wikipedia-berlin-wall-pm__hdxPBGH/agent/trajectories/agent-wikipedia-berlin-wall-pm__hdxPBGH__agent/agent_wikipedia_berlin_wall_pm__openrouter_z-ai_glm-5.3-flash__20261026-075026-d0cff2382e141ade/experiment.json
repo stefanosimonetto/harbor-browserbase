@@ -1,0 +1,11 @@
+{
+  "experiment": "agent/wikipedia_berlin_wall_pm",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "braintrustExperiment": "stagehand-dev [experimentName=agent/wikipedia_berlin_wall_pm]",
+  "braintrustExperimentId": null,
+  "braintrustExperimentUrl": null,
+  "braintrustProject": "stagehand-dev",
+  "braintrustProjectUrl": null,
+  "requestedExperimentName": "agent/wikipedia_berlin_wall_pm"
+}

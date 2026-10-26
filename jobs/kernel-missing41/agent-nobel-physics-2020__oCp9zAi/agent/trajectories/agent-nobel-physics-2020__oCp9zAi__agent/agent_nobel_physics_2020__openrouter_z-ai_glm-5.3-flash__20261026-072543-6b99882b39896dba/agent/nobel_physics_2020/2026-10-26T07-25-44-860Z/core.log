@@ -1,0 +1,12 @@
+{"step":0,"action":"ariaTree","url":"https://www.nobelprize.org/","ok":true}
+{"step":1,"action":"act","url":"https://www.nobelprize.org/","ok":true}
+{"step":2,"action":"ariaTree","url":"https://www.nobelprize.org/","ok":true}
+{"step":3,"action":"act","url":"https://www.nobelprize.org/","ok":true}
+{"step":4,"action":"act","url":"https://www.nobelprize.org/","ok":true}
+{"step":5,"action":"ariaTree","url":"https://www.nobelprize.org/","ok":true}
+{"step":6,"action":"navback","url":"https://start.duckduckgo.com/","ok":true}
+{"step":7,"action":"act","url":"https://start.duckduckgo.com/","ok":true}
+{"step":8,"action":"act","url":"https://start.duckduckgo.com/","ok":true}
+{"step":9,"action":"ariaTree","url":"https://duckduckgo.com/?ia=web&origin=funnel_home_website&t=h_&hps=1&start=1&q=2020+Nobel+Prize+in+Physics","ok":true}
+{"step":10,"action":"act","url":"https://www.nobelprize.org/prizes/physics/2020/summary/","ok":true}
+{"step":11,"action":"ariaTree","url":"https://www.nobelprize.org/prizes/physics/2020/summary/","ok":true}

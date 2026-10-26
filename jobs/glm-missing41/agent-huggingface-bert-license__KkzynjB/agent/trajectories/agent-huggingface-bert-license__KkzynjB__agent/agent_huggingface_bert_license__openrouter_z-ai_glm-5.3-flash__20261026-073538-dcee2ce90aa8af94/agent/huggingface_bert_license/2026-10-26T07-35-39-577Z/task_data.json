@@ -1,0 +1,82 @@
+{
+  "task": {
+    "id": "agent/huggingface_bert_license",
+    "instruction": "On Hugging Face, find the model 'google-bert/bert-base-uncased' and report its license and the languages/datasets it was pretrained on according to the model card.",
+    "initUrl": "https://huggingface.co/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent open the bert-base-uncased model page?",
+          "description": "Did the agent open the bert-base-uncased model page?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report the apache-2.0 license?",
+          "description": "Did the agent report the apache-2.0 license?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent mention BookCorpus and English Wikipedia as pretraining data?",
+          "description": "Did the agent mention BookCorpus and English Wikipedia as pretraining data?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "Successfully navigated to Hugging Face, searched for and opened the google-bert/bert-base-uncased model page, and extracted the required information from the model card. License: apache-2.0. Language: English (pretrained via masked language modeling). Pretraining datasets: BookCorpus and English Wikipedia, as confirmed by both the model card text and the dataset tags/links on the page.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 0.3333333333333333,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent open the bert-base-uncased model page?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report the apache-2.0 license?",
+        "maxPoints": 1,
+        "earnedPoints": null,
+        "explanation": "Verifier did not return a score for this criterion.",
+        "evidenceInsufficient": true
+      },
+      {
+        "criterion": "Did the agent mention BookCorpus and English Wikipedia as pretraining data?",
+        "maxPoints": 1,
+        "earnedPoints": null,
+        "explanation": "Verifier did not return a score for this criterion.",
+        "evidenceInsufficient": true
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [
+      "Did the agent report the apache-2.0 license?",
+      "Did the agent mention BookCorpus and English Wikipedia as pretraining data?"
+    ],
+    "findings": [
+      {
+        "category": "verifier_uncertainty",
+        "severity": "info",
+        "description": "The agent's claim that the model card text itself mentions BookCorpus and English Wikipedia is not directly visible in the captured (truncated) aria tree, though the visible dataset tags 'bookcorpus' and 'wikipedia' fully support the reported answer."
+      }
+    ],
+    "rawSteps": {
+      "primaryIntent": "Find the Hugging Face model page for google-bert/bert-base-uncased and report its license and the languages/datasets it was pretrained on per the model card.",
+      "reasoning": "The agent efficiently searched Hugging Face for 'google-bert/bert-base-uncased', clicked the correct result, and landed on the model page (URL and RootWebArea title confirm this). The final page's aria tree and screenshot clearly show the 'License: apache-2.0' tag, the dataset tags 'bookcorpus' and 'wikipedia', and the language tag 'English', plus model card text stating the model is pretrained on English data via masked language modeling. The agent's final answer accurately reports all requested facts (license apache-2.0, English language, BookCorpus and English Wikipedia as pretraining data), consistent with the visible tags and the model card. All three rubric criteria are satisfied with direct evidence; no hallucination, wrong selection, or missed sub-goal is present.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 1,
+      "totalMax": 3,
+      "evidenceImages": 6,
+      "evidenceTexts": 8,
+      "evidenceOriginalScreenshots": 6
+    }
+  }
+}

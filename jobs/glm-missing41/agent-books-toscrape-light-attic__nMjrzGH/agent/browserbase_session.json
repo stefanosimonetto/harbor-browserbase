@@ -1,0 +1,10 @@
+{
+  "session_id": "5a44511a-90c3-49b4-a2ea-80c2205448db",
+  "session_url": "https://www.browserbase.com/sessions/5a44511a-90c3-49b4-a2ea-80c2205448db",
+  "debug_url": null,
+  "task_id": "agent/books_toscrape_light_attic",
+  "mode": "dom",
+  "all_session_ids": [
+    "5a44511a-90c3-49b4-a2ea-80c2205448db"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/books_toscrape_travel",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "task": "agent/books_toscrape_travel",
+  "runId": "2026-10-26T07-23-56-289Z",
+  "runDir": "2026-10-26T07-23-56-289Z",
+  "attempt": 1,
+  "status": "complete"
+}

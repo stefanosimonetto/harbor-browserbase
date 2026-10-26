@@ -1,0 +1,72 @@
+{
+  "task": {
+    "id": "agent/python_zip_strict",
+    "instruction": "Using the official Python documentation, find the built-in zip() function and report which Python version added the 'strict' parameter and what happens when strict=True and the iterables have different lengths.",
+    "initUrl": "https://docs.python.org/3/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent report that the strict parameter was added in Python 3.10?",
+          "description": "Did the agent report that the strict parameter was added in Python 3.10?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent explain that a ValueError is raised when the iterables have different lengths?",
+          "description": "Did the agent explain that a ValueError is raised when the iterables have different lengths?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "Navigated to the official Python documentation (docs.python.org/3/library/functions.html#zip) and extracted the full zip() function documentation. Found both required answers: (1) The 'strict' parameter was added in Python 3.10, per the doc note \"Changed in version 3.10: Added the strict argument,\" with the signature zip(*iterables, strict=False). (2) When strict=True and one iterable is exhausted before the others, a ValueError is raised (e.g., \"ValueError: zip() argument 2 is longer than argument 1\"), unlike the default strict=False behavior which silently stops at the shortest iterable. Both findings were reported with supporting documentation examples. Task completed successfully.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent report that the strict parameter was added in Python 3.10?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent explain that a ValueError is raised when the iterables have different lengths?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "trajectory_capture",
+        "severity": "info",
+        "description": "The aria-tree capture at the final state is truncated well before the zip() section (only shows abs through all), so page-level confirmation of the zip() content relies on the screenshot and the extract tool output rather than the tree.",
+        "suggestedAction": "Increase aria-tree capture depth or rely on targeted extract calls (as done here) when the tree snapshot is truncated for long pages like the built-ins index.",
+        "relatedSteps": [
+          1,
+          2
+        ]
+      }
+    ],
+    "rawSteps": {
+      "primaryIntent": "Using the official Python documentation, locate the built-in zip() function and report (1) which Python version added the 'strict' parameter and (2) what happens when strict=True and the iterables have different lengths.",
+      "reasoning": "The agent navigated directly to the zip() anchor on the official Python documentation (the /library/functions.html#zip URL resolves to /builtins/functions.html#zip, the same page), and its extract call at step 2 returned the zip() documentation including the signature zip(*iterables, strict=False) and the note 'Changed in version 3.10: Added the strict argument.' The rendered page (screenshot) confirms the strict=True behavior: 'Unlike the default behavior, it raises a ValueError if one iterable is exhausted before the others,' with the example traceback ('ValueError: zip() argument 2 is longer than argument 1'). The agent's final answer accurately reports both facts: strict was added in Python 3.10, and strict=True raises ValueError on unequal-length iterables (vs. the default behavior of stopping at the shortest iterable). Both rubric criteria are fully satisfied with sufficient evidence; no hallucination or contradiction is present.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 2,
+      "totalMax": 2,
+      "evidenceImages": 4,
+      "evidenceTexts": 6,
+      "evidenceOriginalScreenshots": 4
+    }
+  }
+}

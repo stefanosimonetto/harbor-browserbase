@@ -1,0 +1,37 @@
+{
+  "outcomeSuccess": true,
+  "processScore": 1,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent open the requests project page on PyPI?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The trajectory shows the agent searched for 'requests', clicked the correct search result, and landed on the official project page (https://pypi.org/project/requests/) with the heading 'requests 2.34.2' and description 'Python HTTP for Humans.', confirmed in both the aria tree and screenshots.",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Did the agent report the latest version, its release date, and the 'Requires: Python' value shown on the page?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The agent's final answer reports version 2.34.2, release date May 14, 2026 (2026-05-14 12:25:26 UTC-7), and Requires: Python >=3.10. All three values exactly match the page content shown in the final aria tree and screenshots; the 'LATEST RELEASE' marker confirms 2.34.2 is the latest version, and the description/badges corroborate the Python >= 3.10 requirement.",
+      "evidenceInsufficient": false
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [],
+  "rawSteps": {
+    "primaryIntent": "Find the 'requests' package on PyPI and report its latest released version, that release's date, and the minimum required Python version.",
+    "reasoning": "The agent searched PyPI for 'requests', navigated to https://pypi.org/project/requests/, and reported all three requested data points. The final aria tree and screenshots confirm each claim: the heading reads 'requests 2.34.2' (also pypi v2.34.2 badge), the Key dates sidebar shows 'Released: May 14, 2026' (time: 2026-05-14 12:25:26 -07:00) marked 'LATEST RELEASE', and the Requires section shows 'Python >=3.10', corroborated by the description 'Requests officially supports Python 3.10+' and the python 3.10–3.15 badges. Every reported value matches the ground-truth page state, and the task is valid relative to the current date (2026-10-26).",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 2,
+    "totalMax": 2,
+    "evidenceImages": 9,
+    "evidenceTexts": 16,
+    "evidenceOriginalScreenshots": 9
+  }
+}

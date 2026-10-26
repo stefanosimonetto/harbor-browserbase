@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/hackernews_top_story",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "task": "agent/hackernews_top_story",
+  "runId": "2026-10-26T07-31-56-704Z",
+  "runDir": "2026-10-26T07-31-56-704Z",
+  "attempt": 1,
+  "status": "complete"
+}

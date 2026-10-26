@@ -1,0 +1,10 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session arz88qqnjq9ir7rju4myzslu
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/herokuapp_checkboxes in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-herokuapp-checkboxes__FJYBqtA__agent/agent_herokuapp_checkboxes__openrouter_z-ai_glm-5.3-flash__20261026-071321-c0ac11080c62218a/agent/herokuapp_checkboxes/2026-10-26T07-13-22-520Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=1.0 max=2.0
+Deleted Kernel browser session arz88qqnjq9ir7rju4myzslu

@@ -1,0 +1,39 @@
+{
+    "task": {
+        "path": "tasks\\wtb-smoke",
+        "source": "tasks"
+    },
+    "trial_name": "wtb-smoke__PzARh3o",
+    "trials_dir": "jobs\\smoke-dom-or",
+    "agent": {
+        "import_path": "bb_harbor.agent:StagehandAgent",
+        "model_name": "openrouter/google/gemini-3-flash-preview",
+        "kwargs": {
+            "mode": "dom"
+        },
+        "env": {
+            "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+            "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+            "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+            "STAGEHAND_EXECUTION_MODEL": "openrouter/google/gemini-2.5-flash",
+            "STAGEHAND_JUDGE_MODEL": "openrouter/google/gemini-3-flash-preview"
+        }
+    },
+    "environment": {
+        "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+        "kwargs": {
+            "create_session": false,
+            "delete_on_start_failure": true
+        }
+    },
+    "verifier": {
+        "env": {
+            "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+        },
+        "import_path": "bb_harbor.verifier:StagehandVerifier",
+        "kwargs": {
+            "judge_model": "openrouter/google/gemini-3-flash-preview"
+        }
+    },
+    "job_id": "104dad8f-91b2-4a60-9f70-1d6eefb4b964"
+}

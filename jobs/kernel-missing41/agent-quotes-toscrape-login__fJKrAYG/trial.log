@@ -1,0 +1,11 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session hhczad441h77q8j8tg75lwmu
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/quotes_toscrape_login in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-quotes-toscrape-login__fJKrAYG__agent/agent_quotes_toscrape_login__openrouter_z-ai_glm-5.3-flash__20261026-073713-e42bc4cd81f1a871/agent/quotes_toscrape_login/2026-10-26T07-37-15-102Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Deleted Kernel browser session hhczad441h77q8j8tg75lwmu
+Skipping unscrubbable trial output jobs\kernel-missing41\agent-quotes-toscrape-login__fJKrAYG\agent\trajectories\agent-quotes-toscrape-login__fJKrAYG__agent\agent_quotes_toscrape_login__openrouter_z-ai_glm-5.3-flash__20261026-073713-e42bc4cd81f1a871\agent\quotes_toscrape_login\2026-10-26T07-37-15-102Z\trajectory.json: 'charmap' codec can't decode byte 0x9d in position 2037: character maps to <undefined>

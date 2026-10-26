@@ -1,0 +1,609 @@
+{
+    "schema_version": 3,
+    "created_at": "2026-10-26T01:06:14.679904Z",
+    "harbor": {
+        "version": "0.25.0",
+        "is_editable": false
+    },
+    "n_concurrent_trials": 3,
+    "retry": {
+        "max_retries": 0,
+        "exclude_exceptions": [
+            "RewardFileNotFoundError",
+            "VerifierOutputParseError",
+            "RewardFileEmptyError",
+            "ApiUsageLimitError",
+            "AgentSafetyRefusalError",
+            "VerifierTimeoutError",
+            "AgentAuthenticationError",
+            "UnsupportedModelParametersError",
+            "AgentTimeoutError",
+            "ModelNotFoundError"
+        ],
+        "wait_multiplier": 1.0,
+        "min_wait_sec": 1.0,
+        "max_wait_sec": 60.0
+    },
+    "trials": [
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "agent-all-recipes",
+                "type": "local",
+                "digest": "sha256:294819aa483d829904bb965371fc25d60b083b9ed75245317dcfddfe0d07e45e",
+                "source": "tasks",
+                "path": "tasks\\agent-all-recipes"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/google/gemini-3-flash-preview",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                    "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/google/gemini-2.5-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/google/gemini-3-flash-preview"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "create_session": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/google/gemini-3-flash-preview"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "agent-arxiv-gpt-report",
+                "type": "local",
+                "digest": "sha256:555b858bdf8c956189a60bc82de5da798239a25b34f901627b1bb6ba522e97f4",
+                "source": "tasks",
+                "path": "tasks\\agent-arxiv-gpt-report"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/google/gemini-3-flash-preview",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                    "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/google/gemini-2.5-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/google/gemini-3-flash-preview"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "create_session": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/google/gemini-3-flash-preview"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "agent-github-react-version",
+                "type": "local",
+                "digest": "sha256:07eed0e6600d9eba6c38d1ee370e70449c5e44ee2fb4404a50c8cf4ff35df880",
+                "source": "tasks",
+                "path": "tasks\\agent-github-react-version"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/google/gemini-3-flash-preview",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                    "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/google/gemini-2.5-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/google/gemini-3-flash-preview"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "create_session": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/google/gemini-3-flash-preview"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "agent-github-ruby-repo",
+                "type": "local",
+                "digest": "sha256:33835ad0739f7a24bea39b5ad7ec7651e4b761265d6c7358e1a974c775ab9166",
+                "source": "tasks",
+                "path": "tasks\\agent-github-ruby-repo"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/google/gemini-3-flash-preview",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                    "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/google/gemini-2.5-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/google/gemini-3-flash-preview"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "create_session": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/google/gemini-3-flash-preview"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "agent-hugging-face",
+                "type": "local",
+                "digest": "sha256:dce11f64582dddf8073309ba95c8d2e2a916240b70acc030b238e595278094ef",
+                "source": "tasks",
+                "path": "tasks\\agent-hugging-face"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/google/gemini-3-flash-preview",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                    "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/google/gemini-2.5-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/google/gemini-3-flash-preview"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "create_session": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/google/gemini-3-flash-preview"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "agent-iframe-form",
+                "type": "local",
+                "digest": "sha256:6d1d5f88f72052308a47f65db73a57409265b6b60fe2c1f57ddfd814eb126da1",
+                "source": "tasks",
+                "path": "tasks\\agent-iframe-form"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/google/gemini-3-flash-preview",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                    "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/google/gemini-2.5-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/google/gemini-3-flash-preview"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "create_session": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/google/gemini-3-flash-preview"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "agent-nba-trades",
+                "type": "local",
+                "digest": "sha256:02c0c6abf410c73317e046a970181ccc7f724ad10326eaac973e45a8c4386b0f",
+                "source": "tasks",
+                "path": "tasks\\agent-nba-trades"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/google/gemini-3-flash-preview",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                    "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/google/gemini-2.5-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/google/gemini-3-flash-preview"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "create_session": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/google/gemini-3-flash-preview"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "agent-sf-library-card",
+                "type": "local",
+                "digest": "sha256:9d4839fb66098020973f75a421ed4272701fa2fdb55b5425468df2113325fe5b",
+                "source": "tasks",
+                "path": "tasks\\agent-sf-library-card"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/google/gemini-3-flash-preview",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                    "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/google/gemini-2.5-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/google/gemini-3-flash-preview"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "create_session": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/google/gemini-3-flash-preview"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "agent-thegamer-opinion",
+                "type": "local",
+                "digest": "sha256:a8ca0c09ad7142de08349ee6b3f2e3af7ec4a7022435e1227d0b76b3efcecb2d",
+                "source": "tasks",
+                "path": "tasks\\agent-thegamer-opinion"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/google/gemini-3-flash-preview",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                    "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/google/gemini-2.5-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/google/gemini-3-flash-preview"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "create_session": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/google/gemini-3-flash-preview"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "wtb-smoke",
+                "type": "local",
+                "digest": "sha256:d68f1f499c3fcb4971fe3a0da76111673b3ce88df24a5c7c545e6f842e3c78bc",
+                "source": "tasks",
+                "path": "tasks\\wtb-smoke"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "bb_harbor.agent:StagehandAgent",
+                "model_name": "openrouter/google/gemini-3-flash-preview",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "mode": "dom"
+                },
+                "env": {
+                    "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                    "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                    "STAGEHAND_EXECUTION_MODEL": "openrouter/google/gemini-2.5-flash",
+                    "STAGEHAND_JUDGE_MODEL": "openrouter/google/gemini-3-flash-preview"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {
+                    "create_session": false,
+                    "delete_on_start_failure": true
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+                },
+                "import_path": "bb_harbor.verifier:StagehandVerifier",
+                "kwargs": {
+                    "judge_model": "openrouter/google/gemini-3-flash-preview"
+                },
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        }
+    ]
+}

@@ -1,0 +1,82 @@
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Harbor session agent-books-toscrape-light-attic__9APqUJX__env could not record a Anchor session id; check for a leaked browser tagged harbor-agent-books-toscrape-light-attic__9APqUJX__env
+Trial agent-books-toscrape-light-attic__9APqUJX failed: Anchor browser creation failed with HTTP 402: {"error":"Insufficient credits balance"}
+compose cp failed; retrying download with engine cp: Docker compose command failed for environment agent-books-toscrape-light-attic. Command: docker compose --project-name agent-books-toscrape-light-attic__9apqujx__env --project-directory C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\tasks\agent-books-toscrape-light-attic\environment -f C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\environments\docker\docker-compose-build.yaml cp main:/logs/agent/. C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\jobs\anchor-test\agent-books-toscrape-light-attic__9APqUJX\agent. Return code: 1. Stdout: no container found for service "main"
+. Stderr: None. 
+Failed to download logs to jobs\anchor-test\agent-books-toscrape-light-attic__9APqUJX\agent: Could not resolve container for compose service 'main' in project 'agent-books-toscrape-light-attic__9apqujx__env'.
+Traceback (most recent call last):
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 606, in run
+    await self._prepare()
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 645, in _prepare
+    await self._setup_agent_environment()
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 1849, in _setup_agent_environment
+    await self._start_agent_environment()
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 1855, in _start_agent_environment
+    await asyncio.wait_for(
+  File "C:\Program Files\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\bb_harbor\remote_cdp_env.py", line 193, in start
+    payload = await asyncio.shield(create_task)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\bb_harbor\remote_cdp_env.py", line 168, in _create_browser
+    raise RuntimeError(
+RuntimeError: Anchor browser creation failed with HTTP 402: {"error":"Insufficient credits balance"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 824, in _download_role_logs
+    await self.agent_environment.download_dir(
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\environments\docker\docker.py", line 1308, in download_dir
+    await self._platform.download_dir(source_dir, target_dir)
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\environments\docker\docker_unix.py", line 304, in download_dir
+    await self._download_via_engine_cp(f"{source_dir}/.", target_dir, service)
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\environments\docker\docker_unix.py", line 251, in _download_via_engine_cp
+    container = await self._resolve_service_container(service)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\environments\docker\docker_unix.py", line 230, in _resolve_service_container
+    raise RuntimeError(
+RuntimeError: Could not resolve container for compose service 'main' in project 'agent-books-toscrape-light-attic__9apqujx__env'.
+Collecting main service artifacts
+compose cp failed; retrying download with engine cp: Docker compose command failed for environment agent-books-toscrape-light-attic. Command: docker compose --project-name agent-books-toscrape-light-attic__9apqujx__env --project-directory C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\tasks\agent-books-toscrape-light-attic\environment -f C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\environments\docker\docker-compose-build.yaml cp main:/logs/artifacts C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\jobs\anchor-test\agent-books-toscrape-light-attic__9APqUJX\artifacts\logs\artifacts. Return code: 1. Stdout: no container found for service "main"
+. Stderr: None. 
+Failed to download artifact '/logs/artifacts' from service 'main' (best-effort)
+Traceback (most recent call last):
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 606, in run
+    await self._prepare()
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 645, in _prepare
+    await self._setup_agent_environment()
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 1849, in _setup_agent_environment
+    await self._start_agent_environment()
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 1855, in _start_agent_environment
+    await asyncio.wait_for(
+  File "C:\Program Files\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\bb_harbor\remote_cdp_env.py", line 193, in start
+    payload = await asyncio.shield(create_task)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\bb_harbor\remote_cdp_env.py", line 168, in _create_browser
+    raise RuntimeError(
+RuntimeError: Anchor browser creation failed with HTTP 402: {"error":"Insufficient credits balance"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\artifact_handler.py", line 351, in _download_artifact
+    await source_env.service_download_file(
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\environments\docker\docker.py", line 1319, in service_download_file
+    await self.download_file(source_path, target_path)
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\environments\docker\docker.py", line 1304, in download_file
+    await self._platform.download_file(source_path, target_path)
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\environments\docker\docker_unix.py", line 278, in download_file
+    await self._download_via_engine_cp(source_path, target_path, service)
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\environments\docker\docker_unix.py", line 251, in _download_via_engine_cp
+    container = await self._resolve_service_container(service)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\environments\docker\docker_unix.py", line 230, in _resolve_service_container
+    raise RuntimeError(
+RuntimeError: Could not resolve container for compose service 'main' in project 'agent-books-toscrape-light-attic__9apqujx__env'.
+Not retrying trial because the maximum number of retries has been reached

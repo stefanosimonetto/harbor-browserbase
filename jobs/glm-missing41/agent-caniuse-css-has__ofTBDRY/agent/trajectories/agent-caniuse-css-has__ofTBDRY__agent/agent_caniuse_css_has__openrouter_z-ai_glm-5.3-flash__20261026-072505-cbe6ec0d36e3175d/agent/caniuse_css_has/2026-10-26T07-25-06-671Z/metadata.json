@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/caniuse_css_has",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "task": "agent/caniuse_css_has",
+  "runId": "2026-10-26T07-25-06-671Z",
+  "runDir": "2026-10-26T07-25-06-671Z",
+  "attempt": 1,
+  "status": "complete"
+}

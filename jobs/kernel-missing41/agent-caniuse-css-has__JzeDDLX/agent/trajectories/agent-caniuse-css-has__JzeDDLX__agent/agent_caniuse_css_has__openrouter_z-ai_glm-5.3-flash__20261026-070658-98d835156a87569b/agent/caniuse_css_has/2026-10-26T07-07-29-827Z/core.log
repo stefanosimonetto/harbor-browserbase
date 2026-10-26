@@ -1,0 +1,6 @@
+{"step":0,"action":"goto","url":"https://caniuse.com/?search=search/css","ok":false}
+{"step":1,"action":"goto","url":"https://caniuse.com/","ok":true}
+{"step":2,"action":"ariaTree","url":"https://caniuse.com/","ok":true}
+{"step":3,"action":"act","url":"https://caniuse.com/","ok":true}
+{"step":4,"action":"keys","url":"https://caniuse.com/?search=%3Ahas%28%29","ok":true}
+{"step":5,"action":"ariaTree","url":"https://caniuse.com/?search=%3Ahas%28%29","ok":true}

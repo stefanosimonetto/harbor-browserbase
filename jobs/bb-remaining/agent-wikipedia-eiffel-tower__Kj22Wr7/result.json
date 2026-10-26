@@ -1,0 +1,159 @@
+{
+    "id": "90c42fb3-b800-4727-b8d1-99ebbd058c7c",
+    "task_name": "browserbase/agent-wikipedia-eiffel-tower",
+    "trial_name": "agent-wikipedia-eiffel-tower__Kj22Wr7",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/bb-remaining/agent-wikipedia-eiffel-tower__Kj22Wr7",
+    "task_id": {
+        "path": "tasks\\agent-wikipedia-eiffel-tower"
+    },
+    "source": "tasks",
+    "task_checksum": "0f00eb9d1c7afb9a9e06a961067d9675db29113c6ee770a4521026c296715ec0",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-wikipedia-eiffel-tower",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-wikipedia-eiffel-tower__Kj22Wr7",
+        "trials_dir": "jobs\\bb-remaining",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/z-ai/glm-5.3-flash",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "create_session": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "17ba1d76-9723-42bb-aced-aca61351df09",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "z-ai/glm-5.3-flash",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": {
+            "stagehand": {
+                "browserbase_session_id": "d8e4b03a-9509-4cb6-9fce-93f3e267ad28",
+                "browserbase_session_url": "https://www.browserbase.com/sessions/d8e4b03a-9509-4cb6-9fce-93f3e267ad28",
+                "browserbase_session_ids": [
+                    "d8e4b03a-9509-4cb6-9fce-93f3e267ad28"
+                ],
+                "task_id": "agent/wikipedia_eiffel_tower",
+                "mode": "dom",
+                "trajectory_dir": "/logs/agent/trajectories/agent-wikipedia-eiffel-tower__Kj22Wr7__agent/agent_wikipedia_eiffel_tower__openrouter_z-ai_glm-5.3-flash__20261026-185049-68de1d44f6a54a86/agent/wikipedia_eiffel_tower/2026-10-26T18-50-51-115Z",
+                "trajectory_root": "/logs/agent/trajectories/agent-wikipedia-eiffel-tower__Kj22Wr7__agent",
+                "requested_trajectory_group": "agent-wikipedia-eiffel-tower__Kj22Wr7__agent"
+            }
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0,
+            "outcome": 1.0,
+            "process": 1.0,
+            "process_measured": 1.0,
+            "criteria_earned_frac": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-10-26T18:50:41.183756Z",
+    "finished_at": "2026-10-26T18:52:49.148280Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T18:50:41.200833Z",
+        "finished_at": "2026-10-26T18:50:45.068981Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T18:50:45.068981Z",
+        "finished_at": "2026-10-26T18:50:46.154518Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T18:50:46.155036Z",
+        "finished_at": "2026-10-26T18:52:43.944044Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-26T18:52:44.996709Z",
+        "finished_at": "2026-10-26T18:52:45.425455Z"
+    },
+    "step_results": null
+}

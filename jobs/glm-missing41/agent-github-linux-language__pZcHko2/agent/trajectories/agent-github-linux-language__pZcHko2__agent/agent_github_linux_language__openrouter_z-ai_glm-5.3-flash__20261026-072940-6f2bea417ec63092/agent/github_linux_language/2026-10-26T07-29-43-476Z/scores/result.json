@@ -1,0 +1,49 @@
+{
+  "outcomeSuccess": true,
+  "processScore": 1,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent report C as the primary language with a percentage from the repository page?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Did the agent report the license shown on the repository (GPL-2.0 / other)?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "",
+      "evidenceInsufficient": false
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [],
+  "findings": [
+    {
+      "category": "trajectory_capture",
+      "severity": "info",
+      "description": "The primary-language evidence rests on the agent's mid-trajectory reading of the step-0 ariaTree (C 97.9%); the final aria tree was captured on the License tab and is truncated, so the Languages sidebar is not independently visible in the retained final state."
+    },
+    {
+      "category": "agent_strategy",
+      "severity": "info",
+      "description": "The agent noted its step-2 screenshot was low resolution and appropriately relied on the ariaTree text plus a targeted navigation to the License tab, which produced a clear, verifiable confirmation of GPL-2.0."
+    }
+  ],
+  "rawSteps": {
+    "primaryIntent": "Open the torvalds/linux GitHub repository and report the primary programming language with its percentage and the license shown for the repository.",
+    "reasoning": "The agent gathered both required data points from the correct repository page. The primary language (C, 97.9%) was read from the Languages sidebar via the accessibility tree and reported with the full breakdown. The agent then navigated to the License overview via the Resources sidebar link, and the final screenshot authoritatively confirms the repository's license as GPL-2.0 WITH Linux-syscall-note (GPL-2.0-only), exactly matching the agent's reported answer. Both rubric criteria are fully satisfied, so the task succeeded.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 2,
+    "totalMax": 2,
+    "evidenceImages": 7,
+    "evidenceTexts": 9,
+    "evidenceOriginalScreenshots": 7
+  }
+}

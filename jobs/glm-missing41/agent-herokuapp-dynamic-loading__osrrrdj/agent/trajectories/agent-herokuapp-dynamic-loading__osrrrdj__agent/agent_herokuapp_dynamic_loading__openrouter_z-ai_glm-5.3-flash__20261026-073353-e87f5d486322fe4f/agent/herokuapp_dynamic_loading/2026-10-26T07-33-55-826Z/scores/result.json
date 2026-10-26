@@ -1,0 +1,50 @@
+{
+  "outcomeSuccess": true,
+  "processScore": 1,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent click Start on the Dynamic Loading Example 2 page?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The agent navigated to Dynamic Loading (step 1), selected Example 2 (step 3), and the tool output at step 5 confirms a successful click on the Start button. The subsequent screenshot showing the 'Loading...' progress bar confirms the click initiated the dynamic load.",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Did the agent report the text 'Hello World!'?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "After waiting 3 seconds, the aria-tree at step 7 and the final screenshot at step 8 both show the rendered heading 'Hello World!'. The agent's final answer explicitly reports the text 'Hello World!', matching the evidence.",
+      "evidenceInsufficient": false
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [],
+  "findings": [
+    {
+      "category": "agent_strategy",
+      "severity": "info",
+      "description": "The agent verified the outcome with both an aria-tree and a screenshot after the wait, which matched the final page state — good confirmation practice for dynamic-content tasks.",
+      "suggestedAction": "No change needed; this verification pattern handles rendering delays reliably.",
+      "relatedSteps": [
+        6,
+        7,
+        8
+      ]
+    }
+  ],
+  "rawSteps": {
+    "primaryIntent": "Navigate to the-internet.herokuapp.com, open Dynamic Loading Example 2, click Start, wait for loading to complete, and report the text that appears.",
+    "reasoning": "The agent followed the exact navigation path: clicked 'Dynamic Loading' from the homepage (step 1), clicked 'Example 2: Element rendered after the fact' (step 3), clicked the Start button (step 5, tool output confirms successful click on 'button: Start'), waited 3 seconds (step 6), and confirmed via both aria-tree (step 7 shows 'heading: Hello World!') and a final screenshot (step 8) that the hidden element rendered with the text 'Hello World!'. The final trajectory state and post-run observation both show 'Hello World!' as a heading on the Example 2 page. The agent's predicted output explicitly reports 'Hello World!'. Both rubric criteria are fully satisfied with consistent visual and textual evidence.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 2,
+    "totalMax": 2,
+    "evidenceImages": 11,
+    "evidenceTexts": 21,
+    "evidenceOriginalScreenshots": 11
+  }
+}

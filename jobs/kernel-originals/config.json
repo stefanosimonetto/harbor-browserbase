@@ -1,0 +1,52 @@
+{
+    "job_name": "kernel-originals",
+    "n_concurrent_trials": 3,
+    "environment": {
+        "import_path": "bb_harbor.kernel_env:KernelEnvironment",
+        "kwargs": {
+            "timeout_seconds": 300,
+            "headless": false,
+            "stealth": false,
+            "delete_on_start_failure": true
+        }
+    },
+    "verifier": {
+        "env": {
+            "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+        },
+        "import_path": "bb_harbor.verifier:StagehandVerifier",
+        "kwargs": {
+            "judge_model": "openrouter/z-ai/glm-5.3-flash"
+        }
+    },
+    "agents": [
+        {
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/z-ai/glm-5.3-flash",
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+            }
+        }
+    ],
+    "datasets": [
+        {
+            "path": "tasks",
+            "task_names": [
+                "*all-recipes*",
+                "*arxiv-gpt-report*",
+                "*github-react-version*",
+                "*github-ruby-repo*",
+                "*hugging-face*",
+                "*iframe-form*",
+                "*nba-trades*",
+                "*sf-library-card*",
+                "*wtb-smoke*"
+            ]
+        }
+    ]
+}

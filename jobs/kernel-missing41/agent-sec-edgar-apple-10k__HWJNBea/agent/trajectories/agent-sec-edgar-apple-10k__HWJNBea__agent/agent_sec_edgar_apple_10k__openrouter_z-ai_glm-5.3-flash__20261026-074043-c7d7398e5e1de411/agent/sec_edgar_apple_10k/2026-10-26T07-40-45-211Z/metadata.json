@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/sec_edgar_apple_10k",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/sec_edgar_apple_10k",
+  "runId": "2026-10-26T07-40-45-211Z",
+  "runDir": "2026-10-26T07-40-45-211Z",
+  "attempt": 1,
+  "status": "complete"
+}

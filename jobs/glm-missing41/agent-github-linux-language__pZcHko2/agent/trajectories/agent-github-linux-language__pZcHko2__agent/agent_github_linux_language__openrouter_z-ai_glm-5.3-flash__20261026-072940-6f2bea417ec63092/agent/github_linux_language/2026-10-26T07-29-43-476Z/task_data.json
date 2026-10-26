@@ -1,0 +1,72 @@
+{
+  "task": {
+    "id": "agent/github_linux_language",
+    "instruction": "On GitHub, open the torvalds/linux repository and report its primary programming language with its percentage and the license shown for the repository.",
+    "initUrl": "https://github.com/torvalds/linux",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent report C as the primary language with a percentage from the repository page?",
+          "description": "Did the agent report C as the primary language with a percentage from the repository page?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report the license shown on the repository (GPL-2.0 / other)?",
+          "description": "Did the agent report the license shown on the repository (GPL-2.0 / other)?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "The torvalds/linux repository was successfully opened on GitHub. Both required pieces of information were retrieved: (1) The primary programming language from the Languages sidebar section is C at 97.9% (with full breakdown: Assembly 0.6%, Rust 0.5%, Shell 0.4%, Python 0.3%, Makefile 0.2%, Other 0.1%), confirmed via the accessibility tree progress bars and language list. (2) The license was verified by clicking the \"License\" link in the Resources sidebar, which displayed: \"SPDX-License-Identifier: GPL-2.0 WITH Linux-syscall-note\" — the repository is under the GNU General Public License version 2 only (GPL-2.0) with an explicit syscall exception. A screenshot was also taken to verify page state. Both data points were gathered and reported, completing the task successfully.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent report C as the primary language with a percentage from the repository page?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report the license shown on the repository (GPL-2.0 / other)?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "trajectory_capture",
+        "severity": "info",
+        "description": "The primary-language evidence rests on the agent's mid-trajectory reading of the step-0 ariaTree (C 97.9%); the final aria tree was captured on the License tab and is truncated, so the Languages sidebar is not independently visible in the retained final state."
+      },
+      {
+        "category": "agent_strategy",
+        "severity": "info",
+        "description": "The agent noted its step-2 screenshot was low resolution and appropriately relied on the ariaTree text plus a targeted navigation to the License tab, which produced a clear, verifiable confirmation of GPL-2.0."
+      }
+    ],
+    "rawSteps": {
+      "primaryIntent": "Open the torvalds/linux GitHub repository and report the primary programming language with its percentage and the license shown for the repository.",
+      "reasoning": "The agent gathered both required data points from the correct repository page. The primary language (C, 97.9%) was read from the Languages sidebar via the accessibility tree and reported with the full breakdown. The agent then navigated to the License overview via the Resources sidebar link, and the final screenshot authoritatively confirms the repository's license as GPL-2.0 WITH Linux-syscall-note (GPL-2.0-only), exactly matching the agent's reported answer. Both rubric criteria are fully satisfied, so the task succeeded.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 2,
+      "totalMax": 2,
+      "evidenceImages": 7,
+      "evidenceTexts": 9,
+      "evidenceOriginalScreenshots": 7
+    }
+  }
+}

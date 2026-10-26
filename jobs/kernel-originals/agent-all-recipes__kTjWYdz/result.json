@@ -1,0 +1,155 @@
+{
+    "id": "8d73e409-26c7-4b6e-abed-a56d146a70e9",
+    "task_name": "browserbase/agent-all-recipes",
+    "trial_name": "agent-all-recipes__kTjWYdz",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/kernel-originals/agent-all-recipes__kTjWYdz",
+    "task_id": {
+        "path": "tasks\\agent-all-recipes"
+    },
+    "source": "tasks",
+    "task_checksum": "cac0f029236c11b6925a9ed1defa374d1aa7c1f55bb9371c7e61590da96b14b3",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-all-recipes",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-all-recipes__kTjWYdz",
+        "trials_dir": "jobs\\kernel-originals",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/z-ai/glm-5.3-flash",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.kernel_env:KernelEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "timeout_seconds": 300,
+                "headless": false,
+                "stealth": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "779c4517-891b-44ad-94ef-3a9fbd3844e8",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "z-ai/glm-5.3-flash",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": {
+            "stagehand": {
+                "kernel_session_id": "j5r9yo744nqvk3ksl7xqc9wn",
+                "task_id": "agent/all_recipes",
+                "mode": "dom",
+                "trajectory_dir": "/logs/agent/trajectories/agent-all-recipes__kTjWYdz__agent/agent_all_recipes__openrouter_z-ai_glm-5.3-flash__20261026-162929-44973b2867850f58/agent/all_recipes/2026-10-26T16-29-31-817Z",
+                "trajectory_root": "/logs/agent/trajectories/agent-all-recipes__kTjWYdz__agent",
+                "requested_trajectory_group": "agent-all-recipes__kTjWYdz__agent"
+            }
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0,
+            "outcome": 1.0,
+            "process": 1.0,
+            "process_measured": 1.0,
+            "criteria_earned_frac": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-10-26T16:29:16.719343Z",
+    "finished_at": "2026-10-26T16:36:10.095024Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T16:29:17.378637Z",
+        "finished_at": "2026-10-26T16:29:24.787374Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T16:29:24.787374Z",
+        "finished_at": "2026-10-26T16:29:26.094231Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T16:29:26.094231Z",
+        "finished_at": "2026-10-26T16:36:03.777707Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-26T16:36:05.486421Z",
+        "finished_at": "2026-10-26T16:36:06.015883Z"
+    },
+    "step_results": null
+}

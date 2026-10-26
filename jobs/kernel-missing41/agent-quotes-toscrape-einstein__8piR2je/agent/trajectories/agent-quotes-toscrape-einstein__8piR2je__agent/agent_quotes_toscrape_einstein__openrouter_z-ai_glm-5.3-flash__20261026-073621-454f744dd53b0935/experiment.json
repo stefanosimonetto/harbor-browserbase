@@ -1,0 +1,11 @@
+{
+  "experiment": "agent/quotes_toscrape_einstein",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "braintrustExperiment": "stagehand-dev [experimentName=agent/quotes_toscrape_einstein]",
+  "braintrustExperimentId": null,
+  "braintrustExperimentUrl": null,
+  "braintrustProject": "stagehand-dev",
+  "braintrustProjectUrl": null,
+  "requestedExperimentName": "agent/quotes_toscrape_einstein"
+}

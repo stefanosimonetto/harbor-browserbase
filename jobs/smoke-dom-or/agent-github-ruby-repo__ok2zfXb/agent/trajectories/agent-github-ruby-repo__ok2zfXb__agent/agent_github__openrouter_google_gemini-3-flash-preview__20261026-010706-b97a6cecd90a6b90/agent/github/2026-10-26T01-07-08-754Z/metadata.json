@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/github",
+  "model": "openrouter/google/gemini-3-flash-preview",
+  "environment": "BROWSERBASE",
+  "task": "agent/github",
+  "runId": "2026-10-26T01-07-08-754Z",
+  "runDir": "2026-10-26T01-07-08-754Z",
+  "attempt": 1,
+  "status": "complete"
+}

@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/python_zip_strict",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "task": "agent/python_zip_strict",
+  "runId": "2026-10-26T18-39-17-081Z",
+  "runDir": "2026-10-26T18-39-17-081Z",
+  "attempt": 1,
+  "status": "complete"
+}

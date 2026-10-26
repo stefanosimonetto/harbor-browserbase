@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/github_linux_language",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/github_linux_language",
+  "runId": "2026-10-26T07-12-12-281Z",
+  "runDir": "2026-10-26T07-12-12-281Z",
+  "attempt": 1,
+  "status": "complete"
+}

@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/pypi_requests",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/pypi_requests",
+  "runId": "2026-10-26T07-33-19-241Z",
+  "runDir": "2026-10-26T07-33-19-241Z",
+  "attempt": 1,
+  "status": "complete"
+}

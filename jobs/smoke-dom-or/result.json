@@ -1,0 +1,119 @@
+{
+    "id": "104dad8f-91b2-4a60-9f70-1d6eefb4b964",
+    "started_at": "2026-10-25T18:06:14.484250",
+    "updated_at": "2026-10-25T18:25:43.855290",
+    "finished_at": "2026-10-25T18:25:43.855290",
+    "n_total_trials": 10,
+    "stats": {
+        "n_completed_trials": 10,
+        "n_errored_trials": 1,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "stagehand__google/gemini-3-flash-preview__tasks": {
+                "n_trials": 9,
+                "n_errors": 1,
+                "metrics": [
+                    {
+                        "criteria_earned_frac": 0.75,
+                        "outcome": 0.7,
+                        "process": 0.75,
+                        "process_measured": 0.9,
+                        "reward": 0.7
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "agent-all-recipes__xtKw9zY",
+                            "agent-nba-trades__p2HtjoQ"
+                        ],
+                        "1.0": [
+                            "agent-arxiv-gpt-report__CjYCk7b",
+                            "agent-github-react-version__p6FCLtQ",
+                            "agent-github-ruby-repo__ok2zfXb",
+                            "agent-hugging-face__KBbmiFW",
+                            "agent-iframe-form__7o3n73h",
+                            "agent-sf-library-card__a4YTpHi",
+                            "wtb-smoke__PzARh3o"
+                        ]
+                    },
+                    "outcome": {
+                        "0.0": [
+                            "agent-all-recipes__xtKw9zY",
+                            "agent-nba-trades__p2HtjoQ"
+                        ],
+                        "1.0": [
+                            "agent-arxiv-gpt-report__CjYCk7b",
+                            "agent-github-react-version__p6FCLtQ",
+                            "agent-github-ruby-repo__ok2zfXb",
+                            "agent-hugging-face__KBbmiFW",
+                            "agent-iframe-form__7o3n73h",
+                            "agent-sf-library-card__a4YTpHi",
+                            "wtb-smoke__PzARh3o"
+                        ]
+                    },
+                    "process": {
+                        "0.5": [
+                            "agent-all-recipes__xtKw9zY"
+                        ],
+                        "1.0": [
+                            "agent-arxiv-gpt-report__CjYCk7b",
+                            "agent-github-react-version__p6FCLtQ",
+                            "agent-github-ruby-repo__ok2zfXb",
+                            "agent-iframe-form__7o3n73h",
+                            "agent-nba-trades__p2HtjoQ",
+                            "agent-sf-library-card__a4YTpHi",
+                            "wtb-smoke__PzARh3o"
+                        ],
+                        "0.0": [
+                            "agent-hugging-face__KBbmiFW"
+                        ]
+                    },
+                    "process_measured": {
+                        "1.0": [
+                            "agent-all-recipes__xtKw9zY",
+                            "agent-arxiv-gpt-report__CjYCk7b",
+                            "agent-github-react-version__p6FCLtQ",
+                            "agent-github-ruby-repo__ok2zfXb",
+                            "agent-hugging-face__KBbmiFW",
+                            "agent-iframe-form__7o3n73h",
+                            "agent-nba-trades__p2HtjoQ",
+                            "agent-sf-library-card__a4YTpHi",
+                            "wtb-smoke__PzARh3o"
+                        ]
+                    },
+                    "criteria_earned_frac": {
+                        "0.5": [
+                            "agent-all-recipes__xtKw9zY"
+                        ],
+                        "1.0": [
+                            "agent-arxiv-gpt-report__CjYCk7b",
+                            "agent-github-react-version__p6FCLtQ",
+                            "agent-github-ruby-repo__ok2zfXb",
+                            "agent-iframe-form__7o3n73h",
+                            "agent-nba-trades__p2HtjoQ",
+                            "agent-sf-library-card__a4YTpHi",
+                            "wtb-smoke__PzARh3o"
+                        ],
+                        "0.0": [
+                            "agent-hugging-face__KBbmiFW"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "AgentTimeoutError": [
+                        "agent-thegamer-opinion__qPebHtZ"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null
+    }
+}

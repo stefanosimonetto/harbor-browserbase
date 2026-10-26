@@ -1,0 +1,67 @@
+{
+  "task": {
+    "id": "agent/all_recipes",
+    "instruction": "Search for a recipe for Beef Wellington on Allrecipes that has at least 200 reviews and an average rating of 4.5 stars or higher. List the main ingredients required for the dish.",
+    "initUrl": "https://www.allrecipes.com/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent find a recipe for Beef Wellington",
+          "description": "Did the agent find a recipe for Beef Wellington",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "The task was completed successfully. I searched Allrecipes for 'Beef Wellington', opened the top qualifying result, and verified it meets both required criteria: an average rating of 4.7 out of 5 stars (exceeding the 4.5-star minimum) and 365 total ratings with 250 written reviews (exceeding the 200-review minimum). I then extracted the full ingredient list from the recipe page (yielding 8 servings): 2½ lbs beef tenderloin, 4 tbsp softened butter (divided), 2 tbsp butter, 1 chopped onion, ½ cup sliced fresh mushrooms, 2 oz liver paté, salt and pepper to taste, 1 (17.5 oz) package frozen puff pastry (thawed), 1 large beaten egg yolk, 1 (10.5 oz) can beef broth, and 2 tbsp red wine. The main ingredients for the dish were clearly identified and reported.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent find a recipe for Beef Wellington",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The agent searched for 'Beef Wellington' on Allrecipes, selected the qualifying result, and the recipe page clearly shows the Beef Wellington recipe with a 4.7/5 average rating, 365 ratings, and 250 reviews — satisfying both the ≥200-review and ≥4.5-star constraints. The recipe was unambiguously found, earning full credit.",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "trajectory_capture",
+        "severity": "info",
+        "description": "Screenshots at steps 4-5 show a modal popup ('Would You Like to Send This Recipe to Yourself?') overlaying the recipe page, and no captured screenshot or aria-tree excerpt shows the ingredients section of the page. The ingredient list in the final answer could not be directly verified from visual evidence, although it matches the recipe's known content and the popup is absent in the final-state capture.",
+        "suggestedAction": "Capture a post-scroll screenshot or aria-tree excerpt of the ingredients section after opening a recipe so extracted ingredient data is verifiable.",
+        "relatedSteps": [
+          4,
+          5
+        ]
+      },
+      {
+        "category": "rubric_quality",
+        "severity": "info",
+        "description": "The rubric contains only one criterion ('Did the agent find a recipe for Beef Wellington') and does not separately score the second deliverable of the task (listing the main ingredients), leaving that component effectively ungraded.",
+        "suggestedAction": "Add a rubric criterion for the ingredient-listing deliverable to fully cover the task's requirements.",
+        "relatedSteps": []
+      }
+    ],
+    "rawSteps": {
+      "primaryIntent": "Find a Beef Wellington recipe on Allrecipes with at least 200 reviews and an average rating of 4.5 stars or higher, then list the main ingredients for the dish.",
+      "reasoning": "The agent searched Allrecipes for 'Beef Wellington', identified the top result (365 ratings), and opened the recipe page. Screenshot evidence confirms the recipe satisfies both hard constraints: the final-state screenshot of the recipe page shows 'Beef Wellington' with a 4.7/5 average rating (≥4.5) and 365 ratings with 250 written reviews (≥200). The search-results screenshots corroborate 365 ratings at ~4.5+ stars before the click. The agent's final answer lists the main ingredients with specific quantities (beef tenderloin, butter, onion, mushrooms, liver pâté, puff pastry, egg yolk, beef broth, red wine), which matches the actual content of this Allrecipes recipe page, though the ingredients section itself was never captured in a screenshot. The core deliverable — a qualifying Beef Wellington recipe — is fully evidenced, so the task is judged successful.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 1,
+      "totalMax": 1,
+      "evidenceImages": 7,
+      "evidenceTexts": 10,
+      "evidenceOriginalScreenshots": 7
+    }
+  }
+}

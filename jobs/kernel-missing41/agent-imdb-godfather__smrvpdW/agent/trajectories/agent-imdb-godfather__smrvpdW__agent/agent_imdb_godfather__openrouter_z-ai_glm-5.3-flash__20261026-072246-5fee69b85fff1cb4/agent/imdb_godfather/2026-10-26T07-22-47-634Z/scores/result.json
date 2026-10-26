@@ -1,0 +1,55 @@
+{
+  "outcomeSuccess": true,
+  "processScore": 1,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent identify Francis Ford Coppola as the director?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The page clearly lists Francis Ford Coppola as Director, and the agent reported him as such.",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Did the agent report a runtime of about 2 hours 55 minutes (175 minutes)?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The page shows a runtime of 2h 55m, matching the agent's report of 2h 55m (175 min).",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Did the agent report an IMDb rating taken from the title page?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The agent reported 9.2/10 based on ~2.3M votes, exactly matching the rating block on the title page.",
+      "evidenceInsufficient": false
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [],
+  "findings": [
+    {
+      "category": "trajectory_capture",
+      "severity": "info",
+      "description": "The aria_tree output for the final step was empty, but the screenshots fully corroborate the reported facts.",
+      "suggestedAction": "No action needed; screenshots provide sufficient ground truth.",
+      "relatedSteps": [
+        3
+      ]
+    }
+  ],
+  "rawSteps": {
+    "primaryIntent": "Find The Godfather (1972) on IMDb and report its director, runtime, and current IMDb rating.",
+    "reasoning": "The screenshots confirm the agent landed on the correct title page (tt0068646, The Godfather, 1972). The page clearly shows Director: Francis Ford Coppola, runtime 2h 55m, and IMDb rating 9.2/10 with 2.3M votes. The agent's final answer matches all three data points exactly, so all criteria are satisfied.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 3,
+    "totalMax": 3,
+    "evidenceImages": 6,
+    "evidenceTexts": 5,
+    "evidenceOriginalScreenshots": 6
+  }
+}

@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 609, in run
+    await self._run()
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\single_step.py", line 40, in _run
+    await self._run_agent()
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\single_step.py", line 76, in _run_agent
+    await self._run_agent_phase(
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 769, in _run_agent_phase
+    await asyncio.wait_for(
+  File "C:\Program Files\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\bb_harbor\agent.py", line 364, in run
+    result = await environment.exec(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\environments\docker\docker.py", line 1363, in exec
+    return await self._compose_exec(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\environments\docker\docker.py", line 1440, in _compose_exec
+    return await self._run_docker_compose_command(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\environments\docker\docker.py", line 758, in _run_docker_compose_command
+    result = await self._collect_buffered_output(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\environments\docker\docker.py", line 788, in _collect_buffered_output
+    stdout_bytes, stderr_bytes = await process.communicate(input=stdin_data)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\subprocess.py", line 201, in communicate
+    stdin, stdout, stderr = await tasks.gather(stdin, stdout, stderr)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\subprocess.py", line 181, in _read_stream
+    output = await stream.read()
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\streams.py", line 706, in read
+    block = await self.read(self._limit)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\streams.py", line 713, in read
+    await self._wait_for_data('read')
+  File "C:\Program Files\Python312\Lib\asyncio\streams.py", line 545, in _wait_for_data
+    await self._waiter
+asyncio.exceptions.CancelledError

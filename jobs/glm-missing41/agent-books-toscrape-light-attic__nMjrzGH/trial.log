@@ -1,0 +1,9 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/books_toscrape_light_attic in dom mode
+Captured Browserbase session 5a44511a-90c3-49b4-a2ea-80c2205448db for Stagehand task agent/books_toscrape_light_attic in dom mode at jobs\glm-missing41\agent-books-toscrape-light-attic__nMjrzGH\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-books-toscrape-light-attic__nMjrzGH__agent/agent_books_toscrape_light_attic__openrouter_z-ai_glm-5.3-flash__20261026-071521-ba25a5a4df2d0fd7/agent/books_toscrape_light_attic/2026-10-26T07-15-22-798Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=3 total=3 earned=2.0 max=3.0

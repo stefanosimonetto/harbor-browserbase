@@ -1,0 +1,42 @@
+{
+    "id": "7fd8b752-b971-41bb-9979-20eb12d2a0e5",
+    "started_at": "2026-10-26T09:23:43.887297",
+    "updated_at": "2026-10-26T16:25:12.496188Z",
+    "finished_at": null,
+    "n_total_trials": 9,
+    "stats": {
+        "n_completed_trials": 4,
+        "n_errored_trials": 4,
+        "n_running_trials": 3,
+        "n_pending_trials": 2,
+        "n_cancelled_trials": 1,
+        "n_retries": 0,
+        "evals": {
+            "stagehand__z-ai/glm-5.3-flash__tasks": {
+                "n_trials": 0,
+                "n_errors": 4,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {},
+                "exception_stats": {
+                    "StagehandVerifierUnhealthyError": [
+                        "agent-httpbin-pizza-form__CGhTDAD",
+                        "agent-github-flask-good-first-is__5nHrBJx",
+                        "agent-herokuapp-checkboxes__JwYRFMT"
+                    ],
+                    "CancelledError": [
+                        "agent-ns-enschede-amsterdam__MGNN5PA"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null
+    }
+}

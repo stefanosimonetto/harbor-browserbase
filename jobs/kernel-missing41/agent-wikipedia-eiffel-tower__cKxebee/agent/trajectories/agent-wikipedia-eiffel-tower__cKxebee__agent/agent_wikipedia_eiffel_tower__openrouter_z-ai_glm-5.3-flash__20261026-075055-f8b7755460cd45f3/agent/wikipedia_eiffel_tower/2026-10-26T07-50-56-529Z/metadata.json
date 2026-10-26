@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/wikipedia_eiffel_tower",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/wikipedia_eiffel_tower",
+  "runId": "2026-10-26T07-50-56-529Z",
+  "runDir": "2026-10-26T07-50-56-529Z",
+  "attempt": 1,
+  "status": "complete"
+}

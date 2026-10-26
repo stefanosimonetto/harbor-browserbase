@@ -1,0 +1,9 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/iframe_form in dom mode
+Captured Browserbase session 3bd875c4-07ab-45c8-bde7-fbbd25dd4253 for Stagehand task agent/iframe_form in dom mode at jobs\glm-missing41\agent-iframe-form__Ct9whSa\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-iframe-form__Ct9whSa__agent/agent_iframe_form__openrouter_z-ai_glm-5.3-flash__20261026-073718-ec00ce4d03ad3ccb/agent/iframe_form/2026-10-26T07-37-20-236Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0

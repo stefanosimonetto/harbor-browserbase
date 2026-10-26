@@ -1,0 +1,69 @@
+{
+  "task": {
+    "id": "agent/pep8_line_length",
+    "instruction": "On peps.python.org, open PEP 8 and report the recommended maximum line length for code and the recommended maximum line length for docstrings and comments.",
+    "initUrl": "https://peps.python.org/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent report 79 characters for code lines?",
+          "description": "Did the agent report 79 characters for code lines?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report 72 characters for docstrings and comments?",
+          "description": "Did the agent report 72 characters for docstrings and comments?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "The task was completed successfully. I navigated to https://peps.python.org/pep-0008/ (PEP 8 – Style Guide for Python Code) and located the 'Maximum Line Length' section. From the page content, I reported: (1) the recommended maximum line length for code is 79 characters ('Limit all lines to a maximum of 79 characters'), and (2) the recommended maximum line length for docstrings and comments is 72 characters ('For flowing long blocks of text with fewer structural restrictions (docstrings or comments), the line length should be limited to 72 characters'). I also included relevant context, such as the option for teams to extend the code limit up to 99 characters while keeping docstrings/comments at 72, and the standard library's conservative 79/72 requirement.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 0.5,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent report 79 characters for code lines?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report 72 characters for docstrings and comments?",
+        "maxPoints": 1,
+        "earnedPoints": null,
+        "explanation": "Verifier did not return a score for this criterion.",
+        "evidenceInsufficient": true
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [
+      "Did the agent report 72 characters for docstrings and comments?"
+    ],
+    "findings": [
+      {
+        "category": "trajectory_capture",
+        "severity": "info",
+        "description": "Provided screenshots show only the top of the PEP 8 page and the displayed aria tree is truncated before the 'Maximum Line Length' section, so the reported values are verified via the agent's verbatim quotes (which match PEP 8's known text) rather than a directly visible section screenshot."
+      }
+    ],
+    "rawSteps": {
+      "primaryIntent": "Open PEP 8 on peps.python.org and report the recommended maximum line length for code and for docstrings/comments.",
+      "reasoning": "The agent navigated directly to PEP 8 (https://peps.python.org/pep-0008/), captured the page's accessibility tree, and reported both requested values: 79 characters as the recommended maximum line length for code ('Limit all lines to a maximum of 79 characters') and 72 characters for docstrings and comments ('For flowing long blocks of text ... (docstrings or comments), the line length should be limited to 72 characters'). Both values match PEP 8's 'Maximum Line Length' section verbatim. Both rubric criteria are satisfied, so the task succeeded.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 1,
+      "totalMax": 2,
+      "evidenceImages": 3,
+      "evidenceTexts": 3,
+      "evidenceOriginalScreenshots": 3
+    }
+  }
+}

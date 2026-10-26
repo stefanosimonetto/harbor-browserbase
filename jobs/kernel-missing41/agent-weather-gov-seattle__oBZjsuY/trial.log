@@ -1,0 +1,10 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session moowlppgdfah735r1ru2pkqo
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/weather_gov_seattle in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-weather-gov-seattle__oBZjsuY__agent/agent_weather_gov_seattle__openrouter_z-ai_glm-5.3-flash__20261026-074849-3c534355f7a2aca4/agent/weather_gov_seattle/2026-10-26T07-48-50-248Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Deleted Kernel browser session moowlppgdfah735r1ru2pkqo

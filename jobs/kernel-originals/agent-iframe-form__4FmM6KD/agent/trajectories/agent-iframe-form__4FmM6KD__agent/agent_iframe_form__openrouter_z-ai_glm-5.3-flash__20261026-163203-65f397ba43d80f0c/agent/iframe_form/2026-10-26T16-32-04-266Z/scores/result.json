@@ -1,0 +1,48 @@
+{
+  "outcomeSuccess": true,
+  "processScore": 1,
+  "perCriterion": [
+    {
+      "criterion": "Is the form name input filled with 'John Smith'?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Is the form email input filled with 'john.smith@example.com'?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "",
+      "evidenceInsufficient": false
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [],
+  "findings": [
+    {
+      "category": "rubric_quality",
+      "severity": "info",
+      "description": "Rubric criterion 0 refers to a single 'name input' filled with 'John Smith', but the form actually contains separate First Name and Last Name fields. The agent's split ('John' / 'Smith') is the natural and correct interpretation of filling the name with 'John Smith' given the form structure.",
+      "suggestedAction": "Consider rewriting criteria to explicitly account for split first/last name fields (e.g., 'First Name = John and Last Name = Smith') to avoid evaluator ambiguity in similar form-filling tasks.",
+      "relatedSteps": [
+        1
+      ]
+    }
+  ],
+  "rawSteps": {
+    "primaryIntent": "Fill the Contact Form's name field with 'John Smith' and the email field with 'john.smith@example.com' on the iframe-hosted form page.",
+    "reasoning": "The agent correctly identified the Contact Form inside the cross-site OOPIF iframe. Since the form has no single 'name' field, it sensibly filled First Name with 'John' and Last Name with 'Smith', which together represent 'John Smith'. The Email field was filled with 'john.smith@example.com'. Both the final screenshot and the final accessibility tree (authoritative ground truth) confirm the exact values in the corresponding textboxes, and no other fields were modified. Both rubric criteria are fully satisfied, so the task succeeded.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 2,
+    "totalMax": 2,
+    "evidenceImages": 6,
+    "evidenceTexts": 9,
+    "evidenceOriginalScreenshots": 6
+  }
+}

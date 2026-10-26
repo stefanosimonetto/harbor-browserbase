@@ -1,0 +1,151 @@
+{
+    "id": "8578129e-f162-433c-b6fa-19ae52b5572e",
+    "task_name": "browserbase/agent-all-recipes",
+    "trial_name": "agent-all-recipes__mDdooGq",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/glm-missing41/agent-all-recipes__mDdooGq",
+    "task_id": {
+        "path": "tasks\\agent-all-recipes"
+    },
+    "source": "tasks",
+    "task_checksum": "cac0f029236c11b6925a9ed1defa374d1aa7c1f55bb9371c7e61590da96b14b3",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-all-recipes",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-all-recipes__mDdooGq",
+        "trials_dir": "jobs\\glm-missing41",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/z-ai/glm-5.3-flash",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "create_session": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "7341f028-a0ee-498f-b02f-3c014d4567ef",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "z-ai/glm-5.3-flash",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0,
+            "outcome": 0.0,
+            "process": 0.5,
+            "process_measured": 1.0,
+            "criteria_earned_frac": 0.5
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": {
+        "exception_type": "AgentTimeoutError",
+        "exception_message": "Agent execution timed out after 900.0 seconds",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\bb_harbor\\agent.py\", line 364, in run\n    result = await environment.exec(\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\environments\\docker\\docker.py\", line 1363, in exec\n    return await self._compose_exec(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\environments\\docker\\docker.py\", line 1440, in _compose_exec\n    return await self._run_docker_compose_command(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\environments\\docker\\docker.py\", line 758, in _run_docker_compose_command\n    result = await self._collect_buffered_output(\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\environments\\docker\\docker.py\", line 788, in _collect_buffered_output\n    stdout_bytes, stderr_bytes = await process.communicate(input=stdin_data)\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\subprocess.py\", line 201, in communicate\n    stdin, stdout, stderr = await tasks.gather(stdin, stdout, stderr)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\subprocess.py\", line 181, in _read_stream\n    output = await stream.read()\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\streams.py\", line 706, in read\n    block = await self.read(self._limit)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\streams.py\", line 713, in read\n    await self._wait_for_data('read')\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\streams.py\", line 545, in _wait_for_data\n    await self._waiter\nasyncio.exceptions.CancelledError\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 769, in _run_agent_phase\n    await asyncio.wait_for(\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\tasks.py\", line 519, in wait_for\n    async with timeouts.timeout(timeout):\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\timeouts.py\", line 115, in __aexit__\n    raise TimeoutError from exc_val\nTimeoutError\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\trial\\single_step.py\", line 76, in _run_agent\n    await self._run_agent_phase(\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 778, in _run_agent_phase\n    raise AgentTimeoutError(\nharbor.trial.errors.AgentTimeoutError: Agent execution timed out after 900.0 seconds\n",
+        "occurred_at": "2026-10-26T07:38:50.945782Z"
+    },
+    "started_at": "2026-10-26T07:23:43.441273Z",
+    "finished_at": "2026-10-26T07:38:57.814693Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T07:23:44.197129Z",
+        "finished_at": "2026-10-26T07:23:49.358112Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T07:23:49.358112Z",
+        "finished_at": "2026-10-26T07:23:50.757316Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T07:23:50.757316Z",
+        "finished_at": "2026-10-26T07:38:50.782679Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-26T07:38:53.005192Z",
+        "finished_at": "2026-10-26T07:38:54.005365Z"
+    },
+    "step_results": null
+}

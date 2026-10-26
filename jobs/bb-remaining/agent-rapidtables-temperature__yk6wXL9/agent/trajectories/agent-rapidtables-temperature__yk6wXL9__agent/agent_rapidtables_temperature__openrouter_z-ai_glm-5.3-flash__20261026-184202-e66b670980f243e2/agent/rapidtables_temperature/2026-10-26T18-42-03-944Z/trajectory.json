@@ -1,0 +1,167 @@
+{
+  "task": {
+    "id": "agent/rapidtables_temperature",
+    "instruction": "Using rapidtables.com's temperature converter, convert 100 degrees Fahrenheit to Celsius and report the result rounded to two decimal places.",
+    "initUrl": "https://www.rapidtables.com/convert/temperature/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent use the Fahrenheit to Celsius converter?",
+          "description": "Did the agent use the Fahrenheit to Celsius converter?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report approximately 37.78 degrees Celsius?",
+          "description": "Did the agent report approximately 37.78 degrees Celsius?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "steps": [
+    {
+      "actionName": "ariaTree",
+      "actionArgs": {},
+      "reasoning": "",
+      "agentEvidence": {
+        "modalities": [
+          {
+            "type": "json",
+            "content": {
+              "type": "tool-result",
+              "toolCallId": "call_b497c98d50e24671ac602100",
+              "toolName": "ariaTree",
+              "input": {},
+              "output": {
+                "success": true,
+                "content": "[5-6] RootWebArea: Temperature Converter\n  [5-15] scrollable, html\n    [5-18] body\n      [5-68] div\n        [5-70] link: RapidTables\n        [5-74] link: Search Search\n          [5-75] image: Search\n          [5-77] StaticText: Search\n      [5-82] div\n        [5-83] div\n          [5-85] link: Home\n          [5-87] StaticText: ›\n          [5-88] link: Conversion\n          [5-90] StaticText: ›\n          [5-91] link: Temperature conversion\n        [5-94] div\n          [5-95] div\n            [5-97] heading: Temperature Converter\n            [5-99] paragraph\n              [5-100] StaticText: Temperature degrees conversions of\n              [5-101] link: Fahrenheit (°F)\n              [5-103] StaticText: ,\n              [5-104] link: Celsius (°C)\n              [5-106] StaticText: , Kelvin (K), Rankine (°R):\n            [5-7] form\n              [5-107] div\n                [5-8] select\n                  [5-117] MenuListPopup\n                    [5-119] option: Color\n                    [5-120] option: Energy\n                    [5-121] option: Frequency\n                    [5-122] option: Image\n                    [5-123] option: Length\n                    [5-124] option: Mass (weight)\n                    [5-125] option: Number\n                    [5-126] option: Power\n                    [5-127] option: Temperature [selected]\n                [5-9] textbox: Enter degrees\n                [5-199] div\n                  [5-200] div\n                    [5-201] LabelText\n                      [5-202] StaticText: From\n                    [5-10] listbox: From\n                      [5-204] slot\n                        [5-205] option: -- [selected]\n                        [5-206] option: Celsius (°C)\n                        [5-207] option: Fahrenheit (°F)\n                        [5-208] option: Kelvin (K)\n                        [5-209] option: Rankine (°R)\n                  [5-24] div\n                    [5-237] LabelText\n                      [5-238] StaticText: To\n                    [5-11] listbox: To\n                      [5-240] slot\n                        [5-241] option: -- [selected]\n                        [5-242] option: Celsius (°C)\n                        [5-243] option: Fahrenheit (°F)\n                        [5-244] option: Kelvin (K)\n                        [5-245] option: Rankine (°R)\n            [5-273] heading: Temperature conversions\n            [5-275] list\n              [5-276] listitem\n                [5-277] ListMarker: •\n                [5-278] link: Fahrenheit to Celsius conversion\n              [5-280] listitem\n                [5-281] ListMarker: •\n                [5-282] link: Fahrenheit to Kelvin conversion\n              [5-284] listitem\n                [5-285] ListMarker: •\n                [5-286] link: Fahrenheit to Rankine conversion\n              [5-288] listitem\n                [5-289] ListMarker: •\n                [5-290] link: Celsius to Fahrenheit conversion\n              [5-292] listitem\n                [5-293] ListMarker: •\n                [5-294] link: Celsius to Kelvin conversion\n              [5-296] listitem\n                [5-297] ListMarker: •\n                [5-298] link: Celsius to Rankine conversion\n              [5-300] listitem\n                [5-301] ListMarker: •\n                [5-302] link: Kelvin to Fahrenheit conversion\n              [5-304] listitem\n                [5-305] ListMarker: •\n                [5-306] link: Kelvin to Celsius conversion\n              [5-308] listitem\n                [5-309] ListMarker: •\n                [5-310] link: Kelvin to Rankine conversion\n              [5-312] listitem\n                [5-313] ListMarker: •\n                [5-314] link: Rankine to Fahrenheit conversion\n              [5-316] listitem\n                [5-317] ListMarker: •\n                [5-318] link: Rankine to Celsius conversion\n              [5-320] listitem\n                [5-321] ListMarker: •\n                [5-322] link: Rankine to Kelvin conversion\n              [5-324] listitem\n                [5-325] ListMarker: •\n                [5-326] link: 0 degrees Fahrenheit to Celsius\n              [5-328] listitem\n                [5-329] ListMarker: •\n                [5-330] link: 10 degrees Fahrenheit to Celsius\n              [5-332] listitem\n                [5-333] ListMarker: •\n                [5-334] link: 20 degrees Fahrenheit to Celsius\n              [5-336] listitem\n                [5-337] ListMarker: •\n                [5-338] link: 30 degrees Fahrenheit to Celsius\n              [5-340] listitem\n                [5-341] ListMarker: •\n                [5-342] link: 70 Fahrenheit to Celsius\n              [5-344] listitem\n                [5-345] ListMarker: •\n                [5-346] link: 75 Fahrenheit to Celsius\n              [5-348] listitem\n                [5-349] ListMarker: •\n                [5-20] link: 100 Fahrenheit to Celsius\n              [5-351] listitem\n                [5-352] ListMarker: •\n                [5-353] link: 325 Fahrenheit to Celsius\n              [5-355] listitem\n                [5-356] ListMarker: •\n                [5-357] link: 350 Fahrenheit to Celsius\n              [5-359] listitem\n                [5-360] ListMarker: •\n                [5-361] link: 375 Fahrenheit to Celsius\n              [5-363] listitem\n                [5-364] ListMarker: •\n                [5-365] link: 400 Fahrenheit to Celsius\n              [5-367] listitem\n                [5-368] ListMarker: •\n                [5-369] link: 425 Fahrenheit to Celsius\n              [5-371] listitem\n                [5-372] ListMarker: •\n                [5-373] link: 0 degrees Celsius to Fahrenheit\n              [5-375] listitem\n                [5-376] ListMarker: •\n                [5-377] link: 10 degrees Celsius to Fahrenheit\n              [5-379] listitem\n                [5-380] ListMarker: •\n                [5-381] link: 20 degrees Celsius to Fahrenheit\n              [5-383] listitem\n                [5-384] ListMarker: •\n                [5-385] link: 30 degrees Celsius to Fahrenheit\n              [5-387] listitem\n                [5-388] ListMarker: •\n                [5-389] link: 100 degrees Celsius to Fahrenheit\n              [5-391] listitem\n                [5-392] ListMarker: •\n                [5-393] link: Celsius to Kelvin calculation\n              [5-395] listitem\n                [5-396] ListMarker: •\n                [5-397] link: Celsius to Fahrenheit calculation\n              [5-399] listitem\n                [5-400] ListMarker: •\n                [5-401] link: Fahrenheit to Celsius calculation\n              [5-403] listitem\n                [5-404] ListMarker: •\n                [5-405] link: Fahrenheit to Kelvin calculation\n              [5-407] listitem\n                [5-408] ListMarker: •\n                [5-409] link: Kelvin to Celsius calculation\n              [5-411] listitem\n                [5-412] ListMarker: •\n                [5-413] link: Kelvin to Fahrenheit calculation\n              [5-415] listitem\n                [5-416] ListMarker: •\n                [5-417] link: Celsius to Fahrenheit chart\n            [5-419] separator\n            [5-420] heading: See also\n            [5-422] list\n              [5-423] listitem\n                [5-424] link: Power conversion\n              [5-426] listitem\n                [5-427] link: Energy conversion\n              [5-429] listitem\n                [5-430] link: Charge conversion\n              [5-432] listitem\n                [5-433] link: Number conversion\n              [5-435] listitem\n                [5-436] link: Frequency conversion\n              [5-438] listitem\n                [5-439] link: Length conversion\n              [5-441] listitem\n                [5-442] link: Electrical calculators\n          [5-449] div\n            [5-450] heading: Write how to improve this page\n            [5-12] form\n              [5-13] textbox: Your message ...\n              [5-458] button: Submit Feedback\n        [5-460] div\n          [5-464] heading: CONVERSION\n          [5-466] list\n            [5-467] listitem\n              [5-468] ListMarker: •\n              [5-469] link: Color conversion\n            [5-471] listitem\n              [5-472] ListMarker: •\n              [5-473] link: Electric charge conversion\n            [5-475] listitem\n              [5-476] ListMarker: •\n              [5-477] link: Energy conversion\n            [5-479] listitem\n              [5-480] ListMarker: •\n              [5-481] link: Frequency conversion\n            [5-483] listitem\n              [5-484] ListMarker: •\n              [5-485] link: Image conversion\n            [5-487] listitem\n              [5-488] ListMarker: •\n              [5-489] link: Length conversion\n            [5-491] listitem\n              [5-492] ListMarker: •\n              [5-493] link: Number conversion\n            [5-495] listitem\n              [5-496] ListMarker: •\n              [5-497] link: Power conversion\n            [5-499] listitem\n              [5-500] ListMarker: •\n              [5-501] link: Temperature conversion\n            [5-503] listitem\n              [5-504] ListMarker: •\n              [5-505] link: Voltage conversion\n            [5-507] listitem\n              [5-508] ListMarker: •\n              [5-509] link: Electrical calculation\n          [5-511] heading: RAPID TABLES\n          [5-513] list\n            [5-514] listitem\n              [5-515] ListMarker: •\n              [5-516] link: Recommend Site\n            [5-518] listitem\n              [5-519] ListMarker: •\n              [5-520] link: Send Feedback\n            [5-522] listitem\n              [5-523] ListMarker: •\n              [5-524] link: About\n      [5-527] div\n        [5-528] link: Home\n        [5-530] StaticText: |\n        [5-531] link: Web\n        [5-533] StaticText: |\n        [5-534] link: Math\n        [5-536] StaticText: |\n        [5-537] link: Electricity\n        [5-539] StaticText: |\n        [5-540] link: Calculators\n        [5-542] StaticText: |\n        [5-543] link: Converters\n        [5-545] StaticText: |\n        [5-546] link: Tools\n        [5-548] paragraph\n          [5-549] StaticText: ©\n          [5-550] link: RapidTables.com\n          [5-552] StaticText: |\n          [5-553] link: About\n          [5-555] StaticText: |\n          [5-556] link: Terms of Use\n          [5-558] StaticText: |\n          [5-559] link: Privacy Policy\n          [5-561] StaticText: |\n          [5-562] link: Cookie Settings",
+                "pageUrl": "https://www.rapidtables.com/convert/temperature/"
+              },
+              "dynamic": false
+            }
+          }
+        ]
+      },
+      "probeEvidence": {
+        "url": "https://www.rapidtables.com/convert/temperature/",
+        "screenshotPath": "screenshots/probe/1.png"
+      },
+      "toolOutput": {
+        "ok": true,
+        "result": {
+          "type": "tool-result",
+          "toolCallId": "call_b497c98d50e24671ac602100",
+          "toolName": "ariaTree",
+          "input": {},
+          "output": {
+            "success": true,
+            "content": "[5-6] RootWebArea: Temperature Converter\n  [5-15] scrollable, html\n    [5-18] body\n      [5-68] div\n        [5-70] link: RapidTables\n        [5-74] link: Search Search\n          [5-75] image: Search\n          [5-77] StaticText: Search\n      [5-82] div\n        [5-83] div\n          [5-85] link: Home\n          [5-87] StaticText: ›\n          [5-88] link: Conversion\n          [5-90] StaticText: ›\n          [5-91] link: Temperature conversion\n        [5-94] div\n          [5-95] div\n            [5-97] heading: Temperature Converter\n            [5-99] paragraph\n              [5-100] StaticText: Temperature degrees conversions of\n              [5-101] link: Fahrenheit (°F)\n              [5-103] StaticText: ,\n              [5-104] link: Celsius (°C)\n              [5-106] StaticText: , Kelvin (K), Rankine (°R):\n            [5-7] form\n              [5-107] div\n                [5-8] select\n                  [5-117] MenuListPopup\n                    [5-119] option: Color\n                    [5-120] option: Energy\n                    [5-121] option: Frequency\n                    [5-122] option: Image\n                    [5-123] option: Length\n                    [5-124] option: Mass (weight)\n                    [5-125] option: Number\n                    [5-126] option: Power\n                    [5-127] option: Temperature [selected]\n                [5-9] textbox: Enter degrees\n                [5-199] div\n                  [5-200] div\n                    [5-201] LabelText\n                      [5-202] StaticText: From\n                    [5-10] listbox: From\n                      [5-204] slot\n                        [5-205] option: -- [selected]\n                        [5-206] option: Celsius (°C)\n                        [5-207] option: Fahrenheit (°F)\n                        [5-208] option: Kelvin (K)\n                        [5-209] option: Rankine (°R)\n                  [5-24] div\n                    [5-237] LabelText\n                      [5-238] StaticText: To\n                    [5-11] listbox: To\n                      [5-240] slot\n                        [5-241] option: -- [selected]\n                        [5-242] option: Celsius (°C)\n                        [5-243] option: Fahrenheit (°F)\n                        [5-244] option: Kelvin (K)\n                        [5-245] option: Rankine (°R)\n            [5-273] heading: Temperature conversions\n            [5-275] list\n              [5-276] listitem\n                [5-277] ListMarker: •\n                [5-278] link: Fahrenheit to Celsius conversion\n              [5-280] listitem\n                [5-281] ListMarker: •\n                [5-282] link: Fahrenheit to Kelvin conversion\n              [5-284] listitem\n                [5-285] ListMarker: •\n                [5-286] link: Fahrenheit to Rankine conversion\n              [5-288] listitem\n                [5-289] ListMarker: •\n                [5-290] link: Celsius to Fahrenheit conversion\n              [5-292] listitem\n                [5-293] ListMarker: •\n                [5-294] link: Celsius to Kelvin conversion\n              [5-296] listitem\n                [5-297] ListMarker: •\n                [5-298] link: Celsius to Rankine conversion\n              [5-300] listitem\n                [5-301] ListMarker: •\n                [5-302] link: Kelvin to Fahrenheit conversion\n              [5-304] listitem\n                [5-305] ListMarker: •\n                [5-306] link: Kelvin to Celsius conversion\n              [5-308] listitem\n                [5-309] ListMarker: •\n                [5-310] link: Kelvin to Rankine conversion\n              [5-312] listitem\n                [5-313] ListMarker: •\n                [5-314] link: Rankine to Fahrenheit conversion\n              [5-316] listitem\n                [5-317] ListMarker: •\n                [5-318] link: Rankine to Celsius conversion\n              [5-320] listitem\n                [5-321] ListMarker: •\n                [5-322] link: Rankine to Kelvin conversion\n              [5-324] listitem\n                [5-325] ListMarker: •\n                [5-326] link: 0 degrees Fahrenheit to Celsius\n              [5-328] listitem\n                [5-329] ListMarker: •\n                [5-330] link: 10 degrees Fahrenheit to Celsius\n              [5-332] listitem\n                [5-333] ListMarker: •\n                [5-334] link: 20 degrees Fahrenheit to Celsius\n              [5-336] listitem\n                [5-337] ListMarker: •\n                [5-338] link: 30 degrees Fahrenheit to Celsius\n              [5-340] listitem\n                [5-341] ListMarker: •\n                [5-342] link: 70 Fahrenheit to Celsius\n              [5-344] listitem\n                [5-345] ListMarker: •\n                [5-346] link: 75 Fahrenheit to Celsius\n              [5-348] listitem\n                [5-349] ListMarker: •\n                [5-20] link: 100 Fahrenheit to Celsius\n              [5-351] listitem\n                [5-352] ListMarker: •\n                [5-353] link: 325 Fahrenheit to Celsius\n              [5-355] listitem\n                [5-356] ListMarker: •\n                [5-357] link: 350 Fahrenheit to Celsius\n              [5-359] listitem\n                [5-360] ListMarker: •\n                [5-361] link: 375 Fahrenheit to Celsius\n              [5-363] listitem\n                [5-364] ListMarker: •\n                [5-365] link: 400 Fahrenheit to Celsius\n              [5-367] listitem\n                [5-368] ListMarker: •\n                [5-369] link: 425 Fahrenheit to Celsius\n              [5-371] listitem\n                [5-372] ListMarker: •\n                [5-373] link: 0 degrees Celsius to Fahrenheit\n              [5-375] listitem\n                [5-376] ListMarker: •\n                [5-377] link: 10 degrees Celsius to Fahrenheit\n              [5-379] listitem\n                [5-380] ListMarker: •\n                [5-381] link: 20 degrees Celsius to Fahrenheit\n              [5-383] listitem\n                [5-384] ListMarker: •\n                [5-385] link: 30 degrees Celsius to Fahrenheit\n              [5-387] listitem\n                [5-388] ListMarker: •\n                [5-389] link: 100 degrees Celsius to Fahrenheit\n              [5-391] listitem\n                [5-392] ListMarker: •\n                [5-393] link: Celsius to Kelvin calculation\n              [5-395] listitem\n                [5-396] ListMarker: •\n                [5-397] link: Celsius to Fahrenheit calculation\n              [5-399] listitem\n                [5-400] ListMarker: •\n                [5-401] link: Fahrenheit to Celsius calculation\n              [5-403] listitem\n                [5-404] ListMarker: •\n                [5-405] link: Fahrenheit to Kelvin calculation\n              [5-407] listitem\n                [5-408] ListMarker: •\n                [5-409] link: Kelvin to Celsius calculation\n              [5-411] listitem\n                [5-412] ListMarker: •\n                [5-413] link: Kelvin to Fahrenheit calculation\n              [5-415] listitem\n                [5-416] ListMarker: •\n                [5-417] link: Celsius to Fahrenheit chart\n            [5-419] separator\n            [5-420] heading: See also\n            [5-422] list\n              [5-423] listitem\n                [5-424] link: Power conversion\n              [5-426] listitem\n                [5-427] link: Energy conversion\n              [5-429] listitem\n                [5-430] link: Charge conversion\n              [5-432] listitem\n                [5-433] link: Number conversion\n              [5-435] listitem\n                [5-436] link: Frequency conversion\n              [5-438] listitem\n                [5-439] link: Length conversion\n              [5-441] listitem\n                [5-442] link: Electrical calculators\n          [5-449] div\n            [5-450] heading: Write how to improve this page\n            [5-12] form\n              [5-13] textbox: Your message ...\n              [5-458] button: Submit Feedback\n        [5-460] div\n          [5-464] heading: CONVERSION\n          [5-466] list\n            [5-467] listitem\n              [5-468] ListMarker: •\n              [5-469] link: Color conversion\n            [5-471] listitem\n              [5-472] ListMarker: •\n              [5-473] link: Electric charge conversion\n            [5-475] listitem\n              [5-476] ListMarker: •\n              [5-477] link: Energy conversion\n            [5-479] listitem\n              [5-480] ListMarker: •\n              [5-481] link: Frequency conversion\n            [5-483] listitem\n              [5-484] ListMarker: •\n              [5-485] link: Image conversion\n            [5-487] listitem\n              [5-488] ListMarker: •\n              [5-489] link: Length conversion\n            [5-491] listitem\n              [5-492] ListMarker: •\n              [5-493] link: Number conversion\n            [5-495] listitem\n              [5-496] ListMarker: •\n              [5-497] link: Power conversion\n            [5-499] listitem\n              [5-500] ListMarker: •\n              [5-501] link: Temperature conversion\n            [5-503] listitem\n              [5-504] ListMarker: •\n              [5-505] link: Voltage conversion\n            [5-507] listitem\n              [5-508] ListMarker: •\n              [5-509] link: Electrical calculation\n          [5-511] heading: RAPID TABLES\n          [5-513] list\n            [5-514] listitem\n              [5-515] ListMarker: •\n              [5-516] link: Recommend Site\n            [5-518] listitem\n              [5-519] ListMarker: •\n              [5-520] link: Send Feedback\n            [5-522] listitem\n              [5-523] ListMarker: •\n              [5-524] link: About\n      [5-527] div\n        [5-528] link: Home\n        [5-530] StaticText: |\n        [5-531] link: Web\n        [5-533] StaticText: |\n        [5-534] link: Math\n        [5-536] StaticText: |\n        [5-537] link: Electricity\n        [5-539] StaticText: |\n        [5-540] link: Calculators\n        [5-542] StaticText: |\n        [5-543] link: Converters\n        [5-545] StaticText: |\n        [5-546] link: Tools\n        [5-548] paragraph\n          [5-549] StaticText: ©\n          [5-550] link: RapidTables.com\n          [5-552] StaticText: |\n          [5-553] link: About\n          [5-555] StaticText: |\n          [5-556] link: Terms of Use\n          [5-558] StaticText: |\n          [5-559] link: Privacy Policy\n          [5-561] StaticText: |\n          [5-562] link: Cookie Settings",
+            "pageUrl": "https://www.rapidtables.com/convert/temperature/"
+          },
+          "dynamic": false
+        }
+      }
+    },
+    {
+      "actionName": "act",
+      "actionArgs": {
+        "action": "type \"100\" into the \"Enter degrees\" textbox"
+      },
+      "reasoning": "I'll enter 100 in the degrees textbox, then set the From and To units.",
+      "agentEvidence": {
+        "modalities": [
+          {
+            "type": "text",
+            "content": "I'll enter 100 in the degrees textbox, then set the From and To units."
+          },
+          {
+            "type": "json",
+            "content": {
+              "type": "tool-result",
+              "toolCallId": "call_909367bfe9ac469eaf003277",
+              "toolName": "act",
+              "input": {
+                "action": "type \"100\" into the \"Enter degrees\" textbox"
+              },
+              "output": {
+                "success": false,
+                "error": "TimeoutError: act() timed out after 45000ms (it may continue executing in the background) — try using a different description for the action"
+              },
+              "dynamic": false
+            }
+          }
+        ]
+      },
+      "probeEvidence": {
+        "url": "https://www.rapidtables.com/convert/temperature/",
+        "screenshotPath": "screenshots/probe/2.png"
+      },
+      "toolOutput": {
+        "ok": false,
+        "result": {
+          "type": "tool-result",
+          "toolCallId": "call_909367bfe9ac469eaf003277",
+          "toolName": "act",
+          "input": {
+            "action": "type \"100\" into the \"Enter degrees\" textbox"
+          },
+          "output": {
+            "success": false,
+            "error": "TimeoutError: act() timed out after 45000ms (it may continue executing in the background) — try using a different description for the action"
+          },
+          "dynamic": false
+        },
+        "error": "TimeoutError: act() timed out after 45000ms (it may continue executing in the background) — try using a different description for the action"
+      }
+    },
+    {
+      "actionName": "ariaTree",
+      "actionArgs": {},
+      "reasoning": "",
+      "agentEvidence": {
+        "modalities": [
+          {
+            "type": "json",
+            "content": {
+              "type": "tool-result",
+              "toolCallId": "call_c22bd02b45014cc89ff82684",
+              "toolName": "ariaTree",
+              "input": {},
+              "output": {
+                "content": "",
+                "error": "-32001 Session with given id not found.",
+                "success": false,
+                "pageUrl": ""
+              },
+              "dynamic": false
+            }
+          }
+        ]
+      },
+      "probeEvidence": {},
+      "toolOutput": {
+        "ok": false,
+        "result": {
+          "type": "tool-result",
+          "toolCallId": "call_c22bd02b45014cc89ff82684",
+          "toolName": "ariaTree",
+          "input": {},
+          "output": {
+            "content": "",
+            "error": "-32001 Session with given id not found.",
+            "success": false,
+            "pageUrl": ""
+          },
+          "dynamic": false
+        },
+        "error": "-32001 Session with given id not found."
+      }
+    }
+  ],
+  "finalAnswer": "Failed to execute task: No Page found for awaitActivePage: no page available",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  }
+}

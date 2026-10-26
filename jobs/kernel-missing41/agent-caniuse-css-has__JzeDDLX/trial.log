@@ -1,0 +1,10 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session du8zhflti1tzld6ox3s4ogmv
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/caniuse_css_has in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-caniuse-css-has__JzeDDLX__agent/agent_caniuse_css_has__openrouter_z-ai_glm-5.3-flash__20261026-070658-98d835156a87569b/agent/caniuse_css_has/2026-10-26T07-07-29-827Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Deleted Kernel browser session du8zhflti1tzld6ox3s4ogmv

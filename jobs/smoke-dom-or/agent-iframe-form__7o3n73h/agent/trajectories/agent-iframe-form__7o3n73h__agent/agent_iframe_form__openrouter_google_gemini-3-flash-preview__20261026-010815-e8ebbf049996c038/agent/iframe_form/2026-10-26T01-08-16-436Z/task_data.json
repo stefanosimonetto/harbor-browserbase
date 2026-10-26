@@ -1,0 +1,70 @@
+{
+  "task": {
+    "id": "agent/iframe_form",
+    "instruction": "Fill in the form name with 'John Smith', then fill in the form email with 'john.smith@example.com'.",
+    "initUrl": "https://browserbase.github.io/stagehand-eval-sites/sites/iframe-form-filling/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Is the form name input filled with 'John Smith'?",
+          "description": "Is the form name input filled with 'John Smith'?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Is the form email input filled with 'john.smith@example.com'?",
+          "description": "Is the form email input filled with 'john.smith@example.com'?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "I have successfully filled in the 'First Name' field with 'John', the 'Last Name' field with 'Smith', and the 'Email' field with 'john.smith@example.com' as requested.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Is the form name input filled with 'John Smith'?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The ARIA tree shows 'John' in the First Name textbox and 'Smith' in the Last Name textbox, which satisfies the request to fill the form name with 'John Smith'.",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Is the form email input filled with 'john.smith@example.com'?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The ARIA tree shows 'john.smith@example.com' in the Email textbox.",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "agent_strategy",
+        "severity": "info",
+        "description": "The agent split the provided full name 'John Smith' into First Name and Last Name fields, which was a correct interpretation of the UI layout.",
+        "relatedSteps": [
+          1
+        ]
+      }
+    ],
+    "rawSteps": {
+      "primaryIntent": "Fill in the name field with 'John Smith' and the email field with 'john.smith@example.com' in the form.",
+      "reasoning": "The agent successfully filled the form fields, although it split the name 'John Smith' into the 'First Name' and 'Last Name' fields. This is a common and logical interpretation when a single 'name' is requested for a form that provides separate first and last name inputs. The final state clearly shows the name and email are entered correctly according to this interpretation.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 2,
+      "totalMax": 2,
+      "evidenceImages": 3,
+      "evidenceTexts": 4,
+      "evidenceOriginalScreenshots": 3
+    }
+  }
+}

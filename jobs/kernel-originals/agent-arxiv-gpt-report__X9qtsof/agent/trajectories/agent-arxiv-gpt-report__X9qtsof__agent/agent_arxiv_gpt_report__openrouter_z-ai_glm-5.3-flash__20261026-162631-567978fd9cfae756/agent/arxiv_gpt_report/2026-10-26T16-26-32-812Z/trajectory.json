@@ -1,0 +1,24 @@
+{
+  "task": {
+    "id": "agent/arxiv_gpt_report",
+    "instruction": "Find the paper 'GPT-4 Technical Report', when was v3 submitted?",
+    "initUrl": "https://arxiv.org/",
+    "expectedAnswer": "03-27-2023",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "did the agent complete this task successfully? Find the paper 'GPT-4 Technical Report', when was v3 submitted? The correct answer is '03-27-2023'.",
+          "description": "did the agent complete this task successfully? Find the paper 'GPT-4 Technical Report', when was v3 submitted? The correct answer is '03-27-2023'.",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "steps": [],
+  "finalAnswer": "Failed to execute task: Key limit exceeded (daily limit). Manage it using https://openrouter.ai/workspaces/default/keys/d03ae0713ac1fd2eebefc3ec725da14a51e4391a99f731b0ffea09e08fe3a352 $5.00 of $5.00 used; resets 2026-10-27T00:00:00.000Z.",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  }
+}

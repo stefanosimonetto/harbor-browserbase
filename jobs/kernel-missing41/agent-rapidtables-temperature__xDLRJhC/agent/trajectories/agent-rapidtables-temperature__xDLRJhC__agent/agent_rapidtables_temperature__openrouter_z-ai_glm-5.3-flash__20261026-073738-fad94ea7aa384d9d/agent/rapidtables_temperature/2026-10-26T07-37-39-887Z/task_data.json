@@ -1,0 +1,98 @@
+{
+  "task": {
+    "id": "agent/rapidtables_temperature",
+    "instruction": "Using rapidtables.com's temperature converter, convert 100 degrees Fahrenheit to Celsius and report the result rounded to two decimal places.",
+    "initUrl": "https://www.rapidtables.com/convert/temperature/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent use the Fahrenheit to Celsius converter?",
+          "description": "Did the agent use the Fahrenheit to Celsius converter?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report approximately 37.78 degrees Celsius?",
+          "description": "Did the agent report approximately 37.78 degrees Celsius?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "Failed to execute task: Failed to process successful response",
+  "result": {
+    "outcomeSuccess": false,
+    "processScore": 0.5,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent use the Fahrenheit to Celsius converter?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The agent selected Fahrenheit (°F) → Celsius (°C), landed on the Fahrenheit-to-Celsius converter page, and entered 100 into the Fahrenheit field. Although it briefly strayed onto the color converter (steps 4-8), it recovered via navback and completed the conversion on the correct tool, as confirmed by the final screenshot and URL.",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report approximately 37.78 degrees Celsius?",
+        "maxPoints": 1,
+        "earnedPoints": 0,
+        "explanation": "Although the correct result (37.78°C) was computed and visible on the page, the agent's final response was a processing-error message with no reported value. The task's deliverable — reporting the result rounded to two decimal places — was never communicated, so no credit is earned for this criterion.",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "agent_tool_usage",
+        "severity": "blocking",
+        "description": "The run terminated with a harness/processing error ('Failed to process successful response') after the on-page conversion had already completed correctly; the screenshot shows 100°F = 37.78°C but no final answer was delivered to the user.",
+        "suggestedAction": "Retry the run or add fallback logic so that a result already visible on the page is extracted and reported even when final-response processing fails.",
+        "relatedSteps": [
+          11
+        ]
+      },
+      {
+        "category": "agent_strategy",
+        "severity": "warning",
+        "description": "Steps 4-8 show the agent accidentally operating the color converter (navigated to /convert/color/ and typed 100 into its field) before recognizing the mistake and navigating back; residual 'Color' selection is still visible in the category dropdown of the final screenshot.",
+        "suggestedAction": "Verify the URL and page context after each navigation before interacting with form fields.",
+        "relatedSteps": [
+          4,
+          5,
+          6,
+          9
+        ]
+      },
+      {
+        "category": "trajectory_capture",
+        "severity": "info",
+        "description": "No aria tree was captured for the final step (step 11 post-action); evaluation of the final state relied entirely on the step-11 screenshot.",
+        "suggestedAction": "Ensure a final accessibility-tree capture accompanies the last screenshot for verifiable ground truth.",
+        "relatedSteps": [
+          11
+        ]
+      }
+    ],
+    "firstPointOfFailure": {
+      "stepIndex": 11,
+      "errorCode": "3.3",
+      "category": "Execution & Strategy",
+      "description": "Agent completed all intermediate steps (conversion showing 100°F = 37.78°C on-page) but its final response failed with 'Failed to process successful response', so the result was never reported to the user."
+    },
+    "rawSteps": {
+      "primaryIntent": "Use rapidtables.com's temperature converter to convert 100 degrees Fahrenheit to Celsius and report the result rounded to two decimal places (37.78°C).",
+      "reasoning": "The agent successfully navigated to the temperature converter, selected Fahrenheit→Celsius, recovered from an accidental detour to the color converter (steps 4-8) via navback, and entered 100 into the Fahrenheit field on fahrenheit-to-celsius.html. The final screenshot (step 11) confirms the converter computed and displayed '100 degrees Fahrenheit = 37.78 degrees Celsius' with calculation steps showing 37.777777778°C. However, the agent's final answer was an error message ('Failed to execute task: Failed to process successful response') containing no reported value, so the user-facing deliverable was never produced. Criterion 0 passes (the Fahrenheit-to-Celsius converter was used), but Criterion 1 fails because the agent never reported 37.78°C to the user.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 1,
+      "totalMax": 2,
+      "evidenceImages": 13,
+      "evidenceTexts": 15,
+      "evidenceOriginalScreenshots": 13
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+    "id": "a0a390e8-804c-4654-8ec9-d08c8600fc6e",
+    "task_name": "browserbase/agent-nobel-physics-2020",
+    "trial_name": "agent-nobel-physics-2020__oCp9zAi",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/kernel-missing41/agent-nobel-physics-2020__oCp9zAi",
+    "task_id": {
+        "path": "tasks\\agent-nobel-physics-2020"
+    },
+    "source": "tasks",
+    "task_checksum": "ea267a21a3a4105f8680fd05a268c86ae3dc03e4d500784683752e0164a31399",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-nobel-physics-2020",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-nobel-physics-2020__oCp9zAi",
+        "trials_dir": "jobs\\kernel-missing41",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/z-ai/glm-5.3-flash",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.kernel_env:KernelEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "timeout_seconds": 300,
+                "headless": false,
+                "stealth": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "04c27338-02b2-4ba1-9dd2-d4789071d377",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "z-ai/glm-5.3-flash",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": {
+            "stagehand": {
+                "kernel_session_id": "ah3o9xulo8x9lsx1ig6rffig",
+                "task_id": "agent/nobel_physics_2020",
+                "mode": "dom",
+                "trajectory_dir": "/logs/agent/trajectories/agent-nobel-physics-2020__oCp9zAi__agent/agent_nobel_physics_2020__openrouter_z-ai_glm-5.3-flash__20261026-072543-6b99882b39896dba/agent/nobel_physics_2020/2026-10-26T07-25-44-860Z",
+                "trajectory_root": "/logs/agent/trajectories/agent-nobel-physics-2020__oCp9zAi__agent",
+                "requested_trajectory_group": "agent-nobel-physics-2020__oCp9zAi__agent"
+            }
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0,
+            "outcome": 1.0,
+            "process": 1.0,
+            "process_measured": 1.0,
+            "criteria_earned_frac": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-10-26T07:25:31.289704Z",
+    "finished_at": "2026-10-26T07:29:19.812818Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T07:25:31.330120Z",
+        "finished_at": "2026-10-26T07:25:38.458617Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T07:25:38.458617Z",
+        "finished_at": "2026-10-26T07:25:39.985373Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T07:25:39.985373Z",
+        "finished_at": "2026-10-26T07:29:12.487127Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-26T07:29:14.654355Z",
+        "finished_at": "2026-10-26T07:29:15.496064Z"
+    },
+    "step_results": null
+}

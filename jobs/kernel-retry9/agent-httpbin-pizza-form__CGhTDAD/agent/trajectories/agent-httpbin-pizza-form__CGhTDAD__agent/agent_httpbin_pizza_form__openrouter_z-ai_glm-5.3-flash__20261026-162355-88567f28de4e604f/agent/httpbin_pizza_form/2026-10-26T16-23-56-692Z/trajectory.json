@@ -1,0 +1,548 @@
+{
+  "task": {
+    "id": "agent/httpbin_pizza_form",
+    "instruction": "On httpbin.org's pizza order form, enter customer name 'Ada Lovelace', telephone '0612345678', email 'ada@example.com', choose a Large pizza with Bacon and Mushroom toppings, set delivery time to 19:30, and submit. Report the values echoed back in the response's 'form' section.",
+    "initUrl": "https://httpbin.org/forms/post",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent fill the customer name, telephone and email as instructed?",
+          "description": "Did the agent fill the customer name, telephone and email as instructed?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent choose a large size with bacon and mushroom toppings and a 19:30 delivery time?",
+          "description": "Did the agent choose a large size with bacon and mushroom toppings and a 19:30 delivery time?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent submit the form and report the echoed form values?",
+          "description": "Did the agent submit the form and report the echoed form values?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "steps": [
+    {
+      "actionName": "ariaTree",
+      "actionArgs": {},
+      "reasoning": "",
+      "agentEvidence": {
+        "modalities": [
+          {
+            "type": "json",
+            "content": {
+              "type": "tool-result",
+              "toolCallId": "call_d36b6690e83e4890a3ea106b",
+              "toolName": "ariaTree",
+              "input": {},
+              "output": {
+                "success": true,
+                "content": "[0-14] RootWebArea\n  [0-57] scrollable, html\n    [0-1] form\n      [0-16] paragraph\n        [0-61] LabelText\n          [0-17] StaticText: Customer name:\n          [0-2] textbox: Customer name:\n      [0-19] paragraph\n        [0-63] LabelText\n          [0-20] StaticText: Telephone:\n          [0-3] textbox: Telephone:\n      [0-22] paragraph\n        [0-65] LabelText\n          [0-23] StaticText: E-mail address:\n          [0-4] textbox: E-mail address:\n      [0-25] group: Pizza Size\n        [0-67] Legend\n          [0-26] StaticText: Pizza Size\n        [0-27] paragraph\n          [0-6] radio: Small\n        [0-29] paragraph\n          [0-7] radio: Medium\n        [0-31] paragraph\n          [0-8] radio: Large\n      [0-33] group: Pizza Toppings\n        [0-71] Legend\n          [0-34] StaticText: Pizza Toppings\n        [0-35] paragraph\n          [0-9] checkbox: Bacon\n        [0-37] paragraph\n          [0-10] checkbox: Extra Cheese\n        [0-39] paragraph\n          [0-11] checkbox: Onion\n        [0-41] paragraph\n          [0-12] checkbox: Mushroom\n      [0-43] paragraph\n        [0-76] LabelText\n          [0-44] StaticText: Preferred delivery time:\n          [0-13] InputTime: Preferred delivery time:\n            [0-78] div\n              [0-80] div\n                [0-81] spinbutton: Hours Hours\n                  [0-45] StaticText: --\n                [0-46] StaticText: :\n                [0-83] spinbutton: Minutes Minutes\n                  [0-47] StaticText: --\n                [0-48] StaticText: \n                [0-85] spinbutton: AM/PM AM/PM\n                  [0-49] StaticText: --\n              [0-86] button: Show time picker Show time picker\n      [0-50] paragraph\n        [0-87] LabelText\n          [0-51] StaticText: Delivery instructions:\n          [0-5] textbox: Delivery instructions:\n      [0-53] paragraph\n        [0-54] button: Submit order",
+                "pageUrl": "https://httpbin.org/forms/post"
+              },
+              "dynamic": false
+            }
+          }
+        ]
+      },
+      "probeEvidence": {
+        "url": "https://httpbin.org/forms/post",
+        "ariaTree": "[0-14] RootWebArea\n  [0-57] scrollable, html\n    [0-1] form\n      [0-16] paragraph\n        [0-61] LabelText\n          [0-17] StaticText: Customer name:\n          [0-2] textbox: Customer name:\n      [0-19] paragraph\n        [0-63] LabelText\n          [0-20] StaticText: Telephone:\n          [0-3] textbox: Telephone:\n      [0-22] paragraph\n        [0-65] LabelText\n          [0-23] StaticText: E-mail address:\n          [0-4] textbox: E-mail address:\n      [0-25] group: Pizza Size\n        [0-67] Legend\n          [0-26] StaticText: Pizza Size\n        [0-27] paragraph\n          [0-6] radio: Small\n        [0-29] paragraph\n          [0-7] radio: Medium\n        [0-31] paragraph\n          [0-8] radio: Large\n      [0-33] group: Pizza Toppings\n        [0-71] Legend\n          [0-34] StaticText: Pizza Toppings\n        [0-35] paragraph\n          [0-9] checkbox: Bacon\n        [0-37] paragraph\n          [0-10] checkbox: Extra Cheese\n        [0-39] paragraph\n          [0-11] checkbox: Onion\n        [0-41] paragraph\n          [0-12] checkbox: Mushroom\n      [0-43] paragraph\n        [0-76] LabelText\n          [0-44] StaticText: Preferred delivery time:\n          [0-13] InputTime: Preferred delivery time:\n            [0-78] div\n              [0-80] div\n                [0-81] spinbutton: Hours Hours\n                  [0-45] StaticText: --\n                [0-46] StaticText: :\n                [0-83] spinbutton: Minutes Minutes\n                  [0-47] StaticText: --\n                [0-48] StaticText: \n                [0-85] spinbutton: AM/PM AM/PM\n                  [0-49] StaticText: --\n              [0-86] button: Show time picker Show time picker\n      [0-50] paragraph\n        [0-87] LabelText\n          [0-51] StaticText: Delivery instructions:\n          [0-5] textbox: Delivery instructions:\n      [0-53] paragraph\n        [0-54] button: Submit order",
+        "screenshotPath": "screenshots/probe/1.png"
+      },
+      "toolOutput": {
+        "ok": true,
+        "result": {
+          "type": "tool-result",
+          "toolCallId": "call_d36b6690e83e4890a3ea106b",
+          "toolName": "ariaTree",
+          "input": {},
+          "output": {
+            "success": true,
+            "content": "[0-14] RootWebArea\n  [0-57] scrollable, html\n    [0-1] form\n      [0-16] paragraph\n        [0-61] LabelText\n          [0-17] StaticText: Customer name:\n          [0-2] textbox: Customer name:\n      [0-19] paragraph\n        [0-63] LabelText\n          [0-20] StaticText: Telephone:\n          [0-3] textbox: Telephone:\n      [0-22] paragraph\n        [0-65] LabelText\n          [0-23] StaticText: E-mail address:\n          [0-4] textbox: E-mail address:\n      [0-25] group: Pizza Size\n        [0-67] Legend\n          [0-26] StaticText: Pizza Size\n        [0-27] paragraph\n          [0-6] radio: Small\n        [0-29] paragraph\n          [0-7] radio: Medium\n        [0-31] paragraph\n          [0-8] radio: Large\n      [0-33] group: Pizza Toppings\n        [0-71] Legend\n          [0-34] StaticText: Pizza Toppings\n        [0-35] paragraph\n          [0-9] checkbox: Bacon\n        [0-37] paragraph\n          [0-10] checkbox: Extra Cheese\n        [0-39] paragraph\n          [0-11] checkbox: Onion\n        [0-41] paragraph\n          [0-12] checkbox: Mushroom\n      [0-43] paragraph\n        [0-76] LabelText\n          [0-44] StaticText: Preferred delivery time:\n          [0-13] InputTime: Preferred delivery time:\n            [0-78] div\n              [0-80] div\n                [0-81] spinbutton: Hours Hours\n                  [0-45] StaticText: --\n                [0-46] StaticText: :\n                [0-83] spinbutton: Minutes Minutes\n                  [0-47] StaticText: --\n                [0-48] StaticText: \n                [0-85] spinbutton: AM/PM AM/PM\n                  [0-49] StaticText: --\n              [0-86] button: Show time picker Show time picker\n      [0-50] paragraph\n        [0-87] LabelText\n          [0-51] StaticText: Delivery instructions:\n          [0-5] textbox: Delivery instructions:\n      [0-53] paragraph\n        [0-54] button: Submit order",
+            "pageUrl": "https://httpbin.org/forms/post"
+          },
+          "dynamic": false
+        }
+      }
+    },
+    {
+      "actionName": "fillForm",
+      "actionArgs": {
+        "fields": [
+          {
+            "action": "type Ada Lovelace into the Customer name textbox"
+          },
+          {
+            "action": "type 0612345678 into the Telephone textbox"
+          },
+          {
+            "action": "type ada@example.com into the E-mail address textbox"
+          }
+        ]
+      },
+      "reasoning": "The page has a pizza order form. Let me fill in the text fields first.",
+      "agentEvidence": {
+        "modalities": [
+          {
+            "type": "text",
+            "content": "The page has a pizza order form. Let me fill in the text fields first."
+          },
+          {
+            "type": "json",
+            "content": {
+              "type": "tool-result",
+              "toolCallId": "call_908a182ad69140c987ad8052",
+              "toolName": "fillForm",
+              "input": {
+                "fields": [
+                  {
+                    "action": "type Ada Lovelace into the Customer name textbox"
+                  },
+                  {
+                    "action": "type 0612345678 into the Telephone textbox"
+                  },
+                  {
+                    "action": "type ada@example.com into the E-mail address textbox"
+                  }
+                ]
+              },
+              "output": {
+                "success": true,
+                "actions": [
+                  {
+                    "success": true,
+                    "message": "Action [type] performed successfully on selector: xpath=/html[1]/body[1]/form[1]/p[1]/label[1]/input[1]",
+                    "actionDescription": "textbox: Customer name:",
+                    "actions": [
+                      {
+                        "selector": "xpath=/html[1]/body[1]/form[1]/p[1]/label[1]/input[1]",
+                        "description": "textbox: Customer name:",
+                        "method": "type",
+                        "arguments": [
+                          "Ada Lovelace"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "success": true,
+                    "message": "Action [type] performed successfully on selector: xpath=/html[1]/body[1]/form[1]/p[2]/label[1]/input[1]",
+                    "actionDescription": "textbox: Telephone:",
+                    "actions": [
+                      {
+                        "selector": "xpath=/html[1]/body[1]/form[1]/p[2]/label[1]/input[1]",
+                        "description": "textbox: Telephone:",
+                        "method": "type",
+                        "arguments": [
+                          "0612345678"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "success": true,
+                    "message": "Action [type] performed successfully on selector: xpath=/html[1]/body[1]/form[1]/p[3]/label[1]/input[1]",
+                    "actionDescription": "textbox: E-mail address:",
+                    "actions": [
+                      {
+                        "selector": "xpath=/html[1]/body[1]/form[1]/p[3]/label[1]/input[1]",
+                        "description": "textbox: E-mail address:",
+                        "method": "type",
+                        "arguments": [
+                          "ada@example.com"
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "playwrightArguments": [
+                  {
+                    "selector": "xpath=/html[1]/body[1]/form[1]/p[1]/label[1]/input[1]",
+                    "description": "textbox: Customer name:",
+                    "method": "type",
+                    "arguments": [
+                      "Ada Lovelace"
+                    ]
+                  },
+                  {
+                    "selector": "xpath=/html[1]/body[1]/form[1]/p[2]/label[1]/input[1]",
+                    "description": "textbox: Telephone:",
+                    "method": "type",
+                    "arguments": [
+                      "0612345678"
+                    ]
+                  },
+                  {
+                    "selector": "xpath=/html[1]/body[1]/form[1]/p[3]/label[1]/input[1]",
+                    "description": "textbox: E-mail address:",
+                    "method": "type",
+                    "arguments": [
+                      "ada@example.com"
+                    ]
+                  }
+                ]
+              },
+              "dynamic": false
+            }
+          }
+        ]
+      },
+      "probeEvidence": {
+        "url": "https://httpbin.org/forms/post",
+        "ariaTree": "[0-14] RootWebArea\n  [0-57] scrollable, html\n    [0-1] form\n      [0-16] paragraph\n        [0-61] LabelText\n          [0-17] StaticText: Customer name:\n          [0-2] textbox: Customer name:\n            [0-92] StaticText: Ada Lovelace\n      [0-19] paragraph\n        [0-63] LabelText\n          [0-20] StaticText: Telephone:\n          [0-3] textbox: Telephone:\n            [0-93] StaticText: 0612345678\n      [0-22] paragraph\n        [0-65] LabelText\n          [0-23] StaticText: E-mail address:\n          [0-4] textbox: E-mail address:\n            [0-94] StaticText: ada@example.com\n      [0-25] group: Pizza Size\n        [0-67] Legend\n          [0-26] StaticText: Pizza Size\n        [0-27] paragraph\n          [0-6] radio: Small\n        [0-29] paragraph\n          [0-7] radio: Medium\n        [0-31] paragraph\n          [0-8] radio: Large\n      [0-33] group: Pizza Toppings\n        [0-71] Legend\n          [0-34] StaticText: Pizza Toppings\n        [0-35] paragraph\n          [0-9] checkbox: Bacon\n        [0-37] paragraph\n          [0-10] checkbox: Extra Cheese\n        [0-39] paragraph\n          [0-11] checkbox: Onion\n        [0-41] paragraph\n          [0-12] checkbox: Mushroom\n      [0-43] paragraph\n        [0-76] LabelText\n          [0-44] StaticText: Preferred delivery time:\n          [0-13] InputTime: Preferred delivery time:\n            [0-78] div\n              [0-80] div\n                [0-81] spinbutton: Hours Hours\n                  [0-45] StaticText: --\n                [0-46] StaticText: :\n                [0-83] spinbutton: Minutes Minutes\n                  [0-47] StaticText: --\n                [0-48] StaticText: \n                [0-85] spinbutton: AM/PM AM/PM\n                  [0-49] StaticText: --\n              [0-86] button: Show time picker Show time picker\n      [0-50] paragraph\n        [0-87] LabelText\n          [0-51] StaticText: Delivery instructions:\n          [0-5] textbox: Delivery instructions:\n      [0-53] paragraph\n        [0-54] button: Submit order",
+        "screenshotPath": "screenshots/probe/2.png"
+      },
+      "toolOutput": {
+        "ok": true,
+        "result": {
+          "type": "tool-result",
+          "toolCallId": "call_908a182ad69140c987ad8052",
+          "toolName": "fillForm",
+          "input": {
+            "fields": [
+              {
+                "action": "type Ada Lovelace into the Customer name textbox"
+              },
+              {
+                "action": "type 0612345678 into the Telephone textbox"
+              },
+              {
+                "action": "type ada@example.com into the E-mail address textbox"
+              }
+            ]
+          },
+          "output": {
+            "success": true,
+            "actions": [
+              {
+                "success": true,
+                "message": "Action [type] performed successfully on selector: xpath=/html[1]/body[1]/form[1]/p[1]/label[1]/input[1]",
+                "actionDescription": "textbox: Customer name:",
+                "actions": [
+                  {
+                    "selector": "xpath=/html[1]/body[1]/form[1]/p[1]/label[1]/input[1]",
+                    "description": "textbox: Customer name:",
+                    "method": "type",
+                    "arguments": [
+                      "Ada Lovelace"
+                    ]
+                  }
+                ]
+              },
+              {
+                "success": true,
+                "message": "Action [type] performed successfully on selector: xpath=/html[1]/body[1]/form[1]/p[2]/label[1]/input[1]",
+                "actionDescription": "textbox: Telephone:",
+                "actions": [
+                  {
+                    "selector": "xpath=/html[1]/body[1]/form[1]/p[2]/label[1]/input[1]",
+                    "description": "textbox: Telephone:",
+                    "method": "type",
+                    "arguments": [
+                      "0612345678"
+                    ]
+                  }
+                ]
+              },
+              {
+                "success": true,
+                "message": "Action [type] performed successfully on selector: xpath=/html[1]/body[1]/form[1]/p[3]/label[1]/input[1]",
+                "actionDescription": "textbox: E-mail address:",
+                "actions": [
+                  {
+                    "selector": "xpath=/html[1]/body[1]/form[1]/p[3]/label[1]/input[1]",
+                    "description": "textbox: E-mail address:",
+                    "method": "type",
+                    "arguments": [
+                      "ada@example.com"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "playwrightArguments": [
+              {
+                "selector": "xpath=/html[1]/body[1]/form[1]/p[1]/label[1]/input[1]",
+                "description": "textbox: Customer name:",
+                "method": "type",
+                "arguments": [
+                  "Ada Lovelace"
+                ]
+              },
+              {
+                "selector": "xpath=/html[1]/body[1]/form[1]/p[2]/label[1]/input[1]",
+                "description": "textbox: Telephone:",
+                "method": "type",
+                "arguments": [
+                  "0612345678"
+                ]
+              },
+              {
+                "selector": "xpath=/html[1]/body[1]/form[1]/p[3]/label[1]/input[1]",
+                "description": "textbox: E-mail address:",
+                "method": "type",
+                "arguments": [
+                  "ada@example.com"
+                ]
+              }
+            ]
+          },
+          "dynamic": false
+        }
+      }
+    },
+    {
+      "actionName": "act",
+      "actionArgs": {
+        "action": "click the Large radio button"
+      },
+      "reasoning": "Text fields filled. Now I'll select the Large size and the Bacon and Mushroom toppings.",
+      "agentEvidence": {
+        "modalities": [
+          {
+            "type": "text",
+            "content": "Text fields filled. Now I'll select the Large size and the Bacon and Mushroom toppings."
+          },
+          {
+            "type": "json",
+            "content": {
+              "type": "tool-result",
+              "toolCallId": "call_b890ee87acf24a64a0a119f5",
+              "toolName": "act",
+              "input": {
+                "action": "click the Large radio button"
+              },
+              "output": {
+                "success": true,
+                "action": "Radio button labeled 'Large' in the Pizza Size group",
+                "playwrightArguments": {
+                  "selector": "xpath=/html[1]/body[1]/form[1]/fieldset[1]/p[3]/label[1]/input[1]",
+                  "description": "Radio button labeled 'Large' in the Pizza Size group",
+                  "method": "click",
+                  "arguments": []
+                }
+              },
+              "dynamic": false
+            }
+          }
+        ]
+      },
+      "probeEvidence": {
+        "url": "https://httpbin.org/forms/post",
+        "ariaTree": "[0-14] RootWebArea\n  [0-57] scrollable, html\n    [0-1] form\n      [0-16] paragraph\n        [0-61] LabelText\n          [0-17] StaticText: Customer name:\n          [0-2] textbox: Customer name:\n            [0-92] StaticText: Ada Lovelace\n      [0-19] paragraph\n        [0-63] LabelText\n          [0-20] StaticText: Telephone:\n          [0-3] textbox: Telephone:\n            [0-93] StaticText: 0612345678\n      [0-22] paragraph\n        [0-65] LabelText\n          [0-23] StaticText: E-mail address:\n          [0-4] textbox: E-mail address:\n            [0-94] StaticText: ada@example.com\n      [0-25] group: Pizza Size\n        [0-67] Legend\n          [0-26] StaticText: Pizza Size\n        [0-27] paragraph\n          [0-6] radio: Small\n        [0-29] paragraph\n          [0-7] radio: Medium\n        [0-31] paragraph\n          [0-8] radio: Large [checked]\n      [0-33] group: Pizza Toppings\n        [0-71] Legend\n          [0-34] StaticText: Pizza Toppings\n        [0-35] paragraph\n          [0-9] checkbox: Bacon\n        [0-37] paragraph\n          [0-10] checkbox: Extra Cheese\n        [0-39] paragraph\n          [0-11] checkbox: Onion\n        [0-41] paragraph\n          [0-12] checkbox: Mushroom\n      [0-43] paragraph\n        [0-76] LabelText\n          [0-44] StaticText: Preferred delivery time:\n          [0-13] InputTime: Preferred delivery time:\n            [0-78] div\n              [0-80] div\n                [0-81] spinbutton: Hours Hours\n                  [0-45] StaticText: --\n                [0-46] StaticText: :\n                [0-83] spinbutton: Minutes Minutes\n                  [0-47] StaticText: --\n                [0-48] StaticText: \n                [0-85] spinbutton: AM/PM AM/PM\n                  [0-49] StaticText: --\n              [0-86] button: Show time picker Show time picker\n      [0-50] paragraph\n        [0-87] LabelText\n          [0-51] StaticText: Delivery instructions:\n          [0-5] textbox: Delivery instructions:\n      [0-53] paragraph\n        [0-54] button: Submit order",
+        "screenshotPath": "screenshots/probe/3.png"
+      },
+      "toolOutput": {
+        "ok": true,
+        "result": {
+          "type": "tool-result",
+          "toolCallId": "call_b890ee87acf24a64a0a119f5",
+          "toolName": "act",
+          "input": {
+            "action": "click the Large radio button"
+          },
+          "output": {
+            "success": true,
+            "action": "Radio button labeled 'Large' in the Pizza Size group",
+            "playwrightArguments": {
+              "selector": "xpath=/html[1]/body[1]/form[1]/fieldset[1]/p[3]/label[1]/input[1]",
+              "description": "Radio button labeled 'Large' in the Pizza Size group",
+              "method": "click",
+              "arguments": []
+            }
+          },
+          "dynamic": false
+        }
+      }
+    },
+    {
+      "actionName": "act",
+      "actionArgs": {
+        "action": "click the Bacon checkbox"
+      },
+      "reasoning": "",
+      "agentEvidence": {
+        "modalities": [
+          {
+            "type": "json",
+            "content": {
+              "type": "tool-result",
+              "toolCallId": "call_eec1f200cd7540d1969cbb8a",
+              "toolName": "act",
+              "input": {
+                "action": "click the Bacon checkbox"
+              },
+              "output": {
+                "success": true,
+                "action": "Bacon checkbox",
+                "playwrightArguments": {
+                  "selector": "xpath=/html[1]/body[1]/form[1]/fieldset[2]/p[1]/label[1]/input[1]",
+                  "description": "Bacon checkbox",
+                  "method": "click",
+                  "arguments": [
+                    ""
+                  ]
+                }
+              },
+              "dynamic": false
+            }
+          }
+        ]
+      },
+      "probeEvidence": {
+        "url": "https://httpbin.org/forms/post",
+        "ariaTree": "[0-14] RootWebArea\n  [0-57] scrollable, html\n    [0-1] form\n      [0-16] paragraph\n        [0-61] LabelText\n          [0-17] StaticText: Customer name:\n          [0-2] textbox: Customer name:\n            [0-92] StaticText: Ada Lovelace\n      [0-19] paragraph\n        [0-63] LabelText\n          [0-20] StaticText: Telephone:\n          [0-3] textbox: Telephone:\n            [0-93] StaticText: 0612345678\n      [0-22] paragraph\n        [0-65] LabelText\n          [0-23] StaticText: E-mail address:\n          [0-4] textbox: E-mail address:\n            [0-94] StaticText: ada@example.com\n      [0-25] group: Pizza Size\n        [0-67] Legend\n          [0-26] StaticText: Pizza Size\n        [0-27] paragraph\n          [0-6] radio: Small\n        [0-29] paragraph\n          [0-7] radio: Medium\n        [0-31] paragraph\n          [0-8] radio: Large [checked]\n      [0-33] group: Pizza Toppings\n        [0-71] Legend\n          [0-34] StaticText: Pizza Toppings\n        [0-35] paragraph\n          [0-9] checkbox: Bacon [checked]\n        [0-37] paragraph\n          [0-10] checkbox: Extra Cheese\n        [0-39] paragraph\n          [0-11] checkbox: Onion\n        [0-41] paragraph\n          [0-12] checkbox: Mushroom\n      [0-43] paragraph\n        [0-76] LabelText\n          [0-44] StaticText: Preferred delivery time:\n          [0-13] InputTime: Preferred delivery time:\n            [0-78] div\n              [0-80] div\n                [0-81] spinbutton: Hours Hours\n                  [0-45] StaticText: --\n                [0-46] StaticText: :\n                [0-83] spinbutton: Minutes Minutes\n                  [0-47] StaticText: --\n                [0-48] StaticText: \n                [0-85] spinbutton: AM/PM AM/PM\n                  [0-49] StaticText: --\n              [0-86] button: Show time picker Show time picker\n      [0-50] paragraph\n        [0-87] LabelText\n          [0-51] StaticText: Delivery instructions:\n          [0-5] textbox: Delivery instructions:\n      [0-53] paragraph\n        [0-54] button: Submit order",
+        "screenshotPath": "screenshots/probe/4.png"
+      },
+      "toolOutput": {
+        "ok": true,
+        "result": {
+          "type": "tool-result",
+          "toolCallId": "call_eec1f200cd7540d1969cbb8a",
+          "toolName": "act",
+          "input": {
+            "action": "click the Bacon checkbox"
+          },
+          "output": {
+            "success": true,
+            "action": "Bacon checkbox",
+            "playwrightArguments": {
+              "selector": "xpath=/html[1]/body[1]/form[1]/fieldset[2]/p[1]/label[1]/input[1]",
+              "description": "Bacon checkbox",
+              "method": "click",
+              "arguments": [
+                ""
+              ]
+            }
+          },
+          "dynamic": false
+        }
+      }
+    },
+    {
+      "actionName": "act",
+      "actionArgs": {
+        "action": "click the Mushroom checkbox"
+      },
+      "reasoning": "",
+      "agentEvidence": {
+        "modalities": [
+          {
+            "type": "json",
+            "content": {
+              "type": "tool-result",
+              "toolCallId": "call_ad6c80f2f8b64b56a9fd5d5c",
+              "toolName": "act",
+              "input": {
+                "action": "click the Mushroom checkbox"
+              },
+              "output": {
+                "success": true,
+                "action": "checkbox: Mushroom",
+                "playwrightArguments": {
+                  "selector": "xpath=/html[1]/body[1]/form[1]/fieldset[2]/p[4]/label[1]/input[1]",
+                  "description": "checkbox: Mushroom",
+                  "method": "click",
+                  "arguments": [
+                    "left"
+                  ]
+                }
+              },
+              "dynamic": false
+            }
+          }
+        ]
+      },
+      "probeEvidence": {
+        "url": "https://httpbin.org/forms/post",
+        "ariaTree": "[0-14] RootWebArea\n  [0-57] scrollable, html\n    [0-1] form\n      [0-16] paragraph\n        [0-61] LabelText\n          [0-17] StaticText: Customer name:\n          [0-2] textbox: Customer name:\n            [0-92] StaticText: Ada Lovelace\n      [0-19] paragraph\n        [0-63] LabelText\n          [0-20] StaticText: Telephone:\n          [0-3] textbox: Telephone:\n            [0-93] StaticText: 0612345678\n      [0-22] paragraph\n        [0-65] LabelText\n          [0-23] StaticText: E-mail address:\n          [0-4] textbox: E-mail address:\n            [0-94] StaticText: ada@example.com\n      [0-25] group: Pizza Size\n        [0-67] Legend\n          [0-26] StaticText: Pizza Size\n        [0-27] paragraph\n          [0-6] radio: Small\n        [0-29] paragraph\n          [0-7] radio: Medium\n        [0-31] paragraph\n          [0-8] radio: Large [checked]\n      [0-33] group: Pizza Toppings\n        [0-71] Legend\n          [0-34] StaticText: Pizza Toppings\n        [0-35] paragraph\n          [0-9] checkbox: Bacon [checked]\n        [0-37] paragraph\n          [0-10] checkbox: Extra Cheese\n        [0-39] paragraph\n          [0-11] checkbox: Onion\n        [0-41] paragraph\n          [0-12] checkbox: Mushroom [checked]\n      [0-43] paragraph\n        [0-76] LabelText\n          [0-44] StaticText: Preferred delivery time:\n          [0-13] InputTime: Preferred delivery time:\n            [0-78] div\n              [0-80] div\n                [0-81] spinbutton: Hours Hours\n                  [0-45] StaticText: --\n                [0-46] StaticText: :\n                [0-83] spinbutton: Minutes Minutes\n                  [0-47] StaticText: --\n                [0-48] StaticText: \n                [0-85] spinbutton: AM/PM AM/PM\n                  [0-49] StaticText: --\n              [0-86] button: Show time picker Show time picker\n      [0-50] paragraph\n        [0-87] LabelText\n          [0-51] StaticText: Delivery instructions:\n          [0-5] textbox: Delivery instructions:\n      [0-53] paragraph\n        [0-54] button: Submit order",
+        "screenshotPath": "screenshots/probe/5.png"
+      },
+      "toolOutput": {
+        "ok": true,
+        "result": {
+          "type": "tool-result",
+          "toolCallId": "call_ad6c80f2f8b64b56a9fd5d5c",
+          "toolName": "act",
+          "input": {
+            "action": "click the Mushroom checkbox"
+          },
+          "output": {
+            "success": true,
+            "action": "checkbox: Mushroom",
+            "playwrightArguments": {
+              "selector": "xpath=/html[1]/body[1]/form[1]/fieldset[2]/p[4]/label[1]/input[1]",
+              "description": "checkbox: Mushroom",
+              "method": "click",
+              "arguments": [
+                "left"
+              ]
+            }
+          },
+          "dynamic": false
+        }
+      }
+    },
+    {
+      "actionName": "act",
+      "actionArgs": {
+        "action": "click the Hours spinbutton in the Preferred delivery time field"
+      },
+      "reasoning": "Now I need to set the delivery time to 19:30. The time input has separate spinbuttons for hours, minutes, and AM/PM.",
+      "agentEvidence": {
+        "modalities": [
+          {
+            "type": "text",
+            "content": "Now I need to set the delivery time to 19:30. The time input has separate spinbuttons for hours, minutes, and AM/PM."
+          },
+          {
+            "type": "json",
+            "content": {
+              "type": "tool-result",
+              "toolCallId": "call_c45d8310851144f2a0750383",
+              "toolName": "act",
+              "input": {
+                "action": "click the Hours spinbutton in the Preferred delivery time field"
+              },
+              "output": {
+                "success": false,
+                "action": "Hours spinbutton in the Preferred delivery time field"
+              },
+              "dynamic": false
+            }
+          }
+        ]
+      },
+      "probeEvidence": {
+        "url": "https://httpbin.org/forms/post",
+        "ariaTree": "[0-14] RootWebArea\n  [0-57] scrollable, html\n    [0-1] form\n      [0-16] paragraph\n        [0-61] LabelText\n          [0-17] StaticText: Customer name:\n          [0-2] textbox: Customer name:\n            [0-92] StaticText: Ada Lovelace\n      [0-19] paragraph\n        [0-63] LabelText\n          [0-20] StaticText: Telephone:\n          [0-3] textbox: Telephone:\n            [0-93] StaticText: 0612345678\n      [0-22] paragraph\n        [0-65] LabelText\n          [0-23] StaticText: E-mail address:\n          [0-4] textbox: E-mail address:\n            [0-94] StaticText: ada@example.com\n      [0-25] group: Pizza Size\n        [0-67] Legend\n          [0-26] StaticText: Pizza Size\n        [0-27] paragraph\n          [0-6] radio: Small\n        [0-29] paragraph\n          [0-7] radio: Medium\n        [0-31] paragraph\n          [0-8] radio: Large [checked]\n      [0-33] group: Pizza Toppings\n        [0-71] Legend\n          [0-34] StaticText: Pizza Toppings\n        [0-35] paragraph\n          [0-9] checkbox: Bacon [checked]\n        [0-37] paragraph\n          [0-10] checkbox: Extra Cheese\n        [0-39] paragraph\n          [0-11] checkbox: Onion\n        [0-41] paragraph\n          [0-12] checkbox: Mushroom [checked]\n      [0-43] paragraph\n        [0-76] LabelText\n          [0-44] StaticText: Preferred delivery time:\n          [0-13] InputTime: Preferred delivery time:\n            [0-78] div\n              [0-80] div\n                [0-81] spinbutton: Hours Hours\n                  [0-45] StaticText: --\n                [0-46] StaticText: :\n                [0-83] spinbutton: Minutes Minutes\n                  [0-47] StaticText: --\n                [0-48] StaticText: \n                [0-85] spinbutton: AM/PM AM/PM\n                  [0-49] StaticText: --\n              [0-86] button: Show time picker Show time picker\n      [0-50] paragraph\n        [0-87] LabelText\n          [0-51] StaticText: Delivery instructions:\n          [0-5] textbox: Delivery instructions:\n      [0-53] paragraph\n        [0-54] button: Submit order",
+        "screenshotPath": "screenshots/probe/6.png"
+      },
+      "toolOutput": {
+        "ok": false,
+        "result": {
+          "type": "tool-result",
+          "toolCallId": "call_c45d8310851144f2a0750383",
+          "toolName": "act",
+          "input": {
+            "action": "click the Hours spinbutton in the Preferred delivery time field"
+          },
+          "output": {
+            "success": false,
+            "action": "Hours spinbutton in the Preferred delivery time field"
+          },
+          "dynamic": false
+        }
+      }
+    }
+  ],
+  "finalAnswer": "Failed to execute task: Key limit exceeded (daily limit). Manage it using https://openrouter.ai/workspaces/default/keys/d03ae0713ac1fd2eebefc3ec725da14a51e4391a99f731b0ffea09e08fe3a352 $5.00 of $5.00 used; resets 2026-10-27T00:00:00.000Z.",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  }
+}

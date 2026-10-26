@@ -1,0 +1,55 @@
+{
+  "outcomeSuccess": false,
+  "processScore": 0,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent fill the customer name, telephone and email as instructed?",
+      "maxPoints": 1,
+      "earnedPoints": 0,
+      "explanation": "Fused judgment call failed for this criterion.",
+      "evidenceInsufficient": true
+    },
+    {
+      "criterion": "Did the agent choose a large size with bacon and mushroom toppings and a 19:30 delivery time?",
+      "maxPoints": 1,
+      "earnedPoints": 0,
+      "explanation": "Fused judgment call failed for this criterion.",
+      "evidenceInsufficient": true
+    },
+    {
+      "criterion": "Did the agent submit the form and report the echoed form values?",
+      "maxPoints": 1,
+      "earnedPoints": 0,
+      "explanation": "Fused judgment call failed for this criterion.",
+      "evidenceInsufficient": true
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [
+    "Did the agent fill the customer name, telephone and email as instructed?",
+    "Did the agent choose a large size with bacon and mushroom toppings and a 19:30 delivery time?",
+    "Did the agent submit the form and report the echoed form values?"
+  ],
+  "findings": [
+    {
+      "category": "verifier_uncertainty",
+      "severity": "warning",
+      "description": "The fused judgment call did not return a parseable response."
+    }
+  ],
+  "rawSteps": {
+    "primaryIntent": "On httpbin.org's pizza order form, enter customer name 'Ada Lovelace', telephone '0612345678', email 'ada@example.com', choose a Large pizza with Bacon and Mushroom toppings, set delivery time to 19:30, and submit. Report the values echoed back in the response's 'form' section.",
+    "reasoning": "Fused judgment LLM call failed; returning evidence-insufficient result.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 0,
+    "totalMax": 3,
+    "evidenceImages": 16,
+    "evidenceTexts": 32,
+    "evidenceOriginalScreenshots": 16
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "outcomeSuccess": true,
+  "processScore": 1,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent report Firefox 121 as the first supporting Firefox version?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The agent correctly reported Firefox 121 as the first version supporting :has() by default, matching both the rubric and the final page state.",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Did the agent report Chrome 105 as the first supporting Chrome version?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The agent correctly reported Chrome 105 as the first version supporting :has() by default, matching both the rubric and the final page state.",
+      "evidenceInsufficient": false
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [],
+  "findings": [
+    {
+      "category": "agent_tool_usage",
+      "severity": "info",
+      "description": "The agent never issued an explicit click on the feature link; however, pressing Enter with the search term loaded the feature page directly (caniuse.com/?search=:has() renders the single matching feature with its full support table), so no navigation was needed.",
+      "suggestedAction": "No action required; behavior was effective.",
+      "relatedSteps": [
+        4,
+        5
+      ]
+    }
+  ],
+  "rawSteps": {
+    "primaryIntent": "Look up the CSS :has() relational pseudo-class on caniuse.com and report the first Firefox and Chrome versions that support it by default.",
+    "reasoning": "The agent searched for ':has()' on caniuse.com, reached the ':has() CSS relational pseudo-class' feature page, and reported Chrome 105 and Firefox 121 as the first default-support versions. The final page state confirms this: Chrome shows '101 - 104: Not supported (behind Experimental Web Platform features flag, per note 1)' and '105 - 155: Supported'; Firefox shows '103 - 120: Not supported (behind layout.css.has-selector.enabled flag, per note 2)' and '121 - 157: Supported'. Both reported values match the rubric and the ground-truth page content.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 2,
+    "totalMax": 2,
+    "evidenceImages": 7,
+    "evidenceTexts": 9,
+    "evidenceOriginalScreenshots": 7
+  }
+}

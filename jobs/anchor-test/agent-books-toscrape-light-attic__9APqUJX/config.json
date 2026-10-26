@@ -1,0 +1,42 @@
+{
+    "task": {
+        "path": "tasks\\agent-books-toscrape-light-attic",
+        "source": "tasks"
+    },
+    "trial_name": "agent-books-toscrape-light-attic__9APqUJX",
+    "trials_dir": "jobs\\anchor-test",
+    "agent": {
+        "import_path": "bb_harbor.agent:StagehandAgent",
+        "model_name": "openrouter/z-ai/glm-5.3-flash",
+        "kwargs": {
+            "mode": "dom"
+        },
+        "env": {
+            "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+            "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+            "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+        }
+    },
+    "environment": {
+        "import_path": "bb_harbor.anchor_env:AnchorEnvironment",
+        "kwargs": {
+            "adblock": false,
+            "popup_blocker": false,
+            "headless": false,
+            "recording": false,
+            "max_duration_minutes": 25,
+            "idle_timeout_minutes": 5,
+            "delete_on_start_failure": true
+        }
+    },
+    "verifier": {
+        "env": {
+            "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+        },
+        "import_path": "bb_harbor.verifier:StagehandVerifier",
+        "kwargs": {
+            "judge_model": "openrouter/z-ai/glm-5.3-flash"
+        }
+    },
+    "job_id": "eb5400c0-9cec-40c2-a78b-6a6e3d8119a5"
+}

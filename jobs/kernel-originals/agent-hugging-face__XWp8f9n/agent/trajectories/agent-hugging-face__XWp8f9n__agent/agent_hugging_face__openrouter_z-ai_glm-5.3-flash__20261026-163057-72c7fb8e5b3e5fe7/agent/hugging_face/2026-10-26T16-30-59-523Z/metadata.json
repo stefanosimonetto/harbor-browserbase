@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/hugging_face",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/hugging_face",
+  "runId": "2026-10-26T16-30-59-523Z",
+  "runDir": "2026-10-26T16-30-59-523Z",
+  "attempt": 1,
+  "status": "complete"
+}

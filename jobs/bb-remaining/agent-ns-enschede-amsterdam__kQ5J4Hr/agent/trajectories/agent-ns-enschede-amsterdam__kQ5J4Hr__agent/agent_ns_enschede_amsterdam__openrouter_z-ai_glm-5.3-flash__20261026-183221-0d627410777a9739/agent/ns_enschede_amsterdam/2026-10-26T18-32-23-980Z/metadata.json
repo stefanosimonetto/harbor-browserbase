@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/ns_enschede_amsterdam",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "task": "agent/ns_enschede_amsterdam",
+  "runId": "2026-10-26T18-32-23-980Z",
+  "runDir": "2026-10-26T18-32-23-980Z",
+  "attempt": 1,
+  "status": "complete"
+}

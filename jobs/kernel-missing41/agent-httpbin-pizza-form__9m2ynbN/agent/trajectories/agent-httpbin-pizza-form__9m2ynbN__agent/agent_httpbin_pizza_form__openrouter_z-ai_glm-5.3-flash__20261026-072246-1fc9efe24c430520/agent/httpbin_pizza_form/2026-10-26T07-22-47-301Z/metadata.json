@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/httpbin_pizza_form",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/httpbin_pizza_form",
+  "runId": "2026-10-26T07-22-47-301Z",
+  "runDir": "2026-10-26T07-22-47-301Z",
+  "attempt": 1,
+  "status": "complete"
+}

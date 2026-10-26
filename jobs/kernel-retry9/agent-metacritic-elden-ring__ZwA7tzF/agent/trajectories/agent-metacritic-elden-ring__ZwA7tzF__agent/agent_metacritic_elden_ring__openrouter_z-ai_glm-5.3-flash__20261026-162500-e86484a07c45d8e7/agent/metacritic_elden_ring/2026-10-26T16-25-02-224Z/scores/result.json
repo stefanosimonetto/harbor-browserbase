@@ -1,0 +1,47 @@
+{
+  "outcomeSuccess": false,
+  "processScore": 0,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent find the Elden Ring game page on Metacritic?",
+      "maxPoints": 1,
+      "earnedPoints": 0,
+      "explanation": "Fused judgment call failed for this criterion.",
+      "evidenceInsufficient": true
+    },
+    {
+      "criterion": "Did the agent report a Metascore and a user score and name the platform?",
+      "maxPoints": 1,
+      "earnedPoints": 0,
+      "explanation": "Fused judgment call failed for this criterion.",
+      "evidenceInsufficient": true
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [
+    "Did the agent find the Elden Ring game page on Metacritic?",
+    "Did the agent report a Metascore and a user score and name the platform?"
+  ],
+  "findings": [
+    {
+      "category": "verifier_uncertainty",
+      "severity": "warning",
+      "description": "The fused judgment call did not return a parseable response."
+    }
+  ],
+  "rawSteps": {
+    "primaryIntent": "On Metacritic, find the game 'Elden Ring' and report its Metascore and its user score for any one platform, naming the platform.",
+    "reasoning": "Fused judgment LLM call failed; returning evidence-insufficient result.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 0,
+    "totalMax": 2,
+    "evidenceImages": 0,
+    "evidenceTexts": 0,
+    "evidenceOriginalScreenshots": 0
+  }
+}

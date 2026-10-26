@@ -1,0 +1,39 @@
+{
+    "task": {
+        "path": "tasks\\agent-books-toscrape-light-attic",
+        "source": "tasks"
+    },
+    "trial_name": "agent-books-toscrape-light-attic__8pbGdyY",
+    "trials_dir": "jobs\\kernel-test",
+    "agent": {
+        "import_path": "bb_harbor.agent:StagehandAgent",
+        "model_name": "openrouter/z-ai/glm-5.3-flash",
+        "kwargs": {
+            "mode": "dom"
+        },
+        "env": {
+            "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+            "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+            "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+        }
+    },
+    "environment": {
+        "import_path": "bb_harbor.kernel_env:KernelEnvironment",
+        "kwargs": {
+            "timeout_seconds": 300,
+            "headless": false,
+            "stealth": false,
+            "delete_on_start_failure": true
+        }
+    },
+    "verifier": {
+        "env": {
+            "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+        },
+        "import_path": "bb_harbor.verifier:StagehandVerifier",
+        "kwargs": {
+            "judge_model": "openrouter/z-ai/glm-5.3-flash"
+        }
+    },
+    "job_id": "ccabd254-9193-46bc-816b-384b503e3203"
+}

@@ -1,0 +1,84 @@
+{
+  "task": {
+    "id": "agent/all_recipes",
+    "instruction": "Search for a recipe for Beef Wellington on Allrecipes that has at least 200 reviews and an average rating of 4.5 stars or higher. List the main ingredients required for the dish.",
+    "initUrl": "https://www.allrecipes.com/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent find a recipe for Beef Wellington",
+          "description": "Did the agent find a recipe for Beef Wellington",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "Failed to execute task: Cannot read properties of null (reading 'awaitActivePage')",
+  "result": {
+    "outcomeSuccess": false,
+    "processScore": 0.5,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent find a recipe for Beef Wellington",
+        "maxPoints": 1,
+        "earnedPoints": 0.5,
+        "explanation": "The agent successfully reached the search results page, where a 'Beef Wellington' recipe with 365 ratings (satisfying the >=200 review constraint) and a star row consistent with ~4.5 was visible. However, the agent never opened the recipe page or explicitly verified the 4.5-star requirement, and the run crashed before any recipe was confirmed or ingredients listed — the final output was an error message. This warrants partial credit for the search effort and the surfaced matching result, not full credit for a definitively 'found' recipe.",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "agent_tool_usage",
+        "severity": "blocking",
+        "description": "The run crashed immediately after the search results page loaded with a null-reference tooling error ('Cannot read properties of null (reading awaitActivePage)'), and the final ariaTree capture (step 5) returned no content. This prevented the agent from opening the Beef Wellington recipe, confirming the rating constraint, or extracting ingredients.",
+        "suggestedAction": "Add retry/error handling around page-state capture (ariaTree) and re-issue goto or wait-for-load when the page handle is null, so transient framework failures do not abort the run before the deliverable is produced.",
+        "relatedSteps": [
+          4,
+          5
+        ]
+      },
+      {
+        "category": "agent_strategy",
+        "severity": "info",
+        "description": "Typing into the header search box and clicking the search button (steps 1-2) did not submit the query; the agent adapted well by navigating directly to the /search?q=Beef+Wellington URL.",
+        "suggestedAction": "When a site search submit fails, prefer direct URL navigation or pressing Enter in the search field as a first fallback.",
+        "relatedSteps": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "category": "rubric_quality",
+        "severity": "warning",
+        "description": "The rubric contains only one criterion (finding a Beef Wellington recipe) and omits the task's second deliverable (listing the main ingredients) as well as explicit verification of the 200-review/4.5-star constraints, so full task success cannot be expressed through per-criterion scoring alone.",
+        "suggestedAction": "Add criteria for confirming the review-count and rating constraints on the recipe page and for listing the main ingredients.",
+        "relatedSteps": []
+      }
+    ],
+    "firstPointOfFailure": {
+      "stepIndex": 5,
+      "errorCode": "3.4",
+      "category": "Execution & Strategy",
+      "description": "Run crashed with a null-reference tooling error ('Cannot read properties of null (reading awaitActivePage)') right after the search results loaded, blocking the agent from opening the recipe, verifying its rating, or listing ingredients."
+    },
+    "rawSteps": {
+      "primaryIntent": "Find a Beef Wellington recipe on Allrecipes with at least 200 reviews and an average rating of 4.5 stars or higher, and list the dish's main ingredients.",
+      "reasoning": "The agent typed 'Beef Wellington' into the header search box (step 1) but the submit click did not navigate (step 2-3), so it recovered by navigating directly to https://www.allrecipes.com/search?q=Beef+Wellington (step 4), which loaded a results page showing a 'Beef Wellington' recipe with 365 ratings and a star row consistent with roughly 4.5 stars. However, the run then terminated with a null-reference framework error ('Cannot read properties of null (reading awaitActivePage)') and the final page capture (step 5) returned no content. The agent never opened the recipe page, never explicitly verified the 4.5-star requirement against the recipe's actual rating, and never listed any ingredients. Its final answer was a failure message rather than the requested deliverable. Partial credit is warranted for the search effort that surfaced a matching recipe (365 ratings satisfies the >=200 review constraint as visible in the screenshot), but the task was not completed.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 0.5,
+      "totalMax": 1,
+      "evidenceImages": 5,
+      "evidenceTexts": 9,
+      "evidenceOriginalScreenshots": 5
+    }
+  }
+}

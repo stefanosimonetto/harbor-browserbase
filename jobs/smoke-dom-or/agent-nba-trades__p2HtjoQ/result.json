@@ -1,0 +1,159 @@
+{
+    "id": "8dd6bbea-1edf-4ff2-bdef-3c0ac341c90b",
+    "task_name": "browserbase/agent-nba-trades",
+    "trial_name": "agent-nba-trades__p2HtjoQ",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/smoke-dom-or/agent-nba-trades__p2HtjoQ",
+    "task_id": {
+        "path": "tasks\\agent-nba-trades"
+    },
+    "source": "tasks",
+    "task_checksum": "6beade3de863156db204b087634279e49f5b39daf123783e3c71dd99687e2d1f",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-nba-trades",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-nba-trades__p2HtjoQ",
+        "trials_dir": "jobs\\smoke-dom-or",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/google/gemini-3-flash-preview",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/google/gemini-2.5-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/google/gemini-3-flash-preview"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "create_session": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/google/gemini-3-flash-preview"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "104dad8f-91b2-4a60-9f70-1d6eefb4b964",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "google/gemini-3-flash-preview",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": {
+            "stagehand": {
+                "browserbase_session_id": "e153ca45-29f8-4137-aab6-b6962b1e5bc3",
+                "browserbase_session_url": "https://www.browserbase.com/sessions/e153ca45-29f8-4137-aab6-b6962b1e5bc3",
+                "browserbase_session_ids": [
+                    "e153ca45-29f8-4137-aab6-b6962b1e5bc3"
+                ],
+                "task_id": "agent/nba_trades",
+                "mode": "dom",
+                "trajectory_dir": "/logs/agent/trajectories/agent-nba-trades__p2HtjoQ__agent/agent_nba_trades__openrouter_google_gemini-3-flash-preview__20261026-010848-c6638dbfeddb7fb0/agent/nba_trades/2026-10-26T01-08-50-693Z",
+                "trajectory_root": "/logs/agent/trajectories/agent-nba-trades__p2HtjoQ__agent",
+                "requested_trajectory_group": "agent-nba-trades__p2HtjoQ__agent"
+            }
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0,
+            "outcome": 0.0,
+            "process": 1.0,
+            "process_measured": 1.0,
+            "criteria_earned_frac": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-10-26T01:08:40.112067Z",
+    "finished_at": "2026-10-26T01:11:38.645435Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T01:08:40.121227Z",
+        "finished_at": "2026-10-26T01:08:44.038646Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T01:08:44.038646Z",
+        "finished_at": "2026-10-26T01:08:45.128366Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T01:08:45.128941Z",
+        "finished_at": "2026-10-26T01:11:33.356773Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-26T01:11:34.405710Z",
+        "finished_at": "2026-10-26T01:11:34.832002Z"
+    },
+    "step_results": null
+}

@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/timeanddate_tokyo",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "task": "agent/timeanddate_tokyo",
+  "runId": "2026-10-26T18-45-50-456Z",
+  "runDir": "2026-10-26T18-45-50-456Z",
+  "attempt": 1,
+  "status": "complete"
+}

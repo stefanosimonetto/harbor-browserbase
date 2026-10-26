@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/nba_trades",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/nba_trades",
+  "runId": "2026-10-26T16-32-36-747Z",
+  "runDir": "2026-10-26T16-32-36-747Z",
+  "attempt": 1,
+  "status": "complete"
+}

@@ -1,0 +1,60 @@
+{
+  "task": {
+    "id": "agent/wikipedia_berlin_wall_pm",
+    "instruction": "Using Wikipedia, determine who was the Prime Minister of the United Kingdom on the day the Berlin Wall fell. Report the date the wall fell and the Prime Minister's name.",
+    "initUrl": "https://en.wikipedia.org/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent report 9 November 1989 as the date the Berlin Wall fell?",
+          "description": "Did the agent report 9 November 1989 as the date the Berlin Wall fell?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent identify Margaret Thatcher as the UK Prime Minister at that time?",
+          "description": "Did the agent identify Margaret Thatcher as the UK Prime Minister at that time?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "The task was completed successfully. Using Wikipedia, I confirmed via the \"Fall of the Berlin Wall\" article that the wall fell on 9 November 1989 (following Günter Schabowski's announcement that East Germans could travel freely, leading to crowds overwhelming the border crossings that night). I then verified via the \"List of prime ministers of the United Kingdom\" article that Margaret Thatcher's premiership ran from 4 May 1979 to 28 November 1990, meaning she was the sitting UK Prime Minister on 9 November 1989. Both facts are corroborated, as the Berlin Wall article itself references British Prime Minister Margaret Thatcher in its discussion of that period.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent report 9 November 1989 as the date the Berlin Wall fell?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The on-page infobox and lead text explicitly show 9 November 1989 as the date, and the agent's final answer reports exactly this date. Criterion fully satisfied.",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent identify Margaret Thatcher as the UK Prime Minister at that time?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The extract tool output from the Wikipedia list of UK prime ministers identifies Margaret Thatcher with a premiership that includes 9 November 1989, and the agent's final answer correctly names her. Criterion fully satisfied.",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "rawSteps": {
+      "primaryIntent": "Using Wikipedia, find the date the Berlin Wall fell and identify who was UK Prime Minister on that date, reporting both facts.",
+      "reasoning": "The agent navigated to the Fall of the Berlin Wall article, whose infobox and lead text (visible in screenshots at steps 2–3) confirm the date 9 November 1989, which the agent correctly reported. It then went to the List of prime ministers of the United Kingdom article and ran an extract (step 5) that returned Margaret Thatcher with a premiership covering 9 November 1989 (term ending 28 November 1990). The final answer reports both the date (9 November 1989) and the Prime Minister (Margaret Thatcher), consistent with the rubric criteria and the evidence. The trajectory stayed on Wikipedia as required, and both facts were independently corroborated. No blockers, hallucinations, or errors are evident.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 2,
+      "totalMax": 2,
+      "evidenceImages": 7,
+      "evidenceTexts": 12,
+      "evidenceOriginalScreenshots": 7
+    }
+  }
+}

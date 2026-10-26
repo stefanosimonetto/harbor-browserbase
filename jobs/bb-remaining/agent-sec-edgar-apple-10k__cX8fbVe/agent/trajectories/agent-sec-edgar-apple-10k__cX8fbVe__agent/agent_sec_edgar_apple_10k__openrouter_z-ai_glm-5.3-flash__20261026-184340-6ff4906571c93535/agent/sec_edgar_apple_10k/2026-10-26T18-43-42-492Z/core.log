@@ -1,0 +1,5 @@
+{"step":0,"action":"ariaTree","url":"https://www.sec.gov/edgar/search/","ok":true,"reasoning":"I'll start by checking the current page state of the SEC EDGAR search page."}
+{"step":1,"action":"goto","url":"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&type=10-K&dateb=&owner=include&count=10","ok":true,"reasoning":"I'll navigate directly to Apple's EDGAR filing list filtered for 10-K filings."}
+{"step":2,"action":"ariaTree","url":"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&type=10-K&dateb=&owner=include&count=10","ok":true}
+{"step":3,"action":"act","url":"https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.htm","ok":true,"reasoning":"The search results show Apple's most recent 10-K was filed 2025-10-31. Let me open the filing to confirm the fiscal year end it covers."}
+{"step":4,"action":"ariaTree","url":"https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.htm","ok":true}

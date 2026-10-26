@@ -1,0 +1,99 @@
+{
+  "task": {
+    "id": "agent/imdb_godfather",
+    "instruction": "On IMDb, find the 1972 film 'The Godfather' and report its director, its runtime, and its current IMDb rating.",
+    "initUrl": "https://www.imdb.com/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent identify Francis Ford Coppola as the director?",
+          "description": "Did the agent identify Francis Ford Coppola as the director?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report a runtime of about 2 hours 55 minutes (175 minutes)?",
+          "description": "Did the agent report a runtime of about 2 hours 55 minutes (175 minutes)?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent report an IMDb rating taken from the title page?",
+          "description": "Did the agent report an IMDb rating taken from the title page?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "Failed to execute task: Cannot read properties of null (reading 'awaitActivePage')",
+  "result": {
+    "outcomeSuccess": false,
+    "processScore": 0,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent identify Francis Ford Coppola as the director?",
+        "maxPoints": 1,
+        "earnedPoints": 0,
+        "explanation": "The agent only performed a search; the search suggestions and results pages show the title, year, stars, runtime, and rating but never a director credit, and the agent's final answer was a failure message with no director reported.",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report a runtime of about 2 hours 55 minutes (175 minutes)?",
+        "maxPoints": 1,
+        "earnedPoints": 0,
+        "explanation": "Although the runtime '2h 55m' was visible on the search results page, the agent never opened the title page and never reported a runtime in its output — the final answer was a tool-crash failure message.",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent report an IMDb rating taken from the title page?",
+        "maxPoints": 1,
+        "earnedPoints": 0,
+        "explanation": "A rating (9.2) was visible on the search results page, but the criterion requires a rating taken from the title page, which was never visited, and the agent reported no rating in its final answer.",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "trajectory_capture",
+        "severity": "blocking",
+        "description": "Final ariaTree at step 4 returned empty content and the run terminated with 'Cannot read properties of null (reading awaitActivePage)' — an internal automation framework crash, not a website blocker; no title-page extraction ever occurred.",
+        "suggestedAction": "Retry the trajectory with error recovery/retry logic so the agent can continue after tool crashes; verify page-handle lifecycle management.",
+        "relatedSteps": [
+          4
+        ]
+      },
+      {
+        "category": "agent_strategy",
+        "severity": "info",
+        "description": "The search results page at step 3 already displayed the required runtime (2h 55m) and rating (9.2, 2.3M votes) for The Godfather (1972), but the agent never opened the title page or captured/reported any values before crashing. The submit-search button was also clicked twice redundantly (steps 2 and 3).",
+        "suggestedAction": "Click the exact title link from results, extract director/runtime/rating from the title page, and emit the final answer even if later steps degrade.",
+        "relatedSteps": [
+          2,
+          3
+        ]
+      }
+    ],
+    "firstPointOfFailure": {
+      "stepIndex": 4,
+      "errorCode": "3.4",
+      "category": "Execution & Strategy",
+      "description": "Tooling crashed at the final ariaTree step with 'Cannot read properties of null (reading awaitActivePage)' — an internal environment/framework error that prevented the agent from opening the title page and extracting director, runtime, and rating."
+    },
+    "rawSteps": {
+      "primaryIntent": "Find the 1972 film 'The Godfather' on IMDb and report its director, runtime, and current IMDb rating.",
+      "reasoning": "The agent successfully searched IMDb and the results page (step 3) displayed The Godfather (1972) with its runtime (2h 55m) and rating (9.2), but the run then crashed with an internal tool error ('Cannot read properties of null (reading awaitActivePage)') before the title page was opened. The agent's final answer contains none of the three requested data points — it explicitly states 'Failed to execute task'. No director, runtime, or rating was ever reported, so all three criteria score zero and the task failed. The crash appears to be an environment/tooling failure rather than an agent strategy error, but per the rubric the deliverables were never produced.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 0,
+      "totalMax": 3,
+      "evidenceImages": 4,
+      "evidenceTexts": 6,
+      "evidenceOriginalScreenshots": 4
+    }
+  }
+}

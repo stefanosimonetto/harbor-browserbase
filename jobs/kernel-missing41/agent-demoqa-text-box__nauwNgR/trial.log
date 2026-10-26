@@ -1,0 +1,10 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session lymlg4bffryhpry24ze3eqpn
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/demoqa_text_box in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-demoqa-text-box__nauwNgR__agent/agent_demoqa_text_box__openrouter_z-ai_glm-5.3-flash__20261026-070735-7bda1fbb36acda9e/agent/demoqa_text_box/2026-10-26T07-07-37-231Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Deleted Kernel browser session lymlg4bffryhpry24ze3eqpn

@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/wikivoyage_amsterdam_airport",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/wikivoyage_amsterdam_airport",
+  "runId": "2026-10-26T07-52-10-064Z",
+  "runDir": "2026-10-26T07-52-10-064Z",
+  "attempt": 1,
+  "status": "complete"
+}

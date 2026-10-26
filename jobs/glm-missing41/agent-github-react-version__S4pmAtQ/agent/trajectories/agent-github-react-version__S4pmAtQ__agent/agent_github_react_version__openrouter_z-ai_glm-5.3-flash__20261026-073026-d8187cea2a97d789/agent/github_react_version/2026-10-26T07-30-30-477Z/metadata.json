@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/github_react_version",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "task": "agent/github_react_version",
+  "runId": "2026-10-26T07-30-30-477Z",
+  "runDir": "2026-10-26T07-30-30-477Z",
+  "attempt": 1,
+  "status": "complete"
+}

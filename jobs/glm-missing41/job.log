@@ -1,0 +1,303 @@
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/arxiv_attention_paper in dom mode
+Running Stagehand eval task agent/all_recipes in dom mode
+Running Stagehand eval task agent/arxiv_gpt_report in dom mode
+Captured Browserbase session 79b5d8f3-a369-4bd0-b951-5b2eea10ee30 for Stagehand task agent/arxiv_attention_paper in dom mode at jobs\glm-missing41\agent-arxiv-attention-paper__5QoVf4Q\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-arxiv-attention-paper__5QoVf4Q__agent/agent_arxiv_attention_paper__openrouter_z-ai_glm-5.3-flash__20261026-071423-853510085f7f16df/agent/arxiv_attention_paper/2026-10-26T07-14-25-159Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=3 total=3 earned=3.0 max=3.0
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/books_toscrape_light_attic in dom mode
+Captured Browserbase session a04775be-56e8-44ae-baf7-992b04e5ed93 for Stagehand task agent/arxiv_gpt_report in dom mode at jobs\glm-missing41\agent-arxiv-gpt-report__SmhaN3G\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-arxiv-gpt-report__SmhaN3G__agent/agent_arxiv_gpt_report__openrouter_z-ai_glm-5.3-flash__20261026-071424-5717fdf19e9d753d/agent/arxiv_gpt_report/2026-10-26T07-14-25-571Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=1.0 max=1.0
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/books_toscrape_travel in dom mode
+Captured Browserbase session 5a44511a-90c3-49b4-a2ea-80c2205448db for Stagehand task agent/books_toscrape_light_attic in dom mode at jobs\glm-missing41\agent-books-toscrape-light-attic__nMjrzGH\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-books-toscrape-light-attic__nMjrzGH__agent/agent_books_toscrape_light_attic__openrouter_z-ai_glm-5.3-flash__20261026-071521-ba25a5a4df2d0fd7/agent/books_toscrape_light_attic/2026-10-26T07-15-22-798Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=3 total=3 earned=2.0 max=3.0
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/calculator_mortgage in dom mode
+Captured Browserbase session 264b9605-f2a7-4d85-8063-a52a8809b990 for Stagehand task agent/calculator_mortgage in dom mode at jobs\glm-missing41\agent-calculator-mortgage__MPnVmZG\agent\browserbase_session.json
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/books_toscrape_travel in dom mode
+Running Stagehand eval task agent/calculator_mortgage in dom mode
+Running Stagehand eval task agent/all_recipes in dom mode
+Captured Browserbase session 5fdd299a-ac74-4165-bf2d-7900e673fdc0 for Stagehand task agent/books_toscrape_travel in dom mode at jobs\glm-missing41\agent-books-toscrape-travel__D5NnCHc\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-books-toscrape-travel__D5NnCHc__agent/agent_books_toscrape_travel__openrouter_z-ai_glm-5.3-flash__20261026-072354-28b65f6f852e6a3e/agent/books_toscrape_travel/2026-10-26T07-23-56-289Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=3 total=3 earned=3.0 max=3.0
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/caniuse_css_has in dom mode
+Captured Browserbase session eddf497e-902c-437a-bac6-3e8f450b9fe5 for Stagehand task agent/caniuse_css_has in dom mode at jobs\glm-missing41\agent-caniuse-css-has__ofTBDRY\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-caniuse-css-has__ofTBDRY__agent/agent_caniuse_css_has__openrouter_z-ai_glm-5.3-flash__20261026-072505-cbe6ec0d36e3175d/agent/caniuse_css_has/2026-10-26T07-25-06-671Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/crates_serde in dom mode
+Captured Browserbase session 1282f31f-809a-43e1-9bcc-20f684ec2549 for Stagehand task agent/crates_serde in dom mode at jobs\glm-missing41\agent-crates-serde__r4LUdEL\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-crates-serde__r4LUdEL__agent/agent_crates_serde__openrouter_z-ai_glm-5.3-flash__20261026-072614-0049c069ae47a6c0/agent/crates_serde/2026-10-26T07-26-15-803Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/demoqa_text_box in dom mode
+Captured Browserbase session 799b8453-40f0-4c92-a495-5e46b153d16f for Stagehand task agent/calculator_mortgage in dom mode at jobs\glm-missing41\agent-calculator-mortgage__zZ49yGi\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-calculator-mortgage__zZ49yGi__agent/agent_calculator_mortgage__openrouter_z-ai_glm-5.3-flash__20261026-072354-f02b9a53f3458458/agent/calculator_mortgage/2026-10-26T07-23-56-035Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/dockerhub_nginx in dom mode
+Captured Browserbase session bf2113f8-e648-4f9c-b0a3-0ab9c3a4a50e for Stagehand task agent/demoqa_text_box in dom mode at jobs\glm-missing41\agent-demoqa-text-box__TLNbbKD\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-demoqa-text-box__TLNbbKD__agent/agent_demoqa_text_box__openrouter_z-ai_glm-5.3-flash__20261026-072720-d9c0014fb7225202/agent/demoqa_text_box/2026-10-26T07-27-22-235Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/fred_unemployment in dom mode
+Captured Browserbase session 7501db65-95dc-4f18-9cf4-2359c67de09c for Stagehand task agent/fred_unemployment in dom mode at jobs\glm-missing41\agent-fred-unemployment__FU8ctEK\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-fred-unemployment__FU8ctEK__agent/agent_fred_unemployment__openrouter_z-ai_glm-5.3-flash__20261026-072819-bfe539e66ed58624/agent/fred_unemployment/2026-10-26T07-28-21-896Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/github_flask_good_first_issue in dom mode
+Captured Browserbase session 27ace220-c6c9-4a67-8d2e-cf71b82b6e5e for Stagehand task agent/dockerhub_nginx in dom mode at jobs\glm-missing41\agent-dockerhub-nginx__W3uMYDR\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-dockerhub-nginx__W3uMYDR__agent/agent_dockerhub_nginx__openrouter_z-ai_glm-5.3-flash__20261026-072757-958e399f60c8ab31/agent/dockerhub_nginx/2026-10-26T07-27-59-353Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Skipping unscrubbable trial output jobs\glm-missing41\agent-dockerhub-nginx__W3uMYDR\agent\trajectories\agent-dockerhub-nginx__W3uMYDR__agent\agent_dockerhub_nginx__openrouter_z-ai_glm-5.3-flash__20261026-072757-958e399f60c8ab31\agent\dockerhub_nginx\2026-10-26T07-27-59-353Z\trajectory.json: 'charmap' codec can't decode byte 0x81 in position 46674: character maps to <undefined>
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/github_linux_language in dom mode
+Captured Browserbase session 85d0245c-2988-401f-9f18-eeaa6f9c398c for Stagehand task agent/github_flask_good_first_issue in dom mode at jobs\glm-missing41\agent-github-flask-good-first-is__S8Z2fkL\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-github-flask-good-first-is__S8Z2fkL__agent/agent_github_flask_good_first_issue__openrouter_z-ai_glm-5.3-flash__20261026-072913-ef47f73f36eac622/agent/github_flask_good_first_issue/2026-10-26T07-29-16-012Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/github_react_version in dom mode
+Captured Browserbase session 9e226e5a-47e6-48a3-bc3d-291d2c075f4b for Stagehand task agent/github_linux_language in dom mode at jobs\glm-missing41\agent-github-linux-language__pZcHko2\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-github-linux-language__pZcHko2__agent/agent_github_linux_language__openrouter_z-ai_glm-5.3-flash__20261026-072940-6f2bea417ec63092/agent/github_linux_language/2026-10-26T07-29-43-476Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Captured Browserbase session 2dad9ece-4690-40fd-994b-83190978a3e1 for Stagehand task agent/github_react_version in dom mode at jobs\glm-missing41\agent-github-react-version__S4pmAtQ\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-github-react-version__S4pmAtQ__agent/agent_github_react_version__openrouter_z-ai_glm-5.3-flash__20261026-073026-d8187cea2a97d789/agent/github_react_version/2026-10-26T07-30-30-477Z
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=1.0 max=1.0
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/github in dom mode
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/github_vscode_release in dom mode
+Captured Browserbase session f7bd6c56-485a-49ce-9c6a-8ae7630704fe for Stagehand task agent/github in dom mode at jobs\glm-missing41\agent-github-ruby-repo__Z363u3Q\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-github-ruby-repo__Z363u3Q__agent/agent_github__openrouter_z-ai_glm-5.3-flash__20261026-073109-9be6f54cc8c0a9bd/agent/github/2026-10-26T07-31-12-419Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=1.0 max=1.0
+Skipping unscrubbable trial output jobs\glm-missing41\agent-github-ruby-repo__Z363u3Q\agent\trajectories\agent-github-ruby-repo__Z363u3Q__agent\agent_github__openrouter_z-ai_glm-5.3-flash__20261026-073109-9be6f54cc8c0a9bd\agent\github\2026-10-26T07-31-12-419Z\trajectory.json: 'charmap' codec can't decode byte 0x8d in position 13798: character maps to <undefined>
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/hackernews_top_story in dom mode
+Captured Browserbase session 37a2f579-8a0c-45d2-b532-558b01a9978a for Stagehand task agent/hackernews_top_story in dom mode at jobs\glm-missing41\agent-hackernews-top-story__Z9Tn9hJ\agent\browserbase_session.json
+Captured Browserbase session abec36b7-dc81-46f8-b93b-2038a1fadd57 for Stagehand task agent/github_vscode_release in dom mode at jobs\glm-missing41\agent-github-vscode-release__SbXPngh\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-hackernews-top-story__Z9Tn9hJ__agent/agent_hackernews_top_story__openrouter_z-ai_glm-5.3-flash__20261026-073155-7a10aa54ce171c24/agent/hackernews_top_story/2026-10-26T07-31-56-704Z
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-github-vscode-release__SbXPngh__agent/agent_github_vscode_release__openrouter_z-ai_glm-5.3-flash__20261026-073117-c780f90e3ac0c973/agent/github_vscode_release/2026-10-26T07-31-20-252Z
+Collecting main service artifacts
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Skipping unscrubbable trial output jobs\glm-missing41\agent-hackernews-top-story__Z9Tn9hJ\agent\trajectories\agent-hackernews-top-story__Z9Tn9hJ__agent\agent_hackernews_top_story__openrouter_z-ai_glm-5.3-flash__20261026-073155-7a10aa54ce171c24\agent\hackernews_top_story\2026-10-26T07-31-56-704Z\trajectory.json: 'charmap' codec can't decode byte 0x9d in position 25246: character maps to <undefined>
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/herokuapp_checkboxes in dom mode
+Running Stagehand eval task agent/herokuapp_dropdown in dom mode
+Captured Browserbase session ef5e4c1a-7a81-4905-b93d-37072418077c for Stagehand task agent/herokuapp_dropdown in dom mode at jobs\glm-missing41\agent-herokuapp-dropdown__iwDucFz\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-herokuapp-dropdown__iwDucFz__agent/agent_herokuapp_dropdown__openrouter_z-ai_glm-5.3-flash__20261026-073248-d8517febf0734ebe/agent/herokuapp_dropdown/2026-10-26T07-32-50-579Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Captured Browserbase session c104cf2c-51fa-4f33-870b-5fc7162269b0 for Stagehand task agent/herokuapp_checkboxes in dom mode at jobs\glm-missing41\agent-herokuapp-checkboxes__LvZJxYk\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-herokuapp-checkboxes__LvZJxYk__agent/agent_herokuapp_checkboxes__openrouter_z-ai_glm-5.3-flash__20261026-073248-b9f567dca00a27c2/agent/herokuapp_checkboxes/2026-10-26T07-32-50-150Z
+Collecting main service artifacts
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Running Stagehand eval task agent/herokuapp_dynamic_loading in dom mode
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/httpbin_pizza_form in dom mode
+Captured Browserbase session 397a7a36-0767-42ae-a6cf-b671c838f2ce for Stagehand task agent/herokuapp_dynamic_loading in dom mode at jobs\glm-missing41\agent-herokuapp-dynamic-loading__osrrrdj\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-herokuapp-dynamic-loading__osrrrdj__agent/agent_herokuapp_dynamic_loading__openrouter_z-ai_glm-5.3-flash__20261026-073353-e87f5d486322fe4f/agent/herokuapp_dynamic_loading/2026-10-26T07-33-55-826Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/hugging_face in dom mode
+Captured Browserbase session 6815e9bc-d6b0-4ace-ab57-8c10a3826a75 for Stagehand task agent/httpbin_pizza_form in dom mode at jobs\glm-missing41\agent-httpbin-pizza-form__4UuFHKg\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-httpbin-pizza-form__4UuFHKg__agent/agent_httpbin_pizza_form__openrouter_z-ai_glm-5.3-flash__20261026-073403-b4c18687d0f92204/agent/httpbin_pizza_form/2026-10-26T07-34-04-944Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=3 total=3 earned=3.0 max=3.0
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/huggingface_bert_license in dom mode
+Captured Browserbase session 4aef38f9-3794-4d8f-8821-133fad0b82a6 for Stagehand task agent/huggingface_bert_license in dom mode at jobs\glm-missing41\agent-huggingface-bert-license__KkzynjB\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-huggingface-bert-license__KkzynjB__agent/agent_huggingface_bert_license__openrouter_z-ai_glm-5.3-flash__20261026-073538-dcee2ce90aa8af94/agent/huggingface_bert_license/2026-10-26T07-35-39-577Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=3 earned=1.0 max=1.0
+Skipping unscrubbable trial output jobs\glm-missing41\agent-huggingface-bert-license__KkzynjB\agent\trajectories\agent-huggingface-bert-license__KkzynjB__agent\agent_huggingface_bert_license__openrouter_z-ai_glm-5.3-flash__20261026-073538-dcee2ce90aa8af94\agent\huggingface_bert_license\2026-10-26T07-35-39-577Z\trajectory.json: 'charmap' codec can't decode byte 0x90 in position 7721: character maps to <undefined>
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/iframe_form in dom mode
+Captured Browserbase session 3bd875c4-07ab-45c8-bde7-fbbd25dd4253 for Stagehand task agent/iframe_form in dom mode at jobs\glm-missing41\agent-iframe-form__Ct9whSa\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-iframe-form__Ct9whSa__agent/agent_iframe_form__openrouter_z-ai_glm-5.3-flash__20261026-073718-ec00ce4d03ad3ccb/agent/iframe_form/2026-10-26T07-37-20-236Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/imdb_godfather in dom mode
+Captured Browserbase session dd2437ea-9d5d-4ca7-aef4-a3142b93d711 for Stagehand task agent/hugging_face in dom mode at jobs\glm-missing41\agent-hugging-face__5UJ95yq\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-hugging-face__5UJ95yq__agent/agent_hugging_face__openrouter_z-ai_glm-5.3-flash__20261026-073506-cf0355640052129c/agent/hugging_face/2026-10-26T07-35-08-693Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=all-kept-criteria-scored-zero kept=1 total=1 earned=0.0 max=1.0
+Skipping unscrubbable trial output jobs\glm-missing41\agent-hugging-face__5UJ95yq\agent\trajectories\agent-hugging-face__5UJ95yq__agent\agent_hugging_face__openrouter_z-ai_glm-5.3-flash__20261026-073506-cf0355640052129c\agent\hugging_face\2026-10-26T07-35-08-693Z\trajectory.json: 'charmap' codec can't decode byte 0x90 in position 7651: character maps to <undefined>
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/mdn_array_at in dom mode
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=1 total=1 earned=0.5 max=1.0
+Exception AgentTimeoutError is in exclude_exceptions, not retrying
+Not retrying trial because the exception is not in include_exceptions or the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Captured Browserbase session a05e12de-d88d-4064-97b9-bd72999f9775 for Stagehand task agent/mdn_array_at in dom mode at jobs\glm-missing41\agent-mdn-array-at__TaMC6xN\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-mdn-array-at__TaMC6xN__agent/agent_mdn_array_at__openrouter_z-ai_glm-5.3-flash__20261026-073843-d4d67af8aead90be/agent/mdn_array_at/2026-10-26T07-38-44-949Z
+Running Stagehand eval task agent/metacritic_elden_ring in dom mode
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/nasa_apod_archive in dom mode
+Captured Browserbase session 73602129-73dc-4a4c-bc32-4367d9038bf3 for Stagehand task agent/imdb_godfather in dom mode at jobs\glm-missing41\agent-imdb-godfather__uWrhhwF\agent\browserbase_session.json
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-imdb-godfather__uWrhhwF__agent/agent_imdb_godfather__openrouter_z-ai_glm-5.3-flash__20261026-073815-3a87769f57f2114d/agent/imdb_godfather/2026-10-26T07-38-16-772Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=all-kept-criteria-scored-zero kept=3 total=3 earned=0.0 max=3.0
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/nba_trades in dom mode
+No Browserbase session id was captured for Stagehand task agent/nba_trades
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Trial agent-metacritic-elden-ring__6TnuJg8 cancelled
+Collecting main service artifacts
+Trial agent-nasa-apod-archive__W6NockZ cancelled
+Collecting main service artifacts
+Skipping existing trial directory jobs\glm-missing41\agent-nba-trades__GKPcH7P because result.json is empty

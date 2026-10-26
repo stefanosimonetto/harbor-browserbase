@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/metacritic_elden_ring",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/metacritic_elden_ring",
+  "runId": "2026-10-26T07-22-47-475Z",
+  "runDir": "2026-10-26T07-22-47-475Z",
+  "attempt": 1,
+  "status": "complete"
+}

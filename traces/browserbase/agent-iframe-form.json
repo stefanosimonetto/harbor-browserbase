@@ -1,0 +1,361 @@
+{
+  "task": "agent-iframe-form",
+  "backend": "browserbase",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "reward": 1.0,
+  "error": null,
+  "job": "glm-missing41",
+  "trial": "agent-iframe-form__Ct9whSa",
+  "started_at": "2026-10-26T07:37:07.304343Z",
+  "judge": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Is the form name input filled with 'John Smith'?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The Contact Form contains no single 'Name' input — it has separate First Name and Last Name textboxes. The agent entered 'John' into First Name and 'Smith' into Last Name, which together represent the full name 'John Smith' and is the only sensible way to fill this form. Both the post-action screenshot (step=2) and the final aria tree confirm First Name textbox = 'John' and Last Name textbox = 'Smith'.",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Is the form email input filled with 'john.smith@example.com'?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The Email textbox is confirmed to contain 'john.smith@example.com' in both the final screenshot (step=2) and the final aria tree ([0-16] textbox: Email with StaticText 'john.smith@example.com'). The value matches the requested email exactly.",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "rubric_quality",
+        "severity": "info",
+        "description": "Rubric Criterion 0 references a single 'form name input filled with John Smith', but the actual form has separate First Name and Last Name fields with no combined name input. Scoring required interpreting the split entry (First Name='John', Last Name='Smith') as satisfying the criterion, which is the intended real-world behavior."
+      }
+    ],
+    "rawSteps": {
+      "primaryIntent": "Fill the contact form on the iframe demo page with the name 'John Smith' and the email 'john.smith@example.com'.",
+      "reasoning": "The final page state (aria tree and screenshot) confirms First Name = 'John', Last Name = 'Smith', and Email = 'john.smith@example.com'. Since the form has separate First Name and Last Name fields rather than a single name input, splitting 'John Smith' across the two fields is the correct and only reasonable interpretation. The email was filled exactly as requested. Both rubric criteria are fully satisfied, so the task succeeded.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 2,
+      "totalMax": 2,
+      "evidenceImages": 3,
+      "evidenceTexts": 5,
+      "evidenceOriginalScreenshots": 3
+    }
+  },
+  "trajectory": {
+    "task": {
+      "id": "agent/iframe_form",
+      "instruction": "Fill in the form name with 'John Smith', then fill in the form email with 'john.smith@example.com'.",
+      "initUrl": "https://browserbase.github.io/stagehand-eval-sites/sites/iframe-form-filling/",
+      "precomputedRubric": {
+        "items": [
+          {
+            "criterion": "Is the form name input filled with 'John Smith'?",
+            "description": "Is the form name input filled with 'John Smith'?",
+            "maxPoints": 1
+          },
+          {
+            "criterion": "Is the form email input filled with 'john.smith@example.com'?",
+            "description": "Is the form email input filled with 'john.smith@example.com'?",
+            "maxPoints": 1
+          }
+        ]
+      }
+    },
+    "steps": [
+      {
+        "actionName": "ariaTree",
+        "actionArgs": {},
+        "reasoning": "",
+        "agentEvidence": {
+          "modalities": [
+            {
+              "type": "json",
+              "content": {
+                "type": "tool-result",
+                "toolCallId": "chatcmpl-tool-aeeef9f7ff05a94f",
+                "toolName": "ariaTree",
+                "input": {},
+                "output": {
+                  "success": true,
+                  "content": "[1-5] RootWebArea: Stagehand OOPIF – Form-Filling Demo\n  [1-9] scrollable, html\n    [1-11] body\n      [1-46] heading: Form-Filling OOPIF Demo\n      [1-48] paragraph\n        [1-49] StaticText: This page is hosted on\n        [1-50] code\n          [1-51] StaticText: browserbase.github.io\n        [1-52] StaticText: . The iframe below loads content from\n        [1-53] code\n          [1-54] StaticText: seanmcguire12.github.io\n        [1-55] StaticText: , making it a cross-site\n        [1-56] strong\n          [1-57] StaticText: Out-of-Process iframe\n        [1-58] StaticText: in Chromium.\n      [1-12] Iframe: Cross-site Form-Filling Example\n        [0-39] RootWebArea: Interactive Controls Demo\n          [0-61] scrollable, html\n            [0-68] main\n              [0-69] section\n                [0-70] heading: Contact Form\n                [0-13] form\n                  [0-72] div\n                    [0-73] div\n                      [0-74] LabelText\n                        [0-75] StaticText: First Name\n                      [0-14] textbox: First Name\n                    [0-80] div\n                      [0-81] LabelText\n                        [0-82] StaticText: Last Name\n                      [0-15] textbox: Last Name\n                  [0-87] LabelText\n                    [0-88] StaticText: Email\n                  [0-16] textbox: Email\n                  [0-34] group: Preferred Contact Method\n                    [0-93] Legend\n                      [0-94] StaticText: Preferred Contact Method\n                    [0-18] radio: Email [checked]\n                    [0-19] radio: Phone\n                  [0-99] LabelText\n                    [0-100] StaticText: Message\n                  [0-17] textbox: Message\n                  [0-35] button: Send\n              [0-107] section\n                [0-108] heading: Quick Survey\n                [0-32] form\n                  [0-36] group: Devices you own\n                    [0-110] Legend\n                      [0-111] StaticText: Devices you own\n                    [0-20] checkbox: Laptop\n                    [0-21] checkbox: Tablet\n                    [0-22] checkbox: Phone\n                    [0-23] checkbox: Smart-watch\n                  [0-120] LabelText\n                    [0-121] StaticText: Favorite Programming Language\n                  [0-24] select: Favorite Programming Language\n                    [0-130] MenuListPopup\n                      [0-132] option: Select one [selected]\n                      [0-133] option: JavaScript\n                      [0-134] option: Python\n                      [0-135] option: Go\n                      [0-136] option: Rust\n                      [0-137] option: C#\n                  [0-183] LabelText\n                    [0-184] StaticText: Frameworks you use (multi-select)\n                  [0-25] scrollable, select: Frameworks you use (multi-select)\n                    [0-186] slot\n                      [0-187] option: React\n                      [0-188] option: Vue\n                      [0-189] option: Svelte\n                      [0-190] option: Angular\n                      [0-191] option: SolidJS\n                  [0-219] LabelText\n                    [0-220] StaticText: Years of coding experience\n                  [0-26] spinbutton: Years of coding experience\n                    [0-225] StaticText: 3\n                  [0-227] LabelText\n                    [0-228] StaticText: Overall satisfaction\n                  [0-27] slider: Overall satisfaction\n                  [0-233] LabelText\n                    [0-234] StaticText: Today’s date\n                  [0-28] Date: Today’s date\n                    [0-236] div\n                      [0-238] div\n                        [0-239] spinbutton: Month Month\n                          [0-240] StaticText: mm\n                        [0-242] StaticText: /\n                        [0-243] spinbutton: Day Day\n                          [0-244] StaticText: dd\n                        [0-246] StaticText: /\n                        [0-247] spinbutton: Year Year\n                          [0-248] StaticText: yyyy\n                      [0-249] button: Show date picker Show date picker\n                  [0-37] button: Submit Survey\n              [0-251] section\n                [0-252] heading: Create Account\n                [0-33] form\n                  [0-254] LabelText\n                    [0-255] StaticText: Username\n                  [0-29] textbox: Username\n                  [0-260] LabelText\n                    [0-261] StaticText: Password\n                  [0-30] textbox: Password\n                  [0-264] LabelText\n                    [0-265] StaticText: Upload Avatar\n                  [0-31] input, file: Upload Avatar\n                  [0-38] button: Register",
+                  "pageUrl": "https://browserbase.github.io/stagehand-eval-sites/sites/iframe-form-filling/"
+                },
+                "dynamic": false
+              }
+            }
+          ]
+        },
+        "probeEvidence": {
+          "url": "https://browserbase.github.io/stagehand-eval-sites/sites/iframe-form-filling/",
+          "ariaTree": "[1-5] RootWebArea: Stagehand OOPIF – Form-Filling Demo\n  [1-9] scrollable, html\n    [1-11] body\n      [1-46] heading: Form-Filling OOPIF Demo\n      [1-48] paragraph\n        [1-49] StaticText: This page is hosted on\n        [1-50] code\n          [1-51] StaticText: browserbase.github.io\n        [1-52] StaticText: . The iframe below loads content from\n        [1-53] code\n          [1-54] StaticText: seanmcguire12.github.io\n        [1-55] StaticText: , making it a cross-site\n        [1-56] strong\n          [1-57] StaticText: Out-of-Process iframe\n        [1-58] StaticText: in Chromium.\n      [1-12] Iframe: Cross-site Form-Filling Example\n        [0-39] RootWebArea: Interactive Controls Demo\n          [0-61] scrollable, html\n            [0-68] main\n              [0-69] section\n                [0-70] heading: Contact Form\n                [0-13] form\n                  [0-72] div\n                    [0-73] div\n                      [0-74] LabelText\n                        [0-75] StaticText: First Name\n                      [0-14] textbox: First Name\n                    [0-80] div\n                      [0-81] LabelText\n                        [0-82] StaticText: Last Name\n                      [0-15] textbox: Last Name\n                  [0-87] LabelText\n                    [0-88] StaticText: Email\n                  [0-16] textbox: Email\n                  [0-34] group: Preferred Contact Method\n                    [0-93] Legend\n                      [0-94] StaticText: Preferred Contact Method\n                    [0-18] radio: Email [checked]\n                    [0-19] radio: Phone\n                  [0-99] LabelText\n                    [0-100] StaticText: Message\n                  [0-17] textbox: Message\n                  [0-35] button: Send\n              [0-107] section\n                [0-108] heading: Quick Survey\n                [0-32] form\n                  [0-36] group: Devices you own\n                    [0-110] Legend\n                      [0-111] StaticText: Devices you own\n                    [0-20] checkbox: Laptop\n                    [0-21] checkbox: Tablet\n                    [0-22] checkbox: Phone\n                    [0-23] checkbox: Smart-watch\n                  [0-120] LabelText\n                    [0-121] StaticText: Favorite Programming Language\n                  [0-24] select: Favorite Programming Language\n                    [0-130] MenuListPopup\n                      [0-132] option: Select one [selected]\n                      [0-133] option: JavaScript\n                      [0-134] option: Python\n                      [0-135] option: Go\n                      [0-136] option: Rust\n                      [0-137] option: C#\n                  [0-183] LabelText\n                    [0-184] StaticText: Frameworks you use (multi-select)\n                  [0-25] scrollable, select: Frameworks you use (multi-select)\n                    [0-186] slot\n                      [0-187] option: React\n                      [0-188] option: Vue\n                      [0-189] option: Svelte\n                      [0-190] option: Angular\n                      [0-191] option: SolidJS\n                  [0-219] LabelText\n                    [0-220] StaticText: Years of coding experience\n                  [0-26] spinbutton: Years of coding experience\n                    [0-225] StaticText: 3\n                  [0-227] LabelText\n                    [0-228] StaticText: Overall satisfaction\n                  [0-27] slider: Overall satisfaction\n                  [0-233] LabelText\n                    [0-234] StaticText: Today’s date\n                  [0-28] Date: Today’s date\n                    [0-236] div\n                      [0-238] div\n                        [0-239] spinbutton: Month Month\n                          [0-240] StaticText: mm\n                        [0-242] StaticText: /\n                        [0-243] spinbutton: Day Day\n                          [0-244] StaticText: dd\n                        [0-246] StaticText: /\n                        [0-247] spinbutton: Year Year\n                          [0-248] StaticText: yyyy\n                      [0-249] button: Show date picker Show date picker\n                  [0-37] button: Submit Survey\n              [0-251] section\n                [0-252] heading: Create Account\n                [0-33] form\n                  [0-254] LabelText\n                    [0-255] StaticText: Username\n                  [0-29] textbox: Username\n                  [0-260] LabelText\n                    [0-261] StaticText: Password\n                  [0-30] textbox: Password\n                  [0-264] LabelText\n                    [0-265] StaticText: Upload Avatar\n                  [0-31] input, file: Upload Avatar\n                  [0-38] button: Register",
+          "screenshotPath": "screenshots/probe/1.png"
+        },
+        "toolOutput": {
+          "ok": true,
+          "result": {
+            "type": "tool-result",
+            "toolCallId": "chatcmpl-tool-aeeef9f7ff05a94f",
+            "toolName": "ariaTree",
+            "input": {},
+            "output": {
+              "success": true,
+              "content": "[1-5] RootWebArea: Stagehand OOPIF – Form-Filling Demo\n  [1-9] scrollable, html\n    [1-11] body\n      [1-46] heading: Form-Filling OOPIF Demo\n      [1-48] paragraph\n        [1-49] StaticText: This page is hosted on\n        [1-50] code\n          [1-51] StaticText: browserbase.github.io\n        [1-52] StaticText: . The iframe below loads content from\n        [1-53] code\n          [1-54] StaticText: seanmcguire12.github.io\n        [1-55] StaticText: , making it a cross-site\n        [1-56] strong\n          [1-57] StaticText: Out-of-Process iframe\n        [1-58] StaticText: in Chromium.\n      [1-12] Iframe: Cross-site Form-Filling Example\n        [0-39] RootWebArea: Interactive Controls Demo\n          [0-61] scrollable, html\n            [0-68] main\n              [0-69] section\n                [0-70] heading: Contact Form\n                [0-13] form\n                  [0-72] div\n                    [0-73] div\n                      [0-74] LabelText\n                        [0-75] StaticText: First Name\n                      [0-14] textbox: First Name\n                    [0-80] div\n                      [0-81] LabelText\n                        [0-82] StaticText: Last Name\n                      [0-15] textbox: Last Name\n                  [0-87] LabelText\n                    [0-88] StaticText: Email\n                  [0-16] textbox: Email\n                  [0-34] group: Preferred Contact Method\n                    [0-93] Legend\n                      [0-94] StaticText: Preferred Contact Method\n                    [0-18] radio: Email [checked]\n                    [0-19] radio: Phone\n                  [0-99] LabelText\n                    [0-100] StaticText: Message\n                  [0-17] textbox: Message\n                  [0-35] button: Send\n              [0-107] section\n                [0-108] heading: Quick Survey\n                [0-32] form\n                  [0-36] group: Devices you own\n                    [0-110] Legend\n                      [0-111] StaticText: Devices you own\n                    [0-20] checkbox: Laptop\n                    [0-21] checkbox: Tablet\n                    [0-22] checkbox: Phone\n                    [0-23] checkbox: Smart-watch\n                  [0-120] LabelText\n                    [0-121] StaticText: Favorite Programming Language\n                  [0-24] select: Favorite Programming Language\n                    [0-130] MenuListPopup\n                      [0-132] option: Select one [selected]\n                      [0-133] option: JavaScript\n                      [0-134] option: Python\n                      [0-135] option: Go\n                      [0-136] option: Rust\n                      [0-137] option: C#\n                  [0-183] LabelText\n                    [0-184] StaticText: Frameworks you use (multi-select)\n                  [0-25] scrollable, select: Frameworks you use (multi-select)\n                    [0-186] slot\n                      [0-187] option: React\n                      [0-188] option: Vue\n                      [0-189] option: Svelte\n                      [0-190] option: Angular\n                      [0-191] option: SolidJS\n                  [0-219] LabelText\n                    [0-220] StaticText: Years of coding experience\n                  [0-26] spinbutton: Years of coding experience\n                    [0-225] StaticText: 3\n                  [0-227] LabelText\n                    [0-228] StaticText: Overall satisfaction\n                  [0-27] slider: Overall satisfaction\n                  [0-233] LabelText\n                    [0-234] StaticText: Today’s date\n                  [0-28] Date: Today’s date\n                    [0-236] div\n                      [0-238] div\n                        [0-239] spinbutton: Month Month\n                          [0-240] StaticText: mm\n                        [0-242] StaticText: /\n                        [0-243] spinbutton: Day Day\n                          [0-244] StaticText: dd\n                        [0-246] StaticText: /\n                        [0-247] spinbutton: Year Year\n                          [0-248] StaticText: yyyy\n                      [0-249] button: Show date picker Show date picker\n                  [0-37] button: Submit Survey\n              [0-251] section\n                [0-252] heading: Create Account\n                [0-33] form\n                  [0-254] LabelText\n                    [0-255] StaticText: Username\n                  [0-29] textbox: Username\n                  [0-260] LabelText\n                    [0-261] StaticText: Password\n                  [0-30] textbox: Password\n                  [0-264] LabelText\n                    [0-265] StaticText: Upload Avatar\n                  [0-31] input, file: Upload Avatar\n                  [0-38] button: Register",
+              "pageUrl": "https://browserbase.github.io/stagehand-eval-sites/sites/iframe-form-filling/"
+            },
+            "dynamic": false
+          }
+        }
+      },
+      {
+        "actionName": "fillForm",
+        "actionArgs": {
+          "fields": [
+            {
+              "action": "type John into the First Name textbox"
+            },
+            {
+              "action": "type Smith into the Last Name textbox"
+            },
+            {
+              "action": "type john.smith@example.com into the Email textbox"
+            }
+          ]
+        },
+        "reasoning": "The page contains a Contact Form with First Name, Last Name, and Email fields. I'll fill in the name ('John' for First Name, 'Smith' for Last Name) and the email.",
+        "agentEvidence": {
+          "modalities": [
+            {
+              "type": "text",
+              "content": "The page contains a Contact Form with First Name, Last Name, and Email fields. I'll fill in the name ('John' for First Name, 'Smith' for Last Name) and the email."
+            },
+            {
+              "type": "json",
+              "content": {
+                "type": "tool-result",
+                "toolCallId": "call_d623c38feaa14d88b592fe32",
+                "toolName": "fillForm",
+                "input": {
+                  "fields": [
+                    {
+                      "action": "type John into the First Name textbox"
+                    },
+                    {
+                      "action": "type Smith into the Last Name textbox"
+                    },
+                    {
+                      "action": "type john.smith@example.com into the Email textbox"
+                    }
+                  ]
+                },
+                "output": {
+                  "success": true,
+                  "actions": [
+                    {
+                      "success": true,
+                      "message": "Action [type] performed successfully on selector: xpath=/html[1]/body[1]/div[1]/iframe[1]/html[1]/body[1]/main[1]/section[1]/form[1]/div[1]/div[1]/input[1]",
+                      "actionDescription": "First Name textbox",
+                      "actions": [
+                        {
+                          "selector": "xpath=/html[1]/body[1]/div[1]/iframe[1]/html[1]/body[1]/main[1]/section[1]/form[1]/div[1]/div[1]/input[1]",
+                          "description": "First Name textbox",
+                          "method": "type",
+                          "arguments": [
+                            "John"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "success": true,
+                      "message": "Action [type] performed successfully on selector: xpath=/html[1]/body[1]/div[1]/iframe[1]/html[1]/body[1]/main[1]/section[1]/form[1]/div[1]/div[2]/input[1]",
+                      "actionDescription": "Last Name textbox",
+                      "actions": [
+                        {
+                          "selector": "xpath=/html[1]/body[1]/div[1]/iframe[1]/html[1]/body[1]/main[1]/section[1]/form[1]/div[1]/div[2]/input[1]",
+                          "description": "Last Name textbox",
+                          "method": "type",
+                          "arguments": [
+                            "Smith"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "success": true,
+                      "message": "Action [type] performed successfully on selector: xpath=/html[1]/body[1]/div[1]/iframe[1]/html[1]/body[1]/main[1]/section[1]/form[1]/input[1]",
+                      "actionDescription": "Email textbox",
+                      "actions": [
+                        {
+                          "selector": "xpath=/html[1]/body[1]/div[1]/iframe[1]/html[1]/body[1]/main[1]/section[1]/form[1]/input[1]",
+                          "description": "Email textbox",
+                          "method": "type",
+                          "arguments": [
+                            "john.smith@example.com"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "playwrightArguments": [
+                    {
+                      "selector": "xpath=/html[1]/body[1]/div[1]/iframe[1]/html[1]/body[1]/main[1]/section[1]/form[1]/div[1]/div[1]/input[1]",
+                      "description": "First Name textbox",
+                      "method": "type",
+                      "arguments": [
+                        "John"
+                      ]
+                    },
+                    {
+                      "selector": "xpath=/html[1]/body[1]/div[1]/iframe[1]/html[1]/body[1]/main[1]/section[1]/form[1]/div[1]/div[2]/input[1]",
+                      "description": "Last Name textbox",
+                      "method": "type",
+                      "arguments": [
+                        "Smith"
+                      ]
+                    },
+                    {
+                      "selector": "xpath=/html[1]/body[1]/div[1]/iframe[1]/html[1]/body[1]/main[1]/section[1]/form[1]/input[1]",
+                      "description": "Email textbox",
+                      "method": "type",
+                      "arguments": [
+                        "john.smith@example.com"
+                      ]
+                    }
+                  ]
+                },
+                "dynamic": false
+              }
+            }
+          ]
+        },
+        "probeEvidence": {
+          "url": "https://browserbase.github.io/stagehand-eval-sites/sites/iframe-form-filling/",
+          "ariaTree": "[1-5] RootWebArea: Stagehand OOPIF – Form-Filling Demo\n  [1-9] scrollable, html\n    [1-11] body\n      [1-46] heading: Form-Filling OOPIF Demo\n      [1-48] paragraph\n        [1-49] StaticText: This page is hosted on\n        [1-50] code\n          [1-51] StaticText: browserbase.github.io\n        [1-52] StaticText: . The iframe below loads content from\n        [1-53] code\n          [1-54] StaticText: seanmcguire12.github.io\n        [1-55] StaticText: , making it a cross-site\n        [1-56] strong\n          [1-57] StaticText: Out-of-Process iframe\n        [1-58] StaticText: in Chromium.\n      [1-12] Iframe: Cross-site Form-Filling Example\n        [0-39] RootWebArea: Interactive Controls Demo\n          [0-61] scrollable, html\n            [0-68] main\n              [0-69] section\n                [0-70] heading: Contact Form\n                [0-13] form\n                  [0-72] div\n                    [0-73] div\n                      [0-74] LabelText\n                        [0-75] StaticText: First Name\n                      [0-14] textbox: First Name\n                        [0-278] StaticText: John\n                    [0-80] div\n                      [0-81] LabelText\n                        [0-82] StaticText: Last Name\n                      [0-15] textbox: Last Name\n                        [0-279] StaticText: Smith\n                  [0-87] LabelText\n                    [0-88] StaticText: Email\n                  [0-16] textbox: Email\n                    [0-280] StaticText: john.smith@example.com\n                  [0-34] group: Preferred Contact Method\n                    [0-93] Legend\n                      [0-94] StaticText: Preferred Contact Method\n                    [0-18] radio: Email [checked]\n                    [0-19] radio: Phone\n                  [0-99] LabelText\n                    [0-100] StaticText: Message\n                  [0-17] textbox: Message\n                  [0-35] button: Send\n              [0-107] section\n                [0-108] heading: Quick Survey\n                [0-32] form\n                  [0-36] group: Devices you own\n                    [0-110] Legend\n                      [0-111] StaticText: Devices you own\n                    [0-20] checkbox: Laptop\n                    [0-21] checkbox: Tablet\n                    [0-22] checkbox: Phone\n                    [0-23] checkbox: Smart-watch\n                  [0-120] LabelText\n                    [0-121] StaticText: Favorite Programming Language\n                  [0-24] select: Favorite Programming Language\n                    [0-130] MenuListPopup\n                      [0-132] option: Select one [selected]\n                      [0-133] option: JavaScript\n                      [0-134] option: Python\n                      [0-135] option: Go\n                      [0-136] option: Rust\n                      [0-137] option: C#\n                  [0-183] LabelText\n                    [0-184] StaticText: Frameworks you use (multi-select)\n                  [0-25] scrollable, select: Frameworks you use (multi-select)\n                    [0-186] slot\n                      [0-187] option: React\n                      [0-188] option: Vue\n                      [0-189] option: Svelte\n                      [0-190] option: Angular\n                      [0-191] option: SolidJS\n                  [0-219] LabelText\n                    [0-220] StaticText: Years of coding experience\n                  [0-26] spinbutton: Years of coding experience\n                    [0-225] StaticText: 3\n                  [0-227] LabelText\n                    [0-228] StaticText: Overall satisfaction\n                  [0-27] slider: Overall satisfaction\n                  [0-233] LabelText\n                    [0-234] StaticText: Today’s date\n                  [0-28] Date: Today’s date\n                    [0-236] div\n                      [0-238] div\n                        [0-239] spinbutton: Month Month\n                          [0-240] StaticText: mm\n                        [0-242] StaticText: /\n                        [0-243] spinbutton: Day Day\n                          [0-244] StaticText: dd\n                        [0-246] StaticText: /\n                        [0-247] spinbutton: Year Year\n                          [0-248] StaticText: yyyy\n                      [0-249] button: Show date picker Show date picker\n                  [0-37] button: Submit Survey\n              [0-251] section\n                [0-252] heading: Create Account\n                [0-33] form\n                  [0-254] LabelText\n                    [0-255] StaticText: Username\n                  [0-29] textbox: Username\n                  [0-260] LabelText\n                    [0-261] StaticText: Password\n                  [0-30] textbox: Password\n                  [0-264] LabelText\n                    [0-265] StaticText: Upload Avatar\n                  [0-31] input, file: Upload Avatar\n                  [0-38] button: Register",
+          "screenshotPath": "screenshots/probe/2.png"
+        },
+        "toolOutput": {
+          "ok": true,
+          "result": {
+            "type": "tool-result",
+            "toolCallId": "call_d623c38feaa14d88b592fe32",
+            "toolName": "fillForm",
+            "input": {
+              "fields": [
+                {
+                  "action": "type John into the First Name textbox"
+                },
+                {
+                  "action": "type Smith into the Last Name textbox"
+                },
+                {
+                  "action": "type john.smith@example.com into the Email textbox"
+                }
+              ]
+            },
+            "output": {
+              "success": true,
+              "actions": [
+                {
+                  "success": true,
+                  "message": "Action [type] performed successfully on selector: xpath=/html[1]/body[1]/div[1]/iframe[1]/html[1]/body[1]/main[1]/section[1]/form[1]/div[1]/div[1]/input[1]",
+                  "actionDescription": "First Name textbox",
+                  "actions": [
+                    {
+                      "selector": "xpath=/html[1]/body[1]/div[1]/iframe[1]/html[1]/body[1]/main[1]/section[1]/form[1]/div[1]/div[1]/input[1]",
+                      "description": "First Name textbox",
+                      "method": "type",
+                      "arguments": [
+                        "John"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "success": true,
+                  "message": "Action [type] performed successfully on selector: xpath=/html[1]/body[1]/div[1]/iframe[1]/html[1]/body[1]/main[1]/section[1]/form[1]/div[1]/div[2]/input[1]",
+                  "actionDescription": "Last Name textbox",
+                  "actions": [
+                    {
+                      "selector": "xpath=/html[1]/body[1]/div[1]/iframe[1]/html[1]/body[1]/main[1]/section[1]/form[1]/div[1]/div[2]/input[1]",
+                      "description": "Last Name textbox",
+                      "method": "type",
+                      "arguments": [
+                        "Smith"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "success": true,
+                  "message": "Action [type] performed successfully on selector: xpath=/html[1]/body[1]/div[1]/iframe[1]/html[1]/body[1]/main[1]/section[1]/form[1]/input[1]",
+                  "actionDescription": "Email textbox",
+                  "actions": [
+                    {
+                      "selector": "xpath=/html[1]/body[1]/div[1]/iframe[1]/html[1]/body[1]/main[1]/section[1]/form[1]/input[1]",
+                      "description": "Email textbox",
+                      "method": "type",
+                      "arguments": [
+                        "john.smith@example.com"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "playwrightArguments": [
+                {
+                  "selector": "xpath=/html[1]/body[1]/div[1]/iframe[1]/html[1]/body[1]/main[1]/section[1]/form[1]/div[1]/div[1]/input[1]",
+                  "description": "First Name textbox",
+                  "method": "type",
+                  "arguments": [
+                    "John"
+                  ]
+                },
+                {
+                  "selector": "xpath=/html[1]/body[1]/div[1]/iframe[1]/html[1]/body[1]/main[1]/section[1]/form[1]/div[1]/div[2]/input[1]",
+                  "description": "Last Name textbox",
+                  "method": "type",
+                  "arguments": [
+                    "Smith"
+                  ]
+                },
+                {
+                  "selector": "xpath=/html[1]/body[1]/div[1]/iframe[1]/html[1]/body[1]/main[1]/section[1]/form[1]/input[1]",
+                  "description": "Email textbox",
+                  "method": "type",
+                  "arguments": [
+                    "john.smith@example.com"
+                  ]
+                }
+              ]
+            },
+            "dynamic": false
+          }
+        }
+      }
+    ],
+    "finalAnswer": "The task required filling in the form name with 'John Smith' and the form email with 'john.smith@example.com'. The Contact Form on the page contains separate First Name and Last Name fields, so I entered 'John' in the First Name textbox, 'Smith' in the Last Name textbox, and 'john.smith@example.com' in the Email textbox. All three type actions completed successfully, fully accomplishing the task.",
+    "finalObservation": {
+      "url": "https://browserbase.github.io/stagehand-eval-sites/sites/iframe-form-filling/",
+      "ariaTree": "[1-5] RootWebArea: Stagehand OOPIF – Form-Filling Demo\n  [1-9] scrollable, html\n    [1-11] body\n      [1-46] heading: Form-Filling OOPIF Demo\n      [1-48] paragraph\n        [1-49] StaticText: This page is hosted on\n        [1-50] code\n          [1-51] StaticText: browserbase.github.io\n        [1-52] StaticText: . The iframe below loads content from\n        [1-53] code\n          [1-54] StaticText: seanmcguire12.github.io\n        [1-55] StaticText: , making it a cross-site\n        [1-56] strong\n          [1-57] StaticText: Out-of-Process iframe\n        [1-58] StaticText: in Chromium.\n      [1-12] Iframe: Cross-site Form-Filling Example\n        [0-39] RootWebArea: Interactive Controls Demo\n          [0-61] scrollable, html\n            [0-68] main\n              [0-69] section\n                [0-70] heading: Contact Form\n                [0-13] form\n                  [0-72] div\n                    [0-73] div\n                      [0-74] LabelText\n                        [0-75] StaticText: First Name\n                      [0-14] textbox: First Name\n                        [0-278] StaticText: John\n                    [0-80] div\n                      [0-81] LabelText\n                        [0-82] StaticText: Last Name\n                      [0-15] textbox: Last Name\n                        [0-279] StaticText: Smith\n                  [0-87] LabelText\n                    [0-88] StaticText: Email\n                  [0-16] textbox: Email\n                    [0-280] StaticText: john.smith@example.com\n                  [0-34] group: Preferred Contact Method\n                    [0-93] Legend\n                      [0-94] StaticText: Preferred Contact Method\n                    [0-18] radio: Email [checked]\n                    [0-19] radio: Phone\n                  [0-99] LabelText\n                    [0-100] StaticText: Message\n                  [0-17] textbox: Message\n                  [0-35] button: Send\n              [0-107] section\n                [0-108] heading: Quick Survey\n                [0-32] form\n                  [0-36] group: Devices you own\n                    [0-110] Legend\n                      [0-111] StaticText: Devices you own\n                    [0-20] checkbox: Laptop\n                    [0-21] checkbox: Tablet\n                    [0-22] checkbox: Phone\n                    [0-23] checkbox: Smart-watch\n                  [0-120] LabelText\n                    [0-121] StaticText: Favorite Programming Language\n                  [0-24] select: Favorite Programming Language\n                    [0-130] MenuListPopup\n                      [0-132] option: Select one [selected]\n                      [0-133] option: JavaScript\n                      [0-134] option: Python\n                      [0-135] option: Go\n                      [0-136] option: Rust\n                      [0-137] option: C#\n                  [0-183] LabelText\n                    [0-184] StaticText: Frameworks you use (multi-select)\n                  [0-25] scrollable, select: Frameworks you use (multi-select)\n                    [0-186] slot\n                      [0-187] option: React\n                      [0-188] option: Vue\n                      [0-189] option: Svelte\n                      [0-190] option: Angular\n                      [0-191] option: SolidJS\n                  [0-219] LabelText\n                    [0-220] StaticText: Years of coding experience\n                  [0-26] spinbutton: Years of coding experience\n                    [0-225] StaticText: 3\n                  [0-227] LabelText\n                    [0-228] StaticText: Overall satisfaction\n                  [0-27] slider: Overall satisfaction\n                  [0-233] LabelText\n                    [0-234] StaticText: Today’s date\n                  [0-28] Date: Today’s date\n                    [0-236] div\n                      [0-238] div\n                        [0-239] spinbutton: Month Month\n                          [0-240] StaticText: mm\n                        [0-242] StaticText: /\n                        [0-243] spinbutton: Day Day\n                          [0-244] StaticText: dd\n                        [0-246] StaticText: /\n                        [0-247] spinbutton: Year Year\n                          [0-248] StaticText: yyyy\n                      [0-249] button: Show date picker Show date picker\n                  [0-37] button: Submit Survey\n              [0-251] section\n                [0-252] heading: Create Account\n                [0-33] form\n                  [0-254] LabelText\n                    [0-255] StaticText: Username\n                  [0-29] textbox: Username\n                  [0-260] LabelText\n                    [0-261] StaticText: Password\n                  [0-30] textbox: Password\n                  [0-264] LabelText\n                    [0-265] StaticText: Upload Avatar\n                  [0-31] input, file: Upload Avatar\n                  [0-38] button: Register",
+      "screenshotPath": "screenshots/probe/final.png"
+    },
+    "status": "complete",
+    "usage": {
+      "input_tokens": 12203,
+      "output_tokens": 462,
+      "reasoning_tokens": 213,
+      "cached_input_tokens": 0,
+      "inference_time_ms": 16860
+    }
+  }
+}

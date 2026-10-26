@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/columbia_tuition",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/columbia_tuition",
+  "runId": "2026-10-26T16-34-50-507Z",
+  "runDir": "2026-10-26T16-34-50-507Z",
+  "attempt": 1,
+  "status": "complete"
+}

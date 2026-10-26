@@ -1,0 +1,277 @@
+{
+    "id": "04c27338-02b2-4ba1-9dd2-d4789071d377",
+    "started_at": "2026-10-26T00:04:54.246494",
+    "updated_at": "2026-10-26T09:15:58.852787",
+    "finished_at": "2026-10-26T09:15:58.852787",
+    "n_total_trials": 41,
+    "stats": {
+        "n_completed_trials": 41,
+        "n_errored_trials": 3,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "stagehand__z-ai/glm-5.3-flash__tasks": {
+                "n_trials": 39,
+                "n_errors": 3,
+                "metrics": [
+                    {
+                        "criteria_earned_frac": 0.8373983739837398,
+                        "outcome": 0.7804878048780488,
+                        "process": 0.8252032520325204,
+                        "process_measured": 0.9512195121951219,
+                        "reward": 0.7804878048780488
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "agent-arxiv-attention-paper__RijwrDv",
+                            "agent-books-toscrape-light-attic__w4YupTM",
+                            "agent-books-toscrape-travel__6yHN4py",
+                            "agent-calculator-mortgage__m7pWCHT",
+                            "agent-caniuse-css-has__JzeDDLX",
+                            "agent-crates-serde__M4rXDb8",
+                            "agent-demoqa-text-box__nauwNgR",
+                            "agent-dockerhub-nginx__DHS65vE",
+                            "agent-fred-unemployment__mTwynK6",
+                            "agent-github-linux-language__fM6pHCk",
+                            "agent-github-vscode-release__JtFBDUJ",
+                            "agent-hackernews-top-story__DZER38E",
+                            "agent-herokuapp-dropdown__2S7ED2K",
+                            "agent-herokuapp-dynamic-loading__zuwKoTp",
+                            "agent-huggingface-bert-license__mLiLpBz",
+                            "agent-imdb-godfather__smrvpdW",
+                            "agent-mdn-array-at__TP9zdqu",
+                            "agent-nobel-physics-2020__oCp9zAi",
+                            "agent-npm-lodash__EYpPFRp",
+                            "agent-pep8-line-length__xjWMcwC",
+                            "agent-pypi-requests__GQVWqaN",
+                            "agent-python-zip-strict__J7CwwVB",
+                            "agent-quotes-toscrape-einstein__8piR2je",
+                            "agent-quotes-toscrape-login__fJKrAYG",
+                            "agent-rust-vec-remove__ud9uQmo",
+                            "agent-sec-edgar-apple-10k__HWJNBea",
+                            "agent-timeanddate-tokyo__ckCBYAV",
+                            "agent-weather-gov-seattle__oBZjsuY",
+                            "agent-wikipedia-berlin-wall-pm__hdxPBGH",
+                            "agent-wikipedia-eiffel-tower__cKxebee",
+                            "agent-wikipedia-utwente__YPptrzs",
+                            "agent-wikivoyage-amsterdam-airpo__hSVvVKf"
+                        ],
+                        "0.0": [
+                            "agent-herokuapp-checkboxes__FJYBqtA",
+                            "agent-metacritic-elden-ring__iQwjXGq",
+                            "agent-nasa-apod-archive__Z5qtSNq",
+                            "agent-ns-enschede-amsterdam__Fs8M9cK",
+                            "agent-openlibrary-dune__MUf6Gev",
+                            "agent-rapidtables-temperature__xDLRJhC",
+                            "agent-thegamer-opinion__eYiKVya"
+                        ]
+                    },
+                    "outcome": {
+                        "1.0": [
+                            "agent-arxiv-attention-paper__RijwrDv",
+                            "agent-books-toscrape-light-attic__w4YupTM",
+                            "agent-books-toscrape-travel__6yHN4py",
+                            "agent-calculator-mortgage__m7pWCHT",
+                            "agent-caniuse-css-has__JzeDDLX",
+                            "agent-crates-serde__M4rXDb8",
+                            "agent-demoqa-text-box__nauwNgR",
+                            "agent-dockerhub-nginx__DHS65vE",
+                            "agent-fred-unemployment__mTwynK6",
+                            "agent-github-linux-language__fM6pHCk",
+                            "agent-github-vscode-release__JtFBDUJ",
+                            "agent-hackernews-top-story__DZER38E",
+                            "agent-herokuapp-dropdown__2S7ED2K",
+                            "agent-herokuapp-dynamic-loading__zuwKoTp",
+                            "agent-huggingface-bert-license__mLiLpBz",
+                            "agent-imdb-godfather__smrvpdW",
+                            "agent-mdn-array-at__TP9zdqu",
+                            "agent-nobel-physics-2020__oCp9zAi",
+                            "agent-npm-lodash__EYpPFRp",
+                            "agent-pep8-line-length__xjWMcwC",
+                            "agent-pypi-requests__GQVWqaN",
+                            "agent-python-zip-strict__J7CwwVB",
+                            "agent-quotes-toscrape-einstein__8piR2je",
+                            "agent-quotes-toscrape-login__fJKrAYG",
+                            "agent-rust-vec-remove__ud9uQmo",
+                            "agent-sec-edgar-apple-10k__HWJNBea",
+                            "agent-timeanddate-tokyo__ckCBYAV",
+                            "agent-weather-gov-seattle__oBZjsuY",
+                            "agent-wikipedia-berlin-wall-pm__hdxPBGH",
+                            "agent-wikipedia-eiffel-tower__cKxebee",
+                            "agent-wikipedia-utwente__YPptrzs",
+                            "agent-wikivoyage-amsterdam-airpo__hSVvVKf"
+                        ],
+                        "0.0": [
+                            "agent-herokuapp-checkboxes__FJYBqtA",
+                            "agent-metacritic-elden-ring__iQwjXGq",
+                            "agent-nasa-apod-archive__Z5qtSNq",
+                            "agent-ns-enschede-amsterdam__Fs8M9cK",
+                            "agent-openlibrary-dune__MUf6Gev",
+                            "agent-rapidtables-temperature__xDLRJhC",
+                            "agent-thegamer-opinion__eYiKVya"
+                        ]
+                    },
+                    "process": {
+                        "1.0": [
+                            "agent-arxiv-attention-paper__RijwrDv",
+                            "agent-books-toscrape-light-attic__w4YupTM",
+                            "agent-books-toscrape-travel__6yHN4py",
+                            "agent-calculator-mortgage__m7pWCHT",
+                            "agent-caniuse-css-has__JzeDDLX",
+                            "agent-crates-serde__M4rXDb8",
+                            "agent-demoqa-text-box__nauwNgR",
+                            "agent-dockerhub-nginx__DHS65vE",
+                            "agent-fred-unemployment__mTwynK6",
+                            "agent-github-linux-language__fM6pHCk",
+                            "agent-github-vscode-release__JtFBDUJ",
+                            "agent-hackernews-top-story__DZER38E",
+                            "agent-herokuapp-dropdown__2S7ED2K",
+                            "agent-herokuapp-dynamic-loading__zuwKoTp",
+                            "agent-huggingface-bert-license__mLiLpBz",
+                            "agent-imdb-godfather__smrvpdW",
+                            "agent-mdn-array-at__TP9zdqu",
+                            "agent-nobel-physics-2020__oCp9zAi",
+                            "agent-npm-lodash__EYpPFRp",
+                            "agent-pypi-requests__GQVWqaN",
+                            "agent-python-zip-strict__J7CwwVB",
+                            "agent-quotes-toscrape-einstein__8piR2je",
+                            "agent-quotes-toscrape-login__fJKrAYG",
+                            "agent-rust-vec-remove__ud9uQmo",
+                            "agent-sec-edgar-apple-10k__HWJNBea",
+                            "agent-timeanddate-tokyo__ckCBYAV",
+                            "agent-weather-gov-seattle__oBZjsuY",
+                            "agent-wikipedia-berlin-wall-pm__hdxPBGH",
+                            "agent-wikipedia-eiffel-tower__cKxebee",
+                            "agent-wikipedia-utwente__YPptrzs",
+                            "agent-wikivoyage-amsterdam-airpo__hSVvVKf"
+                        ],
+                        "0.5": [
+                            "agent-herokuapp-checkboxes__FJYBqtA",
+                            "agent-metacritic-elden-ring__iQwjXGq",
+                            "agent-ns-enschede-amsterdam__Fs8M9cK",
+                            "agent-pep8-line-length__xjWMcwC",
+                            "agent-rapidtables-temperature__xDLRJhC"
+                        ],
+                        "0.0": [
+                            "agent-nasa-apod-archive__Z5qtSNq",
+                            "agent-thegamer-opinion__eYiKVya"
+                        ],
+                        "0.3333333333333333": [
+                            "agent-openlibrary-dune__MUf6Gev"
+                        ]
+                    },
+                    "process_measured": {
+                        "1.0": [
+                            "agent-arxiv-attention-paper__RijwrDv",
+                            "agent-books-toscrape-light-attic__w4YupTM",
+                            "agent-books-toscrape-travel__6yHN4py",
+                            "agent-calculator-mortgage__m7pWCHT",
+                            "agent-caniuse-css-has__JzeDDLX",
+                            "agent-crates-serde__M4rXDb8",
+                            "agent-demoqa-text-box__nauwNgR",
+                            "agent-dockerhub-nginx__DHS65vE",
+                            "agent-fred-unemployment__mTwynK6",
+                            "agent-github-linux-language__fM6pHCk",
+                            "agent-github-vscode-release__JtFBDUJ",
+                            "agent-hackernews-top-story__DZER38E",
+                            "agent-herokuapp-checkboxes__FJYBqtA",
+                            "agent-herokuapp-dropdown__2S7ED2K",
+                            "agent-herokuapp-dynamic-loading__zuwKoTp",
+                            "agent-huggingface-bert-license__mLiLpBz",
+                            "agent-imdb-godfather__smrvpdW",
+                            "agent-mdn-array-at__TP9zdqu",
+                            "agent-metacritic-elden-ring__iQwjXGq",
+                            "agent-nasa-apod-archive__Z5qtSNq",
+                            "agent-nobel-physics-2020__oCp9zAi",
+                            "agent-npm-lodash__EYpPFRp",
+                            "agent-ns-enschede-amsterdam__Fs8M9cK",
+                            "agent-openlibrary-dune__MUf6Gev",
+                            "agent-pep8-line-length__xjWMcwC",
+                            "agent-pypi-requests__GQVWqaN",
+                            "agent-python-zip-strict__J7CwwVB",
+                            "agent-quotes-toscrape-einstein__8piR2je",
+                            "agent-quotes-toscrape-login__fJKrAYG",
+                            "agent-rapidtables-temperature__xDLRJhC",
+                            "agent-rust-vec-remove__ud9uQmo",
+                            "agent-sec-edgar-apple-10k__HWJNBea",
+                            "agent-thegamer-opinion__eYiKVya",
+                            "agent-timeanddate-tokyo__ckCBYAV",
+                            "agent-weather-gov-seattle__oBZjsuY",
+                            "agent-wikipedia-berlin-wall-pm__hdxPBGH",
+                            "agent-wikipedia-eiffel-tower__cKxebee",
+                            "agent-wikipedia-utwente__YPptrzs",
+                            "agent-wikivoyage-amsterdam-airpo__hSVvVKf"
+                        ]
+                    },
+                    "criteria_earned_frac": {
+                        "1.0": [
+                            "agent-arxiv-attention-paper__RijwrDv",
+                            "agent-books-toscrape-light-attic__w4YupTM",
+                            "agent-books-toscrape-travel__6yHN4py",
+                            "agent-calculator-mortgage__m7pWCHT",
+                            "agent-caniuse-css-has__JzeDDLX",
+                            "agent-crates-serde__M4rXDb8",
+                            "agent-demoqa-text-box__nauwNgR",
+                            "agent-dockerhub-nginx__DHS65vE",
+                            "agent-fred-unemployment__mTwynK6",
+                            "agent-github-linux-language__fM6pHCk",
+                            "agent-github-vscode-release__JtFBDUJ",
+                            "agent-hackernews-top-story__DZER38E",
+                            "agent-herokuapp-dropdown__2S7ED2K",
+                            "agent-herokuapp-dynamic-loading__zuwKoTp",
+                            "agent-huggingface-bert-license__mLiLpBz",
+                            "agent-imdb-godfather__smrvpdW",
+                            "agent-mdn-array-at__TP9zdqu",
+                            "agent-nobel-physics-2020__oCp9zAi",
+                            "agent-npm-lodash__EYpPFRp",
+                            "agent-pep8-line-length__xjWMcwC",
+                            "agent-pypi-requests__GQVWqaN",
+                            "agent-python-zip-strict__J7CwwVB",
+                            "agent-quotes-toscrape-einstein__8piR2je",
+                            "agent-quotes-toscrape-login__fJKrAYG",
+                            "agent-rust-vec-remove__ud9uQmo",
+                            "agent-sec-edgar-apple-10k__HWJNBea",
+                            "agent-timeanddate-tokyo__ckCBYAV",
+                            "agent-weather-gov-seattle__oBZjsuY",
+                            "agent-wikipedia-berlin-wall-pm__hdxPBGH",
+                            "agent-wikipedia-eiffel-tower__cKxebee",
+                            "agent-wikipedia-utwente__YPptrzs",
+                            "agent-wikivoyage-amsterdam-airpo__hSVvVKf"
+                        ],
+                        "0.5": [
+                            "agent-herokuapp-checkboxes__FJYBqtA",
+                            "agent-metacritic-elden-ring__iQwjXGq",
+                            "agent-ns-enschede-amsterdam__Fs8M9cK",
+                            "agent-rapidtables-temperature__xDLRJhC"
+                        ],
+                        "0.0": [
+                            "agent-nasa-apod-archive__Z5qtSNq",
+                            "agent-thegamer-opinion__eYiKVya"
+                        ],
+                        "0.3333333333333333": [
+                            "agent-openlibrary-dune__MUf6Gev"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "StagehandVerifierUnhealthyError": [
+                        "agent-github-flask-good-first-is__8GuC4Pc",
+                        "agent-httpbin-pizza-form__9m2ynbN"
+                    ],
+                    "AgentTimeoutError": [
+                        "agent-ns-enschede-amsterdam__Fs8M9cK"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null
+    }
+}

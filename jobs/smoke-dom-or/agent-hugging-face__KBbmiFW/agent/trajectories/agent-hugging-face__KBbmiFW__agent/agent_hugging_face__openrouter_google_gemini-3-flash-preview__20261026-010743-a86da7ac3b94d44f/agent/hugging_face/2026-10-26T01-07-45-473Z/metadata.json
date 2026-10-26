@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/hugging_face",
+  "model": "openrouter/google/gemini-3-flash-preview",
+  "environment": "BROWSERBASE",
+  "task": "agent/hugging_face",
+  "runId": "2026-10-26T01-07-45-473Z",
+  "runDir": "2026-10-26T01-07-45-473Z",
+  "attempt": 1,
+  "status": "complete"
+}

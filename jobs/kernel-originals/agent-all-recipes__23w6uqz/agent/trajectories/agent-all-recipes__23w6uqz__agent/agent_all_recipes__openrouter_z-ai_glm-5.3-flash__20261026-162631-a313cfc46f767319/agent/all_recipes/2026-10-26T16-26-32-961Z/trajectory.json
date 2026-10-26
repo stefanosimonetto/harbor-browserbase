@@ -1,0 +1,23 @@
+{
+  "task": {
+    "id": "agent/all_recipes",
+    "instruction": "Search for a recipe for Beef Wellington on Allrecipes that has at least 200 reviews and an average rating of 4.5 stars or higher. List the main ingredients required for the dish.",
+    "initUrl": "https://www.allrecipes.com/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent find a recipe for Beef Wellington",
+          "description": "Did the agent find a recipe for Beef Wellington",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "steps": [],
+  "finalAnswer": "Failed to execute task: Key limit exceeded (daily limit). Manage it using https://openrouter.ai/workspaces/default/keys/d03ae0713ac1fd2eebefc3ec725da14a51e4391a99f731b0ffea09e08fe3a352 $5.00 of $5.00 used; resets 2026-10-27T00:00:00.000Z.",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  }
+}

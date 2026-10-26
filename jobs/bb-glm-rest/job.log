@@ -1,0 +1,360 @@
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/metacritic_elden_ring in dom mode
+Running Stagehand eval task agent/nobel_physics_2020 in dom mode
+Running Stagehand eval task agent/npm_lodash in dom mode
+No Browserbase session id was captured for Stagehand task agent/nobel_physics_2020
+No Browserbase session id was captured for Stagehand task agent/metacritic_elden_ring
+No Browserbase session id was captured for Stagehand task agent/npm_lodash
+Trial agent-nobel-physics-2020__JE5JYgp failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/nobel_physics_2020 --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/nobel_physics_2020                                                                                                                                                          [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/nobel_physics_2020][0m
+
+; eval stderr: 
+Collecting main service artifacts
+Trial agent-npm-lodash__4gX6XiR failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/npm_lodash --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/npm_lodash                                                                                                                                                                  [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/npm_lodash][0m
+
+; eval stderr: 
+Collecting main service artifacts
+Trial agent-metacritic-elden-ring__Y2nHahL failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/metacritic_elden_ring --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/metacritic_elden_ring                                                                                                                                                       [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/metacritic_elden_ring][0m
+
+; eval stderr: 
+Collecting main service artifacts
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/openlibrary_dune in dom mode
+Running Stagehand eval task agent/ns_enschede_amsterdam in dom mode
+Running Stagehand eval task agent/pep8_line_length in dom mode
+No Browserbase session id was captured for Stagehand task agent/openlibrary_dune
+No Browserbase session id was captured for Stagehand task agent/ns_enschede_amsterdam
+Trial agent-openlibrary-dune__r3aVToF failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/openlibrary_dune --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/openlibrary_dune                                                                                                                                                            [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/openlibrary_dune][0m
+
+; eval stderr: 
+Collecting main service artifacts
+Trial agent-ns-enschede-amsterdam__wsXY6oh failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/ns_enschede_amsterdam --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/ns_enschede_amsterdam                                                                                                                                                       [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/ns_enschede_amsterdam][0m
+
+; eval stderr: 
+Collecting main service artifacts
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/pypi_requests in dom mode
+Running Stagehand eval task agent/python_zip_strict in dom mode
+No Browserbase session id was captured for Stagehand task agent/pep8_line_length
+No Browserbase session id was captured for Stagehand task agent/pypi_requests
+Trial agent-pep8-line-length__Zc7N4iP failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/pep8_line_length --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/pep8_line_length                                                                                                                                                            [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/pep8_line_length][0m
+
+; eval stderr: 
+Collecting main service artifacts
+Trial agent-pypi-requests__wjTYWnM failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/pypi_requests --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/pypi_requests                                                                                                                                                               [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/pypi_requests][0m
+
+; eval stderr: 
+Collecting main service artifacts
+No Browserbase session id was captured for Stagehand task agent/python_zip_strict
+Trial agent-python-zip-strict__HMEwATi failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/python_zip_strict --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/python_zip_strict                                                                                                                                                           [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/python_zip_strict][0m
+
+; eval stderr: 
+Collecting main service artifacts
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/quotes_toscrape_login in dom mode
+Running Stagehand eval task agent/quotes_toscrape_einstein in dom mode
+Running Stagehand eval task agent/rapidtables_temperature in dom mode
+No Browserbase session id was captured for Stagehand task agent/quotes_toscrape_login
+No Browserbase session id was captured for Stagehand task agent/quotes_toscrape_einstein
+Trial agent-quotes-toscrape-login__F5CJt5d failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/quotes_toscrape_login --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/quotes_toscrape_login                                                                                                                                                       [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/quotes_toscrape_login][0m
+
+; eval stderr: 
+Collecting main service artifacts
+Trial agent-quotes-toscrape-einstein__epVcN3m failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/quotes_toscrape_einstein --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/quotes_toscrape_einstein                                                                                                                                                    [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/quotes_toscrape_einstein][0m
+
+; eval stderr: 
+Collecting main service artifacts
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/rust_vec_remove in dom mode
+Running Stagehand eval task agent/sec_edgar_apple_10k in dom mode
+No Browserbase session id was captured for Stagehand task agent/rust_vec_remove
+Trial agent-rust-vec-remove__qmxvdzs failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/rust_vec_remove --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/rust_vec_remove                                                                                                                                                             [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/rust_vec_remove][0m
+
+; eval stderr: 
+Collecting main service artifacts
+No Browserbase session id was captured for Stagehand task agent/sec_edgar_apple_10k
+Trial agent-sec-edgar-apple-10k__KpmvVV6 failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/sec_edgar_apple_10k --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/sec_edgar_apple_10k                                                                                                                                                         [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/sec_edgar_apple_10k][0m
+
+; eval stderr: 
+Collecting main service artifacts
+No Browserbase session id was captured for Stagehand task agent/rapidtables_temperature
+Trial agent-rapidtables-temperature__YewdnRo failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/rapidtables_temperature --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/rapidtables_temperature                                                                                                                                                     [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/rapidtables_temperature][0m
+
+; eval stderr: 
+Collecting main service artifacts
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/thegamer_opinion_article in dom mode
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/timeanddate_tokyo in dom mode
+Running Stagehand eval task agent/weather_gov_seattle in dom mode
+No Browserbase session id was captured for Stagehand task agent/thegamer_opinion_article
+Trial agent-thegamer-opinion__w5GSYvx failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/thegamer_opinion_article --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/thegamer_opinion_article                                                                                                                                                    [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/thegamer_opinion_article][0m
+
+; eval stderr: 
+Collecting main service artifacts
+No Browserbase session id was captured for Stagehand task agent/timeanddate_tokyo
+Trial agent-timeanddate-tokyo__5F8KpGW failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/timeanddate_tokyo --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/timeanddate_tokyo                                                                                                                                                           [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/timeanddate_tokyo][0m
+
+; eval stderr: 
+Collecting main service artifacts
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/wikipedia_berlin_wall_pm in dom mode
+Running Stagehand eval task agent/wikipedia_eiffel_tower in dom mode
+No Browserbase session id was captured for Stagehand task agent/wikipedia_berlin_wall_pm
+Trial agent-wikipedia-berlin-wall-pm__KiYZp6t failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/wikipedia_berlin_wall_pm --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/wikipedia_berlin_wall_pm                                                                                                                                                    [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/wikipedia_berlin_wall_pm][0m
+
+; eval stderr: 
+Collecting main service artifacts
+No Browserbase session id was captured for Stagehand task agent/wikipedia_eiffel_tower
+No Browserbase session id was captured for Stagehand task agent/weather_gov_seattle
+Trial agent-wikipedia-eiffel-tower__gqgiX5A failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/wikipedia_eiffel_tower --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/wikipedia_eiffel_tower                                                                                                                                                      [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/wikipedia_eiffel_tower][0m
+
+; eval stderr: 
+Collecting main service artifacts
+Trial agent-weather-gov-seattle__LRbAReo failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/weather_gov_seattle --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/weather_gov_seattle                                                                                                                                                         [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/weather_gov_seattle][0m
+
+; eval stderr: 
+Collecting main service artifacts
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Not retrying trial because the maximum number of retries has been reached
+Agent 'stagehand' does not declare an options_model; leftover kwargs are ignored
+Not retrying trial because the maximum number of retries has been reached
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/wikipedia_utwente in dom mode
+Running Stagehand eval task agent/wikivoyage_amsterdam_airport in dom mode
+No Browserbase session id was captured for Stagehand task agent/wikipedia_utwente
+Trial agent-wikipedia-utwente__yKVTUPf failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/wikipedia_utwente --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/wikipedia_utwente                                                                                                                                                           [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/wikipedia_utwente][0m
+
+; eval stderr: 
+Collecting main service artifacts
+No Browserbase session id was captured for Stagehand task agent/wikivoyage_amsterdam_airport
+Trial agent-wikivoyage-amsterdam-airpo__hYLaPK2 failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/wikivoyage_amsterdam_airport --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/wikivoyage_amsterdam_airport                                                                                                                                                [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/wikivoyage_amsterdam_airport][0m
+
+; eval stderr: 
+Collecting main service artifacts
+Not retrying trial because the maximum number of retries has been reached
+Not retrying trial because the maximum number of retries has been reached

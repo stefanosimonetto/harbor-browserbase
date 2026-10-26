@@ -1,0 +1,11 @@
+{
+  "experiment": "agent/sec_edgar_apple_10k",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "braintrustExperiment": "stagehand-dev [experimentName=agent/sec_edgar_apple_10k]",
+  "braintrustExperimentId": null,
+  "braintrustExperimentUrl": null,
+  "braintrustProject": "stagehand-dev",
+  "braintrustProjectUrl": null,
+  "requestedExperimentName": "agent/sec_edgar_apple_10k"
+}

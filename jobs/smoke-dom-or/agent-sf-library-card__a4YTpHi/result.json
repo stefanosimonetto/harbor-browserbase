@@ -1,0 +1,159 @@
+{
+    "id": "f2cef5c9-b392-48d0-a6fc-da371533fd07",
+    "task_name": "browserbase/agent-sf-library-card",
+    "trial_name": "agent-sf-library-card__a4YTpHi",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/smoke-dom-or/agent-sf-library-card__a4YTpHi",
+    "task_id": {
+        "path": "tasks\\agent-sf-library-card"
+    },
+    "source": "tasks",
+    "task_checksum": "6f3b9e033e349e7b3ae1686d742279cbbc8f150f4f087823acda77d18fe3c07c",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-sf-library-card",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-sf-library-card__a4YTpHi",
+        "trials_dir": "jobs\\smoke-dom-or",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/google/gemini-3-flash-preview",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/google/gemini-2.5-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/google/gemini-3-flash-preview"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "create_session": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/google/gemini-3-flash-preview"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "104dad8f-91b2-4a60-9f70-1d6eefb4b964",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "google/gemini-3-flash-preview",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": {
+            "stagehand": {
+                "browserbase_session_id": "ca623e8d-20af-4e4a-bb06-d4dbd17d9fdc",
+                "browserbase_session_url": "https://www.browserbase.com/sessions/ca623e8d-20af-4e4a-bb06-d4dbd17d9fdc",
+                "browserbase_session_ids": [
+                    "ca623e8d-20af-4e4a-bb06-d4dbd17d9fdc"
+                ],
+                "task_id": "agent/sf_library_card",
+                "mode": "dom",
+                "trajectory_dir": "/logs/agent/trajectories/agent-sf-library-card__a4YTpHi__agent/agent_sf_library_card__openrouter_google_gemini-3-flash-preview__20261026-010941-1967fe6181deec6e/agent/sf_library_card/2026-10-26T01-09-42-651Z",
+                "trajectory_root": "/logs/agent/trajectories/agent-sf-library-card__a4YTpHi__agent",
+                "requested_trajectory_group": "agent-sf-library-card__a4YTpHi__agent"
+            }
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0,
+            "outcome": 1.0,
+            "process": 1.0,
+            "process_measured": 1.0,
+            "criteria_earned_frac": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-10-26T01:09:32.360528Z",
+    "finished_at": "2026-10-26T01:10:33.245856Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T01:09:32.368972Z",
+        "finished_at": "2026-10-26T01:09:36.286271Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T01:09:36.286271Z",
+        "finished_at": "2026-10-26T01:09:37.416617Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T01:09:37.416617Z",
+        "finished_at": "2026-10-26T01:10:28.056520Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-26T01:10:29.068148Z",
+        "finished_at": "2026-10-26T01:10:29.505988Z"
+    },
+    "step_results": null
+}

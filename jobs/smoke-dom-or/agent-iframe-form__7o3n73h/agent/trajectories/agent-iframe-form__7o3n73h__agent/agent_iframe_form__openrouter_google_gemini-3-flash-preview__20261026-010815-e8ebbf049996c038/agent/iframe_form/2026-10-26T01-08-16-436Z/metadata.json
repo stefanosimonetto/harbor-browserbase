@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/iframe_form",
+  "model": "openrouter/google/gemini-3-flash-preview",
+  "environment": "BROWSERBASE",
+  "task": "agent/iframe_form",
+  "runId": "2026-10-26T01-08-16-436Z",
+  "runDir": "2026-10-26T01-08-16-436Z",
+  "attempt": 1,
+  "status": "complete"
+}

@@ -1,0 +1,8 @@
+{"step":0,"action":"ariaTree","url":"https://www.weather.gov/","ok":true}
+{"step":1,"action":"act","url":"https://www.weather.gov/","ok":true,"reasoning":"I'm on weather.gov. I'll use the local forecast search box to look up Seattle, WA."}
+{"step":2,"action":"act","url":"https://www.weather.gov/","ok":true}
+{"step":3,"action":"ariaTree","url":"https://www.weather.gov/","ok":true}
+{"step":4,"action":"keys","url":"https://www.weather.gov/","ok":true,"reasoning":"The Go click didn't navigate. Let me press Enter in the search box instead."}
+{"step":5,"action":"ariaTree","url":"https://www.weather.gov/","ok":true}
+{"step":6,"action":"goto","url":"https://forecast.weather.gov/MapClick.php?lat=47.6062&lon=-122.3321","ok":true,"reasoning":"The search didn't navigate. I'll navigate directly to the Seattle, WA forecast page on forecast.weather.gov."}
+{"step":7,"action":"ariaTree","url":"https://forecast.weather.gov/MapClick.php?lat=47.6062&lon=-122.3321","ok":true}

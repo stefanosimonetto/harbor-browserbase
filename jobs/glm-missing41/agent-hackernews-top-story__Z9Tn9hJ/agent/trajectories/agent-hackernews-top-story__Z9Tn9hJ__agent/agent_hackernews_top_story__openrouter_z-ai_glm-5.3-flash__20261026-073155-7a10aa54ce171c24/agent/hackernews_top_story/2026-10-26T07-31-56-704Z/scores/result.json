@@ -1,0 +1,45 @@
+{
+  "outcomeSuccess": true,
+  "processScore": 1,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent report the title of the #1 ranked story on the Hacker News front page?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The #1 ranked story's title is 'Show HN: TitleArt – Make text like it's 1997', which the agent reported exactly.",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Did the agent report its points, comment count and linked domain?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "The agent reported 144 points, 19 comments, and domain dvy.io, all matching the page content for the #1 story.",
+      "evidenceInsufficient": false
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [],
+  "findings": [
+    {
+      "category": "trajectory_capture",
+      "severity": "info",
+      "description": "The trajectory consists of a single ariaTree observation step; no screenshots beyond the initial page load are available, but the aria tree fully corroborates the reported values.",
+      "suggestedAction": "No action needed; evidence is sufficient."
+    }
+  ],
+  "rawSteps": {
+    "primaryIntent": "Report the title, points, comment count, and linked domain of the story ranked #1 on the Hacker News front page.",
+    "reasoning": "The final page state (aria tree at step 0) confirms the #1 ranked story is 'Show HN: TitleArt – Make text like it's 1997' with 144 points, 19 comments, linking to dvy.io. The agent's predicted output reports exactly these values, matching the ground-truth page content on every field. No hallucination or discrepancy is present.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 2,
+    "totalMax": 2,
+    "evidenceImages": 2,
+    "evidenceTexts": 2,
+    "evidenceOriginalScreenshots": 2
+  }
+}

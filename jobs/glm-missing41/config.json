@@ -1,0 +1,41 @@
+{
+    "job_name": "glm-missing41",
+    "n_concurrent_trials": 3,
+    "environment": {
+        "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+        "kwargs": {
+            "create_session": false,
+            "delete_on_start_failure": true
+        }
+    },
+    "verifier": {
+        "env": {
+            "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+        },
+        "import_path": "bb_harbor.verifier:StagehandVerifier",
+        "kwargs": {
+            "judge_model": "openrouter/z-ai/glm-5.3-flash"
+        }
+    },
+    "agents": [
+        {
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/z-ai/glm-5.3-flash",
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+            }
+        }
+    ],
+    "datasets": [
+        {
+            "path": "tasks"
+        }
+    ]
+}

@@ -1,0 +1,159 @@
+{
+    "id": "3296e094-cbb8-439a-a46f-7116741496e0",
+    "task_name": "browserbase/agent-arxiv-gpt-report",
+    "trial_name": "agent-arxiv-gpt-report__SmhaN3G",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/glm-missing41/agent-arxiv-gpt-report__SmhaN3G",
+    "task_id": {
+        "path": "tasks\\agent-arxiv-gpt-report"
+    },
+    "source": "tasks",
+    "task_checksum": "c73d6b1b15f66ce9c194ec0b08898fced7c064fa6ca91bc4f10499c8a9b31196",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-arxiv-gpt-report",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-arxiv-gpt-report__SmhaN3G",
+        "trials_dir": "jobs\\glm-missing41",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/z-ai/glm-5.3-flash",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "create_session": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "7341f028-a0ee-498f-b02f-3c014d4567ef",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "z-ai/glm-5.3-flash",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": {
+            "stagehand": {
+                "browserbase_session_id": "a04775be-56e8-44ae-baf7-992b04e5ed93",
+                "browserbase_session_url": "https://www.browserbase.com/sessions/a04775be-56e8-44ae-baf7-992b04e5ed93",
+                "browserbase_session_ids": [
+                    "a04775be-56e8-44ae-baf7-992b04e5ed93"
+                ],
+                "task_id": "agent/arxiv_gpt_report",
+                "mode": "dom",
+                "trajectory_dir": "/logs/agent/trajectories/agent-arxiv-gpt-report__SmhaN3G__agent/agent_arxiv_gpt_report__openrouter_z-ai_glm-5.3-flash__20261026-071424-5717fdf19e9d753d/agent/arxiv_gpt_report/2026-10-26T07-14-25-571Z",
+                "trajectory_root": "/logs/agent/trajectories/agent-arxiv-gpt-report__SmhaN3G__agent",
+                "requested_trajectory_group": "agent-arxiv-gpt-report__SmhaN3G__agent"
+            }
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0,
+            "outcome": 1.0,
+            "process": 1.0,
+            "process_measured": 1.0,
+            "criteria_earned_frac": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-10-26T07:14:12.640003Z",
+    "finished_at": "2026-10-26T07:15:45.337222Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T07:14:13.223903Z",
+        "finished_at": "2026-10-26T07:14:17.083989Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T07:14:17.083989Z",
+        "finished_at": "2026-10-26T07:14:18.652669Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T07:14:18.652669Z",
+        "finished_at": "2026-10-26T07:15:39.781838Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-26T07:15:41.034861Z",
+        "finished_at": "2026-10-26T07:15:41.567560Z"
+    },
+    "step_results": null
+}

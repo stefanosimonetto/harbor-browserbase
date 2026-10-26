@@ -1,0 +1,140 @@
+{
+    "id": "64f3695e-4e30-409c-857c-f321492ab621",
+    "task_name": "browserbase/agent-rust-vec-remove",
+    "trial_name": "agent-rust-vec-remove__qmxvdzs",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/bb-glm-rest/agent-rust-vec-remove__qmxvdzs",
+    "task_id": {
+        "path": "tasks\\agent-rust-vec-remove"
+    },
+    "source": "tasks",
+    "task_checksum": "c29560b6a8b24885827b969726ae1d1f9a4a0bd56f72b49f8bab7ac4ad5264db",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-rust-vec-remove",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-rust-vec-remove__qmxvdzs",
+        "trials_dir": "jobs\\bb-glm-rest",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/z-ai/glm-5.3-flash",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "create_session": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "c9d2115e-d817-4a5e-91df-96e5daee8719",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "z-ai/glm-5.3-flash",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": null,
+    "verifier_environment_mode": "shared",
+    "exception_info": {
+        "exception_type": "StagehandAgentFailedError",
+        "exception_message": "Stagehand eval CLI reported a failure; command=\"script -q -e -c 'stty cols 400; evals run agent/rust_vec_remove --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null\"; return_code=0; eval stdout: ... (truncated)\n[kept tail]\n─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\u001b[0m\r\n  \u001b[1mTask                                                                                                                                                                             \u001b[0m \u001b[1mModel                                                                                                                                                                                                        \u001b[0m \u001b[1mResult    \u001b[0m\r\n\u001b[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\u001b[0m\r\n  agent/rust_vec_remove                                                                                                                                                             \u001b[2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                \u001b[0m \u001b[31m✗ fail    \u001b[0m\r\n\u001b[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\u001b[0m\r\n\u001b[2m  Experiment: stagehand-dev [experimentName=agent/rust_vec_remove]\u001b[0m\r\n\r\n; eval stderr: ",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 609, in run\n    await self._run()\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\trial\\single_step.py\", line 40, in _run\n    await self._run_agent()\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\trial\\single_step.py\", line 76, in _run_agent\n    await self._run_agent_phase(\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\.venv\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 769, in _run_agent_phase\n    await asyncio.wait_for(\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\bb_harbor\\agent.py\", line 380, in run\n    self._raise_if_cli_failed(result, command=run_command)\n  File \"C:\\Users\\SimonettoS\\OneDrive - University of Twente\\Bureaublad\\brbase\\harbor-browserbase\\bb_harbor\\agent.py\", line 1021, in _raise_if_cli_failed\n    raise StagehandAgentFailedError(\nbb_harbor.agent.StagehandAgentFailedError: Stagehand eval CLI reported a failure; command=\"script -q -e -c 'stty cols 400; evals run agent/rust_vec_remove --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null\"; return_code=0; eval stdout: ... (truncated)\n[kept tail]\n─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\u001b[0m\r\n  \u001b[1mTask                                                                                                                                                                             \u001b[0m \u001b[1mModel                                                                                                                                                                                                        \u001b[0m \u001b[1mResult    \u001b[0m\r\n\u001b[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\u001b[0m\r\n  agent/rust_vec_remove                                                                                                                                                             \u001b[2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                \u001b[0m \u001b[31m✗ fail    \u001b[0m\r\n\u001b[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\u001b[0m\r\n\u001b[2m  Experiment: stagehand-dev [experimentName=agent/rust_vec_remove]\u001b[0m\r\n\r\n; eval stderr: \n",
+        "occurred_at": "2026-10-26T16:31:04.983506Z"
+    },
+    "started_at": "2026-10-26T16:30:23.069498Z",
+    "finished_at": "2026-10-26T16:31:09.199230Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T16:30:23.083162Z",
+        "finished_at": "2026-10-26T16:30:26.871090Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T16:30:26.871090Z",
+        "finished_at": "2026-10-26T16:30:28.190963Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T16:30:28.191529Z",
+        "finished_at": "2026-10-26T16:31:04.805541Z"
+    },
+    "verifier": null,
+    "step_results": null
+}

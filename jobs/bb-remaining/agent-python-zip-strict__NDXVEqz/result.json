@@ -1,0 +1,159 @@
+{
+    "id": "44ab5594-f8eb-4c69-8af6-980fe2b27ce4",
+    "task_name": "browserbase/agent-python-zip-strict",
+    "trial_name": "agent-python-zip-strict__NDXVEqz",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/bb-remaining/agent-python-zip-strict__NDXVEqz",
+    "task_id": {
+        "path": "tasks\\agent-python-zip-strict"
+    },
+    "source": "tasks",
+    "task_checksum": "7c6aabab62d668baade4558437f3449e870352df4c886903fdbddb845539529f",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-python-zip-strict",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-python-zip-strict__NDXVEqz",
+        "trials_dir": "jobs\\bb-remaining",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/z-ai/glm-5.3-flash",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "create_session": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "17ba1d76-9723-42bb-aced-aca61351df09",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "z-ai/glm-5.3-flash",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": {
+            "stagehand": {
+                "browserbase_session_id": "69f5805e-6833-41fc-acdd-a69b05142191",
+                "browserbase_session_url": "https://www.browserbase.com/sessions/69f5805e-6833-41fc-acdd-a69b05142191",
+                "browserbase_session_ids": [
+                    "69f5805e-6833-41fc-acdd-a69b05142191"
+                ],
+                "task_id": "agent/python_zip_strict",
+                "mode": "dom",
+                "trajectory_dir": "/logs/agent/trajectories/agent-python-zip-strict__NDXVEqz__agent/agent_python_zip_strict__openrouter_z-ai_glm-5.3-flash__20261026-183915-53b16c68144f8759/agent/python_zip_strict/2026-10-26T18-39-17-081Z",
+                "trajectory_root": "/logs/agent/trajectories/agent-python-zip-strict__NDXVEqz__agent",
+                "requested_trajectory_group": "agent-python-zip-strict__NDXVEqz__agent"
+            }
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0,
+            "outcome": 1.0,
+            "process": 1.0,
+            "process_measured": 1.0,
+            "criteria_earned_frac": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-10-26T18:39:07.045244Z",
+    "finished_at": "2026-10-26T18:45:38.818063Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T18:39:07.059079Z",
+        "finished_at": "2026-10-26T18:39:11.186352Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T18:39:11.186352Z",
+        "finished_at": "2026-10-26T18:39:12.270077Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T18:39:12.270077Z",
+        "finished_at": "2026-10-26T18:45:33.257087Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-26T18:45:34.668608Z",
+        "finished_at": "2026-10-26T18:45:35.144743Z"
+    },
+    "step_results": null
+}

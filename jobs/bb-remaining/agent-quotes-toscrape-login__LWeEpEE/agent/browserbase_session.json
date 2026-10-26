@@ -1,0 +1,10 @@
+{
+  "session_id": "fc61f3be-4505-4175-b63f-b2edf3e1ae57",
+  "session_url": "https://www.browserbase.com/sessions/fc61f3be-4505-4175-b63f-b2edf3e1ae57",
+  "debug_url": null,
+  "task_id": "agent/quotes_toscrape_login",
+  "mode": "dom",
+  "all_session_ids": [
+    "fc61f3be-4505-4175-b63f-b2edf3e1ae57"
+  ]
+}

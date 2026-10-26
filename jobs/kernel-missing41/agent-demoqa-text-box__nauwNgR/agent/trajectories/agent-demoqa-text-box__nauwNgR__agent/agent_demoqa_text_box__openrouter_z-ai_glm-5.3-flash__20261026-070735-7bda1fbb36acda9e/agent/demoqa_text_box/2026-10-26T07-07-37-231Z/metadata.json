@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/demoqa_text_box",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "LOCAL",
+  "task": "agent/demoqa_text_box",
+  "runId": "2026-10-26T07-07-37-231Z",
+  "runDir": "2026-10-26T07-07-37-231Z",
+  "attempt": 1,
+  "status": "complete"
+}

@@ -1,0 +1,159 @@
+{
+    "id": "b372ffae-c65d-4284-80ac-33fef872caaa",
+    "task_name": "browserbase/agent-books-toscrape-travel",
+    "trial_name": "agent-books-toscrape-travel__D5NnCHc",
+    "trial_uri": "file:///C:/Users/SimonettoS/OneDrive%20-%20University%20of%20Twente/Bureaublad/brbase/harbor-browserbase/jobs/glm-missing41/agent-books-toscrape-travel__D5NnCHc",
+    "task_id": {
+        "path": "tasks\\agent-books-toscrape-travel"
+    },
+    "source": "tasks",
+    "task_checksum": "24dd1806458d328583a42594426cd1b664573e360a07ee6b4b0a33ec7267b3b6",
+    "config": {
+        "task": {
+            "path": "tasks\\agent-books-toscrape-travel",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "agent-books-toscrape-travel__D5NnCHc",
+        "trials_dir": "jobs\\glm-missing41",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "bb_harbor.agent:StagehandAgent",
+            "model_name": "openrouter/z-ai/glm-5.3-flash",
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "mode": "dom"
+            },
+            "env": {
+                "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+                "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+                "STAGEHAND_EXECUTION_MODEL": "openrouter/z-ai/glm-5.3-flash",
+                "STAGEHAND_JUDGE_MODEL": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "bb_harbor.env:BrowserbaseEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {
+                "create_session": false,
+                "delete_on_start_failure": true
+            },
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+            },
+            "import_path": "bb_harbor.verifier:StagehandVerifier",
+            "kwargs": {
+                "judge_model": "openrouter/z-ai/glm-5.3-flash"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "7341f028-a0ee-498f-b02f-3c014d4567ef",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "stagehand",
+        "version": "unknown",
+        "model_info": {
+            "name": "z-ai/glm-5.3-flash",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "model_usage": null,
+        "rollout_details": null,
+        "metadata": {
+            "stagehand": {
+                "browserbase_session_id": "5fdd299a-ac74-4165-bf2d-7900e673fdc0",
+                "browserbase_session_url": "https://www.browserbase.com/sessions/5fdd299a-ac74-4165-bf2d-7900e673fdc0",
+                "browserbase_session_ids": [
+                    "5fdd299a-ac74-4165-bf2d-7900e673fdc0"
+                ],
+                "task_id": "agent/books_toscrape_travel",
+                "mode": "dom",
+                "trajectory_dir": "/logs/agent/trajectories/agent-books-toscrape-travel__D5NnCHc__agent/agent_books_toscrape_travel__openrouter_z-ai_glm-5.3-flash__20261026-072354-28b65f6f852e6a3e/agent/books_toscrape_travel/2026-10-26T07-23-56-289Z",
+                "trajectory_root": "/logs/agent/trajectories/agent-books-toscrape-travel__D5NnCHc__agent",
+                "requested_trajectory_group": "agent-books-toscrape-travel__D5NnCHc__agent"
+            }
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0,
+            "outcome": 1.0,
+            "process": 1.0,
+            "process_measured": 1.0,
+            "criteria_earned_frac": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-10-26T07:23:44.131433Z",
+    "finished_at": "2026-10-26T07:24:51.781593Z",
+    "environment_setup": {
+        "started_at": "2026-10-26T07:23:44.543177Z",
+        "finished_at": "2026-10-26T07:23:49.312837Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-26T07:23:49.312837Z",
+        "finished_at": "2026-10-26T07:23:50.724665Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-26T07:23:50.724665Z",
+        "finished_at": "2026-10-26T07:24:45.229191Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-26T07:24:47.017952Z",
+        "finished_at": "2026-10-26T07:24:47.843125Z"
+    },
+    "step_results": null
+}

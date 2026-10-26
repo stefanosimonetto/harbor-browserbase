@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 609, in run
+    await self._run()
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\single_step.py", line 40, in _run
+    await self._run_agent()
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\single_step.py", line 76, in _run_agent
+    await self._run_agent_phase(
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\.venv\Lib\site-packages\harbor\trial\trial.py", line 769, in _run_agent_phase
+    await asyncio.wait_for(
+  File "C:\Program Files\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\bb_harbor\agent.py", line 380, in run
+    self._raise_if_cli_failed(result, command=run_command)
+  File "C:\Users\SimonettoS\OneDrive - University of Twente\Bureaublad\brbase\harbor-browserbase\bb_harbor\agent.py", line 1021, in _raise_if_cli_failed
+    raise StagehandAgentFailedError(
+bb_harbor.agent.StagehandAgentFailedError: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/timeanddate_tokyo --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/timeanddate_tokyo                                                                                                                                                           [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/timeanddate_tokyo][0m
+
+; eval stderr: 

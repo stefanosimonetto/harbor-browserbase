@@ -1,0 +1,59 @@
+{
+  "task": {
+    "id": "agent/github",
+    "instruction": "Find a Ruby repository on GitHub that has been updated in the past 3 days and has at least 1000 stars.",
+    "initUrl": "https://github.com/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Ruby repository on GitHub that has been updated in the past 3 days and has at least 1000 stars.",
+          "description": "Ruby repository on GitHub that has been updated in the past 3 days and has at least 1000 stars.",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "Searched GitHub with query \"language:Ruby stars:>=1000 pushed:>=2026-10-23\", which returned 162 matching repositories. The top result, rails/rails (Ruby on Rails), has ~58.9k stars and was updated 13 hours ago — well within the past 3 days. Several other qualifying repositories were also identified (mastodon/mastodon, huginn/huginn, Homebrew/brew, discourse/discourse, fastlane/fastlane). All task criteria (Ruby language, ≥1000 stars, updated within past 3 days) are satisfied.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Ruby repository on GitHub that has been updated in the past 3 days and has at least 1000 stars.",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The final page is a GitHub repository search results page for the query language:Ruby stars:>=1000 pushed:>=2026-10-23, returning 162 results. The top result rails/rails is listed with language Ruby, 58,855 stars (>=1000), and 'Updated 13 hours ago', which is within the past 3 days relative to the current date 2026-10-26. Multiple additional qualifying repositories (mastodon/mastodon 50.5k stars updated 2 hours ago, Homebrew/brew 50.1k stars updated 12 hours ago, discourse/discourse 48k stars updated 8 minutes ago, etc.) are also visible. All constraints are demonstrably satisfied by evidence on the final page, and the agent's answer correctly cites rails/rails with accurate figures. Full credit.",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "findings": [
+      {
+        "category": "agent_strategy",
+        "severity": "info",
+        "description": "The agent efficiently used GitHub's advanced search qualifiers (language, stars, pushed) to directly filter results matching all constraints, rather than manually browsing trending pages.",
+        "suggestedAction": "No action needed; this is an exemplary approach for time- and threshold-constrained repository discovery.",
+        "relatedSteps": [
+          0
+        ]
+      }
+    ],
+    "rawSteps": {
+      "primaryIntent": "Find a Ruby repository on GitHub that has been updated in the past 3 days (since 2026-10-23) and has at least 1000 stars.",
+      "reasoning": "The agent constructed a precise GitHub search query (language:Ruby stars:>=1000 pushed:>=2026-10-23) directly encoding all three task constraints. The final page shows 162 matching repositories, with rails/rails (Ruby, 58.9k stars, updated 13 hours ago) as the top result, clearly satisfying all criteria. The agent's predicted output accurately reports what is visible in the evidence — no hallucination. The task is fully accomplished.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 1,
+      "totalMax": 1,
+      "evidenceImages": 3,
+      "evidenceTexts": 4,
+      "evidenceOriginalScreenshots": 3
+    }
+  }
+}

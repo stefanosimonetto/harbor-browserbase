@@ -1,0 +1,10 @@
+{
+  "session_id": "5fdd299a-ac74-4165-bf2d-7900e673fdc0",
+  "session_url": "https://www.browserbase.com/sessions/5fdd299a-ac74-4165-bf2d-7900e673fdc0",
+  "debug_url": null,
+  "task_id": "agent/books_toscrape_travel",
+  "mode": "dom",
+  "all_session_ids": [
+    "5fdd299a-ac74-4165-bf2d-7900e673fdc0"
+  ]
+}

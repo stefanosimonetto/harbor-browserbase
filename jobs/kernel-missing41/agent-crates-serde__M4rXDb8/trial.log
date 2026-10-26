@@ -1,0 +1,10 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Created Kernel browser session yp399d3n1hx109g0j8geaq1d
+Checking for the Stagehand evals CLI
+Stagehand will attach to the environment's remote CDP browser
+Running Stagehand eval task agent/crates_serde in dom mode
+Stagehand trajectory flushed at /logs/agent/trajectories/agent-crates-serde__M4rXDb8__agent/agent_crates_serde__openrouter_z-ai_glm-5.3-flash__20261026-070659-83eeab6b449a5735/agent/crates_serde/2026-10-26T07-07-00-910Z
+Collecting main service artifacts
+reward source: persisted scores/result.json
+Stagehand criteria aggregation: case=positive-earned-total kept=2 total=2 earned=2.0 max=2.0
+Deleted Kernel browser session yp399d3n1hx109g0j8geaq1d

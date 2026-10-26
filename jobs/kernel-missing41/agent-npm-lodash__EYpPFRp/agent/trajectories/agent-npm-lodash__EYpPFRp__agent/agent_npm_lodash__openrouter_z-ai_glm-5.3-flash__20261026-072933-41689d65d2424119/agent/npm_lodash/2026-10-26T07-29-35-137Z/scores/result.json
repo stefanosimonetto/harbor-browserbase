@@ -1,0 +1,51 @@
+{
+  "outcomeSuccess": true,
+  "processScore": 1,
+  "perCriterion": [
+    {
+      "criterion": "Did the agent open the lodash package page on npm?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Did the agent report the latest version and the MIT license?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "",
+      "evidenceInsufficient": false
+    },
+    {
+      "criterion": "Did the agent report a weekly downloads figure from the page?",
+      "maxPoints": 1,
+      "earnedPoints": 1,
+      "explanation": "",
+      "evidenceInsufficient": false
+    }
+  ],
+  "taskValidity": {
+    "isAmbiguous": false,
+    "isInvalid": false
+  },
+  "evidenceInsufficient": [],
+  "findings": [
+    {
+      "category": "trajectory_capture",
+      "severity": "info",
+      "description": "No explicit extract/observe tool call appears in the trajectory; the agent relied on ariaTree snapshots to gather the data. The final aria tree fully corroborates the reported values, so this is a stylistic observation rather than an error."
+    }
+  ],
+  "rawSteps": {
+    "primaryIntent": "Find the 'lodash' package on npmjs.com and report its latest version, its license, and its approximate weekly downloads.",
+    "reasoning": "The agent successfully navigated to the lodash package page on npmjs.com (final URL: https://www.npmjs.com/package/lodash). The final page state — authoritative as ground truth — shows Version 4.18.1 in both the header and the sidebar 'Version' section, License MIT in the sidebar, and Weekly Downloads of 37,446,906. The agent's final answer reports exactly these three values, all of which match the page evidence. All three rubric criteria are fully satisfied: the agent opened the correct package page, reported the latest version and MIT license, and reported the weekly downloads figure displayed on the page. The word 'approximate' in the task does not require rounding; reporting the exact figure shown is a valid fulfillment. No hallucinations, no wrong targets, no execution errors detected.",
+    "rubricSource": "precomputed",
+    "approach": "b",
+    "optionalsMode": "folded",
+    "totalEarned": 3,
+    "totalMax": 3,
+    "evidenceImages": 8,
+    "evidenceTexts": 8,
+    "evidenceOriginalScreenshots": 8
+  }
+}

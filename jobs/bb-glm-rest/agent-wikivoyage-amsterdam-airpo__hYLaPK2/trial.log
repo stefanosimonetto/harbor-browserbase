@@ -1,0 +1,16 @@
+Skipping image OS validation for hb__993e3b44c9b95e4e8c9ff85348215d0a: docker inspect returned 1
+Stagehand will create and own the Browserbase session for this trial
+Checking for the Stagehand evals CLI
+Running Stagehand eval task agent/wikivoyage_amsterdam_airport in dom mode
+No Browserbase session id was captured for Stagehand task agent/wikivoyage_amsterdam_airport
+Trial agent-wikivoyage-amsterdam-airpo__hYLaPK2 failed: Stagehand eval CLI reported a failure; command="script -q -e -c 'stty cols 400; evals run agent/wikivoyage_amsterdam_airport --trials 1 --concurrency 1 --agent-mode dom --env browserbase --model openrouter/z-ai/glm-5.3-flash' /dev/null"; return_code=0; eval stdout: ... (truncated)
+[kept tail]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [1mTask                                                                                                                                                                             [0m [1mModel                                                                                                                                                                                                        [0m [1mResult    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  agent/wikivoyage_amsterdam_airport                                                                                                                                                [2mopenrouter/z-ai/glm-5.3-flash                                                                                                                                                                                [0m [31m✗ fail    [0m
+[90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[2m  Experiment: stagehand-dev [experimentName=agent/wikivoyage_amsterdam_airport][0m
+
+; eval stderr: 
+Collecting main service artifacts

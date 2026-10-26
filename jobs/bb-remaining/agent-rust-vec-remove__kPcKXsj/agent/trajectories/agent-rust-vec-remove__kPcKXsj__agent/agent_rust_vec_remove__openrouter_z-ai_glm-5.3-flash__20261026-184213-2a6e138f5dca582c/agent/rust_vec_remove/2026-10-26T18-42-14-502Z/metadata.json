@@ -1,0 +1,10 @@
+{
+  "experiment": "agent/rust_vec_remove",
+  "model": "openrouter/z-ai/glm-5.3-flash",
+  "environment": "BROWSERBASE",
+  "task": "agent/rust_vec_remove",
+  "runId": "2026-10-26T18-42-14-502Z",
+  "runDir": "2026-10-26T18-42-14-502Z",
+  "attempt": 1,
+  "status": "complete"
+}

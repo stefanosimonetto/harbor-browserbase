@@ -1,0 +1,60 @@
+{
+  "task": {
+    "id": "agent/nobel_physics_2020",
+    "instruction": "On nobelprize.org, find the laureates of the 2020 Nobel Prize in Physics and report all of their names along with a one-sentence summary of what the prize was awarded for.",
+    "initUrl": "https://www.nobelprize.org/",
+    "precomputedRubric": {
+      "items": [
+        {
+          "criterion": "Did the agent name Roger Penrose, Reinhard Genzel and Andrea Ghez?",
+          "description": "Did the agent name Roger Penrose, Reinhard Genzel and Andrea Ghez?",
+          "maxPoints": 1
+        },
+        {
+          "criterion": "Did the agent mention black holes in the prize motivation?",
+          "description": "Did the agent mention black holes in the prize motivation?",
+          "maxPoints": 1
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "finalAnswer": "The task was completed successfully. The agent navigated nobelprize.org, first attempting the \"Explore prizes and laureates\" search (which initially led to an incorrect results page), then recovering by using the site search for \"2020 Nobel Prize in Physics\" and clicking through to the official NobelPrize.org summary page (nobelprize.org/prizes/physics/2020/summary/). From that authoritative page, the agent identified all three 2020 Physics laureates — Roger Penrose (1/2 share), Reinhard Genzel (1/4 share), and Andrea Ghez (1/4 share) — and reported a one-sentence summary of the award: one half to Roger Penrose for the discovery that black hole formation is a robust prediction of the general theory of relativity, and the other half jointly to Reinhard Genzel and Andrea Ghez for the discovery of a supermassive compact object at the centre of our galaxy. All required information was accurately gathered and reported from the official source.",
+  "result": {
+    "outcomeSuccess": true,
+    "processScore": 1,
+    "perCriterion": [
+      {
+        "criterion": "Did the agent name Roger Penrose, Reinhard Genzel and Andrea Ghez?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The agent's final answer explicitly names all three laureates: Roger Penrose (1/2 share), Reinhard Genzel (1/4 share), and Andrea Ghez (1/4 share). This is corroborated by the final trajectory state at step 11 (nobelprize.org/prizes/physics/2020/summary/ aria-tree showing laureate links and figures for Roger Penrose, Reinhard Genzel, and Andrea Ghez with prize shares) and the screenshot of the summary page (step 10/11) displaying all three laureate portraits and names. The DuckDuckGo evidence (steps 8-9) also independently confirms the same three names.",
+        "evidenceInsufficient": false
+      },
+      {
+        "criterion": "Did the agent mention black holes in the prize motivation?",
+        "maxPoints": 1,
+        "earnedPoints": 1,
+        "explanation": "The agent's one-sentence prize summary explicitly mentions black holes: 'one half to Roger Penrose for the discovery that black hole formation is a robust prediction of the general theory of relativity'. This matches the official citation visible in the final page's blockquote at step 11 ('...for the discovery that black hole formation is a robust prediction of the general theory of relativity...') and is consistent with the DuckDuckGo Search Assist snippet (steps 8-9) that also references black hole formation.",
+        "evidenceInsufficient": false
+      }
+    ],
+    "taskValidity": {
+      "isAmbiguous": false,
+      "isInvalid": false
+    },
+    "evidenceInsufficient": [],
+    "rawSteps": {
+      "primaryIntent": "Find on nobelprize.org the laureates of the 2020 Nobel Prize in Physics and report all their names plus a one-sentence summary of the prize motivation.",
+      "reasoning": "The agent successfully reached the authoritative page nobelprize.org/prizes/physics/2020/summary/ (final state, step 11), which lists all three laureates — Roger Penrose (1/2), Reinhard Genzel (1/4), and Andrea Ghez (1/4) — and the official citation. The agent's final answer names all three laureates and provides a one-sentence summary that includes 'black hole formation is a robust prediction of the general theory of relativity' along with the supermassive compact object discovery, matching the page content exactly. Although the on-site 'Explore' year search initially led to an incorrect page (steps 3-5), the agent recovered appropriately by navigating back, using a search engine to locate the correct nobelprize.org page, and sourcing all final information from nobelprize.org itself. Both rubric criteria are fully satisfied with direct evidence from the final page state and screenshot.",
+      "rubricSource": "precomputed",
+      "approach": "b",
+      "optionalsMode": "folded",
+      "totalEarned": 2,
+      "totalMax": 2,
+      "evidenceImages": 13,
+      "evidenceTexts": 18,
+      "evidenceOriginalScreenshots": 13
+    }
+  }
+}

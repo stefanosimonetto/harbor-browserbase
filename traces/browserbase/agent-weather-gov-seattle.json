@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": 1.0,
   "error": null,
-  "job": "bb-remaining",
   "trial": "agent-weather-gov-seattle__3gT6Xo4",
   "started_at": "2026-10-26T18:49:10.486109Z",
   "judge": {

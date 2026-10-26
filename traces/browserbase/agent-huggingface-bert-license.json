@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": 1.0,
   "error": null,
-  "job": "glm-missing41",
   "trial": "agent-huggingface-bert-license__KkzynjB",
   "started_at": "2026-10-26T07:35:25.708948Z",
   "judge": {

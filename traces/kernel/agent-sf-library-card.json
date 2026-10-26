@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": 1.0,
   "error": null,
-  "job": "kernel-originals",
   "trial": "agent-sf-library-card__LXX8UG7",
   "started_at": "2026-10-26T16:33:13.457114Z",
   "judge": {

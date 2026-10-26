@@ -4,7 +4,7 @@
 # in the task image. Only OPENROUTER_API_KEY is needed; no GEMINI_API_KEY.
 # cua mode is not supported here: Stagehand's CUA clients call vendor APIs directly.
 job_name: browserbase-smoke-suite-glm
-jobs_dir: jobs
+jobs_dir: jobs/browserbase
 n_concurrent_trials: 3
 
 datasets:

@@ -4,7 +4,7 @@
 # Models are kept identical to job.yaml so results stay comparable.
 # cua mode is not supported here: Stagehand's CUA clients call vendor APIs directly.
 job_name: browserbase-smoke-suite-openrouter
-jobs_dir: jobs
+jobs_dir: jobs/browserbase
 n_concurrent_trials: 3
 
 datasets:

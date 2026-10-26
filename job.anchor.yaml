@@ -4,7 +4,7 @@
 # via environment/patches/remote-cdp.patch. Needs ANCHOR_API_KEY and
 # OPENROUTER_API_KEY; no Browserbase or Kernel credentials.
 job_name: anchor-smoke-suite-glm
-jobs_dir: jobs
+jobs_dir: jobs/anchor
 # Each trial holds one Anchor session, so keep this within your Anchor plan's
 # concurrent-session limit.
 n_concurrent_trials: 3

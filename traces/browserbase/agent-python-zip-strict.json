@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": 1.0,
   "error": null,
-  "job": "bb-remaining",
   "trial": "agent-python-zip-strict__NDXVEqz",
   "started_at": "2026-10-26T18:39:07.045244Z",
   "judge": {

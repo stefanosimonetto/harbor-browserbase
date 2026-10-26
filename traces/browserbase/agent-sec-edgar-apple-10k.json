@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": 1.0,
   "error": null,
-  "job": "bb-remaining",
   "trial": "agent-sec-edgar-apple-10k__cX8fbVe",
   "started_at": "2026-10-26T18:43:32.188715Z",
   "judge": {

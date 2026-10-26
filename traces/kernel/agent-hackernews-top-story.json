@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": 1.0,
   "error": null,
-  "job": "kernel-missing41",
   "trial": "agent-hackernews-top-story__DZER38E",
   "started_at": "2026-10-26T07:13:10.508006Z",
   "judge": {

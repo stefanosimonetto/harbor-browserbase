@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": null,
   "error": "StagehandVerifierUnhealthyError",
-  "job": "kernel-missing41",
   "trial": "agent-github-flask-good-first-is__8GuC4Pc",
   "started_at": "2026-10-26T07:11:55.575456Z",
   "judge": {

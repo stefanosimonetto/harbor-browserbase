@@ -5,7 +5,7 @@
 # not match its sensitive-key regex and survives in jobs output; stripping that
 # identifier before sharing is an operator responsibility and a known gap.
 job_name: browserbase-smoke-suite
-jobs_dir: jobs
+jobs_dir: jobs/browserbase
 # Each trial holds one real Browserbase session, so concurrency is bounded by the
 # Browserbase plan's concurrent-session limit, not local CPU.
 n_concurrent_trials: 3

@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": 1.0,
   "error": null,
-  "job": "bb-remaining",
   "trial": "agent-quotes-toscrape-einstein__xi2aX6E",
   "started_at": "2026-10-26T18:40:08.035093Z",
   "judge": {

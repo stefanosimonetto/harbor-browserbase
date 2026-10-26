@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": 1.0,
   "error": null,
-  "job": "kernel-missing41",
   "trial": "agent-quotes-toscrape-einstein__8piR2je",
   "started_at": "2026-10-26T07:36:08.410721Z",
   "judge": {

@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": 1.0,
   "error": null,
-  "job": "glm-missing41",
   "trial": "agent-hugging-face__5UJ95yq",
   "started_at": "2026-10-26T07:34:53.280340Z",
   "judge": {

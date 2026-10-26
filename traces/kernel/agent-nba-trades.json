@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": 0.0,
   "error": null,
-  "job": "kernel-originals",
   "trial": "agent-nba-trades__qb2duVZ",
   "started_at": "2026-10-26T16:32:25.566304Z",
   "judge": {

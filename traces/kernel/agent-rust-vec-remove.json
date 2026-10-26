@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": 1.0,
   "error": null,
-  "job": "kernel-missing41",
   "trial": "agent-rust-vec-remove__ud9uQmo",
   "started_at": "2026-10-26T07:38:36.126269Z",
   "judge": {

@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": 1.0,
   "error": null,
-  "job": "kernel-missing41",
   "trial": "agent-npm-lodash__EYpPFRp",
   "started_at": "2026-10-26T07:29:20.751217Z",
   "judge": {

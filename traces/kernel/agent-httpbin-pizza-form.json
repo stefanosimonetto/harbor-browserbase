@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": null,
   "error": "StagehandVerifierUnhealthyError",
-  "job": "kernel-missing41",
   "trial": "agent-httpbin-pizza-form__9m2ynbN",
   "started_at": "2026-10-26T07:22:32.272585Z",
   "judge": {

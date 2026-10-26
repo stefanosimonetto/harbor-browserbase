@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": 0.0,
   "error": null,
-  "job": "kernel-last3",
   "trial": "agent-rapidtables-temperature__aQ4ix3q",
   "started_at": "2026-10-26T18:20:02.464123Z",
   "judge": {

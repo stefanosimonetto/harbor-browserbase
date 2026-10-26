@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": null,
   "error": "StagehandVerifierUnhealthyError",
-  "job": "kernel-retry9",
   "trial": "agent-herokuapp-checkboxes__JwYRFMT",
   "started_at": "2026-10-26T16:23:44.516966Z",
   "judge": {

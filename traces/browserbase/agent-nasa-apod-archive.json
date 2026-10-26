@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": null,
   "error": "CancelledError",
-  "job": "glm-missing41",
   "trial": "agent-nasa-apod-archive__W6NockZ",
   "started_at": "2026-10-26T07:39:12.142961Z",
   "judge": null,

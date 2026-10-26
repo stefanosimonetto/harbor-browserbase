@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": 0.0,
   "error": null,
-  "job": "glm-missing41",
   "trial": "agent-books-toscrape-light-attic__nMjrzGH",
   "started_at": "2026-10-26T07:15:11.723013Z",
   "judge": {

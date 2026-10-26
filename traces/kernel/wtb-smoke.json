@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": null,
   "error": "StagehandVerifierUnhealthyError",
-  "job": "kernel-originals",
   "trial": "wtb-smoke__bKZRD6W",
   "started_at": "2026-10-26T16:34:39.460208Z",
   "judge": {

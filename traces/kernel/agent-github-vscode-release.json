@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": 1.0,
   "error": null,
-  "job": "kernel-missing41",
   "trial": "agent-github-vscode-release__JtFBDUJ",
   "started_at": "2026-10-26T07:13:08.159555Z",
   "judge": {

@@ -4,7 +4,7 @@
 # attaches via environment/patches/remote-cdp.patch. Needs KERNEL_API_KEY and
 # OPENROUTER_API_KEY; no Browserbase credentials.
 job_name: kernel-smoke-suite-glm
-jobs_dir: jobs
+jobs_dir: jobs/kernel
 # Each trial holds one Kernel browser, so keep this within your Kernel plan's
 # concurrent-browser limit.
 n_concurrent_trials: 3

@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": 0.0,
   "error": "AgentTimeoutError",
-  "job": "kernel-missing41",
   "trial": "agent-ns-enschede-amsterdam__Fs8M9cK",
   "started_at": "2026-10-26T07:30:53.762547Z",
   "judge": null,

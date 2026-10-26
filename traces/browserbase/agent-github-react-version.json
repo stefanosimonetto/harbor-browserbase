@@ -4,7 +4,6 @@
   "model": "openrouter/z-ai/glm-5.3-flash",
   "reward": 1.0,
   "error": null,
-  "job": "glm-missing41",
   "trial": "agent-github-react-version__S4pmAtQ",
   "started_at": "2026-10-26T07:30:12.928714Z",
   "judge": {

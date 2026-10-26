@@ -295,7 +295,14 @@ class StagehandAgent(BaseAgent):
                 "The environment advertises a pre-created Browserbase session but "
                 "has no browserbase_session_id"
             )
-        if not uses_browserbase:
+        # Remote-CDP environments (e.g. Kernel) own the browser and hand Stagehand
+        # its CDP URL through session_scope(); remote-cdp.patch attaches to it.
+        uses_remote_cdp = bool(getattr(environment, "uses_remote_cdp", False))
+        if uses_remote_cdp:
+            self.logger.info(
+                "Stagehand will attach to the environment's remote CDP browser"
+            )
+        elif not uses_browserbase:
             self.logger.warning(
                 "No Browserbase session id or connect URL was found on the environment; "
                 "continuing as a local-environment eval"
@@ -312,7 +319,20 @@ class StagehandAgent(BaseAgent):
             "Running Stagehand eval task %s in %s mode", resolved_task_id, self.mode
         )
         with ExitStack() as stack:
-            if uses_browserbase and browserbase_session_id:
+            if uses_remote_cdp:
+                session_scope = getattr(environment, "session_scope", None)
+                if not callable(session_scope):
+                    raise StagehandAgentFailedError(
+                        "The environment advertises a remote CDP browser but has no "
+                        "session_scope()"
+                    )
+                try:
+                    stack.enter_context(session_scope())
+                except RuntimeError as exc:
+                    raise StagehandAgentFailedError(
+                        "Could not enter the remote CDP browser session scope"
+                    ) from exc
+            elif uses_browserbase and browserbase_session_id:
                 session_scope = getattr(environment, "session_scope", None)
                 if callable(session_scope):
                     try:
@@ -333,20 +353,29 @@ class StagehandAgent(BaseAgent):
                 resolved_task_id,
                 use_browserbase=uses_browserbase,
             )
-            await self._enable_session_capture(environment)
+            # Session capture only scrapes Browserbase session URLs from output.
+            if not uses_remote_cdp:
+                await self._enable_session_capture(environment)
             run_command = (
                 self._wrap_for_session_capture(command)
-                if self._session_capture_enabled
+                if not uses_remote_cdp and self._session_capture_enabled
                 else command
             )
             result = await environment.exec(
                 run_command, timeout_sec=self.timeout_sec
             )
-            self._publish_browserbase_session(
-                context=context,
-                task_id=resolved_task_id,
-                result=result,
-            )
+            if uses_remote_cdp:
+                self._publish_remote_cdp_session(
+                    context=context,
+                    environment=environment,
+                    task_id=resolved_task_id,
+                )
+            else:
+                self._publish_browserbase_session(
+                    context=context,
+                    task_id=resolved_task_id,
+                    result=result,
+                )
 
         self._raise_if_cli_failed(result, command=run_command)
         if result.return_code != 0:
@@ -507,6 +536,51 @@ class StagehandAgent(BaseAgent):
             is not None
         ]
         return safe_candidates[-1] if safe_candidates else None
+
+    def _publish_remote_cdp_session(
+        self,
+        *,
+        context: AgentContext,
+        environment: BaseEnvironment,
+        task_id: str,
+    ) -> None:
+        """Record the remote browser's session id; never persist its CDP URL."""
+
+        provider = str(getattr(environment, "provider", "remote")).lower()
+        try:
+            session_id = self._first_environment_value(
+                environment, ("remote_session_id",)
+            )
+            if not session_id:
+                return
+            stagehand_meta = dict((context.metadata or {}).get("stagehand") or {})
+            stagehand_meta[f"{provider}_session_id"] = session_id
+            context.metadata = {
+                **(context.metadata or {}),
+                "stagehand": stagehand_meta,
+            }
+            artifact_path = Path(self.logs_dir) / f"{provider}_session.json"
+            artifact_path.parent.mkdir(parents=True, exist_ok=True)
+            artifact_path.write_text(
+                json.dumps(
+                    {
+                        "provider": provider,
+                        "session_id": session_id,
+                        "task_id": task_id,
+                        "mode": self.mode,
+                    },
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+        except Exception as exc:
+            self.logger.warning(
+                "Could not publish %s session for Stagehand task %s: %s",
+                provider,
+                task_id,
+                exc,
+            )
 
     def _publish_browserbase_session(
         self,

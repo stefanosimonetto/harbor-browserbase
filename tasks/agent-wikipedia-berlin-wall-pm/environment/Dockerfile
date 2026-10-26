@@ -37,7 +37,8 @@ RUN cd /opt/stagehand \
     && grep -q 'browserbaseSessionID: process.env.BROWSERBASE_SESSION_ID' packages/evals/framework/benchHarness.ts \
     && git apply /tmp/stagehand-patches/openrouter-provider.patch \
     && git apply /tmp/stagehand-patches/custom-agent-tasks.patch \
-    && test -f packages/evals/framework/customAgentTask.ts
+    && test -f packages/evals/framework/customAgentTask.ts \
+    && git apply /tmp/stagehand-patches/remote-cdp.patch
 
 WORKDIR /opt/stagehand
 

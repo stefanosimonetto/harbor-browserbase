@@ -1,0 +1,22 @@
+diff --git a/packages/evals/framework/benchHarness.ts b/packages/evals/framework/benchHarness.ts
+index dfcb0a4..f9e9d58 100644
+--- a/packages/evals/framework/benchHarness.ts
++++ b/packages/evals/framework/benchHarness.ts
+@@ -155,12 +155,16 @@ export const stagehandHarness: BenchHarness = {
+     const isCUA = config.isCUA ?? input.isCUA;
+     // The bench verifier injects callbacks unconditionally, so experimental
+     // defaults on. Set BENCH_EXPERIMENTAL=0 or false to force it off.
++    // STAGEHAND_CDP_URL attaches to an already-running remote browser (e.g. a
++    // Kernel session) instead of launching Chrome or creating a Browserbase session.
++    const cdpUrl = process.env.STAGEHAND_CDP_URL || undefined;
+     const configOverrides = {
+-      env: config.environment,
++      env: cdpUrl ? ("LOCAL" as const) : config.environment,
+       experimental: !/^(?:0|false)$/i.test(
+         process.env.BENCH_EXPERIMENTAL ?? "",
+       ),
+       browserbaseSessionID: process.env.BROWSERBASE_SESSION_ID || undefined,
++      ...(cdpUrl && { localBrowserLaunchOptions: { cdpUrl } }),
+     };
+ 
+     if (config.useApi) {

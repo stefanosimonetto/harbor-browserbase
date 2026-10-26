@@ -6,8 +6,10 @@ TRAJECTORIES_ROOT = "/logs/agent/trajectories"
 TRAJECTORY_POINTER_PATH = "/logs/agent/stagehand-trajectory-dir"
 
 __all__ = [
+    "AnchorEnvironment",
     "BrowserbaseDockerEnvironment",
     "BrowserbaseEnvironment",
+    "KernelEnvironment",
     "StagehandAgent",
     "StagehandVerifier",
     "TRAJECTORIES_ROOT",
@@ -16,7 +18,9 @@ __all__ = [
 
 if TYPE_CHECKING:
     from .agent import StagehandAgent
+    from .anchor_env import AnchorEnvironment
     from .env import BrowserbaseDockerEnvironment, BrowserbaseEnvironment
+    from .kernel_env import KernelEnvironment
     from .verifier import StagehandVerifier
 
 
@@ -29,6 +33,14 @@ def __getattr__(name: str):
             if name == "BrowserbaseDockerEnvironment"
             else BrowserbaseEnvironment
         )
+    elif name == "AnchorEnvironment":
+        from .anchor_env import AnchorEnvironment
+
+        value = AnchorEnvironment
+    elif name == "KernelEnvironment":
+        from .kernel_env import KernelEnvironment
+
+        value = KernelEnvironment
     elif name == "StagehandAgent":
         from .agent import StagehandAgent
 

@@ -1,0 +1,42 @@
+# Same suite and models as job.glm.yaml, but the browser is a Kernel cloud
+# browser (https://kernel.sh) instead of a Browserbase session. KernelEnvironment
+# creates one Kernel browser per trial and hands its CDP URL to Stagehand, which
+# attaches via environment/patches/remote-cdp.patch. Needs KERNEL_API_KEY and
+# OPENROUTER_API_KEY; no Browserbase credentials.
+job_name: kernel-smoke-suite-glm
+jobs_dir: jobs
+# Each trial holds one Kernel browser, so keep this within your Kernel plan's
+# concurrent-browser limit.
+n_concurrent_trials: 3
+
+datasets:
+  - path: tasks
+
+environment:
+  import_path: bb_harbor.kernel_env:KernelEnvironment
+  kwargs:
+    # Inactivity timeout: Kernel deletes the browser if nothing is connected for
+    # this long. Covers the gap between creation and Stagehand attaching, and
+    # cleans up if Harbor dies before stop() deletes it.
+    timeout_seconds: 300
+    headless: false
+    # stealth: true enables Kernel's anti-bot mode and CAPTCHA solver.
+    stealth: false
+    delete_on_start_failure: true
+
+agents:
+  - import_path: bb_harbor.agent:StagehandAgent
+    model_name: openrouter/z-ai/glm-5.3-flash
+    kwargs:
+      mode: dom
+    env:
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY}
+      STAGEHAND_EXECUTION_MODEL: openrouter/z-ai/glm-5.3-flash
+      STAGEHAND_JUDGE_MODEL: openrouter/z-ai/glm-5.3-flash
+
+verifier:
+  import_path: bb_harbor.verifier:StagehandVerifier
+  env:
+    OPENROUTER_API_KEY: ${OPENROUTER_API_KEY}
+  kwargs:
+    judge_model: openrouter/z-ai/glm-5.3-flash

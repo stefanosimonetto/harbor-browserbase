@@ -122,6 +122,48 @@ dropped task constraint, a consent wall — not integration defects.
 The gitignored `jobs/` directory contains run artifacts and real session identifiers. Treat it as
 sensitive operational output.
 
+## Running on Kernel instead of Browserbase
+
+`job.kernel.yaml` runs the same tasks against [Kernel](https://kernel.sh) cloud browsers.
+`bb_harbor.kernel_env:KernelEnvironment` creates one Kernel browser per trial after the
+container starts, injects its CDP WebSocket URL into the agent's commands as
+`STAGEHAND_CDP_URL`, and deletes the browser in `stop()`. The task image's
+`environment/patches/remote-cdp.patch` makes Stagehand attach to that URL in LOCAL mode.
+Session-URL capture is skipped; the Kernel session id is written to the agent logs as
+`kernel_session.json`. The CDP URL itself is never persisted.
+
+| Variable | Requirement | Purpose |
+| --- | --- | --- |
+| `KERNEL_API_KEY` | Required | Authenticates Kernel browser create/delete calls. |
+| `KERNEL_BASE_URL` | Optional | Overrides `https://api.onkernel.com`. |
+| `KERNEL_SKIP_PREFLIGHT_API_CHECK` | Optional | Skips the authenticated preflight call. |
+
+Environment kwargs: `timeout_seconds` (Kernel inactivity timeout, default 300), `headless`,
+`stealth` (Kernel anti-bot mode and CAPTCHA solver), `region`, `delete_on_start_failure`.
+
+```bash
+.venv/bin/harbor run -c job.kernel.yaml -p tasks -o jobs --job-name <name> --yes
+```
+
+## Running on Anchor Browser
+
+`job.anchor.yaml` does the same with [Anchor Browser](https://anchorbrowser.io) sessions via
+`bb_harbor.anchor_env:AnchorEnvironment`. Kernel and Anchor share
+`bb_harbor.remote_cdp_env:RemoteCdpEnvironment`; only session create/delete differs, so no
+image change is needed. Set `ANCHOR_API_KEY` (optional: `ANCHOR_BASE_URL`,
+`ANCHOR_SKIP_PREFLIGHT_API_CHECK`).
+
+Anchor enables ad-blocking and popup/consent-banner blocking by default; `AnchorEnvironment`
+turns both off (`adblock`, `popup_blocker` kwargs) so pages match Browserbase and Kernel.
+Other kwargs: `headless`, `recording` (default off), `max_duration_minutes` (default 25, must
+exceed the 900 s agent timeout), `idle_timeout_minutes`, `delete_on_start_failure`.
+
+```bash
+.venv/bin/harbor run -c job.anchor.yaml -p tasks -o jobs --job-name <name> --yes
+```
+
+`scripts/export_traces.py` groups traces into `traces/{browserbase,kernel,anchor}/`.
+
 ## Known limitations
 
 ### Temporary `benchHarness` patch

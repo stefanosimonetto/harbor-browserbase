@@ -1,0 +1,18 @@
+schema_version = "1.4"
+
+[task]
+name = "browserbase/agent-pep8-line-length"
+
+[metadata]
+suite = "agent"
+task_id = "agent-pep8-line-length"
+
+[environment]
+network_mode = "public"
+
+[agent]
+timeout_sec = 900
+
+[verifier]
+timeout_sec = 900
+environment_mode = "shared"

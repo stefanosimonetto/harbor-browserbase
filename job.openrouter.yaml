@@ -1,0 +1,38 @@
+# Same suite as job.yaml, but every model call (agent, agent execution model,
+# in-run judge, fallback judge) goes through OpenRouter. Requires
+# environment/patches/openrouter-provider.patch in the task image.
+# Models are kept identical to job.yaml so results stay comparable.
+# cua mode is not supported here: Stagehand's CUA clients call vendor APIs directly.
+job_name: browserbase-smoke-suite-openrouter
+jobs_dir: jobs
+n_concurrent_trials: 3
+
+datasets:
+  - path: tasks
+
+environment:
+  import_path: bb_harbor.env:BrowserbaseEnvironment
+  kwargs:
+    create_session: false
+    delete_on_start_failure: true
+
+agents:
+  - import_path: bb_harbor.agent:StagehandAgent
+    model_name: openrouter/google/gemini-3-flash-preview
+    kwargs:
+      mode: dom
+    env:
+      BROWSERBASE_API_KEY: ${BROWSERBASE_API_KEY}
+      BROWSERBASE_PROJECT_ID: ${BROWSERBASE_PROJECT_ID}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY}
+      # Stagehand hardcodes google/gemini-2.5-flash for act/extract steps and
+      # for the judge that scores the run; route both through OpenRouter.
+      STAGEHAND_EXECUTION_MODEL: openrouter/google/gemini-2.5-flash
+      STAGEHAND_JUDGE_MODEL: openrouter/google/gemini-3-flash-preview
+
+verifier:
+  import_path: bb_harbor.verifier:StagehandVerifier
+  env:
+    OPENROUTER_API_KEY: ${OPENROUTER_API_KEY}
+  kwargs:
+    judge_model: openrouter/google/gemini-3-flash-preview

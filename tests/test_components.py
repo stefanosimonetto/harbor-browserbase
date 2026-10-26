@@ -987,7 +987,7 @@ def test_job_config_validates_and_import_paths_resolve(monkeypatch):
 
 
 @pytest.mark.asyncio
-async def test_job_config_datasets_discover_all_ten_fixtures(monkeypatch):
+async def test_job_config_datasets_discover_all_fixtures(monkeypatch):
     """Guard against a fixture silently failing Task.is_valid_dir and shrinking the suite."""
 
     repo_root = Path(__file__).resolve().parents[1]
@@ -998,19 +998,11 @@ async def test_job_config_datasets_discover_all_ten_fixtures(monkeypatch):
     task_configs = await config.datasets[0].get_task_configs()
     discovered_names = {task_config.path.name for task_config in task_configs}
     expected_names = {
-        "agent-all-recipes",
-        "agent-arxiv-gpt-report",
-        "agent-github-react-version",
-        "agent-github-ruby-repo",
-        "agent-hugging-face",
-        "agent-iframe-form",
-        "agent-nba-trades",
-        "agent-sf-library-card",
-        "agent-thegamer-opinion",
-        "wtb-smoke",
+        path.name for path in (repo_root / "tasks").iterdir() if path.is_dir()
     }
 
-    assert len(task_configs) == 10
+    assert len(expected_names) == 50
+    assert len(task_configs) == len(expected_names)
     assert discovered_names == expected_names
 
 

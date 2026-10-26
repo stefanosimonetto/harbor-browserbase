@@ -1,0 +1,18 @@
+schema_version = "1.4"
+
+[task]
+name = "browserbase/agent-httpbin-pizza-form"
+
+[metadata]
+suite = "agent"
+task_id = "agent-httpbin-pizza-form"
+
+[environment]
+network_mode = "public"
+
+[agent]
+timeout_sec = 900
+
+[verifier]
+timeout_sec = 900
+environment_mode = "shared"

@@ -125,6 +125,11 @@ _FORWARDED_EXTRA_ENV_NAMES: Final[tuple[str, ...]] = (
     "GEMINI_API_KEY",
     "GOOGLE_GENERATIVE_AI_API_KEY",
     "GOOGLE_API_KEY",
+    # openrouter-provider.patch: OpenRouter key plus overrides for the
+    # hardcoded agent execution model and in-run judge model.
+    "OPENROUTER_API_KEY",
+    "STAGEHAND_EXECUTION_MODEL",
+    "STAGEHAND_JUDGE_MODEL",
 )
 
 

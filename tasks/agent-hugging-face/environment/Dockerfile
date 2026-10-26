@@ -5,7 +5,9 @@
 FROM node:22-slim
 
 ARG STAGEHAND_REPO=https://github.com/browserbase/stagehand.git
-ARG STAGEHAND_REF=
+# Pinned: Stagehand v4 (ef783e1, 2026-08-09) deleted the agent/* tasks these
+# fixtures target. 7566804 is the last main commit that still has them.
+ARG STAGEHAND_REF=7566804ed4b97649706782bccdcab5d80f6fe588
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -17,16 +19,14 @@ RUN apt-get update \
         procps \
         python3 \
     && rm -rf /var/lib/apt/lists/* \
-    && if [ -n "$STAGEHAND_REF" ]; then \
-         git clone --depth 1 --branch "$STAGEHAND_REF" "$STAGEHAND_REPO" /opt/stagehand; \
-       else \
-         git clone --depth 1 "$STAGEHAND_REPO" /opt/stagehand; \
-       fi
+    && git init -q /opt/stagehand \
+    && git -C /opt/stagehand fetch --depth 1 "$STAGEHAND_REPO" "$STAGEHAND_REF" \
+    && git -C /opt/stagehand checkout -q FETCH_HEAD
 
 # TEMPORARY: pending the upstream PR from the Stagehand branch
 # fix/benchharness-config-overrides. Delete patches/ and these two steps once
-# it lands on public main. This file must stay byte-identical across all ten
-# tasks/*/environment/ directories or Harbor will build ten separate images
+# it lands on public main. This file must stay byte-identical across all
+# tasks/*/environment/ directories or Harbor will build separate images
 # instead of sharing one.
 COPY patches/ /tmp/stagehand-patches/
 
@@ -34,7 +34,10 @@ RUN cd /opt/stagehand \
     && git apply --check /tmp/stagehand-patches/benchharness-config-overrides.patch \
     && git apply /tmp/stagehand-patches/benchharness-config-overrides.patch \
     && grep -q 'experimental: !' packages/evals/framework/benchHarness.ts \
-    && grep -q 'browserbaseSessionID: process.env.BROWSERBASE_SESSION_ID' packages/evals/framework/benchHarness.ts
+    && grep -q 'browserbaseSessionID: process.env.BROWSERBASE_SESSION_ID' packages/evals/framework/benchHarness.ts \
+    && git apply /tmp/stagehand-patches/openrouter-provider.patch \
+    && git apply /tmp/stagehand-patches/custom-agent-tasks.patch \
+    && test -f packages/evals/framework/customAgentTask.ts
 
 WORKDIR /opt/stagehand
 

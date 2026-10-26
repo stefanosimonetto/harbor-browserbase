@@ -1,0 +1,18 @@
+schema_version = "1.4"
+
+[task]
+name = "browserbase/agent-nasa-apod-archive"
+
+[metadata]
+suite = "agent"
+task_id = "agent-nasa-apod-archive"
+
+[environment]
+network_mode = "public"
+
+[agent]
+timeout_sec = 900
+
+[verifier]
+timeout_sec = 900
+environment_mode = "shared"

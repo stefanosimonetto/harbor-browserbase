@@ -1,0 +1,75 @@
+diff --git a/packages/core/lib/utils.ts b/packages/core/lib/utils.ts
+index dd86495..9e1ac85 100644
+--- a/packages/core/lib/utils.ts
++++ b/packages/core/lib/utils.ts
+@@ -692,6 +692,7 @@ export const providerEnvVarMap: Partial<
+   Record<ModelProvider | string, string | Array<string>>
+ > = {
+   openai: "OPENAI_API_KEY",
++  openrouter: "OPENROUTER_API_KEY",
+   anthropic: "ANTHROPIC_API_KEY",
+   google: ["GEMINI_API_KEY", "GOOGLE_GENERATIVE_AI_API_KEY", "GOOGLE_API_KEY"],
+   vertex: "GOOGLE_VERTEX_AI_API_KEY",
+diff --git a/packages/core/lib/v3/llm/LLMProvider.ts b/packages/core/lib/v3/llm/LLMProvider.ts
+index a15f9a3..29eb451 100644
+--- a/packages/core/lib/v3/llm/LLMProvider.ts
++++ b/packages/core/lib/v3/llm/LLMProvider.ts
+@@ -37,7 +37,24 @@ import { ollama, createOllama } from "ollama-ai-provider-v2";
+ import { gateway, createGateway, wrapLanguageModel } from "ai";
+ import { AISDKProvider, AISDKCustomProvider } from "../types/public/model.js";
+ 
++// OpenRouter is OpenAI-compatible but only fully supports Chat Completions,
++// so route "openrouter/<vendor>/<model>" through createOpenAI(...).chat.
++const createOpenRouter: AISDKCustomProvider = (options) => {
++  const { baseURL, apiKey, ...rest } = (options ?? {}) as Record<
++    string,
++    unknown
++  >;
++  const provider = createOpenAI({
++    ...rest,
++    name: "openrouter",
++    baseURL: (baseURL as string) || "https://openrouter.ai/api/v1",
++    apiKey: (apiKey as string) || process.env.OPENROUTER_API_KEY,
++  });
++  return (modelName: string) => provider.chat(modelName);
++};
++
+ const AISDKProviders: Record<string, AISDKProvider> = {
++  openrouter: (modelName: string) => createOpenRouter({})(modelName),
+   openai,
+   bedrock,
+   anthropic,
+@@ -55,6 +72,7 @@ const AISDKProviders: Record<string, AISDKProvider> = {
+   gateway,
+ };
+ const AISDKProvidersWithAPIKey: Record<string, AISDKCustomProvider> = {
++  openrouter: createOpenRouter,
+   openai: createOpenAI,
+   bedrock: createAmazonBedrock,
+   anthropic: createAnthropic,
+diff --git a/packages/core/lib/v3Evaluator.ts b/packages/core/lib/v3Evaluator.ts
+index a35f0de..87d97c8 100644
+--- a/packages/core/lib/v3Evaluator.ts
++++ b/packages/core/lib/v3Evaluator.ts
+@@ -71,6 +71,7 @@ export class V3Evaluator implements Verifier {
+     this.v3 = v3;
+     this.modelName =
+       normalizedOptions.modelName ||
++      (process.env.STAGEHAND_JUDGE_MODEL as AvailableModel) ||
+       ("google/gemini-2.5-flash" as AvailableModel);
+     this.modelClientOptions = normalizedOptions.modelClientOptions || {
+       apiKey:
+diff --git a/packages/evals/initV3.ts b/packages/evals/initV3.ts
+index 850b121..a067ad5 100644
+--- a/packages/evals/initV3.ts
++++ b/packages/evals/initV3.ts
+@@ -167,7 +167,8 @@ export async function initV3({
+       agent = v3.agent({
+         model: modelName,
+         mode: resolvedAgentMode ?? "hybrid",
+-        executionModel: "google/gemini-2.5-flash",
++        executionModel: (process.env.STAGEHAND_EXECUTION_MODEL ||
++          "google/gemini-2.5-flash") as AvailableModel,
+       });
+     }
+   }

@@ -1,0 +1,849 @@
+diff --git a/packages/evals/framework/customAgentTask.ts b/packages/evals/framework/customAgentTask.ts
+new file mode 100644
+index 0000000..2d796c9
+--- /dev/null
++++ b/packages/evals/framework/customAgentTask.ts
+@@ -0,0 +1,75 @@
++/**
++ * Shared runner for the Harbor custom agent tasks in tasks/bench/agent/.
++ * Each task file supplies only its name, start URL, instruction and rubric.
++ */
++import type { TaskSpec } from "@browserbasehq/stagehand";
++
++import { defineBenchTask } from "./defineTask.js";
++import { adHocRubric } from "./adHocRubric.js";
++import {
++  runWithVerifier,
++  evaluationResultToSuccess,
++} from "./verifierAdapter.js";
++
++export type CustomAgentTaskOptions = {
++  name: string;
++  initUrl: string;
++  instruction: string;
++  criteria: string[];
++  maxSteps?: number;
++};
++
++export function defineCustomAgentTask(options: CustomAgentTaskOptions) {
++  const { name, initUrl, instruction, criteria, maxSteps = 30 } = options;
++  return defineBenchTask(
++    { name },
++    async ({ debugUrl, sessionUrl, logger, agent, v3 }) => {
++      try {
++        const page = v3.context.pages()[0];
++        await page.goto(initUrl);
++
++        const taskSpec: TaskSpec = {
++          id: name,
++          instruction,
++          initUrl,
++          precomputedRubric: adHocRubric(...criteria),
++        };
++
++        const { evaluationResult, trajectoryDir } = await runWithVerifier({
++          v3,
++          agent,
++          taskSpec,
++          dataset: "agent-custom",
++          agentOptions: {
++            maxSteps: Number(process.env.AGENT_EVAL_MAX_STEPS) || maxSteps,
++          },
++        });
++
++        const successMode = process.env.EVAL_SUCCESS_MODE;
++
++        return {
++          _success: evaluationResultToSuccess(evaluationResult, successMode),
++          outcomeSuccess: evaluationResult.outcomeSuccess,
++          processScore: evaluationResult.processScore,
++          trajectoryDir,
++          debugUrl,
++          sessionUrl,
++          logs: logger.getLogs(),
++        };
++      } catch (error) {
++        const trajectoryDir = (error as { trajectoryDir?: string })
++          .trajectoryDir;
++        return {
++          _success: false,
++          error,
++          trajectoryDir,
++          debugUrl,
++          sessionUrl,
++          logs: logger.getLogs(),
++        };
++      } finally {
++        await v3.close();
++      }
++    },
++  );
++}
+diff --git a/packages/evals/tasks/bench/agent/arxiv_attention_paper.ts b/packages/evals/tasks/bench/agent/arxiv_attention_paper.ts
+new file mode 100644
+index 0000000..4bafaf3
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/arxiv_attention_paper.ts
+@@ -0,0 +1,14 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/arxiv_attention_paper",
++  initUrl: "https://arxiv.org/",
++  instruction:
++    "On arXiv, find the paper 'Attention Is All You Need'. Report its arXiv identifier, the first three authors, and the date of the first submitted version (v1).",
++  criteria: [
++    "Did the agent report the arXiv identifier 1706.03762?",
++    "Did the agent list Ashish Vaswani, Noam Shazeer and Niki Parmar as the first three authors?",
++    "Did the agent report 12 June 2017 as the v1 submission date?",
++  ],
++  maxSteps: 25,
++});
+diff --git a/packages/evals/tasks/bench/agent/books_toscrape_light_attic.ts b/packages/evals/tasks/bench/agent/books_toscrape_light_attic.ts
+new file mode 100644
+index 0000000..123aaff
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/books_toscrape_light_attic.ts
+@@ -0,0 +1,14 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/books_toscrape_light_attic",
++  initUrl: "https://books.toscrape.com/",
++  instruction:
++    "On books.toscrape.com, find the book 'A Light in the Attic' and report its price, its star rating, and how many copies are in stock.",
++  criteria: [
++    "Did the agent report the price of £51.77?",
++    "Did the agent report a three-star rating?",
++    "Did the agent report 22 copies in stock?",
++  ],
++  maxSteps: 15,
++});
+diff --git a/packages/evals/tasks/bench/agent/books_toscrape_travel.ts b/packages/evals/tasks/bench/agent/books_toscrape_travel.ts
+new file mode 100644
+index 0000000..6b94c7c
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/books_toscrape_travel.ts
+@@ -0,0 +1,14 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/books_toscrape_travel",
++  initUrl: "https://books.toscrape.com/",
++  instruction:
++    "On books.toscrape.com, open the 'Travel' category, report how many books it contains, and name the cheapest book in that category with its price.",
++  criteria: [
++    "Did the agent open the Travel category?",
++    "Did the agent report that the Travel category contains 11 books?",
++    "Did the agent identify the cheapest Travel book and its price?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/calculator_mortgage.ts b/packages/evals/tasks/bench/agent/calculator_mortgage.ts
+new file mode 100644
+index 0000000..eae82cf
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/calculator_mortgage.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/calculator_mortgage",
++  initUrl: "https://www.calculator.net/mortgage-calculator.html",
++  instruction:
++    "Using the calculator.net mortgage calculator, compute the monthly principal and interest payment for a $300,000 loan amount (home price $375,000 with $75,000 down payment), a 30-year term and a 6.5% interest rate. Report the monthly payment.",
++  criteria: [
++    "Did the agent enter a $375,000 home price, $75,000 down payment, 30-year term and 6.5% interest rate?",
++    "Did the agent report a monthly principal and interest payment of about $1,896?",
++  ],
++  maxSteps: 25,
++});
+diff --git a/packages/evals/tasks/bench/agent/caniuse_css_has.ts b/packages/evals/tasks/bench/agent/caniuse_css_has.ts
+new file mode 100644
+index 0000000..fcbdc0d
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/caniuse_css_has.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/caniuse_css_has",
++  initUrl: "https://caniuse.com/",
++  instruction:
++    "On caniuse.com, look up the CSS :has() relational pseudo-class and report the first versions of Firefox and Chrome that support it by default.",
++  criteria: [
++    "Did the agent report Firefox 121 as the first supporting Firefox version?",
++    "Did the agent report Chrome 105 as the first supporting Chrome version?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/crates_serde.ts b/packages/evals/tasks/bench/agent/crates_serde.ts
+new file mode 100644
+index 0000000..a53ebc8
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/crates_serde.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/crates_serde",
++  initUrl: "https://crates.io/",
++  instruction:
++    "On crates.io, find the 'serde' crate and report its latest version, its license, and its total all-time downloads.",
++  criteria: [
++    "Did the agent open the serde crate page on crates.io?",
++    "Did the agent report the latest version, the license (MIT OR Apache-2.0) and the all-time download count?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/demoqa_text_box.ts b/packages/evals/tasks/bench/agent/demoqa_text_box.ts
+new file mode 100644
+index 0000000..02fcc42
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/demoqa_text_box.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/demoqa_text_box",
++  initUrl: "https://demoqa.com/text-box",
++  instruction:
++    "On demoqa.com's Text Box page, fill Full Name 'Grace Hopper', Email 'grace@example.com', Current Address 'Drienerlolaan 5, Enschede', Permanent Address 'Arlington, Virginia', submit the form, and report the output shown below the form.",
++  criteria: [
++    "Did the agent fill all four fields with the requested values?",
++    "Did the agent submit the form and report the output block showing those values?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/dockerhub_nginx.ts b/packages/evals/tasks/bench/agent/dockerhub_nginx.ts
+new file mode 100644
+index 0000000..9dc5025
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/dockerhub_nginx.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/dockerhub_nginx",
++  initUrl: "https://hub.docker.com/",
++  instruction:
++    "On Docker Hub, find the official 'nginx' image and report at least three of its currently supported tags, including at least one Alpine-based tag.",
++  criteria: [
++    "Did the agent open the official nginx image page on Docker Hub?",
++    "Did the agent list at least three tags including an alpine tag?",
++  ],
++  maxSteps: 25,
++});
+diff --git a/packages/evals/tasks/bench/agent/fred_unemployment.ts b/packages/evals/tasks/bench/agent/fred_unemployment.ts
+new file mode 100644
+index 0000000..92a6454
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/fred_unemployment.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/fred_unemployment",
++  initUrl: "https://fred.stlouisfed.org/",
++  instruction:
++    "On FRED (Federal Reserve Economic Data), find the US civilian unemployment rate series (UNRATE) and report the most recent value and the month it refers to.",
++  criteria: [
++    "Did the agent open the UNRATE series on FRED?",
++    "Did the agent report the latest observation value and its month?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/github_flask_good_first_issue.ts b/packages/evals/tasks/bench/agent/github_flask_good_first_issue.ts
+new file mode 100644
+index 0000000..33cc778
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/github_flask_good_first_issue.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/github_flask_good_first_issue",
++  initUrl: "https://github.com/pallets/flask",
++  instruction:
++    "On GitHub, find how many open issues in the pallets/flask repository currently have the 'good first issue' label (or report that there are none), and list the title of the most recent one if any exist.",
++  criteria: [
++    "Did the agent filter pallets/flask issues by the 'good first issue' label?",
++    "Did the agent report a count of open issues with that label based on the filtered page?",
++  ],
++  maxSteps: 25,
++});
+diff --git a/packages/evals/tasks/bench/agent/github_linux_language.ts b/packages/evals/tasks/bench/agent/github_linux_language.ts
+new file mode 100644
+index 0000000..5769f59
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/github_linux_language.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/github_linux_language",
++  initUrl: "https://github.com/torvalds/linux",
++  instruction:
++    "On GitHub, open the torvalds/linux repository and report its primary programming language with its percentage and the license shown for the repository.",
++  criteria: [
++    "Did the agent report C as the primary language with a percentage from the repository page?",
++    "Did the agent report the license shown on the repository (GPL-2.0 / other)?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/github_vscode_release.ts b/packages/evals/tasks/bench/agent/github_vscode_release.ts
+new file mode 100644
+index 0000000..c6d913e
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/github_vscode_release.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/github_vscode_release",
++  initUrl: "https://github.com/microsoft/vscode",
++  instruction:
++    "On GitHub, find the latest release of the microsoft/vscode repository and report its version number and the date it was published.",
++  criteria: [
++    "Did the agent navigate to the releases of microsoft/vscode?",
++    "Did the agent report the version number and publication date of the release marked Latest?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/hackernews_top_story.ts b/packages/evals/tasks/bench/agent/hackernews_top_story.ts
+new file mode 100644
+index 0000000..2750e12
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/hackernews_top_story.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/hackernews_top_story",
++  initUrl: "https://news.ycombinator.com/",
++  instruction:
++    "On Hacker News, report the title, points, and number of comments of the story currently ranked #1 on the front page, and the domain it links to.",
++  criteria: [
++    "Did the agent report the title of the #1 ranked story on the Hacker News front page?",
++    "Did the agent report its points, comment count and linked domain?",
++  ],
++  maxSteps: 15,
++});
+diff --git a/packages/evals/tasks/bench/agent/herokuapp_checkboxes.ts b/packages/evals/tasks/bench/agent/herokuapp_checkboxes.ts
+new file mode 100644
+index 0000000..e69d07a
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/herokuapp_checkboxes.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/herokuapp_checkboxes",
++  initUrl: "https://the-internet.herokuapp.com/",
++  instruction:
++    "On the-internet.herokuapp.com, open the 'Checkboxes' page and make sure both checkboxes are checked. Report the final state of each checkbox.",
++  criteria: [
++    "Did the agent open the Checkboxes page?",
++    "Did the agent end with both checkboxes checked and report that state?",
++  ],
++  maxSteps: 15,
++});
+diff --git a/packages/evals/tasks/bench/agent/herokuapp_dropdown.ts b/packages/evals/tasks/bench/agent/herokuapp_dropdown.ts
+new file mode 100644
+index 0000000..783230e
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/herokuapp_dropdown.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/herokuapp_dropdown",
++  initUrl: "https://the-internet.herokuapp.com/",
++  instruction:
++    "On the-internet.herokuapp.com, open the 'Dropdown' page, select 'Option 2' from the dropdown list, and confirm which option is selected.",
++  criteria: [
++    "Did the agent open the Dropdown page?",
++    "Did the agent select 'Option 2' and confirm it is selected?",
++  ],
++  maxSteps: 15,
++});
+diff --git a/packages/evals/tasks/bench/agent/herokuapp_dynamic_loading.ts b/packages/evals/tasks/bench/agent/herokuapp_dynamic_loading.ts
+new file mode 100644
+index 0000000..1a5d1f2
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/herokuapp_dynamic_loading.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/herokuapp_dynamic_loading",
++  initUrl: "https://the-internet.herokuapp.com/",
++  instruction:
++    "On the-internet.herokuapp.com, open 'Dynamic Loading', choose 'Example 2: Element rendered after the fact', click Start, wait for loading to finish, and report the text that appears.",
++  criteria: [
++    "Did the agent click Start on the Dynamic Loading Example 2 page?",
++    "Did the agent report the text 'Hello World!'?",
++  ],
++  maxSteps: 15,
++});
+diff --git a/packages/evals/tasks/bench/agent/httpbin_pizza_form.ts b/packages/evals/tasks/bench/agent/httpbin_pizza_form.ts
+new file mode 100644
+index 0000000..9ef7d1f
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/httpbin_pizza_form.ts
+@@ -0,0 +1,14 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/httpbin_pizza_form",
++  initUrl: "https://httpbin.org/forms/post",
++  instruction:
++    "On httpbin.org's pizza order form, enter customer name 'Ada Lovelace', telephone '0612345678', email 'ada@example.com', choose a Large pizza with Bacon and Mushroom toppings, set delivery time to 19:30, and submit. Report the values echoed back in the response's 'form' section.",
++  criteria: [
++    "Did the agent fill the customer name, telephone and email as instructed?",
++    "Did the agent choose a large size with bacon and mushroom toppings and a 19:30 delivery time?",
++    "Did the agent submit the form and report the echoed form values?",
++  ],
++  maxSteps: 25,
++});
+diff --git a/packages/evals/tasks/bench/agent/huggingface_bert_license.ts b/packages/evals/tasks/bench/agent/huggingface_bert_license.ts
+new file mode 100644
+index 0000000..2466c46
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/huggingface_bert_license.ts
+@@ -0,0 +1,14 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/huggingface_bert_license",
++  initUrl: "https://huggingface.co/",
++  instruction:
++    "On Hugging Face, find the model 'google-bert/bert-base-uncased' and report its license and the languages/datasets it was pretrained on according to the model card.",
++  criteria: [
++    "Did the agent open the bert-base-uncased model page?",
++    "Did the agent report the apache-2.0 license?",
++    "Did the agent mention BookCorpus and English Wikipedia as pretraining data?",
++  ],
++  maxSteps: 25,
++});
+diff --git a/packages/evals/tasks/bench/agent/imdb_godfather.ts b/packages/evals/tasks/bench/agent/imdb_godfather.ts
+new file mode 100644
+index 0000000..4dd6fbb
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/imdb_godfather.ts
+@@ -0,0 +1,14 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/imdb_godfather",
++  initUrl: "https://www.imdb.com/",
++  instruction:
++    "On IMDb, find the 1972 film 'The Godfather' and report its director, its runtime, and its current IMDb rating.",
++  criteria: [
++    "Did the agent identify Francis Ford Coppola as the director?",
++    "Did the agent report a runtime of about 2 hours 55 minutes (175 minutes)?",
++    "Did the agent report an IMDb rating taken from the title page?",
++  ],
++  maxSteps: 25,
++});
+diff --git a/packages/evals/tasks/bench/agent/mdn_array_at.ts b/packages/evals/tasks/bench/agent/mdn_array_at.ts
+new file mode 100644
+index 0000000..cc03434
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/mdn_array_at.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/mdn_array_at",
++  initUrl: "https://developer.mozilla.org/en-US/",
++  instruction:
++    "On MDN Web Docs, find the documentation for JavaScript's Array.prototype.at() method. Explain what it returns when given a negative index and what it returns when the index is out of range.",
++  criteria: [
++    "Did the agent explain that negative indices count back from the last element?",
++    "Did the agent report that undefined is returned for an out-of-range index?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/metacritic_elden_ring.ts b/packages/evals/tasks/bench/agent/metacritic_elden_ring.ts
+new file mode 100644
+index 0000000..616cea5
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/metacritic_elden_ring.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/metacritic_elden_ring",
++  initUrl: "https://www.metacritic.com/",
++  instruction:
++    "On Metacritic, find the game 'Elden Ring' and report its Metascore and its user score for any one platform, naming the platform.",
++  criteria: [
++    "Did the agent find the Elden Ring game page on Metacritic?",
++    "Did the agent report a Metascore and a user score and name the platform?",
++  ],
++  maxSteps: 25,
++});
+diff --git a/packages/evals/tasks/bench/agent/nasa_apod_archive.ts b/packages/evals/tasks/bench/agent/nasa_apod_archive.ts
+new file mode 100644
+index 0000000..f146d06
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/nasa_apod_archive.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/nasa_apod_archive",
++  initUrl: "https://apod.nasa.gov/apod/archivepix.html",
++  instruction:
++    "Using the NASA Astronomy Picture of the Day archive, open the entry for January 1, 2024 and report its title and who is credited for the image.",
++  criteria: [
++    "Did the agent open the APOD entry dated 2024 January 1?",
++    "Did the agent report the title and image credit as shown on that entry?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/nobel_physics_2020.ts b/packages/evals/tasks/bench/agent/nobel_physics_2020.ts
+new file mode 100644
+index 0000000..76859f3
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/nobel_physics_2020.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/nobel_physics_2020",
++  initUrl: "https://www.nobelprize.org/",
++  instruction:
++    "On nobelprize.org, find the laureates of the 2020 Nobel Prize in Physics and report all of their names along with a one-sentence summary of what the prize was awarded for.",
++  criteria: [
++    "Did the agent name Roger Penrose, Reinhard Genzel and Andrea Ghez?",
++    "Did the agent mention black holes in the prize motivation?",
++  ],
++  maxSteps: 25,
++});
+diff --git a/packages/evals/tasks/bench/agent/npm_lodash.ts b/packages/evals/tasks/bench/agent/npm_lodash.ts
+new file mode 100644
+index 0000000..baca109
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/npm_lodash.ts
+@@ -0,0 +1,14 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/npm_lodash",
++  initUrl: "https://www.npmjs.com/",
++  instruction:
++    "On npmjs.com, find the 'lodash' package and report its latest version, its license, and its approximate weekly downloads.",
++  criteria: [
++    "Did the agent open the lodash package page on npm?",
++    "Did the agent report the latest version and the MIT license?",
++    "Did the agent report a weekly downloads figure from the page?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/ns_enschede_amsterdam.ts b/packages/evals/tasks/bench/agent/ns_enschede_amsterdam.ts
+new file mode 100644
+index 0000000..ed83cc9
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/ns_enschede_amsterdam.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/ns_enschede_amsterdam",
++  initUrl: "https://www.ns.nl/en",
++  instruction:
++    "On the NS (Dutch Railways) website, plan a train journey from Enschede to Amsterdam Centraal departing next Monday around 09:00. Report the departure time, arrival time, travel duration and number of transfers of the first suggested option.",
++  criteria: [
++    "Did the agent use the NS journey planner with Enschede as origin and Amsterdam Centraal as destination?",
++    "Did the agent report departure time, arrival time, duration and number of transfers for a suggested journey?",
++  ],
++  maxSteps: 30,
++});
+diff --git a/packages/evals/tasks/bench/agent/openlibrary_dune.ts b/packages/evals/tasks/bench/agent/openlibrary_dune.ts
+new file mode 100644
+index 0000000..f7084ad
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/openlibrary_dune.ts
+@@ -0,0 +1,14 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/openlibrary_dune",
++  initUrl: "https://openlibrary.org/",
++  instruction:
++    "On Open Library, search for the novel 'Dune' by Frank Herbert and report the year it was first published and how many editions Open Library lists for it.",
++  criteria: [
++    "Did the agent find the work 'Dune' by Frank Herbert on Open Library?",
++    "Did the agent report 1965 as the first publication year?",
++    "Did the agent report a number of editions taken from the Open Library page?",
++  ],
++  maxSteps: 25,
++});
+diff --git a/packages/evals/tasks/bench/agent/pep8_line_length.ts b/packages/evals/tasks/bench/agent/pep8_line_length.ts
+new file mode 100644
+index 0000000..2625686
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/pep8_line_length.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/pep8_line_length",
++  initUrl: "https://peps.python.org/",
++  instruction:
++    "On peps.python.org, open PEP 8 and report the recommended maximum line length for code and the recommended maximum line length for docstrings and comments.",
++  criteria: [
++    "Did the agent report 79 characters for code lines?",
++    "Did the agent report 72 characters for docstrings and comments?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/pypi_requests.ts b/packages/evals/tasks/bench/agent/pypi_requests.ts
+new file mode 100644
+index 0000000..a7d3e60
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/pypi_requests.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/pypi_requests",
++  initUrl: "https://pypi.org/",
++  instruction:
++    "On PyPI, find the 'requests' package and report its latest released version, its release date, and the minimum Python version it requires.",
++  criteria: [
++    "Did the agent open the requests project page on PyPI?",
++    "Did the agent report the latest version, its release date, and the 'Requires: Python' value shown on the page?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/python_zip_strict.ts b/packages/evals/tasks/bench/agent/python_zip_strict.ts
+new file mode 100644
+index 0000000..1bda431
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/python_zip_strict.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/python_zip_strict",
++  initUrl: "https://docs.python.org/3/",
++  instruction:
++    "Using the official Python documentation, find the built-in zip() function and report which Python version added the 'strict' parameter and what happens when strict=True and the iterables have different lengths.",
++  criteria: [
++    "Did the agent report that the strict parameter was added in Python 3.10?",
++    "Did the agent explain that a ValueError is raised when the iterables have different lengths?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/quotes_toscrape_einstein.ts b/packages/evals/tasks/bench/agent/quotes_toscrape_einstein.ts
+new file mode 100644
+index 0000000..a90ac3b
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/quotes_toscrape_einstein.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/quotes_toscrape_einstein",
++  initUrl: "https://quotes.toscrape.com/",
++  instruction:
++    "On quotes.toscrape.com, find the quote by Albert Einstein that begins 'The world as we have created it' and list all of the tags attached to it, then open the author page and report Einstein's birth date.",
++  criteria: [
++    "Did the agent list the tags change, deep-thoughts, thinking and world?",
++    "Did the agent report Einstein's birth date as March 14, 1879?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/quotes_toscrape_login.ts b/packages/evals/tasks/bench/agent/quotes_toscrape_login.ts
+new file mode 100644
+index 0000000..935ad54
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/quotes_toscrape_login.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/quotes_toscrape_login",
++  initUrl: "https://quotes.toscrape.com/",
++  instruction:
++    "On quotes.toscrape.com, log in using the username 'harbor' and password 'harbor', then confirm the login worked by reporting what link now appears in the top-right corner instead of 'Login'.",
++  criteria: [
++    "Did the agent fill the login form with username 'harbor' and password 'harbor' and submit it?",
++    "Did the agent report that a 'Logout' link appears after logging in?",
++  ],
++  maxSteps: 15,
++});
+diff --git a/packages/evals/tasks/bench/agent/rapidtables_temperature.ts b/packages/evals/tasks/bench/agent/rapidtables_temperature.ts
+new file mode 100644
+index 0000000..75dde59
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/rapidtables_temperature.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/rapidtables_temperature",
++  initUrl: "https://www.rapidtables.com/convert/temperature/",
++  instruction:
++    "Using rapidtables.com's temperature converter, convert 100 degrees Fahrenheit to Celsius and report the result rounded to two decimal places.",
++  criteria: [
++    "Did the agent use the Fahrenheit to Celsius converter?",
++    "Did the agent report approximately 37.78 degrees Celsius?",
++  ],
++  maxSteps: 15,
++});
+diff --git a/packages/evals/tasks/bench/agent/rust_vec_remove.ts b/packages/evals/tasks/bench/agent/rust_vec_remove.ts
+new file mode 100644
+index 0000000..bf65c4e
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/rust_vec_remove.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/rust_vec_remove",
++  initUrl: "https://doc.rust-lang.org/std/",
++  instruction:
++    "In the Rust standard library documentation, compare Vec::remove and Vec::swap_remove. Report how each one affects the order of the remaining elements and the time complexity of each.",
++  criteria: [
++    "Did the agent state that Vec::remove preserves order and is O(n)?",
++    "Did the agent state that Vec::swap_remove does not preserve order and is O(1)?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/sec_edgar_apple_10k.ts b/packages/evals/tasks/bench/agent/sec_edgar_apple_10k.ts
+new file mode 100644
+index 0000000..24e72c9
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/sec_edgar_apple_10k.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/sec_edgar_apple_10k",
++  initUrl: "https://www.sec.gov/edgar/search/",
++  instruction:
++    "Using SEC EDGAR, find Apple Inc.'s most recent annual report (Form 10-K) and report its filing date and the fiscal year end it covers.",
++  criteria: [
++    "Did the agent find Apple Inc. filings on SEC EDGAR?",
++    "Did the agent report the filing date and period of the most recent 10-K?",
++  ],
++  maxSteps: 30,
++});
+diff --git a/packages/evals/tasks/bench/agent/timeanddate_tokyo.ts b/packages/evals/tasks/bench/agent/timeanddate_tokyo.ts
+new file mode 100644
+index 0000000..a0c2e2f
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/timeanddate_tokyo.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/timeanddate_tokyo",
++  initUrl: "https://www.timeanddate.com/",
++  instruction:
++    "On timeanddate.com, find the current local time in Tokyo, Japan and report it together with Tokyo's UTC offset and whether Japan observes daylight saving time.",
++  criteria: [
++    "Did the agent open the Tokyo time page on timeanddate.com?",
++    "Did the agent report UTC+9 and that Japan does not observe daylight saving time?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/weather_gov_seattle.ts b/packages/evals/tasks/bench/agent/weather_gov_seattle.ts
+new file mode 100644
+index 0000000..8f2d418
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/weather_gov_seattle.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/weather_gov_seattle",
++  initUrl: "https://www.weather.gov/",
++  instruction:
++    "On weather.gov, look up the forecast for Seattle, WA and report the forecast high temperature and conditions for the next daytime period.",
++  criteria: [
++    "Did the agent reach the National Weather Service forecast page for Seattle?",
++    "Did the agent report a forecast high and conditions from that page?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/wikipedia_berlin_wall_pm.ts b/packages/evals/tasks/bench/agent/wikipedia_berlin_wall_pm.ts
+new file mode 100644
+index 0000000..7a3c8ea
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/wikipedia_berlin_wall_pm.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/wikipedia_berlin_wall_pm",
++  initUrl: "https://en.wikipedia.org/",
++  instruction:
++    "Using Wikipedia, determine who was the Prime Minister of the United Kingdom on the day the Berlin Wall fell. Report the date the wall fell and the Prime Minister's name.",
++  criteria: [
++    "Did the agent report 9 November 1989 as the date the Berlin Wall fell?",
++    "Did the agent identify Margaret Thatcher as the UK Prime Minister at that time?",
++  ],
++  maxSteps: 25,
++});
+diff --git a/packages/evals/tasks/bench/agent/wikipedia_eiffel_tower.ts b/packages/evals/tasks/bench/agent/wikipedia_eiffel_tower.ts
+new file mode 100644
+index 0000000..122b267
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/wikipedia_eiffel_tower.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/wikipedia_eiffel_tower",
++  initUrl: "https://en.wikipedia.org/",
++  instruction:
++    "Using Wikipedia, find the Eiffel Tower article and report the tower's total height in metres (including antennas) and the year its construction was completed.",
++  criteria: [
++    "Did the agent report a total height of about 330 metres?",
++    "Did the agent report 1889 as the completion year?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/wikipedia_utwente.ts b/packages/evals/tasks/bench/agent/wikipedia_utwente.ts
+new file mode 100644
+index 0000000..39a3598
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/wikipedia_utwente.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/wikipedia_utwente",
++  initUrl: "https://en.wikipedia.org/",
++  instruction:
++    "Using Wikipedia, find the article about the University of Twente and report the year it was founded and the city where its campus is located.",
++  criteria: [
++    "Did the agent report 1961 as the founding year?",
++    "Did the agent report Enschede as the campus city?",
++  ],
++  maxSteps: 20,
++});
+diff --git a/packages/evals/tasks/bench/agent/wikivoyage_amsterdam_airport.ts b/packages/evals/tasks/bench/agent/wikivoyage_amsterdam_airport.ts
+new file mode 100644
+index 0000000..1a3835d
+--- /dev/null
++++ b/packages/evals/tasks/bench/agent/wikivoyage_amsterdam_airport.ts
+@@ -0,0 +1,13 @@
++import { defineCustomAgentTask } from "../../../framework/customAgentTask.js";
++
++export default defineCustomAgentTask({
++  name: "agent/wikivoyage_amsterdam_airport",
++  initUrl: "https://en.wikivoyage.org/",
++  instruction:
++    "On Wikivoyage, open the Amsterdam travel guide and report the name of the main international airport serving the city and its IATA code.",
++  criteria: [
++    "Did the agent identify Amsterdam Airport Schiphol?",
++    "Did the agent report the IATA code AMS?",
++  ],
++  maxSteps: 20,
++});

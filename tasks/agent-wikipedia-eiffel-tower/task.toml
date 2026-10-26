@@ -1,0 +1,18 @@
+schema_version = "1.4"
+
+[task]
+name = "browserbase/agent-wikipedia-eiffel-tower"
+
+[metadata]
+suite = "agent"
+task_id = "agent-wikipedia-eiffel-tower"
+
+[environment]
+network_mode = "public"
+
+[agent]
+timeout_sec = 900
+
+[verifier]
+timeout_sec = 900
+environment_mode = "shared"
